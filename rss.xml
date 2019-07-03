@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<rss version="2.0">
+    <channel>
+        <title>Tutorialr.com</title>
+            <link>https://tutorialr.com</link>
+            <description>Your online source for original tutorials covering a variety of topics</description>
+        <image>
+            <url>https://tutorialr.com/assets/tutorialr-logo-small.png</url>
+            <link>https://tutorialr.com</link>
+        </image>
+        <item>
+            <title>Setup and Start</title>
+            <link>https://tutorialr.com/pdf/uwp-setup-and-start.pdf</link>
+            <description>Learn how to Setup and Start Visual Studio 2019</description>
+        </item>
+        <item>
+            <title>Hello World</title>
+            <link>https://tutorialr.com/pdf/uwp-hello-world.pdf</link>
+            <description>Introduction to the Universal Windows Platform</description>
+        </item>
+        <item>
+            <title>Command Bar</title>
+            <link>https://tutorialr.com/pdf/uwp-command-bar.pdf</link>
+            <description>Create standard-looking interface for applications for Universal Windows Platform</description>
+        </item>
+        <item>
+            <title>Data Input</title>
+            <link>https://tutorialr.com/pdf/uwp-data-input.pdf</link>
+            <description>Use InputScope for on-screen Keyboards and save and load application data for Universal Windows Platform</description>
+        </item>
+        <item>
+            <title>Image Rotate</title>
+            <link>https://tutorialr.com/pdf/uwp-image-rotate.pdf</link>
+            <description>Use Storyboard and DoubleAnimation to rotate an Image in the X, Y and X axis for Universal Windows Platform</description>
+        </item>
+        <item>
+            <title>Custom Dialog</title>
+            <link>https://tutorialr.com/pdf/uwp-custom-dialog.pdf</link>
+            <description>How to use the ContentDialog to display a customised popup dialog for Universal Windows Platform</description>
+        </item>
+        <item>
+            <title>Navigation View</title>
+            <link>https://tutorialr.com/pdf/uwp-navigation-view.pdf</link>
+            <description>How to use NavigationView to display hamburger-style navigation for Universal Windows Platform</description>
+        </item>
+        <item>
+            <title>Drag and Drop</title>
+            <link>https://tutorialr.com/pdf/uwp-drag-and-drop.pdf</link>
+            <description>How to use a ListBox to create a simple drag-and-drop example for Universal Windows Platform</description>
+        </item>
+        <item>
+            <title>Photo Rotate</title>
+            <link>https://tutorialr.com/pdf/uwp-photo-rotate.pdf</link>
+            <description>How to use BitmapTransform to create a simple image-rotating application for Universal Windows Platform</description>
+        </item>
+    </channel>
+</rss> 
