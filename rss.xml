@@ -97,5 +97,26 @@
             <link>https://tutorialr.com/pdf/uwp-connected-animation.pdf</link>
             <description>How to use Connected Animation which is part of the Fluent Design System in Windows 10 for Universal Windows Platform</description>
         </item>
+
+        <item>
+            <title>Lucky Dice</title>
+            <link>https://tutorialr.com/pdf/uwp-lucky-dice.pdf</link>
+            <description>How to use Grid to display a Dice with Random number of pips shown using Ellipse controls for Universal Windows Platform</description>
+        </item>
+        <item>
+            <title>Lucky Lotto</title>
+            <link>https://tutorialr.com/pdf/uwp-lucky-lotto.pdf</link>
+            <description>How to show selected Lottery Numbers in Ellipse controls within a StackPanel for Universal Windows Platform</description>
+        </item>
+        <item>
+            <title>Tic Tac Toe</title>
+            <link>https://tutorialr.com/pdf/uwp-tic-tac-toe.pdf</link>
+            <description>How to create the game of Tic Tac Toe also known as Noughts and Crosses for Universal Windows Platform</description>
+        </item>
+        <item>
+            <title>Memory Game</title>
+            <link>https://tutorialr.com/pdf/uwp-memory-game.pdf</link>
+            <description>How to create a simple memory game to pair moon phases for Universal Windows Platform</description>
+        </item>
     </channel>
 </rss> 
