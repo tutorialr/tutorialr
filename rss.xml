@@ -118,5 +118,26 @@
             <link>https://tutorialr.com/pdf/uwp-memory-game.pdf</link>
             <description>How to create a simple memory game to pair moon phases for Universal Windows Platform</description>
         </item>
+
+        <item>
+            <title>Lucky Roulette</title>
+            <link>https://tutorialr.com/pdf/uwp-lucky-roulette.pdf</link>
+            <description>How to create a Roulette game using Grid and Ellipse controls and see what number will be randomly selected for Universal Windows Platform</description>
+        </item>
+        <item>
+            <title>Lucky Bingo</title>
+            <link>https://tutorialr.com/pdf/uwp-lucky-bingo.pdf</link>
+            <description>How to create a Bingo game using Grid** and Ellipse controls to display which balls have been drawn and which match a random ticket for Universal Windows Platform</description>
+        </item>
+        <item>
+            <title>Hit or Miss</title>
+            <link>https://tutorialr.com/pdf/uwp-hit-or-miss.pdf</link>
+            <description>How to create a simple random game where you can score a Hit or Miss based on which Button is clicked for Universal Windows Platform</description>
+        </item>
+        <item>
+            <title>Four in Row</title>
+            <link>https://tutorialr.com/pdf/uwp-four-in-row.pdf</link>
+            <description>How to create a simple two-player game where the objective is to get four pieces in a row in either horizontal, vertical or diagonal directions for Universal Windows Platform</description>
+        </item>
     </channel>
 </rss> 
