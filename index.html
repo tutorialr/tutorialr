@@ -24,13 +24,17 @@
                 </div>
             </div>
             <!-- Tabs -->
-            <ul class="nav nav-tabs" id="tab" role="tablist">
+
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" id="uwp-tab" data-toggle="tab" href="#uwp" role="tab" aria-controls="uwp" aria-selected="true">Universal Windows Platform</a>
+                  <a class="nav-link active" id="uwp-tab" data-toggle="tab" href="#uwp" role="tab" aria-controls="uwp" aria-selected="true">Universal Windows Platform</a>
                 </li>
-            </ul>
-            <div class="tab-content" id="tab-content">
-                <div class="tab-pane fade show active m-md-3" id="uwp" role="tabpanel" aria-labelledby="uwp-tab">
+                <li class="nav-item">
+                  <a class="nav-link" id="csharp-tab" data-toggle="tab" href="#csharp" role="tab" aria-controls="csharp" aria-selected="false">C#</a>
+                </li>
+              </ul>
+              <div class="tab-content m-md-3" id="myTabContent">
+                <div class="tab-pane fade show active" id="uwp" role="tabpanel" aria-labelledby="uwp-tab">
                     <!-- Universal Windows Platform -->
                     <div class="container align-middle">
                         <div class="card-deck col-4 mx-auto">
@@ -300,10 +304,69 @@
                                 </div>
                             </div>               
                         </div>
-                    </div>
+                    </div>                        
                     <!-- / Universal Windows Platform -->
                 </div>
-            </div>
+                <div class="tab-pane fade" id="csharp" role="tabpanel" aria-labelledby="csharp-tab">
+                    <!-- C# -->
+                    <div class="container align-middle">
+                        <div class="card-deck col-6 mx-auto">
+                            <div class="card">
+                                <div class="card-header text-center"><small>C#</small></div>
+                                <img src="assets/csharp-small.png" class="img-fluid card-img-middle" alt="Introduction"/>
+                                <div class="card-footer">
+                                    <a href="pdf/csharp-introduction.pdf" target="_blank" class="btn btn-primary btn-lg btn-block">Introduction</a>
+                                </div>
+                            </div>               
+                        </div>
+                        <!-- Cards -->
+                        <div class="card-deck m-md-3">
+                            <div class="card">
+                                <div class="card-header text-center"><small>C#</small></div>
+                                <img src="assets/csharp-small.png" class="img-fluid card-img-middle" alt="Output, Operators, Types & Variables and Input"/>
+                                <div class="card-footer">
+                                    <a href="pdf/csharp-output-operators-types-variables-input.pdf" target="_blank" class="btn btn-primary btn-lg btn-block">Output, Operators, Types & Variables and Input</a>
+                                </div>
+                            </div>                 
+                            <div class="card">
+                                <div class="card-header text-center"><small>C#</small></div>
+                                <img src="assets/csharp-small.png" class="img-fluid card-img-middle" alt="Flow, Loops, Properties & Access and Methods"/>
+                                <div class="card-footer">
+                                    <a href="pdf/csharp-flow-loops-properties-access-methods.pdf" target="_blank" class="btn btn-primary btn-lg btn-block">Flow, Loops, Properties & Access and Methods</a>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="card-deck m-md-3">
+                            <div class="card">
+                                <div class="card-header text-center"><small>C#</small></div>
+                                <img src="assets/csharp-small.png" class="img-fluid card-img-middle" alt="Exceptions, Events, Classes & Objects and Interfaces"/>
+                                <div class="card-footer">
+                                    <a href="pdf/csharp-exceptions-events-classes-objects-interfaces.pdf" target="_blank" class="btn btn-primary btn-lg btn-block">Exceptions, Events, Classes & Objects and Interfaces</a>
+                                </div>
+                            </div> 
+                            <div class="card">
+                                <div class="card-header text-center"><small>C#</small></div>
+                                <img src="assets/csharp-small.png" class="img-fluid card-img-middle" alt="Libraries, Collections, Lambdas & LINQ and Generics"/>
+                                <div class="card-footer">
+                                    <a href="pdf/csharp-libraries-collections-lambdas-linq-generics.pdf" target="_blank" class="btn btn-primary btn-lg btn-block">Libraries, Collections, Lambdas & LINQ and Generics</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Cards -->
+                        <div class="card-deck col-6 mx-auto">
+                            <div class="card">
+                                <div class="card-header text-center"><small>C#</small></div>
+                                <img src="assets/csharp-small.png" class="img-fluid card-img-middle" alt="C#"/>
+                                <div class="card-footer">
+                                    <a href="pdf/csharp.pdf" target="_blank" class="btn btn-success btn-lg btn-block">Complete</a>
+                                </div>
+                            </div>               
+                        </div>
+                    </div>
+                    <!-- / C# -->
+                </div>
+              </div>
+              <!-- /Tabs -->
         </div>
         <!-- Footer -->
         <nav class="navbar bottom navbar-light bg-secondary mt-3">
@@ -311,6 +374,7 @@
             <a href="https://tutorialr.com/rss.xml" target="_blank"><img src="assets/feed-icon-small.png" height="25" alt="RSS"></a>
         </nav>
         <!-- Script -->
+        <script src="bootstrap/js/jquery-3.4.1.min.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
     </body>
 </html>
