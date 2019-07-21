@@ -160,5 +160,26 @@
             <link>https://tutorialr.com/pdf/uwp-touch-game.pdf</link>
             <description>How to create a touch-based pattern matching game for Universal Windows Platform</description>
         </item>
+
+        <item>
+            <title>Fruit Game</title>
+            <link>https://tutorialr.com/pdf/uwp-fruit-game.pdf</link>
+            <description>How to create a simple random game to match three fruit-like symbols together for Universal Windows Platform</description>
+        </item>
+        <item>
+            <title>Light Game</title>
+            <link>https://tutorialr.com/pdf/uwp-light-game.pdf</link>
+            <description>How to create a simple game to toggle all the squares from Gold to Black for Universal Windows Platform</description>
+        </item>
+        <item>
+            <title>Order Game</title>
+            <link>https://tutorialr.com/pdf/uwp-order-game.pdf</link>
+            <description>How to create a simple game where the objective is to re-arrange numbered squares in the correct sequence in the quickest time possible for Universal Windows Platform</description>
+        </item>
+        <item>
+            <title>Sound Game</title>
+            <link>https://tutorialr.com/pdf/uwp-sound-game.pdf</link>
+            <description>How to create a simple game to play sounds using a MediaElement with a provided frequency as an audio stream for Universal Windows Platform</description>
+        </item>
     </channel>
 </rss> 
