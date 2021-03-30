@@ -1,0 +1,423 @@
+1
+00:00:00,000 --> 00:00:06,100
+Welcome to this Talk about Spotify for Developers from tutorialr.com/talks 
+
+2
+00:00:06,100 --> 00:00:12,100
+developer.spotify.com is where you can discover how to build experiences with Spotify for Developers 
+
+3
+00:00:12,100 --> 00:00:15,100
+using Spotify, the music streaming and podcast service
+
+4
+00:00:15,100 --> 00:00:21,600
+Discover how to develop unique experiences for over 180 million global music fans with Spotify features
+
+5
+00:00:21,600 --> 00:00:28,000
+such as Audio Features & Analysis, Playback, Recommendations, Search, Playlists, Metadata,
+
+6
+00:00:28,000 --> 00:00:30,500
+Curated Content and User Taste
+
+7
+00:00:30,500 --> 00:00:35,450
+Docs contain a complete reference for the Spotify Web API and Web Console allows you to try them
+
+8
+00:00:35,450 --> 00:00:40,500
+using Sample Data and even obtain an example CURL request to use
+
+9
+00:00:40,500 --> 00:00:46,500
+Use Cases for common scenarios where Spotify can be integrated include Home Audio using Spotify Connect,
+
+10
+00:00:46,500 --> 00:00:52,100
+Voice Integrations offering immersive voice-controlled experiences, Wearable devices such as smartwatches,
+
+11
+00:00:52,100 --> 00:00:58,500
+health and fitness bands plus headphones or Innovate in new and emerging areas
+
+12
+00:00:58,500 --> 00:01:03,500
+Dashboard is where you create and manage Spotify Integrations, you just need to Log In with a Spotify account
+
+13
+00:01:03,500 --> 00:01:11,100
+and agree to the Terms & Conditions. Then choose Create a Client Id, then Create an App or Hardware Integration
+
+14
+00:01:11,100 --> 00:01:18,000
+and state the purpose of the non-commercial integration although Spotify can approve commercial integrations
+
+15
+00:01:18,000 --> 00:01:22,500
+Once done you get a Client ID and Client Secret to use with the Spotify API
+
+16
+00:01:22,500 --> 00:01:26,500
+You can also Edit Settings to set the Redirect URI for Authentication
+
+17
+00:01:26,500 --> 00:01:30,000
+Authorisation will show how to authorise your application to get data  
+
+18
+00:01:30,000 --> 00:01:35,500
+or to allow an end user to approve your application to access their Spotify data or features
+
+19
+00:01:35,500 --> 00:01:42,000
+Authorised requests to Spotify require permission to be granted to access data. In accordance with OAuth 2.0
+
+20
+00:01:42,000 --> 00:01:48,500
+the parties involved in the authorisation process are the End User, Application Client and the Spotify Server
+
+21
+00:01:48,500 --> 00:01:55,000
+Scopes allow your application to access specific API endpoints on behalf of a user such as Images,
+
+22
+00:01:55,000 --> 00:02:03,500
+Spotify Connect, Playback, Users, Playlists, Library, Listening History and Follow
+
+23
+00:02:03,500 --> 00:02:08,500
+Obtain authorisation from the user by redirecting to a page where they may log in to Spotify or
+
+23
+00:02:08,500 --> 00:02:14,500
+sign up if not already, then the requested information is presented including what account data
+
+24
+00:02:14,500 --> 00:02:18,500
+and activity can be viewed and what actions can be performed
+
+25
+00:02:18,500 --> 00:02:22,500
+Flows for obtaining app authorisation include refreshable user authorisation, 
+
+26
+00:02:22,500 --> 00:02:26,500
+temporary user authorisation and refreshable app authorisation
+
+27
+00:02:26,500 --> 00:02:32,000
+Authorisation Code Flow is suitable for long-running applications where the user grants permission only once,
+
+28
+00:02:32,000 --> 00:02:36,500
+and provides an Access Token that can be Refreshed and is performed on a backend service,
+
+29
+00:02:36,500 --> 00:02:40,000
+rather than a client such as a browser or mobile app
+
+30
+00:02:40,000 --> 00:02:45,000
+First, the application requests authorisation where the user logs in and authorises access
+
+31
+00:02:45,000 --> 00:02:51,000
+Next, the application requests Refresh and Access Tokens with the Code returned in the Redirect URI
+
+32
+00:02:51,000 --> 00:02:57,500
+Then, use the Access Token to access the Spotify Web API which are set to expire after a short time
+
+33
+00:02:57,500 --> 00:03:00,500
+Finally, when needed request a refreshed Access Token
+
+34
+00:03:00,500 --> 00:03:04,500
+Authorization Code Flow with Proof Key for Code Exchange is the best option for mobile
+
+35
+00:03:04,500 --> 00:03:08,500
+and desktop applications and provides an Access Token that can be Refreshed
+
+36
+00:03:08,500 --> 00:03:13,500
+First, create the Code Verifier, a cryptographically random string and then hash with SHA256 
+
+37
+00:03:13,500 --> 00:03:19,500
+and base64url encode this to create the Code Challenge and construct and redirect
+
+38
+00:03:19,500 --> 00:03:24,000
+to the Authorisation URI where the user logs in and authorises access
+
+39
+00:03:24,000 --> 00:03:29,000
+Next, use the Code returned in the Redirect URI to exchange for an Access Token and Refresh Token
+
+40
+00:03:29,000 --> 00:03:34,500
+Then, use the Access Token to access the Spotify Web API which are set to expire after a short time
+
+41
+00:03:34,500 --> 00:03:37,500
+Finally, when needed request a Refreshed Access Token
+
+42
+00:03:37,500 --> 00:03:41,500
+Implicit Grant Flow is the best option for clients that are implemented entirely on the
+
+43
+00:03:41,500 --> 00:03:46,500
+client such as a browser however there are no Refresh Tokens provided
+
+44
+00:03:46,500 --> 00:03:51,500
+First, have your application request authorisation where the user logs in and authorises access,
+
+45
+00:03:51,500 --> 00:03:56,000
+then the Access Token will be returned as a Hash Fragment in the Redirect URI
+
+46
+00:03:56,000 --> 00:03:59,500
+and use the Access Token to access the Spotify API
+
+47
+00:03:59,500 --> 00:04:02,500
+Client Credentials flow is designed for server-to-server communication,
+
+48
+00:04:02,500 --> 00:04:06,500
+only endpoints that do not access user information may be accessed
+
+49
+00:04:06,500 --> 00:04:10,500
+Have your application request authorisation and then an Access Token will be returned
+
+50
+00:04:10,500 --> 00:04:14,500
+in the response and use the Access Token to access the Spotify Web API
+
+51
+00:04:14,500 --> 00:04:20,800
+Spotify Web API allows applications to retrieve Spotify content such as album data, playlists and more
+
+52
+00:04:20,800 --> 00:04:25,500
+Spotify Web API endpoints are based on simple REST principles and return JSON metadata about
+
+53
+00:04:25,500 --> 00:04:30,500
+artists, albums, tracks and more. It also provides access to user related data,
+
+54
+00:04:30,500 --> 00:04:33,500
+like playlists and music the user saves in their library
+
+55
+00:04:33,500 --> 00:04:39,500
+Spotify Web API Requests are performed using standard HTTPS requests in UTF-8 format 
+
+56
+00:04:39,500 --> 00:04:44,500
+to an API endpoint and where possible use the appropriate HTTP verbs for each action
+
+57
+00:04:44,500 --> 00:04:49,000
+Spotify Web API Requests include Albums API such as Get an Album,
+
+57
+00:04:49,000 --> 00:04:52,500
+Artists API such as Get an Artist’s Top Tracks,
+
+58
+00:04:52,500 --> 00:04:57,500
+Browse API such as Get All Categories and Episode API such as Get Multiple Episodes
+
+59
+00:04:57,500 --> 00:05:05,500
+Also, Requests include Follow API such as Get User’s Followed Artists and Library API such as Get User’s Saved Shows
+
+60
+00:05:05,500 --> 00:05:10,500
+Next, Requests include Personalisation API to Get a User’s Top Artists or Tracks
+
+61
+00:05:10,500 --> 00:05:16,500
+and Player API to control user playback plus more such as Get Current User’s Recently Played Tracks
+
+62
+00:05:16,500 --> 00:05:21,500
+Then, Requests include Playlist API such as Get a Playlist’s Items, 
+
+63
+00:05:21,500 --> 00:05:27,500
+Search API to Search for an Item and Shows API such as Get a Show’s Episodes
+
+64
+00:05:27,500 --> 00:05:31,400
+Finally, Requests include Tracks API such as Get Audio Features for a Track
+
+65
+00:05:31,400 --> 00:05:35,300
+and User Profile API to Get Current User’s Profile
+
+66
+00:05:35,300 --> 00:05:42,500
+Spotify Web API Responses are returned in JSON format and with HTTP Status Codes for Success or any Error
+
+67
+00:05:42,500 --> 00:05:48,00
+Objects Index features the Responses which include AlbumObject, ArtistObject, PlaylistObject,
+
+68
+00:05:48,00 --> 00:05:51,200
+TrackObject and more or an Error Object
+
+69
+00:05:51,200 --> 00:05:56,400
+Spotify SDKs are available to help developers take advantage of the Spotify Web API
+
+70
+00:05:56,400 --> 00:06:03,000
+Web Playback SDK is a client-side JavaScript Library which allows you to create a new player in Spotify Connect
+
+71
+00:06:03,000 --> 00:06:07,000
+and play any audio track from Spotify in a Web Browser
+
+72
+00:06:07,000 --> 00:06:13,500
+Spotify iOS SDK allows access to the Spotify API and supports features such as playing a track using the
+
+73
+00:06:13,500 --> 00:06:18,000
+Spotify App in the background or responding to changes in playback state
+
+70
+00:06:18,000 --> 00:06:24,500
+Spotify Android SDK allows access to the Spotify API and supports features such as playing a track
+
+70
+00:06:24,500 --> 00:06:28,500
+using the Spotify App in the background or subscribing to Player State
+
+70
+00:06:28,500 --> 00:06:32,500
+Third-party SDKs are available for other platforms such as .NET
+
+71
+00:06:32,500 --> 00:06:35,500
+and the Universal Windows Platform are available on NuGet
+
+72
+00:06:35,500 --> 00:06:41,500
+Spotify.NetStandard covers the Spotify Web API and is available on NuGet and can be installed
+
+73
+00:06:41,500 --> 00:06:48,000
+into any .NET Standard 2.0 compatible runtime including .NET Framework, .NET Core and .NET 5
+
+74
+00:06:48,000 --> 00:06:52,500
+Source Code is available on GitHub including unit tests and documentation
+
+75
+00:06:52,500 --> 00:06:57,500
+Spotify.NetStandard.Sdk wraps Spotify.NetStandard by adding support for Commanding,
+
+76
+00:06:57,500 --> 00:07:01,00
+Rich Data Binding enhancements and more making it even easier to build
+
+77
+00:07:01,00 --> 00:07:07,000
+Spotify applications supporting .NET Standard 2.0 using Xamarin, WinUI and WPF
+
+78
+00:07:07,000 --> 00:07:11,500
+and is available on NuGet with documentation, unit tests and source code on GitHub
+
+79
+00:07:11,500 --> 00:07:17,000
+Spotify.Uwp extends Spotify.NetStandard.Sdk by adding dedicated support for 
+
+80
+00:07:17,000 --> 00:07:21,500
+Universal Windows Platform applications including lists as Observable Collections
+
+81
+00:07:21,500 --> 00:07:26,100
+to support incremental loading allowing for infinite scroll and is available on NuGet
+
+82
+00:07:26,100 --> 00:07:30,500
+and supports Windows 10 Fall Creators Update from 2017 or later 
+
+83
+00:07:30,500 --> 00:07:34,500
+with full source code, unit tests and documentation available on GitHub
+
+84
+00:07:34,500 --> 00:07:39,500
+Spotify for Developers allows developers to create their own Spotify powered experiences
+
+85
+00:07:39,500 --> 00:07:46,000
+developer.spotify.com is where you can get started with Spotify for Developers, read documentation,
+
+86
+00:07:46,000 --> 00:07:50,500
+try out API calls with the Console and create your Client Id and Client Secret
+
+87
+00:07:50,500 --> 00:07:54,500
+to use the Spotify API in your applications from the Dashboard and more
+
+88
+00:07:54,500 --> 00:08:00,000
+Authorisation for the Spotify platform has four flows to obtain application authorisation
+
+89
+00:08:00,000 --> 00:08:03,100
+Refreshable user authorisation with Authorization Code Flow
+
+90
+00:08:03,100 --> 00:08:06,500
+and Authorization Code Flow With Proof Key for Code Exchange,
+
+91
+00:08:06,500 --> 00:08:10,000
+Refreshable app authorisation with Client Credentials Flow
+
+92
+00:08:10,000 --> 00:08:13,000
+and Temporary user authorisation with Implicit Grant Flow
+
+93
+00:08:13,000 --> 00:08:18,100
+Spotify Web API endpoints are based on simple REST principles and return JSON metadata about 
+
+94
+00:08:18,100 --> 00:08:22,000
+artists, albums, tracks and more directly from the Spotify Catalogue
+
+95
+00:08:22,000 --> 00:08:27,500
+Spotify SDKs from Spotify include Web Playback, iOS and Android SDKs 
+
+96
+00:08:27,500 --> 00:08:30,800
+plus there are third-party SDKs available including .NET Standard 
+
+97
+00:08:30,800 --> 00:08:33,000
+and Universal Windows Platform SDKs
+
+98
+00:08:33,000 --> 00:08:42,000
+Thanks for watching this Talk about Spotify for Developers, you can find out more at tutorialr.com/talks/seriesone
