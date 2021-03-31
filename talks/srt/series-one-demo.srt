@@ -1,0 +1,231 @@
+1
+00:00:00,000 --> 00:00:04,000
+Welcome to this Demo of Spotify for Developers on the Uno Platform 
+
+2
+00:00:04,000 --> 00:00:09,000
+using the Fluent Design System from tutorialr.com/talks
+
+2
+00:00:09,000 --> 00:00:13,200
+The Demo uses Visual Studio 2019 with the Uno Platform Solution Templates
+
+4
+00:00:13,200 --> 00:00:17,000
+Spotify for Developers with Spotify.NetStandard
+
+5
+00:00:17,000 --> 00:00:20,000
+and System Icons from the Fluent Design System
+
+6
+00:00:20,000 --> 00:00:26,000
+The Client Class uses the third-party Spotify for Developers NuGet Package Spotify.NetStandard
+
+7
+00:00:26,000 --> 00:00:32,000
+and supports HttpClient for WebAssembly along with Image and Paging Methods
+
+8
+00:00:32,000 --> 00:00:35,500
+Then, the Client Class also has a Method for converting the responses 
+
+8
+00:00:35,500 --> 00:00:38,500
+from the Spotify Client to the Result Class
+
+9
+00:00:38,500 --> 00:00:43,500
+Next, the Client Class has Methods for getting Categories, Artists, Albums, Tracks
+
+10
+00:00:43,500 --> 00:00:47,200
+and Playlist Items from the Spotify Client Paging Methods
+
+11
+00:00:47,200 --> 00:00:51,100
+Also, the Client Class has Generic Methods that wrap all the Paging Methods
+
+12
+00:00:51,100 --> 00:00:55,250
+for Categories, Artists, Albums, Tracks and Playlist Items
+
+13
+00:00:55,250 --> 00:01:00,150
+Plus, the Client Class has a Generic Method to List everything from the Paging Method
+
+14
+00:01:00,150 --> 00:01:05,000
+It also has another Generic Method to List everything as a List of Result Class 
+
+15
+00:01:05,000 --> 00:01:07,130
+and use this with the List Categories Method
+
+15
+00:01:07,130 --> 00:01:12,800
+Finally, the Client Class has Methods to List Artists, Albums, Tracks, Playlists
+
+16
+00:01:12,800 --> 00:01:16,160
+and Playlist Items as a List of Result Class along with an Action
+
+17
+00:01:16,160 --> 00:01:20,180
+The Command Class implements the Methods from the ICommand Interface
+
+18
+00:01:20,180 --> 00:01:24,180
+to allow for Commanding to be used with the Action from the Client Class
+
+19
+00:01:24,180 --> 00:01:28,500
+The Config Class has the Client Id and Client Secret which can be obtained from the
+
+20
+00:01:28,500 --> 00:01:34,100
+Spotify for Developers Dashboard and will allow the Client Class to use the Spotify Web API
+
+21
+00:01:34,100 --> 00:01:40,000
+The Result Class represents a Category, Playlist, Playlist Item, Album or Track
+
+22
+00:01:40,000 --> 00:01:47,200
+and includes ResultType for Category, Playlist, Album, and Item which is used for Playlist Items or Tracks 
+
+23
+00:01:47,200 --> 00:01:53,750
+It also has Properties for the Id, Title, Image and Command for Commanding
+
+24
+00:01:53,750 --> 00:01:59,180
+MainPage includes XAML for a Navigation View with Category, Featured and Released options
+
+25
+00:01:59,180 --> 00:02:04,250
+including use of Fluent Design System Icons. Content includes an Image with a Border 
+
+26
+00:02:04,250 --> 00:02:08,100
+using Acrylic Effect from the Fluent Design System for the Background
+
+27
+00:02:08,100 --> 00:02:14,300
+MainPage also includes XAML for a GridView with an Item Template with a Button 
+
+28
+00:02:14,300 --> 00:02:17,200
+which has an Image and a TextBlock using a Fluent Design System Colour
+
+29
+00:02:17,200 --> 00:02:20,200
+along with a Progress Ring to indicate Loading
+
+30
+00:02:20,200 --> 00:02:25,000
+The Main Page Class uses the Client Class, where the Country is set for Great Britain 
+
+31
+00:02:25,000 --> 00:02:30,000
+there is an Event Handler for Selection Changed of the Navigation View to List Categories for Category
+
+32
+00:02:30,000 --> 00:02:37,000
+List Playlists for Featured or List Albums for Released plus a Method for Navigation Result
+
+33
+00:02:37,000 --> 00:02:42,100
+The Main Page Class also sets the Action to the Navigation Result Method to List Playlists
+
+34
+00:02:42,100 --> 00:02:48,500
+Playlist Items or Tracks and set the Navigation View to the First option for Category
+
+35
+00:02:48,500 --> 00:02:53,000
+Universal Windows Platform Demo shows the Navigation View with Category 
+
+36
+00:02:53,000 --> 00:02:57,000
+Featured and Released options along with the Categories from Spotify
+
+37
+00:02:57,000 --> 00:03:01,000
+Category shows the Categories from Spotify such as the Rock Category
+
+38
+00:03:01,000 --> 00:03:06,000
+Category when the Rock Category is selected shows Playlists such as the Rock Classics Playlist
+
+39
+00:03:06,000 --> 00:03:11,000
+Category when the Rock Classic Playlist is selected shows various Playlist Items
+
+40
+00:03:11,000 --> 00:03:15,150
+Featured, when selected, shows Playlists from Spotify such as Groove Theory
+
+41
+00:03:15,150 --> 00:03:20,000
+Featured when the Groove Theory Playlist is selected shows various Playlist Items
+
+42
+00:03:20,000 --> 00:03:26,000
+Released, when selected, shows recently released Albums from Spotify such as Written & Directed
+
+43
+00:03:26,000 --> 00:03:30,350
+Released when the Written & Directed Album is selected shows the Tracks for the Album
+
+44
+00:03:30,350 --> 00:03:36,250
+WebAssembly Demo in Microsoft Edge shows the Navigation View with Category, Featured and Released
+
+45
+00:03:36,250 --> 00:03:41,000
+options along with the Spotify Categories like the Universal Windows Platform Demo
+
+46
+00:03:41,000 --> 00:03:44,000
+Category shows Spotify Categories such as Rock
+
+47
+00:03:44,000 --> 00:03:48,300
+Category when Rock is selected shows Playlists such as Rock Classics
+
+48
+00:03:48,300 --> 00:03:52,000
+Category when Rock Classic is selected shows the Playlist Items
+
+49
+00:03:52,000 --> 00:03:57,100
+Featured, when selected, shows Featured Spotify Playlists such as Groove Theory
+
+50
+00:03:57,100 --> 00:03:59,400
+like the Universal Windows Platform Demo
+
+51
+00:03:59,400 --> 00:04:03,200
+Featured when Groove Theory is selected shows the Playlist Items
+
+52
+00:04:03,200 --> 00:04:08,000
+Released, when selected, shows Recent Albums on Spotify such as Written & Directed 
+
+53
+00:04:08,000 --> 00:04:10,300
+like the Universal Windows Platform Demo
+
+54
+00:04:10,300 --> 00:04:14,000
+Released when Written & Directed is selected shows the Tracks for the Album
+
+55
+00:04:14,000 --> 00:04:18,500
+Thanks for watching this demo of Spotify for Developers on the Uno Platform using the
+
+56
+00:04:18,500 --> 00:04:28,000
+Fluent Design System, you can find out more at tutorialr.com/talks/seriesone

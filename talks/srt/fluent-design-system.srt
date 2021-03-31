@@ -1,0 +1,359 @@
+1
+00:00:00,000 --> 00:00:05,500
+Welcome to this Talk about Fluent Design System from tutorialr.com/talks
+
+2
+00:00:05,500 --> 00:00:09,000
+Fluent Design System from Microsoft supports a variety of platforms that allows 
+
+3
+00:00:09,000 --> 00:00:12,500
+designers and developers to create coherent experiences
+
+4
+00:00:12,500 --> 00:00:17,500
+Fluent Design System for the web to create new web apps or adding features to existing ones
+
+5
+00:00:17,500 --> 00:00:22,500
+Fluent UI is a collection of UX frameworks for creating beautiful cross-platform apps
+
+6
+00:00:22,500 --> 00:00:25,000
+that share code, design and interaction behaviour
+
+7
+00:00:25,000 --> 00:00:30,500
+Build apps using the same components as Microsoft from Word and Excel to PowerBI and Teams
+
+8
+00:00:30,500 --> 00:00:35,500
+with accessibility, internationalisation & performance included
+
+9
+00:00:35,500 --> 00:00:38,500
+Fluent Design System for Windows makes your apps feel as though they’re designed
+
+10
+00:00:38,500 --> 00:00:43,500
+with every Windows device in mind such as PCs, Xbox, HoloLens and more
+
+11
+00:00:43,500 --> 00:00:48,500
+Get documentation, tools and samples you need to get your Windows Fluent apps
+
+12
+00:00:48,500 --> 00:00:50,500
+published to the Microsoft Store
+
+13
+00:00:50,500 --> 00:00:54,900
+WinUI allows your Windows apps to be created using the same toolkits that Microsoft
+
+14
+00:00:54,900 --> 00:00:59,500
+apps do such as Maps, Alarm, Calendar and Photo
+
+15
+00:00:59,500 --> 00:01:05,500
+Fluent Design System for iOS to design and build custom apps that are natively iOS but still uniquely Fluent
+
+16
+00:01:05,500 --> 00:01:11,500
+Get documentation, toolkits and guidelines to help get your iOS Fluent Apps published to the App Store
+
+17
+00:01:11,500 --> 00:01:17,500
+Fluent UI Apple allows you to build apps using the same toolkits used by Microsoft 365 apps
+
+18
+00:01:17,500 --> 00:01:21,500
+with a library of controls written in Swift supporting Objective-C
+
+19
+00:01:21,500 --> 00:01:26,500
+Fluent Design System for macOS allows you to build and publish your own Mac desktop apps and add-ins
+
+20
+00:01:26,500 --> 00:01:31,500
+Find components and guidance you need to extend an existing Microsoft app or create your own
+
+21
+00:01:31,500 --> 00:01:36,500
+Fluent UI Apple is a native library where you can share the same resources in your own apps or add-ins
+
+22
+00:01:36,500 --> 00:01:41,500
+as those used by Microsoft 365 apps with a library of controls written in Swift supporting Objective-C
+
+23
+00:01:41,500 --> 00:01:47,500
+Fluent Design System for Android allows you to build custom apps that are natively Android but still uniquely Fluent 
+
+24
+00:01:47,500 --> 00:01:50,600
+Build apps using controls, resources, toolkits & guidelines
+
+25
+00:01:50,600 --> 00:01:56,500
+Fluent UI Android is a native library used by Microsoft 365 apps with a library of controls written in Kotlin
+
+26
+00:01:56,500 --> 00:02:02,500
+Fluent Design System allows building cross-platforms apps and add-ins that work across multiple platforms natively
+
+27
+00:02:02,500 --> 00:02:09,500
+Every platform has its own look-and-feel and can reference each platform’s toolkit when deciding how to build apps
+
+28
+00:02:09,500 --> 00:02:15,500
+Fluent UI React Native is a library built using JavaScript and React Native components with a library of controls
+
+29
+00:02:15,500 --> 00:02:21,500
+written in JavaScript currently supporting Windows and macOS but with iOS and Android support coming soon
+
+30
+00:02:21,500 --> 00:02:26,500
+Fluent Design System is the latest in the evolution of design language from Microsoft
+
+31
+00:02:26,500 --> 00:02:31,500
+Windows Mail has had a variety of icons over the years from 2001 through to 2012
+
+32
+00:02:31,500 --> 00:02:37,500
+where it used the Modern Design Language, then known as “Metro”, introduced with Windows 8
+
+33
+00:02:37,500 --> 00:02:41,500
+Modern Design Language evolved with the release of Windows 10 in 2015
+
+34
+00:02:41,500 --> 00:02:46,500
+Windows Mail got a new icon using the Fluent Design System in 2020
+
+35
+00:02:46,500 --> 00:02:52,700
+Windows Applications such as Alarm, Calendar, Groove Music, Mail, Photos and Tips along with more apps 
+
+36
+00:02:52,700 --> 00:02:56,500
+and services use the Fluent Design System for their look-and-feel and icons 
+
+37
+00:02:56,500 --> 00:03:00,500
+along with other first-party and third-party applications
+
+38
+00:03:00,500 -->  00:03:04,300
+Microsoft Office has changed its icon as well as the look-and-feel over the years with the
+
+39
+00:03:04,300 --> 00:03:09,500
+“Jigsaw Puzzle” look of 1995 slowly becoming more modern and abstract
+
+40
+00:03:09,500 --> 00:03:13,500
+The Modern Design Language in 2012 brought a brand-new icon for Microsoft Office
+
+41
+00:03:13,500 --> 00:03:18,500
+which has evolved into the current icon in 2019 and applications using the Fluent Design System
+
+42
+00:03:18,500 --> 00:03:24,000
+Microsoft Office applications such as Word, Excel, PowerPoint, Outlook, OneNote, SharePoint
+
+43
+00:03:24,000 --> 00:03:31,500
+and more have updated icons as well their look-and-feel allowing for a common design across all platforms
+
+44
+00:03:31,500 --> 00:03:35,600
+including web, desktop, tablet and mobile using the Fluent Design System
+
+45
+00:03:35,600 --> 00:03:40,500
+Fluent Design System is a cross platform design system that gives designers and developers 
+
+46
+00:03:40,500 --> 00:03:43,500
+the frameworks they need to create engaging product experiences
+
+47
+00:03:43,500 --> 00:03:49,500
+Fluent Design System features Design Fundamentals with core design principals, patterns,
+
+48
+00:03:49,500 --> 00:03:55,500
+universal design elements including language, typography, iconography, spacing and colour palette
+
+49
+00:03:55,500 --> 00:03:59,500
+Design Toolkits with cross-platform design, controls, patterns and templates
+
+50
+00:03:59,500 --> 00:04:03,500
+to create coherent experiences across a variety of UI frameworks
+
+51
+00:04:03,500 --> 00:04:08,500
+Fluent Design System can be implemented in code to deliver coherence though controls
+
+52
+00:04:08,500 --> 00:04:13,500
+and design patterns with UI libraries across a variety of frameworks and languages
+
+53
+00:04:13,500 --> 00:04:18,500
+Fluent Design System has a hub for samples, examples, reference documentation and style guides
+
+54
+00:04:18,500 --> 00:04:23,500
+Targets for the Fluent Design System include developing for Web with Fluent UI React,
+
+55
+00:04:23,500 --> 00:04:29,500
+Windows with WinUI as well as Fluent UI for iOS, macOS and Android you can also Target Windows,
+
+56
+00:04:29,500 --> 00:04:33,500
+iOS, macOS and Android with Fluent UI React Native
+
+57
+00:04:33,500 --> 00:04:37,500
+Fluent Design System features System Icons, which are a collection of modern icons from Microsoft 
+
+58
+00:04:37,500 --> 00:04:43,500
+that are friendlier, have rounded corners, simplified shapes and come in regular and filled themes 
+
+59
+00:04:43,500 --> 00:04:53,500
+for both designers and developers, on Figma or GitHub at github.com/microsoft/fluentui-system-icons
+
+60
+00:04:53,500 --> 00:04:57,100
+Windows features the Fluent Design System with the latest updates to Windows 10 bringing 
+
+61
+00:04:57,100 --> 00:05:02,000
+a refreshed look-and-feel to apps and icons and breathing new life into Windows 
+
+62
+00:05:02,000 --> 00:05:06,500
+and consistency with other platforms such as Web and Mobile
+
+63
+00:05:06,500 --> 00:05:11,500
+Xbox features the Fluent Design System with recent updates to the look-and-feel of the Dashboard
+
+64
+00:05:11,500 --> 00:05:16,500
+and consistency with Desktop and Mobile applications that work with the Xbox ecosystem
+
+65
+00:05:16,500 --> 00:05:19,500
+and features many of the new System Icons
+
+66
+00:05:19,500 --> 00:05:22,000
+Getting started using the Fluent Design System
+
+67
+00:05:22,000 --> 00:05:27,500
+Learn about the Fluent Design System, see what’s new and what you can do with Web, Windows, 
+
+68
+00:05:27,500 --> 00:05:34,000
+iOS, macOS, Android and Cross-platform at microsoft.com/design/fluent
+
+69
+00:05:34,000 --> 00:05:38,500
+Learn about Fluent UI, the collection of UX frameworks for creating cross-platform applications
+
+70
+00:05:38,500 --> 00:05:42,500
+with Fluent UI React for the Web and Fluent UI React Native for Windows,
+
+71
+00:05:42,500 --> 00:05:47,500
+iOS, macOS and Android at developer.microsoft.com/fluentui
+
+72
+00:05:47,500 --> 00:05:52,500
+Fluent Design System include Design Toolkits using Sketch for Web, iOS and Android 
+
+73
+00:05:52,500 --> 00:05:59,200
+as well as an Add-ins Toolkit for Office Add-ins. Design Toolkits using Figma for Web, Windows,
+
+74
+00:05:59,200 --> 00:06:03,500
+iOS, Android and SharePoint are available along with Fluent System Icons
+
+75
+00:06:03,500 --> 00:06:08,000
+Add-ins Design Tool kit using Adobe XD is also available
+
+76
+00:06:08,000 --> 00:06:14,500
+Resources such as Fluent UI can be found on GitHub at github.com/microsoft/fluentui
+
+77
+00:06:14,500 --> 00:06:20,500
+Fluent Design System gives designers and developers the frameworks they need to create engaging product experiences
+
+78
+00:06:20,500 --> 00:06:26,500
+Fluent Design System supports platforms including Web, Windows, iOS, macOS, Android as well as
+
+79
+00:06:26,500 --> 00:06:32,500
+cross-platform to work across multiple platforms with accessibility, internationalisation and performance
+
+80
+00:06:32,500 --> 00:06:36,500
+Fluent Design System is the evolution of Microsoft’s design language to deliver a consistent 
+
+81
+00:06:36,500 --> 00:06:41,500
+and coherent experience for modern applications for their look-and-feel and icons
+
+82
+00:06:41,500 --> 00:06:46,500
+Fundamentals for core design principles and universal design elements for Fluent Design System
+
+83
+00:06:46,500 --> 00:06:49,500
+Toolkits for cross-platform controls, patterns and templates
+
+84
+00:06:49,500 --> 00:06:52,500
+Libraries across a variety of frameworks and languages
+
+85
+00:06:52,500 --> 00:06:56,500
+Documentation including samples, examples, style guides and more
+
+86
+00:06:56,500 --> 00:07:01,000
+Get started with Fluent Design System on Web, Windows, iOS, macOS, Android
+
+87
+00:07:01,000 --> 00:07:05,000
+and cross-platform at microsoft.com/design/fluent
+
+88
+00:07:05,000 --> 00:07:09,500
+Fluent UI for a collection of UX frameworks to create cross-platform apps that share code,
+
+89
+00:07:09,500 --> 00:07:14,500
+design and interaction behaviour at developer.microsoft.com/fluentui
+
+90
+00:07:14,500 --> 00:07:22,000
+Thanks for watching this talk about Fluent Design System, you can find out more at tutorialr.com/talks/seriesone
