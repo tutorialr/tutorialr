@@ -1,0 +1,113 @@
+.waves {
+    width:100%;
+    aspect-ratio: 900/90;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.text-tutorialr:hover {
+    color: #5e7495 !important;
+}
+
+.text-tutorialr {
+    color: #3e516c !important;
+}
+
+.text-tutorialr p a {
+    color: #3e516c !important;
+}
+
+.text-tutorialr-light {
+    color: #7694b4 !important;
+}
+
+.text-tutorialr-dark {
+    color: #3c506e !important;
+}
+
+.text-tutorialr-secondary {
+    color: #4e4e4e !important;
+}
+
+.text-tutorialr-muted {
+    color: #b5b5b5 !important;
+}
+
+#tutorialr-navbar .nav-link.active {
+    font-weight:600;
+}
+
+#tutorialr-breadcrumb .breadcrumb-item.active {
+    font-weight:600;
+}
+
+#tutorialr-breadcrumb .breadcrumb-item a {
+    text-decoration: none!important;
+}
+
+.waves-top {
+    background-image: url('../images/waves-top.svg');
+}
+
+.waves-bottom {
+    background-image: url('../images/waves-bottom.svg');
+}
+
+.bg-tutorialr {
+    background-color: #5e7495;
+}
+
+.bg-tutorialr-light {
+    background-color: #7694b4;
+}
+
+.bg-tutorialr-dark {
+    background-color: #3c506e;
+}
+
+.bg-tutorialr-secondary {
+    background-color: #4e4e4e !important;
+}
+
+.bg-tutorialr-muted {
+    background-color: #b5b5b5 !important;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+.tutorialr-carousel .carousel-indicators {
+    margin-top: 5px;
+    position: relative!important;
+}
+
+.tutorialr-carousel .carousel-navigation {
+    top: inherit!important;
+}
+
+.tutorialr-carousel .carousel-navigation .carousel-control-prev-icon, 
+.tutorialr-carousel .carousel-navigation .carousel-control-next-icon {
+    height:1.5rem;
+    width: 1.5rem;
+}
+
+.btn-tutorialr {
+    color:#ffffff!important;
+    background-color:#5e7495!important;
+    border-color:#5e7495!important;
+}
+.btn-tutorialr:hover{
+    background-color:#7694b4!important;
+    border-color:#7694b4!important;
+}
+
+.nav-tutorialr {
+    color: #ffffff!important;
+}
+
+.nav-tutorialr.active {
+    color: #fff!important;
+    background-color:#7694b4!important;
+}
