@@ -2,106 +2,178 @@
 <html lang="en" class="h-100">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-        <title>tutorialr.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <meta name="description" content="tutorialr.com - Tutorials, Talks and Workshops"/>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@tutorialrdotcom"/>
+        <meta name="twitter:creator" content="@rogueplanetoid"/>
+        <meta name="twitter:title" content="tutorialr.com"/>
+        <meta name="twitter:description" content="Tutorials, Talks and Workshops"/>
+        <meta name="twitter:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta name="twitter:image:alt" content="Tutorials, Talks and Workshops"/>
+        <!-- /Twitter -->
+        <!-- Open Graph -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="tutorialr.com"/>
+        <meta property="og:site_name" content="tutorialr.com">
+        <meta property="og:description" content="Tutorials, Talks and Workshops"/>
+        <meta property="og:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta property="og:image:width" content="1280"/>
+        <meta property="og:image:height" content="630"/>
+        <!-- /Open Graph -->
+        <link rel="icon" href="favicon.ico"/>
+        <link href="css/style.css" rel="stylesheet">
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <title>tutorialr.com - Tutorials, Talks and Workshops</title>
     </head>
     <body class="d-flex flex-column h-100">
-		<!-- Main -->
-		<main class="flex-shrink-0">
-			<!-- Navigation -->		
-			<nav class="navbar top navbar-light navbar-expand-lg bg-light">
-				<div class="container-fluid">
-					<a class="navbar-brand" href="/">
-						<img src="images/title.png" height="50" alt="tutorialr.com">
-					</a>
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label=" navigation">
-					<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav">
-						<li class="nav-item">
-						<a class="nav-link" href="talks">talks <span class="badge bg-success">new</span></a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="tutorials">tutorials</a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="workshops">workshops</a>
-						</li>
-					</ul>
-					</div>
-				</div>
-			</nav>
-			<!-- Breadcrumb -->
-			<nav aria-label="breadcrumb" class="m-2">
-				<ol class="breadcrumb">
-					<li class="breadcrumb-item active" aria-current="page">Welcome</li>
-				</ol>
-			</nav>
-			<!-- Content -->	
-			<div class="container px-1 py-1">
-				<div class="row">
-					<div class="col">
-						<div class="card m-2">
-							<div class="row g-0">
-								<div class="col-md-4">
-									<a href="talks"><img src="images/tutorialr-talks-white.png" alt="tutorialr.com/talks" class="img-fluid"></a>
-								</div>
-								<div class="col-md-8">
-									<div class="card-body">
-										<h5 class="card-title">tutorialr.com/talks</h5>
-										<p class="card-text">Talks about a variety of programming topics including Spotify for Developers, Uno Platform and Fluent Design System.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<div class="card m-2">
-							<div class="row g-0">
-								<div class="col-md-4">
-									<a href="tutorials"><img src="images/tutorialr-tutorials-white.png" alt="tutorialr.com/tutorials" class="img-fluid"></a>
-								</div>
-								<div class="col-md-8">
-									<div class="card-body">
-										<h5 class="card-title">tutorialr.com/tutorials</h5>
-										<p class="card-text">Tutorials taking you step-by-step to get started with programming from Universal Windows Platform to micro:bit</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<div class="card m-2">
-							<div class="row g-0">
-								<div class="col-md-4">
-									<a href="workshops"></a><img src="images/tutorialr-workshops-white.png" alt="tutorialr.com/tutorials" class="img-fluid"></a>
-								</div>
-								<div class="col-md-8">
-									<div class="card-body">
-										<h5 class="card-title">tutorialr.com/workshops</h5>
-										<p class="card-text">Workshops to learn more about programming including C# and Spotify for Developers</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main>	
-		<!-- Footer -->
+        <!-- Main -->
+        <main>       
+            <!-- Navigation -->	
+            <nav class="navbar top navbar-light navbar-expand-md bg-brand">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tutorialr-navbar" aria-controls="tutorialr-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">
+                        <img src="images/header.png" alt="tutorialr.com" height="50px">
+                    </a>
+                    <div id="tutorialr-navbar" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr active" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="tutorials">Tutorials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="talks">Talks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="workshops">Workshops</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- /Navigation -->
+            <div class="waves waves-top"></div>
+            <div class="bg-tutorialr">         
+                <!-- Section -->               
+                <section class="text-center text-white container">
+                    <!-- Hero -->
+                    <img class="d-block mx-auto" src="images/tutorialr-white.png" width="75px" height="75px">
+                    <h1 class="display-4 mx-auto">Tutorials, Talks and Workshops</h1>
+                    <p class="lead">
+                        <strong>tutorialr.com</strong> is where you can follow <strong>tutorials</strong>, watch <strong>talks</strong>, try <strong>workshops</strong> and add to your <strong>skills</strong>
+                    </p>
+                    <!-- /Hero -->
+                    <!-- Carousels -->
+                    <div class="row row-cols-1 row-cols-md-3 g-3">
+                        <div class="col">
+                            <!-- Tutorials -->
+                            <div id="carousel-tutorials" class="tutorialr-carousel carousel slide mx-auto" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <a href="tutorials/uwp">
+                                            <img src="tutorials/images/uwp-tutorials.png" class="d-block w-100" alt="Universal Windows Platform Tutorials">
+                                        </a>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <a href="tutorials/microbit">
+                                            <img src="tutorials/images/microbit-tutorials.png" class="d-block w-100" alt="micro:bit Tutorials">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carousel-tutorials" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Universal Windows Platform Tutorials"></button>
+                                    <button type="button" data-bs-target="#carousel-tutorials" data-bs-slide-to="1" class="active" aria-current="true" aria-label="micro:bit Tutorials"></button>
+                                </div>
+                                <button class="carousel-navigation carousel-control-prev" type="button" data-bs-target="#carousel-tutorials" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-navigation carousel-control-next" type="button" data-bs-target="#carousel-tutorials" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <!-- /Tutorials -->
+                        </div>
+                        <div class="col">
+                            <!-- Talks -->
+                            <div id="carousel-talks" class="tutorialr-carousel carousel slide mx-auto" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <a href="talks/seriesone">
+                                            <img src="talks/images/series-one-talks.png" class="d-block w-100" alt="Spotify for Developers, Uno Platform & Fluent Design System">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--<div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carousel-talks" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Spotify for Developers, Uno Platform & Fluent Design System"></button>
+                                </div>
+                                <button class="carousel-navigation carousel-control-prev" type="button" data-bs-target="#carousel-talks" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-navigation carousel-control-next" type="button" data-bs-target="#carousel-talks" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>-->
+                            </div>
+                            <!-- /Talks -->
+                        </div>
+                        <div class="col">
+                            <!-- Workshops -->
+                            <div id="carousel-workshops" class="tutorialr-carousel carousel slide mx-auto" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <a href="workshops/csharp">
+                                            <img src="workshops/images/csharp-workshop.png" class="d-block w-100" alt="C# Workshop">
+                                        </a>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <a href="workshops/spotify-for-developers">
+                                            <img src="workshops/images/spotify-for-developers-workshop.png" class="d-block w-100" alt="Spotify for Developers Workshop">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carousel-workshops" data-bs-slide-to="0" class="active" aria-current="true" aria-label="C# Workshop"></button>
+                                    <button type="button" data-bs-target="#carousel-workshops" data-bs-slide-to="1" class="active" aria-current="true" aria-label="Spotify for Developers Workshop"></button>
+                                </div>
+                                <button class="carousel-navigation carousel-control-prev" type="button" data-bs-target="#carousel-workshops" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-navigation carousel-control-next" type="button" data-bs-target="#carousel-workshops" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div> 
+                            <!-- /Workshops -->    
+                        </div>
+                    </div>
+                    <!-- /Carousels -->
+                </section>
+                <!-- /Section -->    
+            </div>
+            <div class="waves waves-bottom bg-white"></div>  
+        </main>
+        <!-- /Main -->
+        <!-- Footer -->
         <footer class="footer mt-auto">
-            <nav class="navbar bottom navbar-light px-2 py-2 bg-light">
-                <a href="https://www.twitter.com/tutorialrdotcom" target="_blank"><img src="images/twitter-small.png" height="40" alt="@tutorialrdotcom"></a>
-                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="images/cc-by-sa.png" height="40" alt="tutorialr.com"></a>
+            <nav class="navbar bottom navbar-light p-2">
+                <a href="/" target="_blank"><img src="images/footer.png" alt="tutorialr.com" height="40px"></a>
+                <a href="https://www.twitter.com/tutorialrdotcom" target="_blank"><img src="images/twitter.png" height="45px" alt="@tutorialrdotcom"></a>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="images/cc-by-sa.png" height="35px" alt="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"></a>
             </nav>
         </footer>
-        <script src="bootstrap/js/jquery-3.4.1.min.js"></script>
-        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <!-- /Footer -->
+        <!-- Scripts -->
+        <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- /Scripts-->
     </body>
 </html>
