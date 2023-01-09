@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <meta name="description" content="tutorialr.com - Tutorials, Talks and Workshops"/>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@tutorialrdotcom"/>
+        <meta name="twitter:creator" content="@rogueplanetoid"/>
+        <meta name="twitter:title" content="tutorialr.com"/>
+        <meta name="twitter:description" content="Tutorials, Talks and Workshops"/>
+        <meta name="twitter:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta name="twitter:image:alt" content="Tutorials, Talks and Workshops"/>
+        <!-- /Twitter -->
+        <!-- Open Graph -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="tutorialr.com"/>
+        <meta property="og:site_name" content="tutorialr.com">
+        <meta property="og:description" content="Tutorials, Talks and Workshops"/>
+        <meta property="og:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta property="og:image:width" content="1280"/>
+        <meta property="og:image:height" content="630"/>
+        <!-- /Open Graph -->
+        <link rel="icon" href="../../../favicon.ico"/>
+        <link href="../css/win-app-sdk.css" rel="stylesheet">
+        <link href="../../../css/style.css" rel="stylesheet">
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../highlight/css/vs.min.css" rel="stylesheet">
+        <title>tutorialr.com - Tutorials - Windows App SDK - Toast Notifications</title>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <!-- Main -->
+        <main>
+            <!-- Navigation -->	
+            <nav class="navbar top navbar-light navbar-expand-md bg-brand">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tutorialr-navbar" aria-controls="tutorialr-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../">
+                        <img src="../../../images/header.png" alt="tutorialr.com" height="50px">
+                    </a>
+                    <div id="tutorialr-navbar" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../tutorials">Tutorials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-tutorialr active" href="../../winappsdk">Windows App SDK</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../talks">Talks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../workshops">Workshops</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://www.comentsys.com" target="_blank">
+                        <img src="../../../images/comentsys.png" alt="Comentsys" height="50px">
+                    </a>
+                </div>
+            </nav>
+            <!-- /Navigation -->
+            <div class="waves waves-top"></div>
+            <div class="bg-tutorialr">         
+                <!-- Section -->            
+                <section class="text-center text-white container">
+                    <!-- Hero -->
+                    <h1 class="display-4 mx-auto">Toast Notifications</h1>
+                    <p class="lead">
+                        <strong>Learn</strong> to use <strong>Toast Notifications</strong> in <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
+                    </p>
+                    <!-- /Hero -->
+                    <!-- Tutorial -->
+                    <div class="col-lg-10 mx-auto">
+                        <div class="container text-start text-black">
+                            <div class="card position-relative">
+                                <div class="card-header">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-toast-notifications.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Toast Notifications
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>   
+                                <div class="card-body">
+                                    <p>
+                                        <strong>Toast Notifications</strong> shows how you can use <code>ToastNotification</code> with the <strong>Windows App SDK</strong>. 
+                                        This allows you to display a <strong>Toast Notification</strong> for your application in the <strong>Notifications</strong> pane in <strong>Windows</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 1</h2>
+                                    <p>
+                                        Follow <a href="../setup-and-start">Setup and Start</a> on how to get <strong>Setup</strong> and <strong>Install</strong> what you need for <strong>Visual Studio 2022</strong> and <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                In <strong>Windows 11</strong> choose <strong>Start</strong> and then find or search for <strong>Visual Studio 2022</strong> and then select it.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs.png" class="img-fluid" alt="Visual Studio 2022"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Once <strong>Visual Studio 2022</strong> has started select <strong>Create a new project</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-new-project.png" class="img-fluid" alt="Create a new project"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Then choose the <strong>Blank App, Packages (WinUI in Desktop)</strong> and then select <strong>Next</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-win-ui.png" class="img-fluid" alt="Blank App, Packages (WinUI in Desktop)"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>ToastNotifications</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-configure-project.png" class="img-fluid" alt="Configure project" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 2</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio</strong> within <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Add</strong> then <strong>New Item…</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-new-item.png" class="img-fluid" alt="Add New Item" />
+                                    </p>
+                                    <h2 class="display-6">Step 3</h2>
+                                    <p>
+                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>Code</strong> and then select <strong>Code File</strong> from the list next to this, then type in the name of <i>Library.cs</i> and then <strong>Click</strong> on <strong>Add</strong>.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-add-new-item-toast-notifications.png" class="img-fluid" alt="Add New Code File" />
+                                    </p>
+                                    <h2 class="display-6">Step 4</h2>
+                                    <p>
+                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Library.cs</i>, within this type the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+using Microsoft.UI.Xaml.Controls;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Windows.Data.Xml.Dom;
+using Windows.UI.Notifications;
+
+internal class Library
+{
+    public List&lt;string&gt; Options =>
+        Enum.GetValues(typeof(ToastTemplateType))
+        .Cast&lt;ToastTemplateType&gt;()
+        .Select(s => s.ToString())
+        .ToList();
+
+    public void SetToast(ComboBox options, TextBox value)
+    {
+        var selected = options.SelectedValue as string;
+        ToastTemplateType template = Enum.Parse&lt;ToastTemplateType&gt;(selected);
+        XmlDocument toast = ToastNotificationManager.GetTemplateContent(template);
+        XmlNodeList text = toast.GetElementsByTagName("text");
+        if (text.Length > 0)
+        {
+            text[0].AppendChild(toast.CreateTextNode(value.Text));
+        }
+        XmlNodeList image = toast.GetElementsByTagName("image");
+        if (image.Length > 0)
+        {
+            image[0].Attributes.GetNamedItem("src").NodeValue =
+                "Assets/Square44x44Logo.scale-200.png";
+        }
+        ToastNotification notification = new(toast);
+        ToastNotificationManager.CreateToastNotifier().Show(notification);
+    }
+}                                                                                                                     
+                                    </code></pre>  
+                                    <p>
+                                        The <code>Class</code> that has been defined in <i>Library.cs</i> has a <strong>Property</strong> for <code>Options</code>, 
+                                        which is the list of all possible values for the <code>Enum</code> of <code>ToastTemplateType</code> 
+                                        for use with the <code>ComboBox</code>. Then there is the <strong>Method</strong> for <code>SetToast</code> which will 
+                                        get the <code>SelectedValue</code> of a <code>ComboBox</code> passed in and use this to get the 
+                                        <code>ToastTemplateType</code> that was selected in the <code>ComboBox</code>. There is also a 
+                                        <code>TextBox</code> passed in for what value should be shown in the <strong>Toast Notification</strong>. 
+                                        Then there is some code to build up the elements of the <strong>Toast Notification</strong>
+                                        using <strong>XML</strong> which is needed to create the <code>ToastNotification</code> which includes 
+                                        the <code>text</code> and there is also an <code>image</code> set to one of the <strong>Assets</strong> in the 
+                                        application for any <code>ToastTemplateType</code> that supports <strong>Images</strong> and this is then 
+                                        is used to <code>Show</code> the notification with <code>ToastNotificationManager</code>.
+                                    </p>
+
+                                    <h2 class="display-6">Step 5</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>MainWindow.xaml</strong> to see the <strong>XAML</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-xaml-toast-notifications.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 6</h2>
+                                    <p>
+                                        In the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> there will be some <strong>XAML</strong> for a <code>StackPanel</code>, this should be <strong>Removed</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;StackPanel&nbsp;Orientation=&quot;Horizontal&quot;&nbsp;
+HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;x:Name=&quot;myButton&quot;&nbsp;Click=&quot;myButton_Click&quot;&gt;Click&nbsp;Me&lt;/Button&gt;
+&lt;/StackPanel&gt;                               
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 7</h2>
+                                    <p>
+                                        While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> above <code>&lt;/Window&gt;</code>, type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;Grid&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid.RowDefinitions&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;RowDefinition&nbsp;Height=&quot;Auto&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;RowDefinition&nbsp;Height=&quot;*&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;RowDefinition&nbsp;Height=&quot;Auto&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Grid.RowDefinitions&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;StackPanel&nbsp;Grid.Row=&quot;0&quot;&nbsp;Margin=&quot;25&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ComboBox&nbsp;Margin=&quot;5&quot;&nbsp;Name=&quot;Options&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HorizontalAlignment=&quot;Stretch&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TextBox&nbsp;Margin=&quot;5&quot;&nbsp;PlaceholderText=&quot;Value&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name=&quot;Value&quot;&nbsp;HorizontalAlignment=&quot;Stretch&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/StackPanel&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;CommandBar&nbsp;Grid.Row=&quot;3&quot;&nbsp;VerticalAlignment=&quot;Bottom&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AppBarButton&nbsp;Icon=&quot;Comment&quot;&nbsp;Label=&quot;Accept&quot;&nbsp;Click=&quot;Accept_Click&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/CommandBar&gt;
+&lt;/Grid&gt;                                                                                                                                       
+                                    </code></pre> 
+                                    <p>
+                                        This <strong>XAML</strong> features a <code>Grid</code> with a <code>StackPanel</code> for the <code>ComboBox</code> for the <i>Options</i> and a <code>TextBox</code> for the <i>Value</i>, along with an <code>AppBarButton</code> to show the <code>ToastNotification</code> when <strong>Clicked</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 8</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>MainWindow.xaml</strong> then double-click on <strong>MainWindow.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-code-toast-notifications.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 9</h2>
+                                    <p>
+                                        In the <strong>Code</strong> for <code>MainWindow.xaml.cs</code> there be a Method of <code>myButton_Click(...)</code> this should be <strong>Removed</strong> by removing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void myButton_Click(object sender, RoutedEventArgs e)
+{
+    myButton.Content = "Clicked";
+}                                        
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 10</h2>
+                                    <p>
+                                        Once <code>myButton_Click(...)</code> has been removed, type the following <strong>Code</strong> below the end of the <strong>Constructor</strong> of <code>public MainWindow() { ... }</code>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private readonly Library _library = new();
+
+private void Accept_Click(object sender, RoutedEventArgs e)
+{
+    _library.SetToast(Options, Value);
+}                                                                                                                                                                                                                                 
+                                    </code></pre>
+                                    <p>
+                                        The <strong>Method</strong> of <code>Accept_Click</code> will call the <strong>Method</strong> within <i>Library.cs</i> of <code>SetToast</code> from an <strong>Instance</strong> of <code>Library</code> called <code>_library</code> created with <code>new()</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 11</h2>
+                                    <p>
+                                        While still in the <strong>Code</strong> for <code>MainWindow.xaml.cs</code> within the <strong>Constructor</strong> of <code>public MainWindow() { ... }</code> and below the line of <code>this.InitializeComponent();</code> type in the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+Options.ItemsSource = _library.Options;
+Options.SelectedIndex = 0;                                                                                                                                                                                                                                                                   
+                                    </code></pre>
+                                    <p>
+                                        The <strong>Constructor</strong> of <code>public MainWindow() { ... }</code> should look like the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public MainWindow()
+{
+    this.InitializeComponent();
+    Options.ItemsSource = _library.Options;
+    Options.SelectedIndex = 0;
+}                                                                                                                                                                                                                                                                      
+                                    </code></pre>
+                                    <p>
+                                        These set up the <strong>Properties</strong> for the <code>ComboBox</code> for <code>ItemsSource</code> to the list of <code>Options</code> from <code>Library</code> and for <code>SelectedIndex</code> to the first index which is <code>0</code> to select the first item.
+                                    </p>
+                                    <h2 class="display-6">Step 12</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>ToastNotifications (Package)</strong> to <strong>Start</strong> the application.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-debug-toast-notifications.png" class="img-fluid" alt="ToastNotifications (Package)"/>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <h2 class="display-6">Step 13</h2>
+                                    <p>
+                                        Once running you should see the <code>ComboBox</code>, <code>TextBox</code> and <code>CommandBar</code> with the <i>Accept</i> option.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-running-toast-notifications.png" class="img-fluid" alt="Toast Notifications Running" />
+                                    </p>
+                                    <h2 class="display-6">Step 14</h2>
+                                    <p>
+                                        You can select a value from the <code>ComboBox</code> then type a value in the <code>TextBox</code> and then use <i>Accept</i> to see a <strong>Toast Notification</strong> in the <strong>Notifications</strong> for <strong>Windows</strong> for the application.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-output-toast-notifications.png" class="img-fluid" alt="Toast BadgeNotifications Output" />
+                                    </p>
+                                    <h2 class="display-6">Step 15</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                To <strong>Exit</strong> the <strong>Windows App SDK</strong> application, select the <strong>Close</strong> button from the top right of the application as that concludes this <strong>Tutorial</strong> for <strong>Windows App SDK</strong> from <a href="https://www.tutorialr.com">tutorialr.com</a>!
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-close.png" class="img-fluid" alt="Close application"/>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="card-footer">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-toast-notifications.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Toast Notifications
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>                   
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Tutorial -->
+                </section>
+                <!-- /Section -->    
+            </div>
+            <div class="waves waves-bottom bg-white"></div>  
+        </main>
+        <!-- /Main -->
+        <!-- Footer -->
+        <footer class="footer mt-auto">
+            <nav class="navbar bottom navbar-light p-2">
+                <a href="../../../"><img src="../../../images/footer.png" alt="tutorialr.com" height="40px"></a>
+                <a href="https://www.twitter.com/tutorialrdotcom" target="_blank"><img src="../../../images/twitter.png" height="45px" alt="@tutorialrdotcom"></a>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="../../../images/cc-by-sa.png" height="35px" alt="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"></a>
+            </nav>
+        </footer>
+        <!-- /Footer -->
+        <!-- Scripts -->
+        <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../../../highlight/js/highlight.min.js"></script>
+        <!-- /Scripts-->
+    </body>
+</html>

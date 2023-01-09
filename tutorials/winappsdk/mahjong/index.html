@@ -1,0 +1,976 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <meta name="description" content="tutorialr.com - Tutorials, Talks and Workshops"/>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@tutorialrdotcom"/>
+        <meta name="twitter:creator" content="@rogueplanetoid"/>
+        <meta name="twitter:title" content="tutorialr.com"/>
+        <meta name="twitter:description" content="Tutorials, Talks and Workshops"/>
+        <meta name="twitter:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta name="twitter:image:alt" content="Tutorials, Talks and Workshops"/>
+        <!-- /Twitter -->
+        <!-- Open Graph -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="tutorialr.com"/>
+        <meta property="og:site_name" content="tutorialr.com">
+        <meta property="og:description" content="Tutorials, Talks and Workshops"/>
+        <meta property="og:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta property="og:image:width" content="1280"/>
+        <meta property="og:image:height" content="630"/>
+        <!-- /Open Graph -->
+        <link rel="icon" href="../../../favicon.ico"/>
+        <link href="../css/win-app-sdk.css" rel="stylesheet">
+        <link href="../../../css/style.css" rel="stylesheet">
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../highlight/css/vs.min.css" rel="stylesheet">
+        <title>tutorialr.com - Tutorials - Windows App SDK - Mahjong</title>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <!-- Main -->
+        <main>
+            <!-- Navigation -->	
+            <nav class="navbar top navbar-light navbar-expand-md bg-brand">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tutorialr-navbar" aria-controls="tutorialr-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../">
+                        <img src="../../../images/header.png" alt="tutorialr.com" height="50px">
+                    </a>
+                    <div id="tutorialr-navbar" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../tutorials">Tutorials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-tutorialr active" href="../../winappsdk">Windows App SDK</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../talks">Talks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../workshops">Workshops</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://www.comentsys.com" target="_blank">
+                        <img src="../../../images/comentsys.png" alt="Comentsys" height="50px">
+                    </a>
+                </div>
+            </nav>
+            <!-- /Navigation -->
+            <div class="waves waves-top"></div>
+            <div class="bg-tutorialr">         
+                <!-- Section -->            
+                <section class="text-center text-white container">
+                    <!-- Hero -->
+                    <h1 class="display-4 mx-auto">Mahjong</h1>
+                    <p class="lead">
+                        <strong>Learn</strong> creating a <strong>Mahjong</strong> game using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
+                    </p>
+                    <!-- /Hero -->
+                    <!-- Tutorial -->
+                    <div class="col-lg-10 mx-auto">
+                        <div class="container text-start text-black">
+                            <div class="card position-relative">
+                                <div class="card-header">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-mahjong.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Mahjong
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>   
+                                <div class="card-body">
+                                    <p>
+                                        <strong>Mahjong</strong> shows how you can create the game of Mahjong based on the work by <a href="https://github.com/cry-inc" target="_blank">cry-inc</a>, 
+                                        using game assets and a toolkit from <strong>NuGet</strong> using the <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 1</h2>
+                                    <p>
+                                        Follow <a href="../setup-and-start">Setup and Start</a> on how to get <strong>Setup</strong> and <strong>Install</strong> what you need for <strong>Visual Studio 2022</strong> and <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                In <strong>Windows 11</strong> choose <strong>Start</strong> and then find or search for <strong>Visual Studio 2022</strong> and then select it.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs.png" class="img-fluid" alt="Visual Studio 2022"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Once <strong>Visual Studio 2022</strong> has started select <strong>Create a new project</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-new-project.png" class="img-fluid" alt="Create a new project"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Then choose the <strong>Blank App, Packages (WinUI in Desktop)</strong> and then select <strong>Next</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-win-ui.png" class="img-fluid" alt="Blank App, Packages (WinUI in Desktop)"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>Mahjong</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-configure-project.png" class="img-fluid" alt="Configure project" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 2</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio within</strong> <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Manage NuGet Packages...</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-manage-nuget-packages.png" class="img-fluid" alt="Manage NuGet Packages" />
+                                    </p>
+                                    <h2 class="display-6">Step 3</h2>
+                                    <p>
+                                        Then in the <strong>NuGet Package Manager</strong> from the <strong>Browse</strong> tab search for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> and then select <strong>Comentsys.Toolkit.WindowsAppSdk by Comentsys</strong> as indicated and select <strong>Install</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-nuget-toolkit.png" class="img-fluid" alt="NuGet Package Manager Comentsys.Toolkit.WindowsAppSdk" />
+                                    </p>
+                                    <p>
+                                        This will add the package for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> to your <strong>Project</strong>. If you get the <strong>Preview Changes</strong> screen saying 
+                                        <strong>Visual Studio is about to make changes to this solution. Click OK to proceed with the changes listed below.</strong> You can read the message and then select 
+                                        <strong>OK</strong> to <strong>Install</strong> the package.
+                                    </p>
+                                    <h2 class="display-6">Step 4</h2>
+                                    <p>
+                                        Then while still in the <strong>NuGet Package Manager</strong> from the <strong>Browse</strong> tab search for <strong>Comentsys.Assets.Games</strong> and then select <strong>Comentsys.Assets.Games by Comentsys</strong> as indicated and select <strong>Install</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-nuget-games.png" class="img-fluid" alt="NuGet Package Manager Comentsys.Assets.Games" />
+                                    </p>
+                                    <p>
+                                        This will add the package for <strong>Comentsys.Assets.Games </strong>to your <strong>Project</strong>. If you get the <strong>Preview Changes</strong> screen saying 
+                                        <strong>Visual Studio is about to make changes to this solution. Click OK to proceed with the changes listed below.</strong> You can read the message and then select 
+                                        <strong>OK</strong> to <strong>Install</strong> the package, then you can close the <strong>tab</strong> for <strong>Nuget: Games</strong> by selecting the <strong>x</strong> next to it. 
+                                    </p>
+                                    <h2 class="display-6">Step 5</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio</strong> within <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Add</strong> then <strong>New Item…</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-new-item.png" class="img-fluid" alt="Add New Item" />
+                                    </p>
+                                    <h2 class="display-6">Step 6</h2>
+                                    <p>
+                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>Code</strong> and then select <strong>Code File</strong> from the list next to this, then type in the name of <i>Library.cs</i> and then <strong>Click</strong> on <strong>Add</strong>.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-add-new-item-mahjong.png" class="img-fluid" alt="Add New Code File" />
+                                    </p>
+                                    <h2 class="display-6">Step 7</h2>
+                                    <p>
+                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Library.cs</i> then define a <code>namespace</code> allowing classes to be defined together, 
+                                        usually each is separate but will be defined in <i>Library.cs</i> by typing the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+using Comentsys.Assets.Games;
+using Comentsys.Toolkit.Binding;
+using Comentsys.Toolkit.WindowsAppSdk;
+using Microsoft.UI;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Data;
+using Microsoft.UI.Xaml.Input;
+using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Shapes;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Mahjong;
+
+// State & Result Enums and Position & Tile Class 
+
+// Pair Class
+
+public class Board
+{
+    // Board Constants, Variables, Event & Get Methods
+
+    // Can Move, Can Move Up, Can Move Right, Can Move Left, Can Move & Next Move
+
+    // Add, Remove, Removable & Structure
+
+    // Get Hint & Scramble
+
+    // Constructor, Play, Set Hint & Set Disabled
+
+}
+
+// State to Brush Converter
+
+public class Library
+{
+    // Constants, Variables, Get Source, Set Sources, Get Tile & Shuffle
+
+    // Play
+
+    // Add
+
+    // Layout, Remove, New & Hint
+
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 8</h2>
+                                    <p>
+                                        Still in <i>Library.cs</i> for the <code>namespace</code> of <code>Mahjong</code> you can define an <code>enum</code> for <code>State</code> and <code>Result</code> along with a 
+                                        <code>Class</code> for <code>Position</code> and <code>Tile</code> to represent the <strong>Mahjong</strong> after the <strong>Comment</strong> of <code>// State & Result Enums and Position & Tile Class</code> by typing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public enum State
+{
+    None,
+    Selected,
+    Disabled,
+    Hint
+}
+
+public enum Result
+{
+    DifferentTypes = 1,
+    UnableToMove = 2,
+    InvalidMove = 4,
+    ValidMove = 8,
+    NoMoves = 16,
+    Winner = 32,
+}
+
+public class Position
+{
+    public int Row { get; set; }
+
+    public int Column { get; set; }
+
+    public int Index { get; set; }
+
+    public Position(int row, int column, int index) =>
+        (Row, Column, Index) = (row, column, index);
+}
+
+public class Tile : ObservableBase
+{
+    private State _state;
+
+    public Position Position { get; }
+
+    public MahjongTileType? Type { get; set; }
+
+    public State State { get => _state; set => SetProperty(ref _state, value); }
+
+    public Tile(MahjongTileType type, Position position) =>
+        (Type, Position) = (type, Position = position);
+
+    public Tile(Position position) =>
+        (Type, Position) = (null, Position = position);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+                                    </code></pre>
+                                    <h2 class="display-6">Step 9</h2>
+                                    <p>
+                                        Still in the <code>namespace</code> of <code>Mahjong</code> in <i>Library.cs</i> after the <strong>Comment</strong> of <code>// Pair Class</code> type the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public class Pair
+{
+    private static readonly Random _random = new((int)DateTime.UtcNow.Ticks);
+
+    public Tile TileOne { get; set; }
+
+    public Tile TileTwo { get; set; }
+
+    public Pair(Tile tileOne, Tile tileTwo) =>
+        (TileOne, TileTwo) = (tileOne, tileTwo);
+
+    public static Pair Get(List<Tile> tiles)
+    {
+        if(tiles.Count &lt; 2)
+            throw new Exception();
+        var index = _random.Next() % tiles.Count;
+        var tileOne = tiles[index];
+        tiles.RemoveAt(index);
+        index = _random.Next() % tiles.Count;
+        var tileTwo = tiles[index];
+        tiles.RemoveAt(index);
+        return new Pair(tileOne, tileTwo);
+    }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                    </code></pre>
+                                    <p>
+                                        <code>Pair</code> will represent a couple of <code>Tile</code> classes with a <strong>Property</strong> for each one it will also from a <code>List</code> of them, get a randomly selected set of them.
+                                    </p>
+                                    <h2 class="display-6">Step 10</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Mahjong</code> in <i>Library.cs</i> and the <code>class</code> of <code>Board</code> and after the <strong>Comment</strong> 
+                                        of <code>// Board Constants, Variables, Event & Get Methods</code> type the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private const int rows = 8;
+private const int columns = 10;
+private const int indexes = 5;
+
+private static readonly byte[] _layout =
+{
+    0, 1, 1, 1, 1, 1, 1, 1, 1, 0,
+    1, 1, 2, 2, 2, 2, 2, 2, 1, 1,
+    1, 1, 2, 3, 4, 4, 3, 2, 1, 1,
+    1, 1, 2, 4, 5, 5, 4, 2, 1, 1,
+    1, 1, 2, 4, 5, 5, 4, 2, 1, 1,
+    1, 1, 2, 3, 4, 4, 3, 2, 1, 1,
+    1, 1, 2, 2, 2, 2, 2, 2, 1, 1,
+    0, 1, 1, 1, 1, 1, 1, 1, 1, 0
+};
+private static readonly Random _random = new((int)DateTime.UtcNow.Ticks);
+
+private static readonly List&lt;MahjongTileType&gt; _types =
+    Enum.GetValues(typeof(MahjongTileType))
+    .Cast&lt;MahjongTileType&gt;()
+    .Where(w => w != MahjongTileType.Back)
+    .ToList();
+
+private readonly List&lt;Tile&gt; _tiles;
+
+public delegate void RemovedEventHandler(Tile tile);
+
+public event RemovedEventHandler Removed;
+
+public IEnumerable&lt;Tile&gt; Get(int row, int column) =>
+    _tiles.Where(w => w.Position.Row == row
+    && w.Position.Column == column)
+        .OrderBy(o => o.Position.Index);
+
+private Tile Get(int row, int column, int index) =>
+    _tiles.FirstOrDefault(
+        f => f.Position.Row == row
+    && f.Position.Column == column
+    && f.Position.Index == index);
+
+private Tile Get(Tile tile) =>
+    Get(tile.Position.Row, tile.Position.Column, tile.Position.Index);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                                    </code></pre>  
+                                    <p>
+                                        <strong>Constants</strong> define the layout and configuration of the board for the game, there are <strong>Variables</strong> for both the types and tiles 
+                                        themselves along with an <strong>Event Handler</strong> which will be used when playing the game when a tile is removed from the board. 
+                                        Then there are <strong>Methods</strong> that are used to obtain a <code>Tile</code> by <code>row</code> & <code>column</code> along with those plus <code>index</code> as well as by <code>Tile</code>.                                 
+                                    </p>
+                                    <h2 class="display-6">Step 11</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Mahjong</code> in <i>Library.cs</i> and the <code>class</code> of <code>Board</code> and after 
+                                        the <strong>Comment</strong> of <code>// Can Move, Can Move Up, Can Move Right, Can Move Left, Can Move & Next Move</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private bool CanMove(Tile tile, int rowOffset, int columnOffset, int indexOffset)
+{
+    var found = Get(
+        tile.Position.Row + rowOffset, 
+        tile.Position.Column + columnOffset, 
+        tile.Position.Index + indexOffset
+    );
+    return found == null || tile == found;
+}
+
+private bool CanMoveUp(Tile tile) =>
+    CanMove(tile, 0, 0, 1);
+
+private bool CanMoveRight(Tile tile) =>
+    CanMove(tile, 1, 0, 0);
+
+private bool CanMoveLeft(Tile tile) =>
+    CanMove(tile, -1, 0, 0);
+
+public bool CanMove(Tile tile)
+{
+    bool up = CanMoveUp(tile);
+    bool upLeft = up && CanMoveLeft(tile);
+    bool upRight = up && CanMoveRight(tile);
+    return upLeft || upRight;
+}
+
+private bool NextMove()
+{
+    var removable = new List&lt;Tile&gt;();
+    foreach (var tile in _tiles)
+        if (CanMove(tile))
+            removable.Add(tile);
+    for (int i = 0; i &lt; removable.Count; i++)
+        for (int j = 0; j &lt; removable.Count; j++)
+            if (j != i && removable[i].Type == removable[j].Type)
+                return true;
+    return false;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                                    </code></pre>  
+                                    <p>
+                                        <code>CanMove</code>, <code>CanMoveUp</code>, <code>CanMoveRight</code> and <code>CanMoveLeft</code> will be used to determine if a <code>Tile</code> can be moved in those directions 
+                                        and <code>CanMove</code> will be used by <code>NextMove</code> to determine the next available move.
+                                    </p>
+                                    <h2 class="display-6">Step 12</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Mahjong</code> in <i>Library.cs</i> and the <code>class</code> of <code>Boeard</code> and after 
+                                        the <strong>Comment</strong> of <code>// Add, Remove, Removable & Structure</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void Add(Tile tile) =>
+    _tiles.Add(tile);
+
+private void Remove(Tile tile)
+{
+    if (tile == Get(tile))
+    {
+        _tiles.Remove(tile);
+        Removed?.Invoke(tile);
+    }
+}
+
+private List&lt;Tile&gt; Removable()
+{
+    List&lt;Tile&gt; removable = new();
+    foreach (var tile in _tiles)
+        if (CanMove(tile))
+            removable.Add(tile);
+    foreach (Tile tile in removable)
+        Remove(tile);
+    return removable;
+}
+
+private void Structure()
+{
+    for (int index = 0; index &lt; indexes; index++)
+    {
+        for (int row = 0; row &lt; rows; row++)
+        {
+            for (int column = 0; column &lt; columns; column++)
+            {
+                var current = _layout[row * columns + column];
+                if (current > 0 && index &lt; current)
+                    Add(new Tile(new Position(row, column, index)));
+            }
+        }
+    }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                    </code></pre>  
+                                    <p>
+                                        <code>Add</code> will be used to add a <code>Tile</code> to the <code>List</code> of them and <code>Remove</code> will not only remove it from the 
+                                        <code>List</code> but it will also <code>Invoke</code> the <strong>Event Handler</strong>. <code>Removable</code> will determine which tiles can be 
+                                        removed and <code>Structure</code> will create the structure for the tiles in the game.
+                                    </p>
+                                    <h2 class="display-6">Step 13</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Mahjong</code> in <i>Library.cs</i> and the <code>class</code> of <code>Board</code> after 
+                                        the <strong>Comment</strong> of <code>// Get Hint & Scramble</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private Pair GetHint()
+{
+    var tiles = new List&lt;Tile&gt;();
+    foreach (var tile in _tiles)
+        if (CanMove(tile))
+            tiles.Add(tile);
+    for (int i = 0; i &lt; tiles.Count; i++)
+    {
+        for (int j = 0; j &lt; tiles.Count; j++)
+        {
+            if (i == j)
+                continue;
+            if (tiles[i].Type == tiles[j].Type)
+                return new Pair(tiles[i], tiles[j]);
+        }
+    }
+    return null;
+}
+
+public void Scramble()
+{
+    List&lt;Pair&gt; reversed = new();
+    while (_tiles.Count > 0)
+    {
+        List&lt;Tile&gt; removable = new();
+        removable.AddRange(Removable());
+        while (removable.Count > 1)
+            reversed.Add(Pair.Get(removable));
+        foreach (var tile in removable)
+            Add(tile);
+    }
+    for (int i = reversed.Count - 1; i >= 0; i--)
+    {
+        int index = _random.Next() % _types.Count;
+        reversed[i].TileOne.Type = _types[index];
+        reversed[i].TileTwo.Type = _types[index];
+        Add(reversed[i].TileOne);
+        Add(reversed[i].TileTwo);
+    }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                                    </code></pre>  
+                                    <p>
+                                        <code>GetHint</code> will be used to determine which are the next set of tiles that can be moved anywhere on the gameboard to 
+                                        give a hint to the player of the game by checking which ones can be moved with <code>CanMove</code> and <code>Scramble</code> 
+                                        will be used to randomise the tiles used in the game.
+                                    </p>
+                                    <h2 class="display-6">Step 14</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Mahjong</code> in <i>Library.cs</i> and the <code>class</code> of <code>Board</code> after 
+                                        the <strong>Comment</strong> of <code>// Constructor, Play, Set Hint & Set Disabled</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public Board()
+{
+    _tiles = new List&lt;Tile&gt;();
+    Structure();
+    Scramble();
+}
+
+public Result Play(Tile tileOne, Tile tileTwo)
+{
+    if (tileOne == tileTwo)
+        return Result.InvalidMove;
+    if (tileOne.Type != tileTwo.Type)
+        return Result.DifferentTypes;
+    if(!CanMove(tileOne) || !CanMove(tileTwo))
+        return Result.UnableToMove;
+    Remove(tileOne);
+    Remove(tileTwo);
+    if(_tiles.Count == 0)
+        return Result.Winner;
+    var result = Result.ValidMove;
+    if(!NextMove())
+        result |= Result.NoMoves;
+    return result;
+}
+
+public void SetHint()
+{
+    if (_tiles.Count > 0)
+    { 
+        var hint = GetHint();
+        if (hint != null)
+        {
+            hint.TileOne.State = State.Hint;
+            hint.TileTwo.State = State.Hint;
+        }
+    }
+}
+
+public void SetDisabled()
+{
+    if(_tiles.Count > 0)
+        foreach(var tile in _tiles)
+            tile.State = CanMove(tile) ? 
+                State.None : State.Disabled;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+                                    </code></pre>  
+                                    <p>
+                                        <code>Play</code> will be used to check if the action is valid and produce the necessary outcome as well as checking if the 
+                                        action is valid and if the game has been won or no further actions are valid, <code>SetHint</code> will be used to indicate 
+                                        which tiles are the hint ones and <code>SetDisabled</code> will show which tiles are not valid.
+                                    </p>
+                                    <h2 class="display-6">Step 15</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Mahjong</code> in <i>Library.cs</i> after the 
+                                        <strong>Comment</strong> of <code>// State to Brush Converter</code> type the following <strong>Class</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public class StateToBrushConverter : IValueConverter
+{
+    public object Convert(object value, Type targetType, 
+        object parameter, string language) =>
+        new SolidColorBrush((State)value switch
+        {
+            State.None => Colors.Transparent,
+            State.Selected => Colors.ForestGreen,
+            State.Disabled => Colors.DarkSlateGray,
+            State.Hint => Colors.CornflowerBlue,
+            _ => Colors.Transparent
+        });
+
+    public object ConvertBack(object value, Type targetType, 
+        object parameter, string language) =>
+        throw new NotImplementedException();
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                                    </code></pre>  
+                                    <p>
+                                        <code>StateToBrushConverter</code> defines an <code>IValueConverter</code> that will be used with <strong>Data Binding</strong>, and this will 
+                                        return a <code>SolidColorBrush</code> of a given colour depending on the value of the <code>State</code> used.
+                                    </p>
+                                    <h2 class="display-6">Step 16</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Mahjong</code> in <i>Library.cs</i> and the <code>class</code> of <code>Library</code> after 
+                                        the <strong>Comment</strong> of <code>// Constants, Variables, Get Source, Set Sources, Get Tile & Shuffle</code> 
+                                        type the following <strong>Constants</strong>, <strong>Variables</strong> and <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private const string title = "Mahjong";
+private const int rows = 8;
+private const int columns = 10;
+private const int tile_width = 74;
+private const int tile_height = 95;
+private const int square_height = 120;
+private const int square_width = 90;
+private readonly Dictionary&lt;MahjongTileType, ImageSource&gt; _sources = new();
+
+private Board _board = new();
+private Dialog _dialog;
+private Grid _grid;
+private Tile _selected;
+private bool _gameOver;
+
+private static async Task&lt;ImageSource&gt; GetSourceAsync(MahjongTileType type) =>
+    await MahjongTile.Get(type)
+    .AsImageSourceAsync();
+
+private async Task SetSourcesAsync()
+{
+    if (_sources.Count == 0)
+        foreach (var mahjongTileType in Enum.GetValues&lt;MahjongTileType&gt;())
+            _sources.Add(mahjongTileType, await GetSourceAsync(mahjongTileType));
+}
+
+private ImageSource GetTile(MahjongTileType? type) =>
+    type == null ? null : _sources[type.Value];
+
+private void Shuffle()
+{
+    _board.Scramble();
+    _grid.Children.Clear();
+    for (int column = 0; column &lt; columns; column++)
+        for (int row = 0; row &lt; rows; row++)
+            Add(row, column);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                                    </code></pre>  
+                                    <p>
+                                        <strong>Constants</strong> are values that are used in the game that will not change and <strong>Variables</strong> are used to store various 
+                                        values and controls needed for the game. <code>GetSourceAsync</code>, <code>SetSourcesAsync</code> and <code>GetTile</code> are used for the assets 
+                                        for the <strong>Mahjong</strong> tiles and <code>Shuffle</code> is used to randomise the tiles displayed in the game the <strong>Method</strong> of <code>Add</code> 
+                                        will be defined later.
+                                    </p>
+                                    <h2 class="display-6">Step 17</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Mahjong</code> in <i>Library.cs</i> and the <code>class</code> of <code>Library</code> after 
+                                        the <strong>Comment</strong> of <code>// Play</code> type the following <strong>Method</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private async void Play(Tile tile)
+{
+    if(!_gameOver)
+    {
+        if (!_board.CanMove(tile))
+            return;
+        if (_selected == null || tile == _selected)
+        {
+            if (_selected == tile)
+            {
+                tile.State = State.None;
+                _selected = null;
+            }
+            else
+            {
+                tile.State = State.Selected;
+                _selected = tile;
+            }
+        }
+        else
+        {
+            var state = _board.Play(_selected, tile);
+            _board.SetDisabled();
+            if (state == Result.Winner)
+                _gameOver = true;
+            else if ((state & Result.NoMoves) != 0)
+            {
+                if (await _dialog.ConfirmAsync(
+                    "No further moves. Shuffle?", "Yes", "No"))
+                    Shuffle();
+            }
+            _selected = null;
+        }
+    }
+    if(_gameOver)
+        _dialog.Show("You Won, Game Over!");
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                    </code></pre>  
+                                    <p>
+                                        <code>Play</code> will check if the game is over, then will check if there is a valid move then will update the selected <code>Tile</code> and then once 
+                                        there are two the turn will be checked to see if it is valid then if the game is not over or there are moves still available 
+                                        the game will continue otherwise the game will be over or if no more moves then there will be the option to shuffle the tiles.
+                                    </p>
+                                    <h2 class="display-6">Step 18</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Mahjong</code> in <i>Library.cs</i> and the <code>class</code> of <code>Library</code> after 
+                                        the <strong>Comment</strong> of <code>// Add </code> type the following <strong>Method</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void Add(int row, int column)
+{
+    Canvas square = new()
+    {
+        Width = square_width, Height = square_height
+    };
+    var tiles = _board.Get(row, column);
+    foreach (var tile in tiles)
+    {
+        Canvas canvas = new()
+        {
+            Tag = tile, Width = tile_width, Height = tile_height,
+        };
+        Image image = new()
+        {
+            Tag = tile,
+            Width = tile_width,
+            Height = tile_height,
+            Source = GetTile(tile.Type)
+        };
+        image.Tapped += (object sender, TappedRoutedEventArgs e) =>
+            Play((sender as Image).Tag as Tile);
+        canvas.Children.Add(image);
+        var rectangle = new Rectangle()
+        {
+            Tag = tile,
+            Opacity = 0.25,
+            Width = tile_width,
+            Height = tile_height,
+            IsHitTestVisible = false   
+        };
+        var binding = new Binding()
+        {
+            Source = tile,
+            Mode = BindingMode.OneWay,
+            Converter = new StateToBrushConverter(),
+            Path = new PropertyPath(nameof(tile.State)),
+            UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged
+        };
+        BindingOperations.SetBinding(rectangle, Shape.FillProperty, binding);
+        if (!_board.CanMove(tile))
+            tile.State = State.Disabled;
+        canvas.Children.Add(rectangle);
+        Canvas.SetTop(canvas, -(tile.Position.Index * 5));
+        square.Children.Add(canvas);
+    }
+    square.SetValue(Grid.RowProperty, row);
+    square.SetValue(Grid.ColumnProperty, column);
+    _grid.Children.Add(square);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 19</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Reversi</code> in <i>Library.cs</i> and the <code>class</code> of <code>Library</code> after 
+                                        the <strong>Comment</strong> of <code>// Layout, Remove, New & Hint</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void Layout(Grid grid)
+{
+    grid.Children.Clear();
+    _grid = new Grid();
+    for (int column = 0; column &lt; columns; column++)
+    {
+        _grid.RowDefinitions.Add(new RowDefinition());
+        for (int row = 0; row &lt; rows; row++)
+        {
+            if (row == 0)
+                _grid.ColumnDefinitions.Add(new ColumnDefinition());
+            Add(row, column);
+        }
+    }
+    grid.Children.Add(_grid);
+}
+
+private void Remove(Tile tile)
+{
+    foreach (var item in _grid.Children.Cast&lt;Canvas&gt;()
+                .Where(w => w.Children.Any()))
+    {
+        var canvas = item.Children
+        .Cast&lt;Canvas&gt;()
+        .FirstOrDefault(w => w.Tag as Tile == tile);
+        if (canvas != null)
+            canvas.Children.Clear();
+    }
+}
+
+public async void New(Grid grid)
+{
+    _gameOver = false;
+    _board = new Board();
+    _board.Removed += (Tile tile) =>
+        Remove(tile);
+    await SetSourcesAsync();
+    Layout(grid);
+    _dialog = new Dialog(grid.XamlRoot, title);
+}
+
+public void Hint() =>
+    _board.SetHint();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                    </code></pre>  
+                                    <p>
+                                        <code>Layout</code> will create the look-and-feel of the game by setting up all the elements, <code>Remove</code> will be set to use the <strong>Event Handler</strong>, 
+                                        <code>New</code> will setup and start a new game and assign the <strong>Event Handler</strong> and <code>Hint</code> will be used to display the hint for the player.
+                                    </p>
+                                    <h2 class="display-6">Step 20</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>MainWindow.xaml</strong> to see the <strong>XAML</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-xaml-mahjong.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 21</h2>
+                                    <p>
+                                        In the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> there will be some <strong>XAML</strong> for a <code>StackPanel</code>, this should be <strong>Removed</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;StackPanel&nbsp;Orientation=&quot;Horizontal&quot;&nbsp;
+HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;x:Name=&quot;myButton&quot;&nbsp;Click=&quot;myButton_Click&quot;&gt;Click&nbsp;Me&lt;/Button&gt;
+&lt;/StackPanel&gt;                               
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 22</h2>
+                                    <p>
+                                        While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> above <code>&lt;/Window&gt;</code>, type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;Grid&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid&nbsp;Margin=&quot;50&quot;&nbsp;Name=&quot;Display&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HorizontalAlignment=&quot;Center&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VerticalAlignment=&quot;Center&quot;&nbsp;Loaded=&quot;New&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ProgressRing/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Grid&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;CommandBar&nbsp;VerticalAlignment=&quot;Bottom&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AppBarButton&nbsp;Icon=&quot;Page2&quot;&nbsp;Label=&quot;New&quot;&nbsp;Click=&quot;New&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AppBarButton&nbsp;Icon=&quot;Help&quot;&nbsp;Label=&quot;Hint&quot;&nbsp;Click=&quot;Hint&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/CommandBar&gt;
+&lt;/Grid&gt;                                                                                                                                                                                                                                                                                 
+                                    </code></pre> 
+                                    <p>
+                                        This <strong>XAML</strong> contains a <code>Grid</code> with a <code>Viewbox</code> which will <strong>Scale</strong> a <code>Grid</code> which contains a <code>ProgressRing</code> which will display 
+                                        until all assets have been set and it has a <code>Loaded</code> event handler for <code>New</code> which is also shared by an <code>AppBarButton</code> along with another for <code>Hint</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 23</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>MainWindow.xaml</strong> then double-click on <strong>MainWindow.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-code-mahjong.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 24</h2>
+                                    <p>
+                                        In the <strong>Code</strong> for <code>MainWindow.xaml.cs</code> there be a Method of <code>myButton_Click(...)</code> this should be <strong>Removed</strong> by removing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void myButton_Click(object sender, RoutedEventArgs e)
+{
+    myButton.Content = "Clicked";
+}                                        
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 25</h2>
+                                    <p>
+                                        Once <code>myButton_Click(...)</code> has been removed, within the <strong>Constructor</strong> of <code>public MainWindow() { ... }</code> and below the line of <code>this.InitializeComponent();</code> type in the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private readonly Library _library = new();
+
+private void New(object sender, RoutedEventArgs e) =>
+    _library.New(Display);
+
+private void Hint(object sender, RoutedEventArgs e) =>
+    _library.Hint();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                                    </code></pre>
+                                    <p>
+                                        Here an <strong>Instance</strong> of <code>Library</code> is created then below this is the <strong>Method</strong> of <code>New</code> 
+                                        and <code>Hint</code> that will be used with <strong>Event Handler</strong> from the <strong>XAML</strong>, this <strong>Method</strong> 
+                                        uses Arrow Syntax with the <code>=></code> for an Expression Body which is useful when a <strong>Method</strong> only has one line.
+                                    </p>
+                                    <h2 class="display-6">Step 26</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>Mahjong (Package)</strong> to <strong>Start</strong> the application.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-debug-mahjong.png" class="img-fluid" alt="Mahjong (Package)"/>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <h2 class="display-6">Step 27</h2>
+                                    <p>
+                                        Once running you can then tap on a <strong>Tile</strong> and then select another <strong>Tile</strong> that matches to remove it from the <strong>Board</strong> - if you're not sure which two 
+                                        to pick then use <i>Hint</i> to indicate which to choose, if no more can be moved then you'll get the option to <strong>Shuffle</strong> them, and you win when all 
+                                        the tiles have been removed or select <i>New</i> to start a new game.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-running-mahjong.png" class="img-fluid" alt="Mahjong Running and Output" />
+                                    </p>
+                                    <h2 class="display-6">Step 28</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                To <strong>Exit</strong> the <strong>Windows App SDK</strong> application, select the <strong>Close</strong> button from the top right of the application as that concludes this <strong>Tutorial</strong> for <strong>Windows App SDK</strong> from <a href="https://www.tutorialr.com">tutorialr.com</a>!
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-close.png" class="img-fluid" alt="Close application"/>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="card-footer">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-mahjong.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Mahjong
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>                   
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Tutorial -->
+                </section>
+                <!-- /Section -->    
+            </div>
+            <div class="waves waves-bottom bg-white"></div>  
+        </main>
+        <!-- /Main -->
+        <!-- Footer -->
+        <footer class="footer mt-auto">
+            <nav class="navbar bottom navbar-light p-2">
+                <a href="../../../"><img src="../../../images/footer.png" alt="tutorialr.com" height="40px"></a>
+                <a href="https://www.twitter.com/tutorialrdotcom" target="_blank"><img src="../../../images/twitter.png" height="45px" alt="@tutorialrdotcom"></a>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="../../../images/cc-by-sa.png" height="35px" alt="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"></a>
+            </nav>
+        </footer>
+        <!-- /Footer -->
+        <!-- Scripts -->
+        <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../../../highlight/js/highlight.min.js"></script>
+        <!-- /Scripts-->
+    </body>
+</html>

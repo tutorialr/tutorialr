@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <meta name="description" content="tutorialr.com - Tutorials, Talks and Workshops"/>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@tutorialrdotcom"/>
+        <meta name="twitter:creator" content="@rogueplanetoid"/>
+        <meta name="twitter:title" content="tutorialr.com"/>
+        <meta name="twitter:description" content="Tutorials, Talks and Workshops"/>
+        <meta name="twitter:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta name="twitter:image:alt" content="Tutorials, Talks and Workshops"/>
+        <!-- /Twitter -->
+        <!-- Open Graph -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="tutorialr.com"/>
+        <meta property="og:site_name" content="tutorialr.com">
+        <meta property="og:description" content="Tutorials, Talks and Workshops"/>
+        <meta property="og:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta property="og:image:width" content="1280"/>
+        <meta property="og:image:height" content="630"/>
+        <!-- /Open Graph -->
+        <link rel="icon" href="../../../favicon.ico"/>
+        <link href="../css/win-app-sdk.css" rel="stylesheet">
+        <link href="../../../css/style.css" rel="stylesheet">
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../highlight/css/vs.min.css" rel="stylesheet">
+        <title>tutorialr.com - Tutorials - Windows App SDK - Four in Row</title>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <!-- Main -->
+        <main>
+            <!-- Navigation -->	
+            <nav class="navbar top navbar-light navbar-expand-md bg-brand">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tutorialr-navbar" aria-controls="tutorialr-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../">
+                        <img src="../../../images/header.png" alt="tutorialr.com" height="50px">
+                    </a>
+                    <div id="tutorialr-navbar" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../tutorials">Tutorials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-tutorialr active" href="../../winappsdk">Windows App SDK</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../talks">Talks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../workshops">Workshops</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://www.comentsys.com" target="_blank">
+                        <img src="../../../images/comentsys.png" alt="Comentsys" height="50px">
+                    </a>
+                </div>
+            </nav>
+            <!-- /Navigation -->
+            <div class="waves waves-top"></div>
+            <div class="bg-tutorialr">         
+                <!-- Section -->            
+                <section class="text-center text-white container">
+                    <!-- Hero -->
+                    <h1 class="display-4 mx-auto">Four in Row</h1>
+                    <p class="lead">
+                        <strong>Learn</strong> creating a <strong>Four in Row</strong> game using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
+                    </p>
+                    <!-- /Hero -->
+                    <!-- Tutorial -->
+                    <div class="col-lg-10 mx-auto">
+                        <div class="container text-start text-black">
+                            <div class="card position-relative">
+                                <div class="card-header">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-four-in-row.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Four in Row
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>   
+                                <div class="card-body">
+                                    <p>
+                                        <strong>Four in Row</strong> shows how you can create simple a two-player game where the objective is to get four items
+                                        in a horizontal, vertical or diagonal row displayed with emoji and with a toolkit from <strong>NuGet</strong> using the <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 1</h2>
+                                    <p>
+                                        Follow <a href="../setup-and-start">Setup and Start</a> on how to get <strong>Setup</strong> and <strong>Install</strong> what you need for <strong>Visual Studio 2022</strong> and <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                In <strong>Windows 11</strong> choose <strong>Start</strong> and then find or search for <strong>Visual Studio 2022</strong> and then select it.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs.png" class="img-fluid" alt="Visual Studio 2022"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Once <strong>Visual Studio 2022</strong> has started select <strong>Create a new project</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-new-project.png" class="img-fluid" alt="Create a new project"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Then choose the <strong>Blank App, Packages (WinUI in Desktop)</strong> and then select <strong>Next</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-win-ui.png" class="img-fluid" alt="Blank App, Packages (WinUI in Desktop)"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>FourInRow</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-configure-project.png" class="img-fluid" alt="Configure project" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 2</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio within</strong> <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Manage NuGet Packages...</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-manage-nuget-packages.png" class="img-fluid" alt="Manage NuGet Packages" />
+                                    </p>
+                                    <h2 class="display-6">Step 3</h2>
+                                    <p>
+                                        Then in the <strong>NuGet Package Manager</strong> from the <strong>Browse</strong> tab search for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> and then select <strong>Comentsys.Toolkit.WindowsAppSdk by Comentsys</strong> as indicated and select <strong>Install</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-nuget-toolkit.png" class="img-fluid" alt="NuGet Package Manager Comentsys.Toolkit.WindowsAppSdk" />
+                                    </p>
+                                    <p>
+                                        This will add the package for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> to your <strong>Project</strong>. If you get the <strong>Preview Changes</strong> screen saying 
+                                        <strong>Visual Studio is about to make changes to this solution. Click OK to proceed with the changes listed below.</strong> You can read the message and then select 
+                                        <strong>OK</strong> to <strong>Install</strong> the package.
+                                    </p>
+                                    <h2 class="display-6">Step 4</h2>
+                                    <p>
+                                        Then while still in the <strong>NuGet Package Manager</strong> from the <strong>Browse</strong> tab search for <strong>Comentsys.Assets.FluentEmoji</strong> and then select <strong>Comentsys.Assets.FluentEmoji by Comentsys</strong> as indicated and select <strong>Install</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-nuget-emoji.png" class="img-fluid" alt="NuGet Package Manager Comentsys.Assets.FluentEmoji" />
+                                    </p>
+                                    <p>
+                                        This will add the package for <strong>Comentsys.Assets.FluentEmoji </strong>to your <strong>Project</strong>. If you get the <strong>Preview Changes</strong> screen saying 
+                                        <strong>Visual Studio is about to make changes to this solution. Click OK to proceed with the changes listed below.</strong> You can read the message and then select 
+                                        <strong>OK</strong> to <strong>Install</strong> the package, then you can close the <strong>tab</strong> for <strong>Nuget: FourInRow</strong> by selecting the <strong>x</strong> next to it. 
+                                    </p>
+                                    <h2 class="display-6">Step 5</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio</strong> within <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Add</strong> then <strong>New Item…</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-new-item.png" class="img-fluid" alt="Add New Item" />
+                                    </p>
+                                    <h2 class="display-6">Step 6</h2>
+                                    <p>
+                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>Code</strong> and then select <strong>Code File</strong> from the list next to this, then type in the name of <i>Library.cs</i> and then <strong>Click</strong> on <strong>Add</strong>.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-add-new-item-four-in-row.png" class="img-fluid" alt="Add New Code File" />
+                                    </p>
+                                    <h2 class="display-6">Step 7</h2>
+                                    <p>
+                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Library.cs</i>, within this type the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+using Comentsys.Assets.FluentEmoji;
+using Comentsys.Toolkit.WindowsAppSdk;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using System.Linq;
+
+public class Library
+{
+    private const string title = "Four In Row";
+    private const int total = 3;
+    private const int size = 7;
+    private readonly string[] _players = { string.Empty, "Yellow", "Red" };
+    private readonly int[,] _board = new int[size, size];
+
+    private int _value = 0;
+    private int _amend = 0;
+    private int _player = 0;
+    private bool _won = false;
+    private Dialog _dialog;
+
+    // Check Vertical & Check Horizontal
+
+    // Check Diagonal Top Left & Check Diagonal Top Right
+
+    // Winner, Full & Asset
+
+    // Set & Add
+
+    // Layout & New
+
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                    </code></pre>  
+                                    <p>
+                                        The <code>Class</code> that has been defined in so far <i>Library.cs</i> has <code>using</code> for the packages that were added of <code>Comentsys.Assets.FluentEmoji</code> 
+                                        and <code>Comentsys.Toolkit.WindowsAppSdk</code> amongst others needed. There are also some <code>const</code> and <code>readonly</code> values for parts of the game and to 
+                                        represent the board along with a <code>Dialog</code> that will be used to display messages in the game.
+                                    </p>
+                                    <h2 class="display-6">Step 8</h2>
+                                    <p>
+                                        Still in the <code>Class</code> for <i>Library.cs</i> after the <strong>Comment</strong> of <code>// Check Vertical & Check Horizontal</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private bool CheckVertical(int row, int column)
+{
+    _value = 0;
+    do
+    {
+        _value++;
+    }
+    while (row + _value &lt; size &&
+    _board[column, row + _value] == _player);
+    return _value > total;
+}
+
+private bool CheckHorizontal(int row, int column)
+{
+    _value = 0;
+    _amend = 0;
+    // From Left
+    do
+    {
+        _value++;
+    }
+    while (column - _value >= 0 &&
+    _board[column - _value, row] == _player);
+    if (_value > total)
+        return true;
+    // Deduct Middle - Prevent double count
+    _value -= 1;
+    // Then Right
+    do
+    {
+        _value++;
+        _amend++;
+    }
+    while (column + _amend &lt; size &&
+    _board[column + _amend, row] == _player);
+    return _value > total;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+                                    </code></pre>  
+                                    <p>
+                                        <code>CheckVertical</code> will check to see if there is a vertical set of four items for the current player or for a horizontal set of four items then will use <code>CheckHorizontal</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 9</h2>
+                                    <p>
+                                        While still in the <code>Class</code> for <i>Library.cs</i> after the <strong>Comment</strong> of <code>// Check Diagonal Top Left & Check Diagonal Top Right</code> 
+                                        type in the following <strong>Methods</strong> to check for a set of four diagonal items for a player:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private bool CheckDiagonalTopLeft(int row, int column)
+{
+    _value = 0;
+    _amend = 0;
+    // From Top Left
+    do
+    {
+        _value++;
+    }
+    while (column - _value >= 0 && row - _value >= 0 &&
+    _board[column - _value, row - _value] == _player);
+    if (_value > total)
+        return true;
+    _value -= 1; // Deduct Middle - Prevent double count
+    // To Bottom Right
+    do
+    {
+        _value++;
+        _amend++;
+    }
+    while (column + _amend &lt; size && row + _amend &lt; size &&
+    _board[column + _amend, row + _amend] == _player);
+    return _value > total;
+}
+
+private bool CheckDiagonalTopRight(int row, int column)
+{
+    _value = 0;
+    _amend = 0;
+    // From Top Right
+    do
+    {
+        _value++;
+    }
+    while (column + _value &lt; size && row - _value >= 0 &&
+    _board[column + _value, row - _value] == _player);
+    if (_value > total)
+        return true;
+    _value -= 1; // Deduct Middle - Prevent double count
+    // To Bottom Left
+    do
+    {
+        _value++;
+        _amend++;
+    }
+    while (column - _amend >= 0 &&
+    row + _amend &lt; size &&
+    _board[column - _amend,
+    row + _amend] == _player);
+    return _value > total;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                    </code></pre>
+                                    <h2 class="display-6">Step 10</h2>
+                                    <p>
+                                        While still in the <code>Class</code> for <i>Library.cs</i> after the <strong>Comment</strong> of <code>// Winner, Full & Asset </code> 
+                                        type in the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private bool Winner(int row, int column)
+{
+    bool vertical = CheckVertical(row, column);
+    bool horizontal = CheckHorizontal(row, column);
+    bool diagonalTopLeft = CheckDiagonalTopLeft(row, column);
+    bool diagonalTopRight = CheckDiagonalTopRight(row, column);
+    return vertical || horizontal ||
+    diagonalTopLeft || diagonalTopRight;
+}
+
+private bool Full()
+{
+    for (int row = 0; row &lt; size; row++)
+    {
+        for (int column = 0; column &lt; size; column++)
+        {
+            if (_board[column, row] == 0)
+            {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+private Viewbox Asset(int player) => new()
+{
+    Child = new Asset()
+    {
+        AssetResource = FlatFluentEmoji.Get(
+        player == 1 ? FluentEmojiType.YellowCircle :
+        FluentEmojiType.RedCircle)
+    }
+};                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                                    </code></pre>
+                                    <p>
+                                        <code>Winner</code> will use the previous <strong>Methods</strong> to check if the current player is the winner to see if there is a vertical, horizontal or diagonal set of items. 
+                                        <code>Full</code> will be used to check if the board is full and <code>Asset</code> will be used to create the <strong>Emoji</strong> to represent the players with a <i>Yellow Circle</i> and a <i>Red Circle</i>.
+                                    </p>
+                                    <h2 class="display-6">Step 11</h2>
+                                    <p>
+                                        While still in the <code>Class</code> for <i>Library.cs</i> after the <strong>Comment</strong> of <code>// Set & Add</code> 
+                                        type in the following <strong>Methods</strong> which are <code>Set</code> to place an item for a player and <code>Add</code> for the <code>Button</code> and <strong>Events</strong> which form the game board.
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void Set(Grid grid, int row, int column)
+{
+    for (int i = size - 1; i > -1; i--)
+    {
+        if (_board[column, i] == 0)
+        {
+            _board[column, i] = _player;
+            Button button = (Button)grid.Children.Single(
+            w => Grid.GetRow((Button)w) == i
+            && Grid.GetColumn((Button)w) == column);
+            button.Content = Asset(_player);
+            row = i;
+            break;
+        }
+    }
+    if (Winner(row, column))
+    {
+        _won = true;
+        _dialog.Show($"{_players[_player]} has won!");
+    }
+    else if (Full())
+        _dialog.Show("Board Full!");
+    _player = _player == 1 ? 2 : 1; // Set Player
+}
+
+private void Add(Grid grid, int row, int column)
+{
+    Button button = new()
+    {
+        Width = 100,
+        Height = 100,
+        Name = $"{row}:{column}"
+    };
+    button.Click += (object sender, RoutedEventArgs e) =>
+    {
+        if (!_won)
+        {
+            button = (Button)sender;
+            row = (int)button.GetValue(Grid.RowProperty);
+            column = (int)button.GetValue(Grid.ColumnProperty);
+            if (_board[column, 0] == 0) // Check Free Row
+                Set(grid, row, column);
+        }
+        else
+            _dialog.Show("Game Over!");
+    };
+    button.SetValue(Grid.ColumnProperty, column);
+    button.SetValue(Grid.RowProperty, row);
+    grid.Children.Add(button);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+                                    </code></pre>
+                                    <p>
+                                        <code>Winner</code> will use the previous <strong>Methods</strong> to check if the current player is the winner to see if there is a vertical, horizontal or diagonal set of items. 
+                                        <code>Full</code> will be used to check if the board is full and <code>Asset</code> will be used to create the <strong>Emoji</strong> to represent the players with a <i>Yellow Circle</i> and a <i>Red Circle</i>.
+                                    </p>
+                                    <h2 class="display-6">Step 12</h2>
+                                    <p>
+                                        While still in the <code>Class</code> for <i>Library.cs</i> after the <strong>Comment</strong> of <code>// Layout & New</code> type in the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void Layout(Grid grid)
+{
+    grid.Children.Clear();
+    grid.ColumnDefinitions.Clear();
+    grid.RowDefinitions.Clear();
+    // Setup Grid
+    for (int index = 0; index &lt; size; index++)
+    {
+        grid.RowDefinitions.Add(new RowDefinition());
+        grid.ColumnDefinitions.Add(new ColumnDefinition());
+    }
+    // Setup Board
+    for (int column = 0; column &lt; size; column++)
+    {
+        for (int row = 0; row &lt; size; row++)
+        {
+            Add(grid, row, column);
+            _board[row, column] = 0;
+        }
+    }
+}
+
+public async void New(Grid grid)
+{
+    _won = false;
+    _dialog = new Dialog(grid.XamlRoot, title);
+    _player = await _dialog.ConfirmAsync("Who goes First?",
+        _players[1], _players[2]) ? 1 : 2;
+    Layout(grid);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                    </code></pre>
+                                    <p>
+                                        <code>Layout</code> creates the look-and-feel of the game by setting out the game board and <code>New</code> will start a new game and ask which player should go first as either <i>Yellow</i> or <i>Red</i>.
+                                    </p>
+                                    <h2 class="display-6">Step 13</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>MainWindow.xaml</strong> to see the <strong>XAML</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-xaml-four-in-row.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 14</h2>
+                                    <p>
+                                        In the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> there will be some <strong>XAML</strong> for a <code>StackPanel</code>, this should be <strong>Removed</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;StackPanel&nbsp;Orientation=&quot;Horizontal&quot;&nbsp;
+HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;x:Name=&quot;myButton&quot;&nbsp;Click=&quot;myButton_Click&quot;&gt;Click&nbsp;Me&lt;/Button&gt;
+&lt;/StackPanel&gt;                               
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 15</h2>
+                                    <p>
+                                        While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> above <code>&lt;/Window&gt;</code>, type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;Grid&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid&nbsp;Margin=&quot;50&quot;&nbsp;Name=&quot;Display&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HorizontalAlignment=&quot;Center&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VerticalAlignment=&quot;Center&quot;&nbsp;Loaded=&quot;New&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;CommandBar&nbsp;VerticalAlignment=&quot;Bottom&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AppBarButton&nbsp;Icon=&quot;Page2&quot;&nbsp;Label=&quot;New&quot;&nbsp;Click=&quot;New&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/CommandBar&gt;
+&lt;/Grid&gt;                                                                                                                                                                                                                                                                                 
+                                    </code></pre> 
+                                    <p>
+                                        This <strong>XAML</strong> contains a <code>Grid</code> with a <strong>Viewbox</strong> which will <strong>Scale</strong> a <code>Grid</code>. 
+                                        It has a <code>Loaded</code> event handler for <code>New</code> which is also shared by the <code>AppBarButton</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 16</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>MainWindow.xaml</strong> then double-click on <strong>MainWindow.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-code-four-in-row.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 17</h2>
+                                    <p>
+                                        In the <strong>Code</strong> for <code>MainWindow.xaml.cs</code> there be a Method of <code>myButton_Click(...)</code> this should be <strong>Removed</strong> by removing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void myButton_Click(object sender, RoutedEventArgs e)
+{
+    myButton.Content = "Clicked";
+}                                        
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 18</h2>
+                                    <p>
+                                        Once <code>myButton_Click(...)</code> has been removed, within the <strong>Constructor</strong> of <code>public MainWindow() { ... }</code> and below the line of <code>this.InitializeComponent();</code> type in the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private readonly Library _library = new();
+
+private void New(object sender, RoutedEventArgs e) =>
+    _library.New(Display);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                    </code></pre>
+                                    <p>
+                                        Here an <strong>Instance</strong> of <code>Library</code> is created then below this is the <strong>Method</strong> of <code>New</code> that will be used with <strong>Event Handler</strong> 
+                                        from the <code>XAML</code>, this <strong>Method</strong> uses <strong>Arrow Syntax</strong> with the <code>=></code> for an expression body which is useful when a <strong>Method</strong> only has one line.
+                                    </p>
+                                    <h2 class="display-6">Step 19</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>FourInRow (Package)</strong> to <strong>Start</strong> the application.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-debug-four-in-row.png" class="img-fluid" alt="FourInRow (Package)"/>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <h2 class="display-6">Step 20</h2>
+                                    <p>
+                                        Once running you can choose to play as <i>Yellow</i> or <i>Red</i> then the first player to get a horizontal, vertical or diagonal set of items wins the game or you can restart the game by selecting <i>New</i>.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-running-four-in-row.png" class="img-fluid" alt="Four in Row Running and Output" />
+                                    </p>
+                                    <h2 class="display-6">Step 21</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                To <strong>Exit</strong> the <strong>Windows App SDK</strong> application, select the <strong>Close</strong> button from the top right of the application as that concludes this <strong>Tutorial</strong> for <strong>Windows App SDK</strong> from <a href="https://www.tutorialr.com">tutorialr.com</a>!
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-close.png" class="img-fluid" alt="Close application"/>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="card-footer">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-four-in-row.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Four in Row
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>                   
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Tutorial -->
+                </section>
+                <!-- /Section -->    
+            </div>
+            <div class="waves waves-bottom bg-white"></div>  
+        </main>
+        <!-- /Main -->
+        <!-- Footer -->
+        <footer class="footer mt-auto">
+            <nav class="navbar bottom navbar-light p-2">
+                <a href="../../../"><img src="../../../images/footer.png" alt="tutorialr.com" height="40px"></a>
+                <a href="https://www.twitter.com/tutorialrdotcom" target="_blank"><img src="../../../images/twitter.png" height="45px" alt="@tutorialrdotcom"></a>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="../../../images/cc-by-sa.png" height="35px" alt="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"></a>
+            </nav>
+        </footer>
+        <!-- /Footer -->
+        <!-- Scripts -->
+        <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../../../highlight/js/highlight.min.js"></script>
+        <!-- /Scripts-->
+    </body>
+</html>

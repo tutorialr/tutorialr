@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <meta name="description" content="tutorialr.com - Tutorials, Talks and Workshops"/>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@tutorialrdotcom"/>
+        <meta name="twitter:creator" content="@rogueplanetoid"/>
+        <meta name="twitter:title" content="tutorialr.com"/>
+        <meta name="twitter:description" content="Tutorials, Talks and Workshops"/>
+        <meta name="twitter:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta name="twitter:image:alt" content="Tutorials, Talks and Workshops"/>
+        <!-- /Twitter -->
+        <!-- Open Graph -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="tutorialr.com"/>
+        <meta property="og:site_name" content="tutorialr.com">
+        <meta property="og:description" content="Tutorials, Talks and Workshops"/>
+        <meta property="og:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta property="og:image:width" content="1280"/>
+        <meta property="og:image:height" content="630"/>
+        <!-- /Open Graph -->
+        <link rel="icon" href="../../../favicon.ico"/>
+        <link href="../css/win-app-sdk.css" rel="stylesheet">
+        <link href="../../../css/style.css" rel="stylesheet">
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../highlight/css/vs.min.css" rel="stylesheet">
+        <title>tutorialr.com - Tutorials - Windows App SDK - Connected Animation</title>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <!-- Main -->
+        <main>
+            <!-- Navigation -->	
+            <nav class="navbar top navbar-light navbar-expand-md bg-brand">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tutorialr-navbar" aria-controls="tutorialr-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../">
+                        <img src="../../../images/header.png" alt="tutorialr.com" height="50px">
+                    </a>
+                    <div id="tutorialr-navbar" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../tutorials">Tutorials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-tutorialr active" href="../../winappsdk">Windows App SDK</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../talks">Talks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../workshops">Workshops</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://www.comentsys.com" target="_blank">
+                        <img src="../../../images/comentsys.png" alt="Comentsys" height="50px">
+                    </a>
+                </div>
+            </nav>
+            <!-- /Navigation -->
+            <div class="waves waves-top"></div>
+            <div class="bg-tutorialr">         
+                <!-- Section -->            
+                <section class="text-center text-white container">
+                    <!-- Hero -->
+                    <h1 class="display-4 mx-auto">Connection Animation</h1>
+                    <p class="lead">
+                        <strong>Learn</strong> to use a <strong>Connected Animation</strong> in <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
+                    </p>
+                    <!-- /Hero -->
+                    <!-- Tutorial -->
+                    <div class="col-lg-10 mx-auto">
+                        <div class="container text-start text-black">
+                            <div class="card position-relative">
+                                <div class="card-header">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-connected-animation.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Connected Animation
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>   
+                                <div class="card-body">
+                                    <p>
+                                        <strong>Connected Animation</strong> shows how you can create <strong>Connected Animations</strong> between <strong>Pages</strong> within an
+                                        application using the <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 1</h2>
+                                    <p>
+                                        Follow <a href="../setup-and-start">Setup and Start</a> on how to get <strong>Setup</strong> and <strong>Install</strong> what you need for <strong>Visual Studio 2022</strong> and <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                In <strong>Windows 11</strong> choose <strong>Start</strong> and then find or search for <strong>Visual Studio 2022</strong> and then select it.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs.png" class="img-fluid" alt="Visual Studio 2022"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Once <strong>Visual Studio 2022</strong> has started select <strong>Create a new project</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-new-project.png" class="img-fluid" alt="Create a new project"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Then choose the <strong>Blank App, Packages (WinUI in Desktop)</strong> and then select <strong>Next</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-win-ui.png" class="img-fluid" alt="Blank App, Packages (WinUI in Desktop)"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>ConnectedAnimation</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-configure-project.png" class="img-fluid" alt="Configure project" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 2</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio</strong> within <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Add</strong> then <strong>New Item…</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-new-item.png" class="img-fluid" alt="Add New Item" />
+                                    </p>
+                                    <h2 class="display-6">Step 3</h2>
+                                    <p>
+                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>Code</strong> and then select <strong>Code File</strong> from the list next to this, then type in the name of <i>Library.cs</i> and then <strong>Click</strong> on <strong>Add</strong>.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-add-new-item-connected-animation.png" class="img-fluid" alt="Add New Code File" />
+                                    </p>
+                                    <h2 class="display-6">Step 4</h2>
+                                    <p>
+                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Library.cs</i>, within this type the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Media.Animation;
+using Microsoft.UI.Xaml.Shapes;
+using System;
+using System.Linq;
+
+internal static class Library
+{
+    private const string animate_back = "AnimateBack";
+    private const string animate_next = "AnimateNext";
+
+    public static Frame Frame { get; set; }
+
+    public static string Current { get; set; }
+
+    public static void Back(ListView listview)
+    {
+        var rectangle = listview.Items
+        .SingleOrDefault(f => (f as Rectangle)
+        .Tag.Equals(Current)) as Rectangle;
+        var animation = ConnectedAnimationService
+        .GetForCurrentView()
+        .GetAnimation(animate_back);
+        animation?.TryStart(rectangle);
+    }
+
+    public static Brush Next(object selected)
+    {
+        var rectangle = selected as Rectangle;
+        Current = rectangle.Tag as string;
+        ConnectedAnimationService
+        .GetForCurrentView()
+        .PrepareToAnimate(animate_next, rectangle);
+        return rectangle.Fill;
+    }
+
+    // Other Methods
+
+}                                                                                                                                                                                                                                                                                                                                                                                               
+                                    </code></pre>  
+                                    <p>
+                                        The <code>Class</code> that has been defined so far in <i>Library.cs</i> has <code>const</code> values along with <strong>Properties</strong> for <code>Frame</code> and <code>Current</code> then a 
+                                        <strong>Method</strong> for <code>Back</code> and <code>Next</code> that will be used to create the <strong>Connected Animation</strong> when going backwards and forwards between the 
+                                        <strong>Pages</strong> using the <code>ConnectedAnimationService</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 5</h2>
+                                    <p>
+                                        While still in the <code>Class</code> for <i>Library.cs</i> and after the <strong>Comment</strong> of <code>// Other Methods</code> type in the following other <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public static void From(Rectangle from)
+{
+    ConnectedAnimationService
+    .GetForCurrentView()
+    .PrepareToAnimate(animate_back, from);
+}
+
+public static void Loaded(Rectangle rectangle)
+{
+    var animation = ConnectedAnimationService
+    .GetForCurrentView()
+    .GetAnimation(animate_next);
+    rectangle.Opacity = 1;
+    animation?.TryStart(rectangle);
+}
+
+public static void Navigate(Type page, object parameter)
+{
+    Frame.Navigate(page, Next(parameter));
+}
+
+public static Brush GetBrush(object parameter)
+{
+    return parameter as SolidColorBrush;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                                    </code></pre>  
+                                    <p>
+                                        The <strong>Methods</strong> for <code>From</code> and <code>Loaded</code> will create the animation flow when going between the <strong>Pages</strong> and <strong>Method</strong> for <code>Navigate</code> will use the 
+                                        <strong>Method</strong> for <code>Navigate</code> of the <code>Frame</code> and the <strong>Method</strong> for <code>GetBrush</code> will return a <code>SolidColorBrush</code> from an <code>object</code> of <code>parameter</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 6</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio</strong> within <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Add</strong> then <strong>New Item…</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-new-item.png" class="img-fluid" alt="Add New Item" />
+                                    </p>
+                                    <h2 class="display-6">Step 7</h2>
+                                    <p>
+                                        Then in <strong>Add New Item</strong> from the <strong>WinUI</strong> items list, select <strong>Page</strong> and then select <strong>Blank Page (WinUI 3)</strong> 
+                                        from the list next to this, then type in the name of <i>ContentPage.xaml</i> and then <strong>Click</strong> on <strong>Add</strong>.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-add-new-item-content-connected-animation.png" class="img-fluid" alt="Add New Blank page" />
+                                    </p>
+                                    <h2 class="display-6">Step 8</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>ContentPage.xaml</strong> to see the <strong>XAML</strong> for the <strong>Content Page</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-content-xaml-connected-animation.png" class="img-fluid" alt="Solution Explorer ContentPage.xaml"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 9</h2>
+                                    <p>
+                                        Then in the <strong>XAML</strong> for <strong>ContentPage.xaml</strong>, below <code>&lt;Grid&gt;</code> and above <code>&lt;/Grid&gt;</code>, type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;ListView&nbsp;Name=&quot;Display&quot;&nbsp;Margin=&quot;10&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Rectangle&nbsp;HorizontalAlignment=&quot;Left&quot;&nbsp;Margin=&quot;10&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Width=&quot;64&quot;&nbsp;Height=&quot;64&quot;&nbsp;Tag=&quot;Black&quot;&nbsp;Fill=&quot;Black&quot;&nbsp;Tapped=&quot;Rectangle_Tapped&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Rectangle&nbsp;HorizontalAlignment=&quot;Left&quot;&nbsp;Margin=&quot;10&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Width=&quot;64&quot;&nbsp;Height=&quot;64&quot;&nbsp;Tag=&quot;Gray&quot;&nbsp;Fill=&quot;Gray&quot;&nbsp;Tapped=&quot;Rectangle_Tapped&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Rectangle&nbsp;HorizontalAlignment=&quot;Left&quot;&nbsp;Margin=&quot;10&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Width=&quot;64&quot;&nbsp;Height=&quot;64&quot;&nbsp;Tag=&quot;Red&quot;&nbsp;Fill=&quot;Red&quot;&nbsp;Tapped=&quot;Rectangle_Tapped&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Rectangle&nbsp;HorizontalAlignment=&quot;Left&quot;&nbsp;Margin=&quot;10&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Width=&quot;64&quot;&nbsp;Height=&quot;64&quot;&nbsp;Tag=&quot;Orange&quot;&nbsp;Fill=&quot;Orange&quot;&nbsp;Tapped=&quot;Rectangle_Tapped&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Rectangle&nbsp;HorizontalAlignment=&quot;Left&quot;&nbsp;Margin=&quot;10&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Width=&quot;64&quot;&nbsp;Height=&quot;64&quot;&nbsp;Tag=&quot;Yellow&quot;&nbsp;Fill=&quot;Yellow&quot;&nbsp;Tapped=&quot;Rectangle_Tapped&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Rectangle&nbsp;HorizontalAlignment=&quot;Left&quot;&nbsp;Margin=&quot;10&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Width=&quot;64&quot;&nbsp;Height=&quot;64&quot;&nbsp;Tag=&quot;Green&quot;&nbsp;Fill=&quot;Green&quot;&nbsp;Tapped=&quot;Rectangle_Tapped&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Rectangle&nbsp;HorizontalAlignment=&quot;Left&quot;&nbsp;Margin=&quot;10&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width=&quot;64&quot;&nbsp;Height=&quot;64&quot;&nbsp;Tag=&quot;Cyan&quot;&nbsp;Fill=&quot;Cyan&quot;&nbsp;Tapped=&quot;Rectangle_Tapped&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Rectangle&nbsp;HorizontalAlignment=&quot;Left&quot;&nbsp;Margin=&quot;10&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width=&quot;64&quot;&nbsp;Height=&quot;64&quot;&nbsp;Tag=&quot;Blue&quot;&nbsp;Fill=&quot;Blue&quot;&nbsp;Tapped=&quot;Rectangle_Tapped&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Rectangle&nbsp;HorizontalAlignment=&quot;Left&quot;&nbsp;Margin=&quot;10&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Width=&quot;64&quot;&nbsp;Height=&quot;64&quot;&nbsp;Tag=&quot;Magenta&quot;&nbsp;Fill=&quot;Magenta&quot;&nbsp;Tapped=&quot;Rectangle_Tapped&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Rectangle&nbsp;HorizontalAlignment=&quot;Left&quot;&nbsp;Margin=&quot;10&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Width=&quot;64&quot;&nbsp;Height=&quot;64&quot;&nbsp;Tag=&quot;Purple&quot;&nbsp;Fill=&quot;Purple&quot;&nbsp;Tapped=&quot;Rectangle_Tapped&quot;/&gt;
+&lt;/ListView&gt;  
+                                    </code></pre>  
+                                    <p>
+                                        This <code>ListView</code> contains <code>Rectangle</code> elements of different colours plus each has the <strong>Event</strong> for <code>Tapped</code> set to the 
+                                        <strong>Method</strong> of <code>Rectangle_Tapped</code> which will be triggered when the <code>Rectangle</code> is <strong>Tapped</strong> or <strong>Clicked</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 10</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>ContentPage.xaml</strong> then double-click on <strong>ContentPage.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Content Page</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-content-code-connected-animation.png" class="img-fluid" alt="Solution Explorer ContentPage.xaml.cs"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 11</h2>
+                                    <p>
+                                        In the <strong>Code</strong> for <strong>ContentPage.xaml.cs</strong> type in the following <strong>Code</strong> below the end of the <strong>Constructor</strong> of <code>public ContentPage() { ... }</code>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+protected override void OnNavigatedTo(NavigationEventArgs e)
+{
+    if (e.NavigationMode == NavigationMode.Back)
+    {
+        Library.Back(Display);
+    }
+    base.OnNavigatedTo(e);
+}
+
+private void Rectangle_Tapped(object sender, TappedRoutedEventArgs e)
+{
+    Library.Navigate(typeof(DetailPage), sender);
+}                                                                                                                 
+                                    </code></pre>  
+                                    <p>
+                                        There is the <strong>Method</strong> for <code>OnNavigatedTo</code> that uses <code>override</code> to change the functionality of the <strong>Method</strong> for <code>OnNavigatedTo</code> which 
+                                        will check the <code>NavigationMode</code> and call the <strong>Method</strong> of <code>Back</code> in the <code>Class</code> of <code>Library</code> and pass through the <code>ListView</code> it also 
+                                        calls the version of the <strong>Method</strong> that was <strong>Overridden</strong> with <code>base.OnNavigatedTo(e)</code> there is also another <strong>Method</strong> of 
+                                        <code>Rectangle_Tapped</code> which will call the <strong>Method</strong> of <code>Navigate</code> in the <code>Class</code> of <code>Library</code> when a <code>Rectangle</code> is <strong>Tapped</strong> or <strong>Clicked</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 12</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio</strong> within <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Add</strong> then <strong>New Item…</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-new-item.png" class="img-fluid" alt="Add New Item" />
+                                    </p>
+                                    <h2 class="display-6">Step 13</h2>
+                                    <p>
+                                        Then in <strong>Add New Item</strong> from the <strong>WinUI</strong> items list, select <strong>Page</strong> and then select <strong>Blank Page (WinUI 3)</strong> 
+                                        from the list next to this, then type in the name of <i>DetailPage.xaml</i> and then <strong>Click</strong> on <strong>Add</strong>.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-add-new-item-detail-connected-animation.png" class="img-fluid" alt="Add New Blank page" />
+                                    </p>
+                                    <h2 class="display-6">Step 14</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>DetailPage.xaml</strong> to see the <strong>XAML</strong> for the <strong>Detail Page</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-detail-xaml-connected-animation.png" class="img-fluid" alt="Solution Explorer DetailPage.xaml"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 15</h2>
+                                    <p>
+                                        Then in the <strong>XAML</strong> for <strong>DetailPage.xaml</strong>, below <code>&lt;Grid&gt;</code> and above <code>&lt;/Grid&gt;</code>, type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;Rectangle&nbsp;Margin=&quot;50&quot;&nbsp;Name=&quot;Target&quot;&nbsp;Opacity=&quot;0&quot;&nbsp;Loaded=&quot;Target_Loaded&quot;/&gt;
+&lt;CommandBar&nbsp;VerticalAlignment=&quot;Bottom&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;AppBarButton&nbsp;Icon=&quot;Back&quot;&nbsp;Label=&quot;Back&quot;&nbsp;Click=&quot;Back_Click&quot;/&gt;
+&lt;/CommandBar&gt;
+                                    </code></pre>  
+                                    <p>
+                                        There is <code>Rectangle</code> element of <code>Target</code> along with an <code>AppBarButton</code> set to a <strong>Method</strong> of <code>Back_Click</code> which will be triggered when the <code>AppBarButton</code> is <strong>Clicked</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 16</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>DetailPage.xaml</strong> then double-click on <strong>DetailPage.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Detail Page</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-detail-code-connected-animation.png" class="img-fluid" alt="Solution Explorer DetailPage.xaml.cs"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 17</h2>
+                                    <p>
+                                        In the <strong>Code</strong> for <strong>DetailPage.xaml.cs</strong> type in the following <strong>Code</strong> below the end of the <strong>Constructor</strong> of <code>public DetailPage() { ... }</code>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+protected override void OnNavigatedTo(NavigationEventArgs e)
+{
+    Target.Fill = Library.GetBrush(e.Parameter);
+}
+
+protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
+{
+    if (e.NavigationMode == NavigationMode.Back)
+        Library.From(Target);
+    base.OnNavigatingFrom(e);
+}
+
+private void Target_Loaded(object sender, RoutedEventArgs e)
+{
+    Library.Loaded(Target);
+}
+
+private void Back_Click(object sender, RoutedEventArgs e)
+{
+    Library.Frame.GoBack();
+}                                                                                                                                                        
+                                    </code></pre>  
+                                    <p>
+                                        There is a <strong>Method</strong> for <code>OnNavigatedTo</code> that uses <code>override</code> to change the functionality of the <strong>Method</strong> for <code>OnNavigatedTo</code> which will set <code>Fill</code> for the <code>Rectangle</code> 
+                                        element of <code>Target</code> using the <strong>Method</strong> of <code>GetBrush</code> from the <code>Class</code> for <code>Library</code> there is also an <code>override</code> for <code>OnNavigatingFrom</code> which will call the <strong>Method</strong> for 
+                                        From in the <code>Class</code> for <code>Library</code> when navigating backwards. There is also a <strong>Method</strong> of <code>Target_Loaded</code> for when the <code>Rectangle</code> element of <code>Target</code> has loaded and 
+                                        there is the <strong>Method</strong> for when the <code>AppBarButton</code> is <strong>Clicked</strong> of <code>Back_Click</code> which calls the <strong>Method</strong> of <code>GoBack</code> for the <code>Frame</code> in the <code>Class</code> for <code>Library</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 18</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>MainWindow.xaml</strong> to see the <strong>XAML</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-xaml-connected-animation.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 19</h2>
+                                    <p>
+                                        In the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> there will be some <strong>XAML</strong> for a <code>StackPanel</code>, this should be <strong>Removed</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;StackPanel&nbsp;Orientation=&quot;Horizontal&quot;&nbsp;
+HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;x:Name=&quot;myButton&quot;&nbsp;Click=&quot;myButton_Click&quot;&gt;Click&nbsp;Me&lt;/Button&gt;
+&lt;/StackPanel&gt;                               
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 20</h2>
+                                    <p>
+                                        While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> above <code>&lt;/Window&gt;</code>, type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;Frame&nbsp;Name=&quot;Frame&quot;/&gt;                                                                                                                                                                                                                                         
+                                    </code></pre> 
+                                    <h2 class="display-6">Step 21</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>MainWindow.xaml</strong> then double-click on <strong>MainWindow.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-code-connected-animation.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 22</h2>
+                                    <p>
+                                        In the <strong>Code</strong> for <code>MainWindow.xaml.cs</code> there be a Method of <code>myButton_Click(...)</code> this should be <strong>Removed</strong> by removing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void myButton_Click(object sender, RoutedEventArgs e)
+{
+    myButton.Content = "Clicked";
+}                                        
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 23</h2>
+                                    <p>
+                                        Once <code>myButton_Click(...)</code> has been removed, within the <strong>Constructor</strong> of <code>public MainWindow() { ... }</code> and below the line of <code>this.InitializeComponent();</code> type in the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+Library.Frame = Frame;
+Library.Frame.Navigate(typeof(ContentPage));                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                    </code></pre>
+                                    <p>
+                                        The <strong>Constructor</strong> of <code>public MainWindow() { ... }</code> should look like the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public MainWindow()
+{
+    this.InitializeComponent();
+    Library.Frame = Frame;
+    Library.Frame.Navigate(typeof(ContentPage));
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                    </code></pre>
+                                    <p>
+                                        These set up the <strong>Property</strong> for the <code>Frame</code> and call the <strong>Method</strong> for <code>Navigate</code> in the <code>class</code> of <code>Library</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 24</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>ConnectedAnimation (Package)</strong> to <strong>Start</strong> the application.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-debug-connected-animation.png" class="img-fluid" alt="ConnectedAnimation (Package)"/>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <h2 class="display-6">Step 25</h2>
+                                    <p>
+                                        Once running you should see the <code>Rectangle</code> elements.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-running-connected-animation.png" class="img-fluid" alt="Connected Animation Running" />
+                                    </p>
+                                    <h2 class="display-6">Step 26</h2>
+                                    <p>
+                                        You can <strong>Click</strong> on any of the <code>Rectangle</code> elements to switch from the <strong>Content Page</strong> to the <strong>Detail Page</strong> and observe the <strong>Connected Animation</strong>.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-output-connected-animation.png" class="img-fluid" alt="Connected Animation Output" />
+                                    </p>
+                                    <h2 class="display-6">Step 27</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                To <strong>Exit</strong> the <strong>Windows App SDK</strong> application, select the <strong>Close</strong> button from the top right of the application as that concludes this <strong>Tutorial</strong> for <strong>Windows App SDK</strong> from <a href="https://www.tutorialr.com">tutorialr.com</a>!
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-close.png" class="img-fluid" alt="Close application"/>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="card-footer">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-connected-animation.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Connected Animation
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>                   
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Tutorial -->
+                </section>
+                <!-- /Section -->    
+            </div>
+            <div class="waves waves-bottom bg-white"></div>  
+        </main>
+        <!-- /Main -->
+        <!-- Footer -->
+        <footer class="footer mt-auto">
+            <nav class="navbar bottom navbar-light p-2">
+                <a href="../../../"><img src="../../../images/footer.png" alt="tutorialr.com" height="40px"></a>
+                <a href="https://www.twitter.com/tutorialrdotcom" target="_blank"><img src="../../../images/twitter.png" height="45px" alt="@tutorialrdotcom"></a>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="../../../images/cc-by-sa.png" height="35px" alt="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"></a>
+            </nav>
+        </footer>
+        <!-- /Footer -->
+        <!-- Scripts -->
+        <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../../../highlight/js/highlight.min.js"></script>
+        <!-- /Scripts-->
+    </body>
+</html>

@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <meta name="description" content="tutorialr.com - Tutorials, Talks and Workshops"/>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@tutorialrdotcom"/>
+        <meta name="twitter:creator" content="@rogueplanetoid"/>
+        <meta name="twitter:title" content="tutorialr.com"/>
+        <meta name="twitter:description" content="Tutorials, Talks and Workshops"/>
+        <meta name="twitter:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta name="twitter:image:alt" content="Tutorials, Talks and Workshops"/>
+        <!-- /Twitter -->
+        <!-- Open Graph -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="tutorialr.com"/>
+        <meta property="og:site_name" content="tutorialr.com">
+        <meta property="og:description" content="Tutorials, Talks and Workshops"/>
+        <meta property="og:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta property="og:image:width" content="1280"/>
+        <meta property="og:image:height" content="630"/>
+        <!-- /Open Graph -->
+        <link rel="icon" href="../../../favicon.ico"/>
+        <link href="../css/win-app-sdk.css" rel="stylesheet">
+        <link href="../../../css/style.css" rel="stylesheet">
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../highlight/css/vs.min.css" rel="stylesheet">
+        <title>tutorialr.com - Tutorials - Windows App SDK - Deal or Not</title>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <!-- Main -->
+        <main>
+            <!-- Navigation -->	
+            <nav class="navbar top navbar-light navbar-expand-md bg-brand">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tutorialr-navbar" aria-controls="tutorialr-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../">
+                        <img src="../../../images/header.png" alt="tutorialr.com" height="50px">
+                    </a>
+                    <div id="tutorialr-navbar" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../tutorials">Tutorials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-tutorialr active" href="../../winappsdk">Windows App SDK</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../talks">Talks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../workshops">Workshops</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://www.comentsys.com" target="_blank">
+                        <img src="../../../images/comentsys.png" alt="Comentsys" height="50px">
+                    </a>
+                </div>
+            </nav>
+            <!-- /Navigation -->
+            <div class="waves waves-top"></div>
+            <div class="bg-tutorialr">         
+                <!-- Section -->            
+                <section class="text-center text-white container">
+                    <!-- Hero -->
+                    <h1 class="display-4 mx-auto">Deal or Not</h1>
+                    <p class="lead">
+                        <strong>Learn</strong> creating a <strong>Deal or Not</strong> game using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
+                    </p>
+                    <!-- /Hero -->
+                    <!-- Tutorial -->
+                    <div class="col-lg-10 mx-auto">
+                        <div class="container text-start text-black">
+                            <div class="card position-relative">
+                                <div class="card-header">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-deal-or-not.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Deal or Not
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>   
+                                <div class="card-body">
+                                    <p>
+                                        <strong>Deal or Not</strong> shows how you can create simple box-opening game where every so often you can choose to 
+                                        accept a deal, or not and continue but risk winning a smaller amount, the last box will be the amount won, 
+                                        unless you took the deal, using a toolkit from <strong>NuGet</strong> using the <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 1</h2>
+                                    <p>
+                                        Follow <a href="../setup-and-start">Setup and Start</a> on how to get <strong>Setup</strong> and <strong>Install</strong> what you need for <strong>Visual Studio 2022</strong> and <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                In <strong>Windows 11</strong> choose <strong>Start</strong> and then find or search for <strong>Visual Studio 2022</strong> and then select it.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs.png" class="img-fluid" alt="Visual Studio 2022"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Once <strong>Visual Studio 2022</strong> has started select <strong>Create a new project</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-new-project.png" class="img-fluid" alt="Create a new project"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Then choose the <strong>Blank App, Packages (WinUI in Desktop)</strong> and then select <strong>Next</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-win-ui.png" class="img-fluid" alt="Blank App, Packages (WinUI in Desktop)"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>DealOrNot</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-configure-project.png" class="img-fluid" alt="Configure project" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 2</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio within</strong> <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Manage NuGet Packages...</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-manage-nuget-packages.png" class="img-fluid" alt="Manage NuGet Packages" />
+                                    </p>
+                                    <h2 class="display-6">Step 3</h2>
+                                    <p>
+                                        Then in the <strong>NuGet Package Manager</strong> from the <strong>Browse</strong> tab search for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> and then select <strong>Comentsys.Toolkit.WindowsAppSdk by Comentsys</strong> as indicated and select <strong>Install</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-nuget-toolkit.png" class="img-fluid" alt="NuGet Package Manager Comentsys.Toolkit.WindowsAppSdk" />
+                                    </p>
+                                    <p>
+                                        This will add the package for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> to your <strong>Project</strong>. If you get the <strong>Preview Changes</strong> screen saying 
+                                        <strong>Visual Studio is about to make changes to this solution. Click OK to proceed with the changes listed below.</strong> You can read the message and then select <strong>OK</strong> to <strong>Install</strong> the package, 
+                                        then you can close the <strong>tab</strong> for <strong>Nuget: DealOrNot</strong> by selecting the <strong>x</strong> next to it. 
+                                    </p>
+                                    <h2 class="display-6">Step 4</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio</strong> within <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Add</strong> then <strong>New Item…</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-new-item.png" class="img-fluid" alt="Add New Item" />
+                                    </p>
+                                    <h2 class="display-6">Step 5</h2>
+                                    <p>
+                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>Code</strong> and then select <strong>Code File</strong> from the list next to this, then type in the name of <i>Library.cs</i> and then <strong>Click</strong> on <strong>Add</strong>.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-add-new-item-deal-or-not.png" class="img-fluid" alt="Add New Code File" />
+                                    </p>
+                                    <h2 class="display-6">Step 6</h2>
+                                    <p>
+                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Library.cs</i>, within this type the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+using Comentsys.Toolkit.WindowsAppSdk;
+using Microsoft.UI;
+using Microsoft.UI.Text;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Shapes;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using Windows.UI;
+
+public class Library
+{
+    private const string title = "Deal or Not";
+    private const int rate = 5;
+    private static readonly double[] amounts =
+    {
+        0.01, 0.10, 0.50, 1, 5, 10, 50, 100, 250, 500, 750,
+        1000, 3000, 5000, 10000, 15000, 20000, 35000, 50000, 75000, 100000, 250000
+    };
+    private static readonly string[] colors =
+    {
+        "0026ff", "0039ff", "004dff", "0060ff", "0073ff", "0086ff", 
+        "0099ff", "0099ff", "0099ff", "00acff", "00bfff",
+        "ff5900", "ff4d00", "ff4000", "ff3300", "ff2600", "ff2600", 
+        "ff2600", "ff2600", "ff1a00", "ff1c00", "ff0d00",
+    };
+    private static readonly string[] names = {
+        "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k",
+        "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v"
+    };
+    private readonly Random _random = new((int)DateTime.UtcNow.Ticks);
+    private readonly List&lt;double&gt; _values = new();
+
+    private int _turn;
+    private bool _over;
+    private bool _dealt;
+    private double _amount;
+    private Dialog _dialog;
+
+    // Choose, Get Color, Get Background & Get Amount
+
+    // Get Offer & Select Box
+
+    // Add Box
+
+    // Add Row, Layout & New
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                    </code></pre>  
+                                    <p>
+                                        The <code>Class</code> that has been defined in so far <i>Library.cs</i> has <code>using</code> for the package of <code>Comentsys.Toolkit.WindowsAppSdk</code> and others. 
+                                    </p>
+                                    <h2 class="display-6">Step 7</h2>
+                                    <p>
+                                        While still in the <code>Class</code> for <i>Library.cs</i> and after the <strong>Comment</strong> of <code>// Choose, Get Color, Get Background & Get Amount</code> type in the following 
+                                        <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private List&lt;int&gt; Choose(int minimum, int maximum, int total) =>
+    Enumerable.Range(minimum, maximum)
+        .OrderBy(r => _random.Next(minimum, maximum))
+            .Take(total).ToList();
+    
+private Color GetColor(string hex)
+{
+    byte r = byte.Parse(hex[0..^4], NumberStyles.HexNumber);
+    byte g = byte.Parse(hex[2..^2], NumberStyles.HexNumber);
+    byte b = byte.Parse(hex[4..^0], NumberStyles.HexNumber);
+    return Color.FromArgb(255, r, g, b);
+}
+
+private Color GetBackground(double amount)
+{
+    var position = Array.FindIndex(amounts, a => a.Equals(amount));
+    return GetColor(colors[position]);
+}
+
+private Grid GetAmount(double value, Color background)
+{
+    Grid grid = new()
+    {
+        Background = new SolidColorBrush(background)
+    };
+    TextBlock text = new()
+    {
+        Text = string.Format(new CultureInfo("en-GB"), "{0:c}", value),
+        HorizontalAlignment = HorizontalAlignment.Center,
+        VerticalAlignment = VerticalAlignment.Center,
+        Foreground = new SolidColorBrush(Colors.White),
+        Margin = new Thickness(10),
+        FontSize = 33
+    };
+    grid.Children.Add(text);
+    return grid;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                                    </code></pre>  
+                                    <p>
+                                        <code>Choose</code> is used to select a list of randomised numbers, <code>GetColor</code> is used to get a <code>Color</code> from the hex representation of the colour and 
+                                        <code>GetBackground</code> will use this to get the appropriate background colour based on the amount passed in. <code>GetAmount</code> will be used to display 
+                                        an amount with an appropriate colour.
+                                    </p>
+                                    <h2 class="display-6">Step 8</h2>
+                                    <p>
+                                        While still in the <code>Class</code> for <i>Library.cs</i> after the <strong>Comment</strong> of <code>// Get Offer & Select Box</code> 
+                                        type in the following <strong>Methods</strong> for <code>GetOffer</code> to generate an offer and <code>SelectBox</code> used when picking a box:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private double GetOffer()
+{
+    int count = 0;
+    double total = 0.0;
+    foreach (double value in _values)
+    {
+        total += value;
+        count++;
+    }
+    double average = total / count;
+    double offer = average * _turn / 10;
+    return Math.Round(offer, 0);
+}
+
+private async void SelectBox(Button button, string name)
+{
+    if (!_over)
+    {
+        if (_turn &lt; names.Length)
+        {
+            button.Opacity = 0;
+            _amount = _values[Array.IndexOf(names, name)];
+            bool response = await _dialog.ConfirmAsync(
+                GetAmount(_amount, GetBackground(_amount)));
+            if (response)
+            {
+                if (!_dealt && _turn % rate == 0 && _turn > 1)
+                {
+                    double offer = GetOffer();
+                    bool accept = await _dialog.ConfirmAsync(
+                        GetAmount(offer, Colors.Black), "Deal", "Not");
+                    if (accept)
+                    {
+                        _amount = offer;
+                        _dealt = true;
+                    }
+                }
+                _turn++;
+            }
+        }
+        if (_turn == names.Length || _dealt)
+            _over = true;
+    }
+    if (_over)
+    {
+        object content = _dealt ?
+            GetAmount(_amount, Colors.Black) :
+            GetAmount(_amount, GetBackground(_amount));
+        await _dialog.ConfirmAsync(content, "Game Over", null);
+    }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                    </code></pre>
+                                    <h2 class="display-6">Step 9</h2>
+                                    <p>
+                                        While still in the <code>Class</code> for <i>Library.cs</i> after the <strong>Comment</strong> of <code>// Add Box</code> type the following <strong>Method</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void AddBox(StackPanel panel, string name, int value)
+{
+    Button button = new()
+    {
+        Name = $"box.{name}",
+        Margin = new Thickness(5)
+    };
+    button.Click += (object sender, RoutedEventArgs e) =>
+        SelectBox((Button)sender, name);
+    StackPanel box = new()
+    {
+        Width = 100
+    };
+    Rectangle lid = new()
+    {
+        Height = 10,
+        Fill = new SolidColorBrush(Colors.DarkRed)
+    };
+    Grid front = new()
+    {
+        Height = 75,
+        Background = new SolidColorBrush(Colors.Red)
+    };
+    Grid label = new()
+    {
+        Width = 50,
+        Background = new SolidColorBrush(Colors.White),
+        HorizontalAlignment = HorizontalAlignment.Center,
+        VerticalAlignment = VerticalAlignment.Center
+    };
+    TextBlock text = new()
+    {
+        TextAlignment = TextAlignment.Center,
+        FontWeight = FontWeights.Bold,
+        Foreground = new SolidColorBrush(Colors.Black),
+        FontSize = 32,
+        Text = value.ToString()
+    };
+    label.Children.Add(text);
+    front.Children.Add(label);
+    box.Children.Add(lid);
+    box.Children.Add(front);
+    button.Content = box;
+    panel.Children.Add(button);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                    </code></pre>  
+                                    <p>
+                                        <code>AddBox</code> is used to add a box that can be selected when <strong>Clicked</strong> to the game and give it a game-specific appearance using various elements to 
+                                        create the look-and-feel of the box that can be selected.
+                                    </p>
+                                    <h2 class="display-6">Step 10</h2>
+                                    <p>
+                                        While still in the <code>Class</code> for <i>Library.cs</i> after the <strong>Comment</strong> of <code>// Add Row, Layout & New </code> type the following <strong>Methods</strong>
+                                        of <code>AddRow</code> which will add a row of boxes for the game, <code>Layout</code> which will create the look-and-feel for the game and <code>New</code> which will start a game.
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private StackPanel AddRow()
+{
+    int count = 0;
+    StackPanel panel = new();
+    int[] rows = { 5, 6, 6, 5 };
+    for (int r = 0; r &lt; 4; r++)
+    {
+        StackPanel places = new()
+        {
+            Orientation = Orientation.Horizontal,
+            HorizontalAlignment = HorizontalAlignment.Center
+        };
+        for (int column = 0; column &lt; rows[r]; column++)
+        {
+            AddBox(places, names[count], count + 1);
+            count++;
+        }
+        panel.Children.Add(places);
+    }
+    return panel;
+}
+
+private void Layout(Grid grid)
+{
+    grid.Children.Clear();
+    Viewbox view = new()
+    {
+        Child = AddRow()
+    };
+    grid.Children.Add(view);
+}
+
+public void New(Grid grid)
+{
+    _turn = 0;
+    _amount = 0;
+    _over = false;
+    _dealt = false;
+    _dialog = new Dialog(grid.XamlRoot, title);
+    var positions = Choose(0, names.Length, names.Length);
+    foreach (var position in positions)
+    {
+        _values.Add(amounts[position]);
+    }
+    Layout(grid);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 11</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>MainWindow.xaml</strong> to see the <strong>XAML</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-xaml-deal-or-not.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 12</h2>
+                                    <p>
+                                        In the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> there will be some <strong>XAML</strong> for a <code>StackPanel</code>, this should be <strong>Removed</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;StackPanel&nbsp;Orientation=&quot;Horizontal&quot;&nbsp;
+HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;x:Name=&quot;myButton&quot;&nbsp;Click=&quot;myButton_Click&quot;&gt;Click&nbsp;Me&lt;/Button&gt;
+&lt;/StackPanel&gt;                               
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 13</h2>
+                                    <p>
+                                        While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> above <code>&lt;/Window&gt;</code>, type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;Grid&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid&nbsp;Margin=&quot;50&quot;&nbsp;Name=&quot;Display&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HorizontalAlignment=&quot;Center&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VerticalAlignment=&quot;Center&quot;&nbsp;Loaded=&quot;New&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;CommandBar&nbsp;VerticalAlignment=&quot;Bottom&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AppBarButton&nbsp;Icon=&quot;Page2&quot;&nbsp;Label=&quot;New&quot;&nbsp;Click=&quot;New&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/CommandBar&gt;
+&lt;/Grid&gt;                                                                                                                                                                                                                                                                                                                                                                                                       
+                                    </code></pre> 
+                                    <p>
+                                        This <strong>XAML</strong> contains a <code>Grid</code> with a <code>Viewbox</code> which will <strong>Scale</strong> a <code>Grid</code>. 
+                                        It has a <code>Loaded</code> event handler for <code>New</code> which is also shared by the<code>AppBarButton</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 14</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>MainWindow.xaml</strong> then double-click on <strong>MainWindow.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-code-deal-or-not.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 15</h2>
+                                    <p>
+                                        In the <strong>Code</strong> for <code>MainWindow.xaml.cs</code> there be a Method of <code>myButton_Click(...)</code> this should be <strong>Removed</strong> by removing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void myButton_Click(object sender, RoutedEventArgs e)
+{
+    myButton.Content = "Clicked";
+}                                        
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 16</h2>
+                                    <p>
+                                        Once <code>myButton_Click(...)</code> has been removed, within the <strong>Constructor</strong> of <code>public MainWindow() { ... }</code> and below the line of <code>this.InitializeComponent();</code> type in the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private readonly Library _library = new();
+
+private void New(object sender, RoutedEventArgs e) =>
+    _library.New(Display);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                    </code></pre>
+                                    <p>
+                                        Here an <strong>Instance</strong> of the <code>Class</code> of <code>Library</code> is created then below this is the <strong>Method</strong> of <code>New</code> that 
+                                        will be used with <strong>Event Handler</strong> from the <strong>XAML</strong>, this Method uses Arrow Syntax with the <code>=></code> for an Expression Body which is 
+                                        useful when a <strong>Method</strong> only has one line.
+                                    </p>
+                                    <h2 class="display-6">Step 17</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>DealOrNot (Package)</strong> to <strong>Start</strong> the application.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-debug-deal-or-not.png" class="img-fluid" alt="DealOrNot (Package)"/>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <h2 class="display-6">Step 18</h2>
+                                    <p>
+                                        Once running you can then select one of the boxes and an amount will be displayed but each five turns, then you'll have the chance to take a 
+                                        <strong>Deal</strong> or <strong>Not</strong> and can continue until there is just one box left, which you'll win the amount, 
+                                        but if you took the <strong>Deal</strong> then you win that amount instead, or you can select <i>New</i> to start a new game.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-running-deal-or-not.png" class="img-fluid" alt="Deal or Not Running and Output" />
+                                    </p>
+                                    <h2 class="display-6">Step 19</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                To <strong>Exit</strong> the <strong>Windows App SDK</strong> application, select the <strong>Close</strong> button from the top right of the application as that concludes this <strong>Tutorial</strong> for <strong>Windows App SDK</strong> from <a href="https://www.tutorialr.com">tutorialr.com</a>!
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-close.png" class="img-fluid" alt="Close application"/>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="card-footer">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-deal-or-not.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Deal or Not
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>                   
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Tutorial -->
+                </section>
+                <!-- /Section -->    
+            </div>
+            <div class="waves waves-bottom bg-white"></div>  
+        </main>
+        <!-- /Main -->
+        <!-- Footer -->
+        <footer class="footer mt-auto">
+            <nav class="navbar bottom navbar-light p-2">
+                <a href="../../../"><img src="../../../images/footer.png" alt="tutorialr.com" height="40px"></a>
+                <a href="https://www.twitter.com/tutorialrdotcom" target="_blank"><img src="../../../images/twitter.png" height="45px" alt="@tutorialrdotcom"></a>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="../../../images/cc-by-sa.png" height="35px" alt="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"></a>
+            </nav>
+        </footer>
+        <!-- /Footer -->
+        <!-- Scripts -->
+        <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../../../highlight/js/highlight.min.js"></script>
+        <!-- /Scripts-->
+    </body>
+</html>

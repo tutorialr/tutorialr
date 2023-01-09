@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <meta name="description" content="tutorialr.com - Tutorials, Talks and Workshops"/>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@tutorialrdotcom"/>
+        <meta name="twitter:creator" content="@rogueplanetoid"/>
+        <meta name="twitter:title" content="tutorialr.com"/>
+        <meta name="twitter:description" content="Tutorials, Talks and Workshops"/>
+        <meta name="twitter:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta name="twitter:image:alt" content="Tutorials, Talks and Workshops"/>
+        <!-- /Twitter -->
+        <!-- Open Graph -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="tutorialr.com"/>
+        <meta property="og:site_name" content="tutorialr.com">
+        <meta property="og:description" content="Tutorials, Talks and Workshops"/>
+        <meta property="og:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta property="og:image:width" content="1280"/>
+        <meta property="og:image:height" content="630"/>
+        <!-- /Open Graph -->
+        <link rel="icon" href="../../../favicon.ico"/>
+        <link href="../css/win-app-sdk.css" rel="stylesheet">
+        <link href="../../../css/style.css" rel="stylesheet">
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../highlight/css/vs.min.css" rel="stylesheet">
+        <title>tutorialr.com - Tutorials - Windows App SDK - Hello Input</title>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <!-- Main -->
+        <main>
+            <!-- Navigation -->	
+            <nav class="navbar top navbar-light navbar-expand-md bg-brand">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tutorialr-navbar" aria-controls="tutorialr-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../">
+                        <img src="../../../images/header.png" alt="tutorialr.com" height="50px">
+                    </a>
+                    <div id="tutorialr-navbar" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../tutorials">Tutorials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-tutorialr active" href="../../winappsdk">Windows App SDK</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../talks">Talks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../workshops">Workshops</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://www.comentsys.com" target="_blank">
+                        <img src="../../../images/comentsys.png" alt="Comentsys" height="50px">
+                    </a>
+                </div>
+            </nav>
+            <!-- /Navigation -->
+            <div class="waves waves-top"></div>
+            <div class="bg-tutorialr">         
+                <!-- Section -->            
+                <section class="text-center text-white container">
+                    <!-- Hero -->
+                    <h1 class="display-4 mx-auto">Hello Input</h1>
+                    <p class="lead">
+                        <strong>Learn</strong> input and output with <strong>Hello Input</strong> using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
+                    </p>
+                    <!-- /Hero -->
+                    <!-- Tutorial -->
+                    <div class="col-lg-10 mx-auto">
+                        <div class="container text-start text-black">
+                            <div class="card position-relative">
+                                <div class="card-header">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-hello-input.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Hello Input
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>   
+                                <div class="card-body">
+                                    <p>
+                                        <strong>Hello Input</strong> shows you how to use a <code>ContentDialog</code> with a <code>TextBox</code> that you can type into and show that text in another <code>ContentDialog</code> using the <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 1</h2>
+                                    <p>
+                                        Follow <a href="../setup-and-start">Setup and Start</a> on how to get <strong>Setup</strong> and <strong>Install</strong> what you need for <strong>Visual Studio 2022</strong> and <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                In <strong>Windows 11</strong> choose <strong>Start</strong> and then find or search for <strong>Visual Studio 2022</strong> and then select it.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs.png" class="img-fluid" alt="Visual Studio 2022"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Once <strong>Visual Studio 2022</strong> has started select <strong>Create a new project</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-new-project.png" class="img-fluid" alt="Create a new project"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Then choose the <strong>Blank App, Packages (WinUI in Desktop)</strong> and then select <strong>Next</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-win-ui.png" class="img-fluid" alt="Blank App, Packages (WinUI in Desktop)"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>HelloInput</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-configure-project.png" class="img-fluid" alt="Configure project" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 2</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>MainWindow.xaml</strong> then double-click on <strong>MainWindow.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-hello-input.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 3</h2>
+                                    <p>
+                                        In the <strong>Code</strong> for <strong>MainWindow.xaml.cs</strong> there will already be a <strong>Method</strong> of <code>myButton_Click(...)</code> and within this the following <strong>Line</strong> should be <strong>Removed</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+myButton.Content = "Clicked";
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 4</h2>
+                                    <p>
+                                        Then in <code>myButton_Click(...)</code> where <code>myButton.Content = "Clicked";</code> was <strong>Removed</strong> type in the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+TextBox input = new()
+{
+    PlaceholderText = "Display Text"
+};
+ContentDialog dialog = new()
+{
+    XamlRoot = Content.XamlRoot,
+    PrimaryButtonText = "Display",
+    SecondaryButtonText = "Close",
+    Title = "Hello Input",
+    Content = input
+};
+ContentDialogResult result = await dialog.ShowAsync();
+if(result == ContentDialogResult.Primary)
+{
+    dialog.Content = (dialog.Content as TextBox).Text;
+    dialog.PrimaryButtonText = string.Empty;
+    await dialog.ShowAsync();
+}                                        
+                                    </code></pre>
+                                    <p>
+                                        This will create <code>TextBox</code> which will be used to type in what should be display, then there is an <strong>Instance</strong> of a <code>ContentDialog</code> 
+                                        with the <code>Content</code> of set to the <code>TextBox</code> it also has a <code>Title</code> set to the text of <i>Hello Input</i> along with having the <code>PrimaryButtonText</code> 
+                                        set to <i>Display</i> and the <code>SecondaryButtonText</code> set to <i>Close</i>, which when selected will <strong>Close</strong> the <code>ContentDialog</code>. 
+                                        When <i>Display</i> is <strong>Clicked</strong> this will produce the <code>ContentDialogResult.Primary</code> value. Should this be the case, the <code>Content</code> will be set to the <strong>Property</strong> of 
+                                        <code>Text</code> of <code>TextBox</code> which will be the contents of what was typed into it. 
+                                        The <code>PrimaryButtonText</code> is reset as this option is not needed when the <code>ContentDialog</code> is shown again. To show the <code>ContentDialog</code> 
+                                        the <strong>Method</strong> for <code>ShowAsync</code> is used which uses the <strong>Keyword</strong> for <code>await</code> which means it will perform a <strong>Task</strong> that won't happen at 
+                                        the same time, or <strong>Asynchronously</strong> and <code>XamlRoot</code> is also set to allow the <code>ContentDialog</code> to work correctly. 
+                                        A good concept shown here is of <strong>Code Reuse</strong>, as it is possible to use the same <strong>Instance</strong> of the <code>ContentDialog</code> to display both messages.
+                                    </p>
+                                    <h2 class="display-6">Step 5</h2>
+                                    <p>
+                                        While still in the <strong>Method</strong> for <code>myButton_Click(...)</code> between <code>private</code> and <code>void</code> type in the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+async
+                                    </code></pre>
+                                    <p>
+                                        Because the <strong>Method</strong> for <code>ShowAsync</code> is <strong>asynchronous</strong> using the <strong>Keyword</strong> of await so you need to mark the <strong>Method</strong> it is used in as such, this done with the <strong>Keyword</strong> of <code>async</code>.
+                                    </p> 
+                                    <p>
+                                        The <strong>Method</strong> for <code>myButton_Click(...)</code> should look as follows:
+                                    </p>  
+                                    <pre class="code-block language-csharp"><code>
+private async void myButton_Click(object sender, RoutedEventArgs e)
+{
+    TextBox input = new()
+    {
+        PlaceholderText = "Display Text"
+    };
+    ContentDialog dialog = new()
+    {
+        XamlRoot = Content.XamlRoot,
+        PrimaryButtonText = "Display",
+        SecondaryButtonText = "Close",
+        Title = "Hello Input",
+        Content = input
+    };
+    ContentDialogResult result = await dialog.ShowAsync();
+    if(result == ContentDialogResult.Primary)
+    {
+        dialog.Content = (dialog.Content as TextBox).Text;
+        dialog.PrimaryButtonText = string.Empty;
+        await dialog.ShowAsync();
+    }
+}                                                                            
+                                    </code></pre>                                    
+                                    <p>
+                                        When the <code>Button</code> is <strong>Clicked</strong>, the <strong>Method</strong> of <code>myButton_Click(...)</code> will be triggered and this display a 
+                                        <code>ContentDialog</code> with the <code>Content</code> set to a <code>TextBox</code> and the <code>Title</code> set to <i>Hello Input</i>.
+                                    </p>
+                                    <h2 class="display-6">Step 6</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>HelloInput (Package)</strong> to <strong>Start</strong> the application.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-debug-hello-input.png" class="img-fluid" alt="HelloInput (Package)"/>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <h2 class="display-6">Step 7</h2>
+                                    <p>
+                                        Once running you should see the <code>Button</code> with the text of <i>Click Me</i>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-running-hello-input.png" class="img-fluid" alt="Hello Input Running" />
+                                    </p>
+                                    <h2 class="display-6">Step 8</h2>
+                                    <p>
+                                        If you <strong>Click</strong> on the <code>Button</code> with the Text <i>Click Me</i> it will display the <code>ContentDialog</code> which you can then type anything 
+                                        into the <code>TextBox</code> or you can dismiss it with the <code>Button</code> for <i>Close</i>.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-output-hello-input.png" class="img-fluid" alt="Hello Input Output" />
+                                    </p>
+                                    <p>
+                                        When you <strong>Click</strong> on the <code>Button</code> for <i>Display</i> whatever you typed in will displayed in a <code>ContentDialog</code> which you can then 
+                                        dismiss with the <code>Button</code> for <i>Close</i>.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-message-hello-input.png" class="img-fluid" alt="Hello Input Message" />
+                                    </p>
+                                    <h2 class="display-6">Step 9</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                To <strong>Exit</strong> the <strong>Windows App SDK</strong> application, select the <strong>Close</strong> button from the top right of the application as that concludes this <strong>Tutorial</strong> for <strong>Windows App SDK</strong> from <a href="https://www.tutorialr.com">tutorialr.com</a>!
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-close.png" class="img-fluid" alt="Close application"/>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="card-footer">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-hello-input.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Hello Input
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>                   
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Tutorial -->
+                </section>
+                <!-- /Section -->    
+            </div>
+            <div class="waves waves-bottom bg-white"></div>  
+        </main>
+        <!-- /Main -->
+        <!-- Footer -->
+        <footer class="footer mt-auto">
+            <nav class="navbar bottom navbar-light p-2">
+                <a href="../../../"><img src="../../../images/footer.png" alt="tutorialr.com" height="40px"></a>
+                <a href="https://www.twitter.com/tutorialrdotcom" target="_blank"><img src="../../../images/twitter.png" height="45px" alt="@tutorialrdotcom"></a>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="../../../images/cc-by-sa.png" height="35px" alt="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"></a>
+            </nav>
+        </footer>
+        <!-- /Footer -->
+        <!-- Scripts -->
+        <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../../../highlight/js/highlight.min.js"></script>
+        <!-- /Scripts-->
+    </body>
+</html>
