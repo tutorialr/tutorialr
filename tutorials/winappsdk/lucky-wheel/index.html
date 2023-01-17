@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <meta name="description" content="tutorialr.com - Tutorials, Talks and Workshops"/>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@tutorialrdotcom"/>
+        <meta name="twitter:creator" content="@rogueplanetoid"/>
+        <meta name="twitter:title" content="tutorialr.com"/>
+        <meta name="twitter:description" content="Tutorials, Talks and Workshops"/>
+        <meta name="twitter:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta name="twitter:image:alt" content="Tutorials, Talks and Workshops"/>
+        <!-- /Twitter -->
+        <!-- Open Graph -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="tutorialr.com"/>
+        <meta property="og:site_name" content="tutorialr.com">
+        <meta property="og:description" content="Tutorials, Talks and Workshops"/>
+        <meta property="og:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta property="og:image:width" content="1280"/>
+        <meta property="og:image:height" content="630"/>
+        <!-- /Open Graph -->
+        <link rel="icon" href="../../../favicon.ico"/>
+        <link href="../css/win-app-sdk.css" rel="stylesheet">
+        <link href="../../../css/style.css" rel="stylesheet">
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../highlight/css/vs.min.css" rel="stylesheet">
+        <title>tutorialr.com - Tutorials - Windows App SDK - Lucky Wheel</title>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <!-- Main -->
+        <main>
+            <!-- Navigation -->	
+            <nav class="navbar top navbar-light navbar-expand-md bg-brand">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tutorialr-navbar" aria-controls="tutorialr-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../">
+                        <img src="../../../images/header.png" alt="tutorialr.com" height="50px">
+                    </a>
+                    <div id="tutorialr-navbar" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../tutorials">Tutorials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-tutorialr active" href="../../winappsdk">Windows App SDK</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../talks">Talks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../workshops">Workshops</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://www.comentsys.com" target="_blank">
+                        <img src="../../../images/comentsys.png" alt="Comentsys" height="50px">
+                    </a>
+                </div>
+            </nav>
+            <!-- /Navigation -->
+            <div class="waves waves-top"></div>
+            <div class="bg-tutorialr">         
+                <!-- Section -->            
+                <section class="text-center text-white container">
+                    <!-- Hero -->
+                    <h1 class="display-4 mx-auto">Lucky Wheel</h1>
+                    <p class="lead">
+                        <strong>Learn</strong> creating a <strong>Lucky Wheel</strong> game using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
+                    </p>
+                    <!-- /Hero -->
+                    <!-- Tutorial -->
+                    <div class="col-lg-10 mx-auto">
+                        <div class="container text-start text-black">
+                            <div class="card position-relative">
+                                <div class="card-header">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-lucky-wheel.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Lucky Wheel
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>   
+                                <div class="card-body">
+                                    <p>
+                                        <strong>Lucky Wheel</strong> shows how you can create spinning wheel game with a random chance of getting a particular 
+                                        score or you could lose it all, using a control in a toolkit from <strong>NuGet</strong> using the <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 1</h2>
+                                    <p>
+                                        Follow <a href="../setup-and-start">Setup and Start</a> on how to get <strong>Setup</strong> and <strong>Install</strong> what you need for <strong>Visual Studio 2022</strong> and <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                In <strong>Windows 11</strong> choose <strong>Start</strong> and then find or search for <strong>Visual Studio 2022</strong> and then select it.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs.png" class="img-fluid" alt="Visual Studio 2022"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Once <strong>Visual Studio 2022</strong> has started select <strong>Create a new project</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-new-project.png" class="img-fluid" alt="Create a new project"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Then choose the <strong>Blank App, Packages (WinUI in Desktop)</strong> and then select <strong>Next</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-win-ui.png" class="img-fluid" alt="Blank App, Packages (WinUI in Desktop)"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>LuckyWheel</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-configure-project.png" class="img-fluid" alt="Configure project" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 2</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio within</strong> <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Manage NuGet Packages...</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-manage-nuget-packages.png" class="img-fluid" alt="Manage NuGet Packages" />
+                                    </p>
+                                    <h2 class="display-6">Step 3</h2>
+                                    <p>
+                                        Then in the <strong>NuGet Package Manager</strong> from the <strong>Browse</strong> tab search for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> and then select <strong>Comentsys.Toolkit.WindowsAppSdk by Comentsys</strong> as indicated and select <strong>Install</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-nuget-toolkit.png" class="img-fluid" alt="NuGet Package Manager Comentsys.Toolkit.WindowsAppSdk" />
+                                    </p>
+                                    <p>
+                                        This will add the package for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> to your <strong>Project</strong>. If you get the <strong>Preview Changes</strong> screen saying 
+                                        <strong>Visual Studio is about to make changes to this solution. Click OK to proceed with the changes listed below.</strong> You can read the message and then select <strong>OK</strong> to <strong>Install</strong> the package, 
+                                        then you can close the <strong>tab</strong> for <strong>Nuget: LuckyWheel</strong> by selecting the <strong>x</strong> next to it. 
+                                    </p>
+                                    <h2 class="display-6">Step 4</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio</strong> within <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Add</strong> then <strong>New Item…</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-new-item.png" class="img-fluid" alt="Add New Item" />
+                                    </p>
+                                    <h2 class="display-6">Step 5</h2>
+                                    <p>
+                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>Code</strong> and then select <strong>Code File</strong> from the list next to this, then type in the name of <i>Library.cs</i> and then <strong>Click</strong> on <strong>Add</strong>.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-add-new-item-lucky-wheel.png" class="img-fluid" alt="Add New Code File" />
+                                    </p>
+                                    <h2 class="display-6">Step 6</h2>
+                                    <p>
+                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Library.cs</i>, within this type the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+using Comentsys.Toolkit.WindowsAppSdk;
+using Microsoft.UI;
+using Microsoft.UI.Text;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Documents;
+using Microsoft.UI.Xaml.Input;
+using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Media.Animation;
+using Microsoft.UI.Xaml.Shapes;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Windows.Foundation;
+using Windows.UI;
+
+public class Library
+{
+    private const string title = "Lucky Wheel";
+    private const int size = 400, hole = 60, radius = 200, circle = 360;
+    private const int border = 4, marker = 30, duration = 5;
+    private static readonly List&lt;(string Value, Color Fill)&gt; wedges = new()
+    {
+        ("1000", Colors.WhiteSmoke), ("600", Colors.LightGreen),
+        ("500", Colors.Yellow), ("300", Colors.Red),
+        ("500", Colors.Azure), ("800", Colors.Orange),
+        ("550", Colors.Violet), ("400", Colors.Yellow),
+        ("300", Colors.Pink), ("900", Colors.Red),
+        ("500", Colors.Azure), ("300", Colors.LightGreen),
+        ("900", Colors.Pink), ("LOSE", Colors.Black),
+        ("600", Colors.Violet), ("400", Colors.Yellow),
+        ("300", Colors.Azure), ("LOSE", Colors.Black),
+        ("800", Colors.Red), ("350", Colors.Violet),
+        ("450", Colors.Pink), ("700", Colors.LightGreen),
+        ("300", Colors.Orange), ("600", Colors.Violet),
+    };
+    private static readonly double section = circle / wedges.Count;
+    private readonly Random _random = new((int)DateTime.UtcNow.Ticks);
+
+    // Variables, Get Ellipse, Add Circle, Get Sector & Add Section
+
+    // Get Text & Add Text
+
+    // Get Marker & Add Rotate
+
+    // Set Rotate, Play & Add Wheel
+
+    // Layout, Reset & New
+
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                                    </code></pre>  
+                                    <p>
+                                        The <code>Class</code> that has been defined in so far <i>Library.cs</i> has <code>using</code> for the package of <code>Comentsys.Toolkit.WindowsAppSdk</code> and others. 
+                                    </p>
+                                    <h2 class="display-6">Step 7</h2>
+                                    <p>
+                                        While still in the <code>Class</code> for <i>Library.cs</i> and after the <strong>Comment</strong> of <code>// Variables, Get Ellipse, Add Circle, Get Sector & Add Section</code> 
+                                        type the following <strong>Variables</strong> and <strong>Methods</strong> for <code>GetEllipse</code> which will get an <code>Ellipse</code> used by 
+                                        <code>AddCircle</code> along with <code>GetSector</code> which will get a Sector control used by <code>AddSection</code>.
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private int _total;
+private bool _over;
+private bool _spin;
+private double _position;
+private double _selected;
+private Canvas _canvas;
+private Dialog _dialog;
+private Storyboard _storyboard;
+
+private Ellipse GetEllipse(double diameter, Color fill) => new()
+{
+    Width = diameter,
+    Height = diameter,
+    StrokeThickness = border,
+    Fill = new SolidColorBrush(fill),
+    Stroke = new SolidColorBrush(Colors.Gold)
+};
+
+private void AddCircle(Canvas canvas, double diameter)
+{
+    var circle = GetEllipse(diameter, Colors.Green);
+    Canvas.SetLeft(circle, (size - diameter) / 2);
+    Canvas.SetTop(circle, (size - diameter) / 2);
+    canvas.Children.Add(circle);
+}
+
+private Sector GetSector(double start, double finish, double radius, Color fill)
+{
+    Sector sector = new()
+    {
+        Hole = hole,
+        Start = start,
+        Finish = finish,
+        Radius = radius,
+        Fill = new SolidColorBrush(fill)
+    };
+    Canvas.SetLeft(sector, (size - radius * 2) / 2);
+    Canvas.SetTop(sector, (size - radius * 2) / 2);
+    return sector;
+}
+
+private void AddSection(Canvas canvas, int index, double start)
+{
+    var finish = section;
+    var sector = GetSector(start, finish, radius, wedges[index].Fill);
+    canvas.Children.Add(sector);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 8</h2>
+                                    <p>
+                                        While still in the <code>Class</code> for <i>Library.cs</i> after the <strong>Comment</strong> of <code>// Get Text & Add Text</code> 
+                                        type in the following <strong>Methods</strong> for <code>GetText</code> which will create a <code>TextBlock</code> for amounts to be 
+                                        used by <code>AddText</code> which will position the amounts on the wheel.
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private TextBlock GetText(string value, Color foreground)
+{
+    TextBlock text = new()
+    {
+        FontSize = 20,
+        Margin = new Thickness(2),
+        FontWeight = FontWeights.SemiBold,
+        TextAlignment = TextAlignment.Center,
+        Foreground = new SolidColorBrush(foreground)
+    };
+    for (int index = 0; index &lt; value.Length; index++)
+    {
+        text.Inlines.Add(new Run()
+        {
+            Text = value[index] + Environment.NewLine
+        });
+    }
+    text.Measure(new Size(
+        double.PositiveInfinity,
+        double.PositiveInfinity));
+    return text;
+}
+
+private void AddText(Canvas canvas, int index, double start)
+{
+    double top = 0;
+    var (value, fill) = wedges[index];
+    var foreground = fill == Colors.Black ? Colors.White : Colors.Black;
+    var text = GetText(value, foreground);
+    double middle = text.DesiredSize.Width / 2;
+    double left = (size / 2) - middle;
+    Grid grid = new()
+    {
+        Height = radius,
+        RenderTransform = new RotateTransform()
+        {
+            Angle = start,
+            CenterX = middle,
+            CenterY = radius
+        }
+    };
+    grid.Children.Add(text);
+    Canvas.SetLeft(grid, left);
+    Canvas.SetTop(grid, top);
+    canvas.Children.Add(grid);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+                                    </code></pre>
+                                    <h2 class="display-6">Step 9</h2>
+                                    <p>
+                                        While still in the <code>Class</code> for <i>Library.cs</i> after the <strong>Comment</strong> of <code>// Get Marker & Add Rotate</code> 
+                                        type the following <strong>Methods</strong> for <code>GetMarker</code> for the marker on top of the wheel and <code>AddRotate</code> for rotating it.
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private Polygon GetMarker() => new()
+{
+    Width = marker,
+    Height = marker / 2,
+    Fill = new SolidColorBrush(Colors.Gold),
+    VerticalAlignment = VerticalAlignment.Center,
+    HorizontalAlignment = HorizontalAlignment.Center,
+    Points =
+    {
+        new Point(0, 0),
+        new Point(marker, 0),
+        new Point(marker / 2, marker / 2)
+    }
+};
+
+private void AddRotate()
+{
+    DoubleAnimation animation = new()
+    {
+        From = _position,
+        To = circle * 2,
+        EasingFunction = new QuadraticEase(),
+        RepeatBehavior = new RepeatBehavior(1),
+        Duration = new Duration(TimeSpan.FromSeconds(duration))
+    };
+    Storyboard.SetTargetProperty(animation,
+        "(Canvas.RenderTransform).(RotateTransform.Angle)");
+    Storyboard.SetTarget(animation, _canvas);
+    _storyboard = new Storyboard();
+    _storyboard.Completed += (object sender, object e) =>
+    {
+        _spin = false;
+        var angle = circle - _selected - (section / 2);
+        var index = (int)Math.Ceiling(angle / section);
+        var (value, _) = wedges[index];
+        if (int.TryParse(value, out int result) && !_over)
+        {
+            _total += result;
+            _dialog.Show($"You Won {result}, Total is {_total}");
+        }
+        else
+        {
+            _over = true;
+            _dialog.Show($"You Lose, Total was {_total}!");
+        }
+    };
+    _storyboard.Children.Add(animation);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 10</h2>
+                                    <p>
+                                        While still in the <code>Class</code> for <i>Library.cs</i> after the <strong>Comment</strong> of <code>// Set Rotate, Play & Add Wheel</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void SetRotate(double angle)
+{
+    var animation = _storyboard.Children.First() as DoubleAnimation;
+    animation.From = _position;
+    animation.To = circle * 2 + angle;
+    _storyboard.Begin();
+}
+
+private void Play()
+{
+    if (!_spin)
+    {
+        _spin = true;
+        if (_over)
+        {
+            _dialog.Show($"You Lost, Total was {_total}, Starting New Game");
+            Reset();
+        }
+        else
+        {
+            _position = _selected;
+            _selected = _random.Next(1, circle);
+            SetRotate(_selected);
+        }
+    }
+}
+
+private void AddWheel(Canvas canvas, double diameter)
+{
+    var wheel = GetEllipse(diameter, Colors.Transparent);
+    wheel.Tapped += (object sender, TappedRoutedEventArgs e) => 
+        Play();
+    Canvas.SetLeft(wheel, (size - diameter) / 2);
+    Canvas.SetTop(wheel, (size - diameter) / 2);
+    canvas.Children.Add(wheel);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                    </code></pre>
+                                    <p>
+                                        <code>GetScore</code> will work out the score of the position on the dartboard, taking into account the double ring, triple ring, 
+                                        outer bullseye and the inner bullseye. <code>Play</code> will position the dart on the dart board in a randomised location near 
+                                        where was selected and then the score will be updated accordingly and is used in <code>AddBoard</code> which will add a transparent 
+                                        <code>Ellipse</code> which will capture <strong>Events</strong> when it is <strong>Tapped</strong>.
+                                    </p>  
+                                    <h2 class="display-6">Step 11</h2>
+                                    <p>
+                                        While still in the <code>Class</code> for <i>Library.cs</i> after the <strong>Comment</strong> of <code>// Layout, Reset & New</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void Layout(Grid grid)
+{
+    grid.Children.Clear();
+    StackPanel panel = new();
+    _canvas = new Canvas()
+    {
+        Width = size,
+        Height = size,
+        RenderTransform = new RotateTransform()
+        {
+            Angle = 0,
+            CenterX = radius,
+            CenterY = radius
+        }
+    };
+    var start = -(section / 2);
+    for (int index = 0; index &lt; wedges.Count; index++)
+    {
+        AddSection(_canvas, index, start);
+        AddText(_canvas, index, start + (section / 2));
+        start += section;
+    }
+    AddCircle(_canvas, hole * 2);
+    AddWheel(_canvas, size + border);
+    AddRotate();
+    panel.Children.Add(GetMarker());
+    panel.Children.Add(_canvas);
+    grid.Children.Add(panel);
+}
+
+private void Reset()
+{
+    _total = 0;
+    _spin = false;
+    _over = false;
+    _selected = 0;
+}
+
+public void New(Grid grid)
+{
+    Reset();
+    Layout(grid);
+    _dialog = new Dialog(grid.XamlRoot, title);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                                    </code></pre>
+                                    <p>
+                                        <code>Layout</code> will create the look-and-feel of the wheel by setting up all the elements, <code>Reset</code> will reset the values 
+                                        used in the game when a game is over or started and <code>New</code> will start a new game.
+                                    </p>  
+                                    <h2 class="display-6">Step 12</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>MainWindow.xaml</strong> to see the <strong>XAML</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-xaml-lucky-wheel.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 13</h2>
+                                    <p>
+                                        In the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> there will be some <strong>XAML</strong> for a <code>StackPanel</code>, this should be <strong>Removed</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;StackPanel&nbsp;Orientation=&quot;Horizontal&quot;&nbsp;
+HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;x:Name=&quot;myButton&quot;&nbsp;Click=&quot;myButton_Click&quot;&gt;Click&nbsp;Me&lt;/Button&gt;
+&lt;/StackPanel&gt;                               
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 14</h2>
+                                    <p>
+                                        While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> above <code>&lt;/Window&gt;</code>, type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;Grid&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid&nbsp;Margin=&quot;50&quot;&nbsp;Name=&quot;Display&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HorizontalAlignment=&quot;Center&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VerticalAlignment=&quot;Center&quot;&nbsp;Loaded=&quot;New&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;CommandBar&nbsp;VerticalAlignment=&quot;Bottom&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AppBarButton&nbsp;Icon=&quot;Page2&quot;&nbsp;Label=&quot;New&quot;&nbsp;Click=&quot;New&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/CommandBar&gt;
+&lt;/Grid&gt;                                                                                                                                                                                                                                                                                                                                                                                                       
+                                    </code></pre> 
+                                    <p>
+                                        This <strong>XAML</strong> contains a <code>Grid</code> with a <code>Viewbox</code> which will <strong>Scale</strong> a <code>Grid</code>. 
+                                        It has a <code>Loaded</code> event handler for <code>New</code> which is also shared by the<code>AppBarButton</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 15</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>MainWindow.xaml</strong> then double-click on <strong>MainWindow.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-code-lucky-wheel.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 16</h2>
+                                    <p>
+                                        In the <strong>Code</strong> for <code>MainWindow.xaml.cs</code> there be a Method of <code>myButton_Click(...)</code> this should be <strong>Removed</strong> by removing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void myButton_Click(object sender, RoutedEventArgs e)
+{
+    myButton.Content = "Clicked";
+}                                        
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 17</h2>
+                                    <p>
+                                        Once <code>myButton_Click(...)</code> has been removed, within the <strong>Constructor</strong> of <code>public MainWindow() { ... }</code> and below the line of <code>this.InitializeComponent();</code> type in the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private readonly Library _library = new();
+
+private void New(object sender, RoutedEventArgs e) =>
+    _library.New(Display);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                    </code></pre>
+                                    <p>
+                                        Here an <strong>Instance</strong> of the <code>Class</code> of <code>Library</code> is created then below this is the <strong>Method</strong> of <code>New</code> that 
+                                        will be used with <strong>Event Handler</strong> from the <strong>XAML</strong>, this Method uses Arrow Syntax with the <code>=></code> for an Expression Body which is 
+                                        useful when a <strong>Method</strong> only has one line.
+                                    </p>
+                                    <h2 class="display-6">Step 18</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>LuckyWheel (Package)</strong> to <strong>Start</strong> the application.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-debug-lucky-wheel.png" class="img-fluid" alt="LuckyWheel (Package)"/>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <h2 class="display-6">Step 19</h2>
+                                    <p>
+                                        Once running you can then select anywhere on the wheel and it will start spinning and once it stops on a value that's what you win, but if it lands on <strong>LOSE</strong> the game will be over or select <i>New</i> to restart the game.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-running-lucky-wheel.png" class="img-fluid" alt="Lucky Wheel Running and Output" />
+                                    </p>
+                                    <h2 class="display-6">Step 20</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                To <strong>Exit</strong> the <strong>Windows App SDK</strong> application, select the <strong>Close</strong> button from the top right of the application as that concludes this <strong>Tutorial</strong> for <strong>Windows App SDK</strong> from <a href="https://www.tutorialr.com">tutorialr.com</a>!
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-close.png" class="img-fluid" alt="Close application"/>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="card-footer">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-lucky-wheel.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Lucky Wheel
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>                   
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Tutorial -->
+                </section>
+                <!-- /Section -->    
+            </div>
+            <div class="waves waves-bottom bg-white"></div>  
+        </main>
+        <!-- /Main -->
+        <!-- Footer -->
+        <footer class="footer mt-auto">
+            <nav class="navbar bottom navbar-light p-2">
+                <a href="../../../"><img src="../../../images/footer.png" alt="tutorialr.com" height="40px"></a>
+                <a href="https://www.twitter.com/tutorialrdotcom" target="_blank"><img src="../../../images/twitter.png" height="45px" alt="@tutorialrdotcom"></a>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="../../../images/cc-by-sa.png" height="35px" alt="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"></a>
+            </nav>
+        </footer>
+        <!-- /Footer -->
+        <!-- Scripts -->
+        <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../../../highlight/js/highlight.min.js"></script>
+        <!-- /Scripts-->
+    </body>
+</html>
