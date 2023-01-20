@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <meta name="description" content="tutorialr.com - Tutorials, Talks and Workshops"/>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@tutorialrdotcom"/>
+        <meta name="twitter:creator" content="@rogueplanetoid"/>
+        <meta name="twitter:title" content="tutorialr.com"/>
+        <meta name="twitter:description" content="Tutorials, Talks and Workshops"/>
+        <meta name="twitter:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta name="twitter:image:alt" content="Tutorials, Talks and Workshops"/>
+        <!-- /Twitter -->
+        <!-- Open Graph -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="tutorialr.com"/>
+        <meta property="og:site_name" content="tutorialr.com">
+        <meta property="og:description" content="Tutorials, Talks and Workshops"/>
+        <meta property="og:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta property="og:image:width" content="1280"/>
+        <meta property="og:image:height" content="630"/>
+        <!-- /Open Graph -->
+        <link rel="icon" href="../../../favicon.ico"/>
+        <link href="../css/win-app-sdk.css" rel="stylesheet">
+        <link href="../../../css/style.css" rel="stylesheet">
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../highlight/css/vs.min.css" rel="stylesheet">
+        <title>tutorialr.com - Tutorials - Windows App SDK - Order Game</title>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <!-- Main -->
+        <main>
+            <!-- Navigation -->	
+            <nav class="navbar top navbar-light navbar-expand-md bg-brand">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tutorialr-navbar" aria-controls="tutorialr-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../">
+                        <img src="../../../images/header.png" alt="tutorialr.com" height="50px">
+                    </a>
+                    <div id="tutorialr-navbar" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../tutorials">Tutorials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-tutorialr active" href="../../winappsdk">Windows App SDK</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../talks">Talks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../workshops">Workshops</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://www.comentsys.com" target="_blank">
+                        <img src="../../../images/comentsys.png" alt="Comentsys" height="50px">
+                    </a>
+                </div>
+            </nav>
+            <!-- /Navigation -->
+            <div class="waves waves-top"></div>
+            <div class="bg-tutorialr">         
+                <!-- Section -->            
+                <section class="text-center text-white container">
+                    <!-- Hero -->
+                    <h1 class="display-4 mx-auto">Order Game</h1>
+                    <p class="lead">
+                        <strong>Learn</strong> creating an <strong>Order Game</strong> using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
+                    </p>
+                    <!-- /Hero -->
+                    <!-- Tutorial -->
+                    <div class="col-lg-10 mx-auto">
+                        <div class="container text-start text-black">
+                            <div class="card position-relative">
+                                <div class="card-header">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-order-game.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Order Game
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>   
+                                <div class="card-body">
+                                    <p>
+                                        <strong>Order Game</strong> shows how you can create a simple game where the objective is to arrange <strong>Squares</strong> in the
+                                        correct sequence in the quickest time possible using a toolkit from <strong>NuGet</strong> using the <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 1</h2>
+                                    <p>
+                                        Follow <a href="../setup-and-start">Setup and Start</a> on how to get <strong>Setup</strong> and <strong>Install</strong> what you need for <strong>Visual Studio 2022</strong> and <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                In <strong>Windows 11</strong> choose <strong>Start</strong> and then find or search for <strong>Visual Studio 2022</strong> and then select it.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs.png" class="img-fluid" alt="Visual Studio 2022"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Once <strong>Visual Studio 2022</strong> has started select <strong>Create a new project</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-new-project.png" class="img-fluid" alt="Create a new project"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Then choose the <strong>Blank App, Packages (WinUI in Desktop)</strong> and then select <strong>Next</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-win-ui.png" class="img-fluid" alt="Blank App, Packages (WinUI in Desktop)"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>OrderGame</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-configure-project.png" class="img-fluid" alt="Configure project" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 2</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio within</strong> <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Manage NuGet Packages...</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-manage-nuget-packages.png" class="img-fluid" alt="Manage NuGet Packages" />
+                                    </p>
+                                    <h2 class="display-6">Step 3</h2>
+                                    <p>
+                                        Then in the <strong>NuGet Package Manager</strong> from the <strong>Browse</strong> tab search for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> and then select <strong>Comentsys.Toolkit.WindowsAppSdk by Comentsys</strong> as indicated and select <strong>Install</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-nuget-toolkit.png" class="img-fluid" alt="NuGet Package Manager Comentsys.Toolkit.WindowsAppSdk" />
+                                    </p>
+                                    <p>
+                                        This will add the package for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> to your <strong>Project</strong>. If you get the <strong>Preview Changes</strong> screen saying 
+                                        <strong>Visual Studio is about to make changes to this solution. Click OK to proceed with the changes listed below.</strong> You can read the message and then select 
+                                        <strong>OK</strong> to <strong>Install</strong> the package, then you can close the <strong>tab</strong> for <strong>Nuget: OrderGame</strong> by selecting the <strong>x</strong> next to it. 
+                                    </p>
+                                    <h2 class="display-6">Step 4</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio</strong> within <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Add</strong> then <strong>New Item…</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-new-item.png" class="img-fluid" alt="Add New Item" />
+                                    </p>
+                                    <h2 class="display-6">Step 5</h2>
+                                    <p>
+                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>Code</strong> and then select <strong>Code File</strong> from the list next to this, then type in the name of <i>Library.cs</i> and then <strong>Click</strong> on <strong>Add</strong>.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-add-new-item-order-game.png" class="img-fluid" alt="Add New Code File" />
+                                    </p>
+                                    <h2 class="display-6">Step 6</h2>
+                                    <p>
+                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Library.cs</i>, within this type the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+using Comentsys.Toolkit.WindowsAppSdk;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+
+public class Library
+{
+    private const string title = "Order Game";
+    private const int size = 6;
+
+    private readonly Random _random = new((int)DateTime.UtcNow.Ticks);
+    private readonly ObservableCollection&lt;int&gt; _values = new();
+
+    private Dialog _dialog;
+    private GridView _view;
+    private DateTime _start;
+
+    private List&lt;int&gt; Choose(int minimum, int maximum, int total) =>
+        Enumerable.Range(minimum, maximum)
+            .OrderBy(r => _random.Next(minimum, maximum))
+                .Take(total).ToList();
+
+    private void Completed()
+    {
+        if (_values.OrderBy(o => o).SequenceEqual(_values))
+        {
+            TimeSpan duration = (DateTime.UtcNow - _start).Duration();
+            _dialog.Show($"Completed in {duration:hh\\:mm\\:ss}", title);
+            _view.IsEnabled = false;
+        }
+    }
+
+    // Layout & New
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                                    </code></pre>  
+                                    <p>
+                                        The <code>Class</code> defined so far <i>Library.cs</i> has <code>using</code> for package of <code>Comentsys.Assets.FluentEmoji</code> and others.
+                                        It also has <strong>Constants</strong> to represent things needed in the game and there are <strong>Variables</strong> 
+                                        to keep track of values used in the game along with <strong>Methods</strong> for <code>Choose</code> to pick the random sequence of numbers to be put in 
+                                        <strong>Order</strong> and <code>Completed</code> which will determine if the game has been finished and display a <code>Dialog</code> showing the time it took do to so.
+                                    </p>
+                                    <h2 class="display-6">Step 7</h2>
+                                    <p>
+                                        While still in the <code>Class</code> for <i>Library.cs</i> after the <strong>Comment</strong> of <code>// Layout & New</code> 
+                                        type in the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void Layout(Grid grid)
+{
+    grid.Children.Clear();
+    _view = new()
+    {
+        ItemsPanel = grid.Resources[nameof(ItemsPanelTemplate)]
+            as ItemsPanelTemplate,
+        ItemTemplate = grid.Resources[nameof(DataTemplate)]
+            as DataTemplate,
+        SelectionMode = ListViewSelectionMode.Single,
+        CanReorderItems = true,
+        ItemsSource = _values,
+        CanDragItems = true,
+        AllowDrop = true,
+        IsEnabled = true,
+        CanDrag = true,
+    };
+    _view.DragItemsCompleted += (ListViewBase sender, 
+        DragItemsCompletedEventArgs args) =>
+        Completed();
+    grid.Children.Add(_view);
+}
+
+public void New(Grid grid)
+{
+    _dialog = new Dialog(grid.XamlRoot, title);
+    _values.Clear();
+    _start = DateTime.UtcNow;
+    var values = Choose(1, size * size, size * size);
+    foreach (var value in values)
+    {
+        _values.Add(value);
+    }
+    Layout(grid);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+                                    </code></pre>
+                                    <p>
+                                        <code>Layout</code> will create the layout for the game which comprises of an <code>ItemsPanel</code> which will use <strong>Templates</strong> to create the look-and-feel 
+                                        for the elements of the game and will check if the game is finished using <code>Completed</code> when the elements are reordered and <code>New</code> will setup and start a new game.
+                                    </p>
+                                    <h2 class="display-6">Step 8</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>MainWindow.xaml</strong> to see the <strong>XAML</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-xaml-order-game.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                    <h2 class="display-6">Step 9</h2>
+                                    <p>
+                                        In the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> there will be some <strong>XAML</strong> for a <code>StackPanel</code>, this should be <strong>Removed</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;StackPanel&nbsp;Orientation=&quot;Horizontal&quot;&nbsp;
+HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;x:Name=&quot;myButton&quot;&nbsp;Click=&quot;myButton_Click&quot;&gt;Click&nbsp;Me&lt;/Button&gt;
+&lt;/StackPanel&gt;                               
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 10</h2>
+                                    <p>
+                                        While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> below <code>&lt;Window&gt;</code>, type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+xmlns:ui="using:Comentsys.Toolkit.WindowsAppSdk"                                                                                                                                                                                                                                                                                                                        
+                                    </code></pre>                                    
+                                    <p>
+                                        The <strong>XAML</strong> for <code>&lt;Window&gt;</code> should then look as follows:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;Window
+&nbsp;&nbsp;&nbsp;&nbsp;xmlns:ui=&quot;using:Comentsys.Toolkit.WindowsAppSdk&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;x:Class=&quot;OrderGame.MainWindow&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;xmlns:local=&quot;using:OrderGame&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;xmlns:mc=&quot;http://schemas.openxmlformats.org/markup&#45;compatibility/2006&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;mc:Ignorable=&quot;d&quot;&gt;                                                                                                                                                                                                                                                                                                                     
+                                    </code></pre>
+                                    <h2 class="display-6">Step 11</h2>
+                                    <p>
+                                        While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> above <code>&lt;/Window&gt;</code>, type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;Grid&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid&nbsp;Margin=&quot;50&quot;&nbsp;Name=&quot;Display&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HorizontalAlignment=&quot;Center&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VerticalAlignment=&quot;Center&quot;&nbsp;Loaded=&quot;New&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid.Resources&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;DataTemplate&nbsp;x:Name=&quot;DataTemplate&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ui:Piece&nbsp;Value=&quot;{Binding}&quot;&nbsp;IsSquare=&quot;True&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fill=&quot;Black&quot;&nbsp;Foreground=&quot;White&quot;&nbsp;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/DataTemplate&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ItemsPanelTemplate&nbsp;x:Name=&quot;ItemsPanelTemplate&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ItemsWrapGrid&nbsp;Orientation=&quot;Horizontal&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MaximumRowsOrColumns=&quot;6&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ItemsPanelTemplate&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Grid.Resources&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Grid&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;CommandBar&nbsp;VerticalAlignment=&quot;Bottom&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AppBarButton&nbsp;Icon=&quot;Page2&quot;&nbsp;Label=&quot;New&quot;&nbsp;Click=&quot;New&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/CommandBar&gt;
+&lt;/Grid&gt;                                                                                                                                                                                                                                                                                                                         
+                                    </code></pre> 
+                                    <p>
+                                        This <strong>XAML</strong> contains a <code>Grid</code> with a <strong>Viewbox</strong> which will <strong>Scale</strong> a <code>Grid</code>. 
+                                        It has a <code>Loaded</code> event handler for <code>New</code> which is also shared by the <code>AppBarButton</code> 
+                                        and the <code>Grid</code> also has Resources which defines the <strong>Templates</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 12</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>MainWindow.xaml</strong> then double-click on <strong>MainWindow.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-code-order-game.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 13</h2>
+                                    <p>
+                                        In the <strong>Code</strong> for <code>MainWindow.xaml.cs</code> there be a Method of <code>myButton_Click(...)</code> this should be <strong>Removed</strong> by removing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void myButton_Click(object sender, RoutedEventArgs e)
+{
+    myButton.Content = "Clicked";
+}                                        
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 14</h2>
+                                    <p>
+                                        Once <code>myButton_Click(...)</code> has been removed, within the <strong>Constructor</strong> of <code>public MainWindow() { ... }</code> and below the line of <code>this.InitializeComponent();</code> type in the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private readonly Library _library = new();
+
+private void New(object sender, RoutedEventArgs e) =>
+    _library.New(Display);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                    </code></pre>
+                                    <p>
+                                        Here an <strong>Instance</strong> of <code>Library</code> is created then below this is the <strong>Method</strong> of <code>New</code> that will be used with <strong>Event Handler</strong> 
+                                        from the <code>XAML</code>, this <strong>Method</strong> uses <strong>Arrow Syntax</strong> with the <code>=></code> for an expression body which is useful when a <strong>Method</strong> only has one line.
+                                    </p>
+                                    <h2 class="display-6">Step 15</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>OrderGame (Package)</strong> to <strong>Start</strong> the application.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-debug-order-game.png" class="img-fluid" alt="OrderGame (Package)"/>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <h2 class="display-6">Step 16</h2>
+                                    <p>
+                                        Once running you win by putting all the numbers in <strong>Order</strong> from <i>1</i> to <i>36</i> from left to right as quickly as possible by dragging and moving them into the correct <strong>Order</strong>, or you can select <i>New</i> to start a new game.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-running-order-game.png" class="img-fluid" alt="Order Game Running and Output" />
+                                    </p>
+                                    <h2 class="display-6">Step 17</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                To <strong>Exit</strong> the <strong>Windows App SDK</strong> application, select the <strong>Close</strong> button from the top right of the application as that concludes this <strong>Tutorial</strong> for <strong>Windows App SDK</strong> from <a href="https://www.tutorialr.com">tutorialr.com</a>!
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-close.png" class="img-fluid" alt="Close application"/>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="card-footer">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-order-game.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Order Game
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>                   
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Tutorial -->
+                </section>
+                <!-- /Section -->    
+            </div>
+            <div class="waves waves-bottom bg-white"></div>  
+        </main>
+        <!-- /Main -->
+        <!-- Footer -->
+        <footer class="footer mt-auto">
+            <nav class="navbar bottom navbar-light p-2">
+                <a href="../../../"><img src="../../../images/footer.png" alt="tutorialr.com" height="40px"></a>
+                <a href="https://www.twitter.com/tutorialrdotcom" target="_blank"><img src="../../../images/twitter.png" height="45px" alt="@tutorialrdotcom"></a>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="../../../images/cc-by-sa.png" height="35px" alt="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"></a>
+            </nav>
+        </footer>
+        <!-- /Footer -->
+        <!-- Scripts -->
+        <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../../../highlight/js/highlight.min.js"></script>
+        <!-- /Scripts-->
+    </body>
+</html>
