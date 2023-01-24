@@ -1,0 +1,1189 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <meta name="description" content="tutorialr.com - Tutorials, Talks and Workshops"/>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@tutorialrdotcom"/>
+        <meta name="twitter:creator" content="@rogueplanetoid"/>
+        <meta name="twitter:title" content="tutorialr.com"/>
+        <meta name="twitter:description" content="Tutorials, Talks and Workshops"/>
+        <meta name="twitter:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta name="twitter:image:alt" content="Tutorials, Talks and Workshops"/>
+        <!-- /Twitter -->
+        <!-- Open Graph -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="tutorialr.com"/>
+        <meta property="og:site_name" content="tutorialr.com">
+        <meta property="og:description" content="Tutorials, Talks and Workshops"/>
+        <meta property="og:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta property="og:image:width" content="1280"/>
+        <meta property="og:image:height" content="630"/>
+        <!-- /Open Graph -->
+        <link rel="icon" href="../../../favicon.ico"/>
+        <link href="../css/win-app-sdk.css" rel="stylesheet">
+        <link href="../../../css/style.css" rel="stylesheet">
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../highlight/css/vs.min.css" rel="stylesheet">
+        <title>tutorialr.com - Tutorials - Windows App SDK - Tetrominos</title>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <!-- Main -->
+        <main>
+            <!-- Navigation -->	
+            <nav class="navbar top navbar-light navbar-expand-md bg-brand">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tutorialr-navbar" aria-controls="tutorialr-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../">
+                        <img src="../../../images/header.png" alt="tutorialr.com" height="50px">
+                    </a>
+                    <div id="tutorialr-navbar" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../tutorials">Tutorials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-tutorialr active" href="../../winappsdk">Windows App SDK</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../talks">Talks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../workshops">Workshops</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://www.comentsys.com" target="_blank">
+                        <img src="../../../images/comentsys.png" alt="Comentsys" height="50px">
+                    </a>
+                </div>
+            </nav>
+            <!-- /Navigation -->
+            <div class="waves waves-top"></div>
+            <div class="bg-tutorialr">         
+                <!-- Section -->            
+                <section class="text-center text-white container">
+                    <!-- Hero -->
+                    <h1 class="display-4 mx-auto">Tetrominos</h1>
+                    <p class="lead">
+                        <strong>Learn</strong> creating a <strong>Tetrominos</strong> game using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
+                    </p>
+                    <!-- /Hero -->
+                    <!-- Tutorial -->
+                    <div class="col-lg-10 mx-auto">
+                        <div class="container text-start text-black">
+                            <div class="card position-relative">
+                                <div class="card-header">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-tetrominos.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Tetrominos
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>   
+                                <div class="card-body">
+                                    <p>
+                                        <strong>Tetronimos</strong> shows how you can create the game of <strong>Tetrominos</strong> or <strong>Tetris</strong> based on the work by 
+                                        <a href="https://github.com/OttoBotCode" target="_blank">OttoBotCode</a> using a control in a toolkit from <strong>NuGet</strong> using the <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 1</h2>
+                                    <p>
+                                        Follow <a href="../setup-and-start">Setup and Start</a> on how to get <strong>Setup</strong> and <strong>Install</strong> what you need for <strong>Visual Studio 2022</strong> and <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                In <strong>Windows 11</strong> choose <strong>Start</strong> and then find or search for <strong>Visual Studio 2022</strong> and then select it.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs.png" class="img-fluid" alt="Visual Studio 2022"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Once <strong>Visual Studio 2022</strong> has started select <strong>Create a new project</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-new-project.png" class="img-fluid" alt="Create a new project"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Then choose the <strong>Blank App, Packages (WinUI in Desktop)</strong> and then select <strong>Next</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-win-ui.png" class="img-fluid" alt="Blank App, Packages (WinUI in Desktop)"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>Tetrominos</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-configure-project.png" class="img-fluid" alt="Configure project" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 2</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio within</strong> <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Manage NuGet Packages...</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-manage-nuget-packages.png" class="img-fluid" alt="Manage NuGet Packages" />
+                                    </p>
+                                    <h2 class="display-6">Step 3</h2>
+                                    <p>
+                                        Then in the <strong>NuGet Package Manager</strong> from the <strong>Browse</strong> tab search for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> and then select <strong>Comentsys.Toolkit.WindowsAppSdk by Comentsys</strong> as indicated and select <strong>Install</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-nuget-toolkit.png" class="img-fluid" alt="NuGet Package Manager Comentsys.Toolkit.WindowsAppSdk" />
+                                    </p>
+                                    <p>
+                                        This will add the package for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> to your <strong>Project</strong>. If you get the <strong>Preview Changes</strong> screen saying 
+                                        <strong>Visual Studio is about to make changes to this solution. Click OK to proceed with the changes listed below.</strong> You can read the message and then select 
+                                        <strong>OK</strong> to <strong>Install</strong> the package, then you can close the <strong>tab</strong> for <strong>Nuget: Tetrominos</strong> by selecting the <strong>x</strong> next to it. 
+                                    </p>
+                                    <h2 class="display-6">Step 4</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio</strong> within <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Add</strong> then <strong>New Item…</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-new-item.png" class="img-fluid" alt="Add New Item" />
+                                    </p>
+                                    <h2 class="display-6">Step 5</h2>
+                                    <p>
+                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>Code</strong> and then select <strong>Code File</strong> from the list next to this, then type in the name of <i>Library.cs</i> and then <strong>Click</strong> on <strong>Add</strong>.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-add-new-item-tetrominos.png" class="img-fluid" alt="Add New Code File" />
+                                    </p>
+                                    <h2 class="display-6">Step 6</h2>
+                                    <p>
+                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Library.cs</i> then define a <code>namespace</code> allowing classes to be defined together, 
+                                        usually each is separate but will be defined in <i>Library.cs</i> by typing the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+// Using Statements
+
+namespace Tetrominos;
+
+// Position Class
+
+// Block Class
+
+// IBlock, JBlock & LBlock Class
+
+// OBlock, SBlock, TBlock & ZBlock Class
+
+// Queue Class
+
+public class Board
+{
+    // Board Member, Properties & Constructor
+
+    // Board ClearRow, MoveRowDown, IsInside & IsOutside Methods
+
+    // Board IsRowFull, IsRowEmpty & ClearFullRow Methods
+
+}
+
+public class State
+{
+    // State Members & Properties
+
+    // State Private Methods
+
+    // State Constructor and Hold, RotateClockwise & RotateAntiClockwise Methods
+
+    // State Left, Right, Down, Distance & Drop Methods
+
+}
+
+public class Library
+{
+    // Constants, Variables & Enum
+
+    // SetPieces & Board Methods
+
+    // Block, Preview, Next & Held Methods
+
+    // Ghost, Score, Over & Draw Methods
+
+    // Loop & Move Methods
+
+    // Layout & New Methods
+
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                    </code></pre>
+                                    <h2 class="display-6">Step 7</h2>
+                                    <p>
+                                        Still in <i>Library.cs</i> for the <code>namespace</code> of <code>Tetrominos</code> in <i>Library.cs</i> you can define some <code>using</code> 
+                                        statements needed for the <code>class</code> by typing below the <strong>Comment</strong> of <code>// Using Statements</code> the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+using Comentsys.Toolkit.WindowsAppSdk;
+using Microsoft.UI;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Media;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                                    </code></pre>                                    
+                                    <h2 class="display-6">Step 8</h2>
+                                    <p>
+                                        Still in <i>Library.cs</i> for the <code>namespace</code> of <code>Tetrominos</code> in <i>Library.cs</i> 
+                                        you will define a <code>class</code> for <code>Position</code> for after the <strong>Comment</strong> of <code>// Position Class</code> by typing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public class Position
+{
+    public int Row { get; set; }
+
+    public int Column { get; set; }
+
+    public Position(int row, int column) =>
+        (Row, Column) = (row, column);  
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+                                    </code></pre> 
+                                    <p>
+                                        <code>Position</code> has <strong>Properties</strong> for <code>Row</code> and <code>Column</code> along with a 
+                                        <strong>Constructor</strong> to set them which will represent the location of an element for the game.
+                                    </p>
+
+                                    <h2 class="display-6">Step 9</h2>
+                                    <p>
+                                        Still in <i>Library.cs</i> for the <code>namespace</code> of <code>Tetrominos</code> you will define a <code>class</code> for 
+                                        <code>Block</code> after the <strong>Comment</strong> of <code>// Block Class</code> by typing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public abstract class Block
+{
+    private readonly Position[][] _tiles;
+    private readonly Position _start;
+    private readonly Position _offset;
+    private int _rotate;
+
+    public int Id { get; }
+
+    public Block(int id, int row, int column, Position[][] tiles)
+    { 
+        Id = id;
+        _start = new Position(row, column);
+        _offset = new Position(_start.Row, _start.Column); 
+        _tiles = tiles;
+    }
+
+    public IEnumerable&lt;Position&gt; Positions => 
+        _tiles[_rotate].Select(position => 
+        new Position(
+            position.Row + _offset.Row,
+            position.Column + _offset.Column));
+
+    public void RotateClockwise() =>
+        _rotate = (_rotate + 1) % _tiles.Length;
+
+    public void RotateAntiClockwise() =>
+        _rotate = _rotate == 0 ? 
+            _rotate = _tiles.Length - 1 : _rotate--;
+        
+    public void Move(int rows, int columns)
+    {
+        _offset.Row += rows; 
+        _offset.Column += columns; 
+    }
+
+    public void Reset()
+    {
+        _rotate = 0;
+        _offset.Row = _start.Row;
+        _offset.Column = _start.Column;
+    }
+    
+    public IEnumerable&lt;Position&gt; Preview =>
+        _tiles[0];
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                                    </code></pre>
+                                    <p>
+                                        <code>Block</code> uses <code>Position</code> to represent the set of tiles for the elements or <strong>Block</strong> for the game including 
+                                        <strong>Methods</strong> such as <code>RotateClockwise</code> and <code>RotateAntiClockwise</code> to update the tiles accordingly and to 
+                                        get a preview to be used to represent an upcoming <strong>Block</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 10</h2>
+                                    <p>
+                                        Still in the <code>namespace</code> of <code>Tetrominos</code> in <i>Library.cs</i> after the <strong>Comment</strong> of <code>// IBlock, JBlock & LBlock Class</code> type the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public class IBlock : Block
+{
+    public IBlock() : base(1, -1, 3, new Position[][]
+    {
+        new Position[] { new(1,0), new(1,1), new(1,2), new(1,3) },
+        new Position[] { new(0,2), new(1,2), new(2,2), new(3,2) },
+        new Position[] { new(2,0), new(2,1), new(2,2), new(2,3) },
+        new Position[] { new(0,1), new(1,1), new(2,1), new(3,1) }
+    }) 
+    { }
+}
+
+public class JBlock : Block
+{
+    public JBlock() : base(2, 0, 3, new Position[][]
+    {
+        new Position[] { new(0, 0), new(1, 0), new(1, 1), new(1, 2) },
+        new Position[] { new(0, 1), new(0, 2), new(1, 1), new(2, 1) },
+        new Position[] { new(1, 0), new(1, 1), new(1, 2), new(2, 2) },
+        new Position[] { new(0, 1), new(1, 1), new(2, 1), new(2, 0) }
+    }) 
+    { }
+}
+
+public class LBlock : Block
+{
+    public LBlock() : base(3, 0, 3, new Position[][]
+    {
+        new Position[] { new(0,2), new(1,0), new(1,1), new(1,2) },
+        new Position[] { new(0,1), new(1,1), new(2,1), new(2,2) },
+        new Position[] { new(1,0), new(1,1), new(1,2), new(2,0) },
+        new Position[] { new(0,0), new(0,1), new(1,1), new(2,1) }
+    })
+    { }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                                    </code></pre>
+                                    <p>
+                                        <code>IBlock</code>, <code>JBlock</code> and <code>LBlock</code> represent some of the <strong>Blocks</strong> in the game which are shaped like an <i>I</i>, <i>J</i> and <i>L</i>
+                                    </p>
+                                    <h2 class="display-6">Step 11</h2>
+                                    <p>
+                                        Still in the <code>namespace</code> of <code>Tetrominos</code> in <i>Library.cs</i> after the <strong>Comment</strong> of <code>// OBlock, SBlock, TBlock & ZBlock Class</code> type the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public class OBlock : Block
+{
+    public OBlock() : base(4, 0, 4, new Position[][]
+    {
+        new Position[] { new(0,0), new(0,1), new(1,0), new(1,1) }
+    })
+    { }
+}
+
+public class SBlock : Block
+{
+    public SBlock() : base(5, 0, 3, new Position[][]
+    {
+        new Position[] { new(0,1), new(0,2), new(1,0), new(1,1) },
+        new Position[] { new(0,1), new(1,1), new(1,2), new(2,2) },
+        new Position[] { new(1,1), new(1,2), new(2,0), new(2,1) },
+        new Position[] { new(0,0), new(1,0), new(1,1), new(2,1) }
+    })
+    { }
+}
+
+public class TBlock : Block
+{
+    public TBlock() : base(6, 0, 3, new Position[][]
+    {
+        new Position[] { new(0,1), new(1,0), new(1,1), new(1,2) },
+        new Position[] { new(0,1), new(1,1), new(1,2), new(2,1) },
+        new Position[] { new(1,0), new(1,1), new(1,2), new(2,1) },
+        new Position[] { new(0,1), new(1,0), new(1,1), new(2,1) }
+    })
+    { }
+}
+
+public class ZBlock : Block
+{
+    public ZBlock() : base(7, 0, 3, new Position[][]
+    {
+        new Position[] { new(0,0), new(0,1), new(1,1), new(1,2) },
+        new Position[] { new(0,2), new(1,1), new(1,2), new(2,1) },
+        new Position[] { new(1,0), new(1,1), new(2,1), new(2,2) },
+        new Position[] { new(0,1), new(1,0), new(1,1), new(2,0) }
+    })
+    { }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                                    </code></pre>
+                                    <p>
+                                        <code>OBlock</code>, <code>SBlock</code>, <code>TBlock</code> and <code>ZBlock</code> represent some of the <strong>Blocks</strong> in the game which are shaped like an <i>O</i>, <i>S</i>, <i>T</i> and <i>Z</i>
+                                    </p>
+                                    <h2 class="display-6">Step 12</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Tetrominos</code> in <i>Library.cs</i> after the <strong>Comment</strong> of <code>// Queue Class</code> type the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public class Queue
+{
+    private readonly Block[] _blocks = new Block[]
+    {
+        new IBlock(),
+        new JBlock(),
+        new LBlock(),
+        new OBlock(),
+        new SBlock(),
+        new TBlock(),
+        new ZBlock()
+    };
+    
+    private readonly Random _random = new((int)DateTime.UtcNow.Ticks);
+
+    private Block Choose() =>
+        _blocks[_random.Next(0, _blocks.Length)];
+
+    public Block Next { get; private set; }
+
+    public Queue() =>
+        Next = Choose();
+
+    public Block Get()
+    {
+        var block = Next;
+        do 
+        { 
+            Next = Choose();
+        } while(block.Id == Next.Id);
+        return block;
+    }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                    </code></pre>
+                                    <p>
+                                        <code>Queue</code> represents the possible <strong>Blocks</strong> that will be returned from the set of <strong>Blocks</strong> that have been defined.
+                                    </p>
+                                    <h2 class="display-6">Step 13</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Tetrominos</code> in <i>Library.cs</i> in the <code>Class</code> of <code>Board</code> 
+                                        after the <strong>Comment</strong> of <code>// Board Member, Properties & Constructor</code> type the following <strong>Member</strong>, <strong>Properties</strong> and <strong>Constructor</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private readonly int[,] _board;
+
+public int Rows { get; }
+
+public int Columns { get; }
+
+public int this[int row, int column]
+{
+    get => _board[row, column];
+    set => _board[row, column] = value;
+}
+
+public Board(int rows, int columns) =>
+    (Rows, Columns, _board) = (rows, columns, new int[rows, columns]);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                    </code></pre>  
+                                    <p>
+                                        The <strong>Member</strong> of <code>_board</code> will represent the elements for the layout of the game and the <strong>Properties</strong> will define the <code>Rows</code> and <code>Columns</code> for this with the 
+                                        ability to assign these using the this along with the <strong>Constructor</strong> and the <code>_board</code> will be updated with the <strong>Methods</strong> that will be defined in the next <strong>Steps</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 14</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Tetrominos</code> in <i>Library.cs</i> in the <code>Class</code> of <code>Board</code> 
+                                        after the <strong>Comment</strong> of <code>// Board ClearRow, MoveRowDown, IsInside & IsOutside Methods</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void ClearRow(int row)
+{
+    for (int column = 0; column &lt; Columns; column++)
+    {
+        _board[row, column] = 0;
+    }
+}
+
+private void MoveRowDown(int row, int rows)
+{
+    for (int column = 0; column &lt; Columns; column++)
+    {
+        _board[row + rows, column] = _board[row, column];
+        _board[row, column] = 0;
+    }
+}
+
+public bool IsInside(int row, int column) =>
+    row >= 0 && row &lt; Rows && column >= 0 && column &lt; Columns;
+
+public bool IsEmpty(int row, int column) =>
+    IsInside(row, column) && _board[row, column] == 0;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 15</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Tetrominos</code> in <i>Library.cs</i> in the <code>Class</code> of <code>Board</code> 
+                                        after the <strong>Comment</strong> of <code>// Board IsRowFull, IsRowEmpty & ClearFullRow Methods</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public bool IsRowFull(int row)
+{
+    for(int column = 0; column &lt; Columns; column++)
+    {
+        if(_board[row, column] == 0)
+            return false;
+    }
+    return true;
+}
+
+public bool IsRowEmpty(int row)
+{
+    for (int column = 0; column &lt; Columns; column++)
+    {
+        if (_board[row, column] != 0)
+            return false;
+    }
+    return true;
+}
+
+public int ClearFullRows()
+{
+    var cleared = 0;
+    for(int row = Rows - 1; row >= 0; row--)
+    {
+        if(IsRowFull(row))
+        {
+            ClearRow(row);
+            cleared++;
+        } 
+        else if(cleared > 0)
+            MoveRowDown(row, cleared);
+    }
+    return cleared;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 16</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Tetrominos</code> in <i>Library.cs</i> in the 
+                                        <code>Class</code> of <code>State</code> after the <strong>Comment</strong> of <code>// State Members & Properties</code> 
+                                        type the following <strong>Members</strong> and <strong>Properties</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private readonly Board _board;
+private Block _current;
+
+public Board Board => _board;
+
+public Queue Queue { get; }
+
+public bool Over { get; private set; }
+
+public int Score { get; private set; }
+
+public Block Held { get; private set; }
+
+public bool CanHold { get; private set; }
+
+public Block Current
+{
+    get => _current;
+    private set => Update(value);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 17</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Tetrominos</code> in <i>Library.cs</i> in the 
+                                        <code>Class</code> of <code>State</code> after the <strong>Comment</strong> of <code>// Private Methods</code> 
+                                        type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private bool Fits()
+{
+    foreach(var position in _current.Positions)
+        if(!_board.IsEmpty(position.Row, position.Column))
+            return false;
+    return true;
+}
+
+private void Update(Block value)
+{
+    _current = value;
+    _current.Reset();
+    for(int i = 0; i &lt; 2; i++)
+    {
+        _current.Move(1, 0);
+        if(!Fits())
+            _current.Move(-1, 0);
+    }
+}
+
+private bool IsOver() =>
+    !(_board.IsRowEmpty(0) && _board.IsRowEmpty(1));
+
+private void Place()
+{
+    foreach (var position in Current.Positions)
+        _board[position.Row, position.Column] = Current.Id;
+    Score += _board.ClearFullRows();
+    if (IsOver())
+        Over = true;
+    else
+    {
+        Current = Queue.Get();
+        CanHold = true;
+    }
+}
+
+private int GetDistance(Position position)
+{
+    var drop = 0;
+    while(_board.IsEmpty(position.Row + drop + 1, position.Column))
+        drop++;
+    return drop;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                                    </code></pre>
+                                    <p>
+                                        <code>State</code> represents the conditions of the game including being able to place <strong>Blocks</strong> and determine if the game is over.
+                                    </p>
+                                    <h2 class="display-6">Step 18</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Tetrominos</code> in <i>Library.cs</i> in the 
+                                        <code>Class</code> of <code>State</code> after the <strong>Comment</strong> of <code>// State Constructor and Hold, RotateClockwise & RotateAntiClockwise Methods</code> 
+                                        type the following <strong>Constructor</strong> and <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public State()
+{
+    _board = new Board(22, 10);
+    Queue = new Queue();
+    Current = Queue.Get();
+    CanHold = true;
+}
+
+public void Hold()
+{
+    if(!CanHold)
+        return;
+    if(Held == null)
+    {
+        Held = Current;
+        Current = Queue.Get();
+    }
+    else
+        (Held, Current) = (Current, Held);
+    CanHold = false;
+}
+
+public void RotateClockwise()
+{
+    Current.RotateClockwise();
+    if(!Fits())
+        Current.RotateAntiClockwise();
+}
+
+public void RotateAntiClockwise()
+{
+    Current.RotateAntiClockwise();
+    if (!Fits())
+        Current.RotateClockwise();
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                    </code></pre>
+                                    <p>
+                                        <code>Hold</code> will hold a <strong>Block</strong> for the game and <code>RotateClockwise</code> and <code>RotateAntiClockwise</code> will rotate a <strong>Block</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 19</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Tetrominos</code> in <i>Library.cs</i> in the 
+                                        <code>Class</code> of <code>State</code> after the <strong>Comment</strong> of <code>// State Left, Right, Down, Distance & Drop Methods</code> 
+                                        type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public void Left()
+{
+    Current.Move(0, -1);
+    if(!Fits())
+        Current.Move(0, 1);
+}
+
+public void Right()
+{
+    Current.Move(0, 1);
+    if (!Fits())
+        Current.Move(0, -1);
+}
+
+public void Down()
+{
+    Current.Move(1, 0);
+    if(!Fits())
+    {
+        Current.Move(-1, 0);
+        Place();
+    }
+}
+
+public int Distance()
+{
+    var drop = _board.Rows;
+    foreach(var position in Current.Positions)
+    {
+        drop = Math.Min(drop, GetDistance(position));
+    }
+    return drop;
+}
+
+public void Drop()
+{
+    Current.Move(Distance(), 0);
+    Place();
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                    </code></pre>
+                                    <p>
+                                        <code>Left</code>, <code>Right</code> and <code>Down</code> will move a <strong>Block</strong> accordingly and <code>Distance</code> will determine the minimum 
+                                        position on the <strong>Board</strong> and <code>Drop</code> will place a <strong>Block</strong> there.
+                                    </p>
+                                    <h2 class="display-6">Step 20</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Tetrominos</code> in <i>Library.cs</i> and the <code>class</code> of <code>Library</code> after 
+                                        the <strong>Comment</strong> of <code>// Constants, Variables & Enum</code> 
+                                        type the following <strong>Constants</strong>, <strong>Variables</strong>, <strong>Property</strong> and <strong>Enum</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private const int max_delay = 1000;
+private const int min_delay = 75;
+private const int increase = 25;
+private const int preview = 4;
+private const int size = 36;
+private readonly Brush[] _brushes = new Brush[]
+{
+    new SolidColorBrush(Colors.White),
+    new SolidColorBrush(Colors.Cyan),
+    new SolidColorBrush(Colors.Blue),
+    new SolidColorBrush(Colors.Orange),
+    new SolidColorBrush(Colors.Gold),
+    new SolidColorBrush(Colors.Green),
+    new SolidColorBrush(Colors.Purple),
+    new SolidColorBrush(Colors.Red)
+};
+private Grid _grid;
+private Grid _next;
+private Grid _hold;
+private TextBlock _text;
+private Piece[,] _pieces;
+private State _state;
+
+public enum Moves
+{
+    Left,
+    Right,
+    Down,
+    RotateClockwise,
+    RotateAntiClockwise,
+    Hold,
+    Drop
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                                    </code></pre>  
+                                    <p>
+                                        <strong>Constants</strong> are values that are used in the game that will not change and <strong>Variables</strong> are used to store various 
+                                        values for the game, there is also an <code>enum</code> which is used to define moves possible in the game.
+                                    </p>
+                                    <h2 class="display-6">Step 21</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Tetrominos</code> in <i>Library.cs</i> and the <code>class</code> of <code>Library</code> after 
+                                        the <strong>Comment</strong> of <code>// SetPieces & Board Methods</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private static Piece[,] SetPieces(Grid grid, int rows, int columns)
+{
+    grid.Children.Clear();
+    var pieces = new Piece[rows, columns];
+    for (int row = 0; row &lt; rows; row++)
+    {
+        grid.RowDefinitions.Add(new RowDefinition());
+        for (int column = 0; column &lt; columns; column++)
+        {
+            if (row == 0)
+                grid.ColumnDefinitions.Add(new ColumnDefinition());
+            var piece = new Piece
+            {
+                Width = size,
+                Height = size,
+                IsSquare = true,
+                Stroke = new SolidColorBrush(Colors.Black)
+            };
+            Grid.SetColumn(piece, column);
+            Grid.SetRow(piece, row);
+            grid.Children.Add(piece);
+            pieces[row, column] = piece;
+        }
+    }
+    return pieces;
+}
+
+private void Board(Board board)
+{
+    for (int row = 0; row &lt; board.Rows; row++)
+    {
+        for (int column = 0; column &lt; board.Columns; column++)
+        {
+            var id = board[row, column];
+            var counter = _pieces[row, column];
+            counter.Opacity = 1;
+            counter.Fill = _brushes[id];
+        }
+    }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                    </code></pre>  
+                                    <p>
+                                        <code>SetPieces</code> is used to define where the elements that make up the visuals for a <strong>Block</strong> using <code>Piece</code> 
+                                        is performed and <code>Board</code> is used to set up the <strong>Board</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 22</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Tetrominos</code> in <i>Library.cs</i> and the <code>class</code> of <code>Library</code> after 
+                                        the <strong>Comment</strong> of <code>// Block, Preview, Next & Held Methods</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void Block(Block block)
+{
+    foreach(var position in block.Positions)
+    {
+        var counter = _pieces[position.Row, position.Column];
+        counter.Opacity = 1;
+        counter.Fill = _brushes[block.Id];
+    }
+}
+
+private void Preview(Grid grid, Block block = null)
+{
+    foreach (var piece in grid.Children.Cast&lt;Piece&gt;())
+    {
+        piece.Fill = _brushes[0];
+    }
+    if (block != null)
+    {
+        foreach (var position in block.Preview)
+        {
+            var piece = grid.Children.Cast&lt;Piece&gt;()
+                .First(f => Grid.GetRow(f) == position.Row
+                    && Grid.GetColumn(f) == position.Column);
+            piece.Fill = _brushes[block.Id];
+        }
+    }
+}
+
+private void Next(Queue queue) =>
+    Preview(_next, queue.Next);
+
+private void Held(Block block)
+{
+    if (block == null)
+        Preview(_hold);
+    else
+        Preview(_hold, block);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                                    </code></pre>  
+                                    <p>
+                                        <code>Block</code> is used to set elements of the <strongBoard></strong> for a <strong>Block</strong> and <code>Preview</code> is used to get the elements to display what a <strong>Block</strong> looks like. 
+                                        <code>Next</code> will use <code>Preview</code> to display the upcoming <strong>Block</strong> and <code>Held</code> will use <code>Preview</code> to display the <strong>Block</strong> being <strong>Held</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 23</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Tetrominos</code> in <i>Library.cs</i> and the <code>class</code> of <code>Library</code> after 
+                                        the <strong>Comment</strong> of <code>// Ghost, Score, Over & Draw Methods</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void Ghost(Block block)
+{
+    int distance = _state.Distance();
+    foreach (var position in block.Positions)
+    {
+        var counter = _pieces[position.Row + distance, position.Column];
+        counter.Opacity = 0.25;
+        counter.Fill = _brushes[block.Id];
+    }
+}
+
+private void Score(int score) => 
+    _text.Text = $"Score {score}";
+
+private void Over(int score) =>
+    _text.Text = $"Game Over! Final Score {score}";
+    
+private void Draw(State state)
+{
+    Board(state.Board);
+    Ghost(state.Current);
+    Block(state.Current);
+    Next(state.Queue);
+    Held(state.Held);
+    Score(state.Score);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                    </code></pre>  
+                                    <p>
+                                        <code>Ghost</code> is used to show a semi-transparent version of the <strong>Block</strong> where it would end up if placed, <code>Score</code> and <code>Over</code> will be used to set 
+                                        the output to be displayed accordingly. <code>Draw</code> will be used to call the <strong>Methods</strong> which will be used as part of the game-loop.
+                                    </p>
+                                    <h2 class="display-6">Step 24</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Tetrominos</code> in <i>Library.cs</i> and the <code>class</code> of <code>Library</code> after 
+                                        the <strong>Comment</strong> of <code>// Loop & Move Methods</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private async Task Loop()
+{
+    Draw(_state);
+    while(!_state.Over)
+    {
+        var delay = Math.Max(min_delay, max_delay - (_state.Score * increase));
+        await Task.Delay(delay);
+        _state.Down();
+        Draw(_state);
+    }
+    Over(_state.Score);
+}
+
+public void Move(string value)
+{
+    var move = Enum.Parse(typeof(Moves), value);
+    if (_state.Over)
+        return;
+    switch (move)
+    {
+        case Moves.Left:
+            _state.Left();
+            break;
+        case Moves.Right:
+            _state.Right();
+            break;
+        case Moves.Down:
+            _state.Down();
+            break;
+        case Moves.RotateClockwise:
+            _state.RotateClockwise();
+            break;
+        case Moves.RotateAntiClockwise:
+            _state.RotateAntiClockwise();
+            break;
+        case Moves.Hold:
+            _state.Hold();
+            break;
+        case Moves.Drop:
+            _state.Drop();
+            break;
+        default:
+            return;
+    }
+    Draw(_state);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                    </code></pre>  
+                                    <p>
+                                        <code>Loop</code> is used to create the game-loop and will also increase the speed of the game as it progresses to make the game harder, 
+                                        and <code>Move</code> will perform the actions based on the value that match the <code>enum</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 25</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Chessboard</code> in <i>Library.cs</i> and the <code>class</code> of <code>Library</code> after 
+                                        the <strong>Comment</strong> of <code>// Layout & New Methods</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void Layout(Grid grid)
+{
+    grid.Children.Clear();
+    grid.RowDefinitions.Clear();
+    grid.ColumnDefinitions.Clear();
+    grid.ColumnDefinitions.Add(new ColumnDefinition() 
+    { 
+        Width = GridLength.Auto 
+    });
+    grid.ColumnDefinitions.Add(new ColumnDefinition() 
+    { 
+        Width = new GridLength(1, GridUnitType.Star) 
+    });
+    StackPanel panel = new()
+    {
+        Orientation = Orientation.Vertical,
+    };
+    _text = new TextBlock();
+    panel.Children.Add(_text);
+    panel.Children.Add(new TextBlock() { Text = "Next" });
+    _next = new Grid();
+    SetPieces(_next, preview, preview);
+    panel.Children.Add(_next);
+    panel.Children.Add(new TextBlock() { Text = "Hold" });
+    _hold = new Grid();
+    SetPieces(_hold, preview, preview);
+    panel.Children.Add(_hold);
+    grid.Children.Add(panel);
+    _grid = new Grid();
+    grid.Children.Add(_grid);
+    _pieces = SetPieces(_grid, _state.Board.Rows, _state.Board.Columns);
+    Grid.SetColumn(_grid, 1);
+}
+
+public async void New(Grid grid)
+{
+    _grid = grid;
+    _state = new State();
+    Layout(grid);
+    await Loop();
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                    </code></pre>  
+                                    <p>
+                                        <code>Layout</code> will create the look-and-feel of the game including those to display progress and <code>New</code> will start a new game.
+                                    </p>
+                                    <h2 class="display-6">Step 26</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>MainWindow.xaml</strong> to see the <strong>XAML</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-xaml-tetrominos.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 27</h2>
+                                    <p>
+                                        In the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> there will be some <strong>XAML</strong> for a <code>StackPanel</code>, this should be <strong>Removed</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;StackPanel&nbsp;Orientation=&quot;Horizontal&quot;&nbsp;
+HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;x:Name=&quot;myButton&quot;&nbsp;Click=&quot;myButton_Click&quot;&gt;Click&nbsp;Me&lt;/Button&gt;
+&lt;/StackPanel&gt;                               
+                                    </code></pre>
+                                    <h2 class="display-6">Step 28</h2>
+                                    <p>
+                                        While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> above <code>&lt;/Window&gt;</code>, type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;Grid&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid&nbsp;Margin=&quot;50&quot;&nbsp;Name=&quot;Display&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HorizontalAlignment=&quot;Center&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VerticalAlignment=&quot;Center&quot;&nbsp;Loaded=&quot;New&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;CommandBar&nbsp;VerticalAlignment=&quot;Bottom&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AppBarButton&nbsp;Icon=&quot;Back&quot;&nbsp;Label=&quot;Left&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tag=&quot;Left&quot;&nbsp;Click=&quot;Move&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AppBarButton&nbsp;Icon=&quot;Forward&quot;&nbsp;Label=&quot;Right&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tag=&quot;Right&quot;&nbsp;Click=&quot;Move&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AppBarButton&nbsp;Icon=&quot;Download&quot;&nbsp;Label=&quot;Down&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tag=&quot;Down&quot;&nbsp;Click=&quot;Move&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AppBarButton&nbsp;Icon=&quot;Priority&quot;&nbsp;Label=&quot;Drop&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tag=&quot;Drop&quot;&nbsp;Click=&quot;Move&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AppBarButton&nbsp;Icon=&quot;Redo&quot;&nbsp;Label=&quot;Rotate&nbsp;Clockwise&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tag=&quot;RotateClockwise&quot;&nbsp;Click=&quot;Move&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AppBarButton&nbsp;Icon=&quot;Undo&quot;&nbsp;Label=&quot;Rotate&nbsp;Clockwise&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tag=&quot;RotateAntiClockwise&quot;&nbsp;Click=&quot;Move&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AppBarButton&nbsp;Icon=&quot;Stop&quot;&nbsp;Label=&quot;Hold&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tag=&quot;Hold&quot;&nbsp;Click=&quot;Move&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AppBarButton&nbsp;Icon=&quot;Page2&quot;&nbsp;Label=&quot;New&quot;&nbsp;Click=&quot;New&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/CommandBar&gt;
+&lt;/Grid&gt;                                                                                                                                                                                                                                                                                                                                                                
+                                    </code></pre> 
+                                    <p>
+                                        This <strong>XAML</strong> contains a <code>Grid</code> to contain the game itself along with a <code>CommandBar</code> which will be used to perform the moves in the game.
+                                    </p>                           
+                                    <h2 class="display-6">Step 29</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>MainWindow.xaml</strong> then double-click on <strong>MainWindow.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-code-tetrominos.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 30</h2>
+                                    <p>
+                                        In the <strong>Code</strong> for <code>MainWindow.xaml.cs</code> there be a Method of <code>myButton_Click(...)</code> this should be <strong>Removed</strong> by removing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void myButton_Click(object sender, RoutedEventArgs e)
+{
+    myButton.Content = "Clicked";
+}                                        
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 31</h2>
+                                    <p>
+                                        Once <code>myButton_Click(...)</code> has been removed, within the <strong>Constructor</strong> of <code>public MainWindow() { ... }</code> and below the line of <code>this.InitializeComponent();</code> type in the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private readonly Library _library = new();
+
+private void New(object sender, RoutedEventArgs e) =>
+    _library.New(Display);
+
+private void Move(object sender, RoutedEventArgs e) =>
+    _library.Move(((AppBarButton)sender).Tag as string);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                                    </code></pre>
+                                    <p>
+                                        Here an <strong>Instance</strong> of <code>Library</code> is created then below this is the <strong>Method</strong> of <code>New</code> and <code>Move</code> 
+                                        that will be used with <strong>Event Handler</strong> from the <strong>XAML</strong>, this <strong>Method</strong> 
+                                        uses Arrow Syntax with the <code>=></code> for an Expression Body which is useful when a <strong>Method</strong> only has one line.
+                                    </p>
+                                    <h2 class="display-6">Step 32</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>Tetrominos (Package)</strong> to <strong>Start</strong> the application.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-debug-tetrominos.png" class="img-fluid" alt="Tetrominos (Package)"/>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <h2 class="display-6">Step 33</h2>
+                                    <p>
+                                        Once running you can tap on the appropriate button on the <code>CommandBar</code> to play the game where the goal is to get as many lines as possible, 
+                                        when you do that line will disappear but if you reach the top then the game is over, you can also <strong>Hold</strong> a <strong>Block</strong> or see what one is 
+                                        <strong>Next</strong> or select <i>New</i> to start a new game.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-running-tetrominos.png" class="img-fluid" alt="Tetrominos Running and Output" />
+                                    </p>
+                                    <h2 class="display-6">Step 34</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                To <strong>Exit</strong> the <strong>Windows App SDK</strong> application, select the <strong>Close</strong> button from the top right of the application as that concludes this <strong>Tutorial</strong> for <strong>Windows App SDK</strong> from <a href="https://www.tutorialr.com">tutorialr.com</a>!
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-close.png" class="img-fluid" alt="Close application"/>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="card-footer">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-tetrominos.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Tetrominos
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>                   
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Tutorial -->
+                </section>
+                <!-- /Section -->    
+            </div>
+            <div class="waves waves-bottom bg-white"></div>  
+        </main>
+        <!-- /Main -->
+        <!-- Footer -->
+        <footer class="footer mt-auto">
+            <nav class="navbar bottom navbar-light p-2">
+                <a href="../../../"><img src="../../../images/footer.png" alt="tutorialr.com" height="40px"></a>
+                <a href="https://www.twitter.com/tutorialrdotcom" target="_blank"><img src="../../../images/twitter.png" height="45px" alt="@tutorialrdotcom"></a>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="../../../images/cc-by-sa.png" height="35px" alt="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"></a>
+            </nav>
+        </footer>
+        <!-- /Footer -->
+        <!-- Scripts -->
+        <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../../../highlight/js/highlight.min.js"></script>
+        <!-- /Scripts-->
+    </body>
+</html>

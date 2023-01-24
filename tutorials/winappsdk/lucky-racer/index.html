@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <meta name="description" content="tutorialr.com - Tutorials, Talks and Workshops"/>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@tutorialrdotcom"/>
+        <meta name="twitter:creator" content="@rogueplanetoid"/>
+        <meta name="twitter:title" content="tutorialr.com"/>
+        <meta name="twitter:description" content="Tutorials, Talks and Workshops"/>
+        <meta name="twitter:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta name="twitter:image:alt" content="Tutorials, Talks and Workshops"/>
+        <!-- /Twitter -->
+        <!-- Open Graph -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="tutorialr.com"/>
+        <meta property="og:site_name" content="tutorialr.com">
+        <meta property="og:description" content="Tutorials, Talks and Workshops"/>
+        <meta property="og:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta property="og:image:width" content="1280"/>
+        <meta property="og:image:height" content="630"/>
+        <!-- /Open Graph -->
+        <link rel="icon" href="../../../favicon.ico"/>
+        <link href="../css/win-app-sdk.css" rel="stylesheet">
+        <link href="../../../css/style.css" rel="stylesheet">
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../highlight/css/vs.min.css" rel="stylesheet">
+        <title>tutorialr.com - Tutorials - Windows App SDK - Lucky Racer</title>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <!-- Main -->
+        <main>
+            <!-- Navigation -->	
+            <nav class="navbar top navbar-light navbar-expand-md bg-brand">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tutorialr-navbar" aria-controls="tutorialr-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../">
+                        <img src="../../../images/header.png" alt="tutorialr.com" height="50px">
+                    </a>
+                    <div id="tutorialr-navbar" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../tutorials">Tutorials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-tutorialr active" href="../../winappsdk">Windows App SDK</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../talks">Talks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../workshops">Workshops</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://www.comentsys.com" target="_blank">
+                        <img src="../../../images/comentsys.png" alt="Comentsys" height="50px">
+                    </a>
+                </div>
+            </nav>
+            <!-- /Navigation -->
+            <div class="waves waves-top"></div>
+            <div class="bg-tutorialr">         
+                <!-- Section -->            
+                <section class="text-center text-white container">
+                    <!-- Hero -->
+                    <h1 class="display-4 mx-auto">Lucky Racer</h1>
+                    <p class="lead">
+                        <strong>Learn</strong> creating a <strong>Lucky Racer</strong> game using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
+                    </p>
+                    <!-- /Hero -->
+                    <!-- Tutorial -->
+                    <div class="col-lg-10 mx-auto">
+                        <div class="container text-start text-black">
+                            <div class="card position-relative">
+                                <div class="card-header">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-lucky-racer.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Lucky Racer
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>   
+                                <div class="card-body">
+                                    <p>
+                                        <strong>Lucky Racer</strong> shows how you can create a game where you can pick from a selection of cars to see if you 
+                                        will be the winner in the quickest time using emoji and a toolkit from <strong>NuGet</strong> using the <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 1</h2>
+                                    <p>
+                                        Follow <a href="../setup-and-start">Setup and Start</a> on how to get <strong>Setup</strong> and <strong>Install</strong> what you need for <strong>Visual Studio 2022</strong> and <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                In <strong>Windows 11</strong> choose <strong>Start</strong> and then find or search for <strong>Visual Studio 2022</strong> and then select it.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs.png" class="img-fluid" alt="Visual Studio 2022"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Once <strong>Visual Studio 2022</strong> has started select <strong>Create a new project</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-new-project.png" class="img-fluid" alt="Create a new project"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Then choose the <strong>Blank App, Packages (WinUI in Desktop)</strong> and then select <strong>Next</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-win-ui.png" class="img-fluid" alt="Blank App, Packages (WinUI in Desktop)"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>LuckyRacer</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-configure-project.png" class="img-fluid" alt="Configure project" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 2</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio within</strong> <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Manage NuGet Packages...</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-manage-nuget-packages.png" class="img-fluid" alt="Manage NuGet Packages" />
+                                    </p>
+                                    <h2 class="display-6">Step 3</h2>
+                                    <p>
+                                        Then in the <strong>NuGet Package Manager</strong> from the <strong>Browse</strong> tab search for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> and then select <strong>Comentsys.Toolkit.WindowsAppSdk by Comentsys</strong> as indicated and select <strong>Install</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-nuget-toolkit.png" class="img-fluid" alt="NuGet Package Manager Comentsys.Toolkit.WindowsAppSdk" />
+                                    </p>
+                                    <p>
+                                        This will add the package for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> to your <strong>Project</strong>. If you get the <strong>Preview Changes</strong> screen saying 
+                                        <strong>Visual Studio is about to make changes to this solution. Click OK to proceed with the changes listed below.</strong> You can read the message and then select 
+                                        <strong>OK</strong> to <strong>Install</strong> the package.
+                                    </p>
+                                    <h2 class="display-6">Step 4</h2>
+                                    <p>
+                                        Then while still in the <strong>NuGet Package Manager</strong> from the <strong>Browse</strong> tab search for <strong>Comentsys.Assets.FluentEmoji</strong> and then select <strong>Comentsys.Assets.FluentEmoji by Comentsys</strong> as indicated and select <strong>Install</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-nuget-emoji.png" class="img-fluid" alt="NuGet Package Manager Comentsys.Assets.FluentEmoji" />
+                                    </p>
+                                    <p>
+                                        This will add the package for <strong>Comentsys.Assets.FluentEmoji </strong>to your <strong>Project</strong>. If you get the <strong>Preview Changes</strong> screen saying 
+                                        <strong>Visual Studio is about to make changes to this solution. Click OK to proceed with the changes listed below.</strong> You can read the message and then select 
+                                        <strong>OK</strong> to <strong>Install</strong> the package, then you can close the <strong>tab</strong> for <strong>Nuget: LuckyRacer</strong> by selecting the <strong>x</strong> next to it. 
+                                    </p>
+                                    <h2 class="display-6">Step 5</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio</strong> within <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Add</strong> then <strong>New Item…</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-new-item.png" class="img-fluid" alt="Add New Item" />
+                                    </p>
+                                    <h2 class="display-6">Step 6</h2>
+                                    <p>
+                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>Code</strong> and then select <strong>Code File</strong> from the list next to this, then type in the name of <i>Library.cs</i> and then <strong>Click</strong> on <strong>Add</strong>.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-add-new-item-lucky-racer.png" class="img-fluid" alt="Add New Code File" />
+                                    </p>
+                                    <h2 class="display-6">Step 7</h2>
+                                    <p>
+                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Library.cs</i> to define a <code>namespace</code> allowing classes to be defined together, 
+                                        usually each is separate but will be defined in <i>Library.cs</i> by typing the following <strong>Code</strong> along with <code>using</code> for <code>Comentsys.Toolkit.WindowsAppSdk</code> 
+                                        and others plus an <code>enum</code> for <code>State</code> and <code>Class</code> for <code>Racer</code>.
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+using Comentsys.Assets.FluentEmoji;
+using Comentsys.Toolkit.WindowsAppSdk;
+using Microsoft.UI;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Input;
+using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Media.Animation;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Windows.UI;
+
+namespace LuckyRacer;
+
+public enum State
+{
+    Select, Ready, Started, Finished
+}
+
+public class Racer
+{
+    public int Index { get; set; }
+    public TimeSpan Time { get; set; }
+
+    public Racer(int index) =>
+        Index = index;
+
+    public Racer(int index, TimeSpan time) =>
+        (Index, Time) = (index, time);
+}
+
+public class Library
+{
+    // Constants, Variables & Choose Method
+
+    // Get Finish, Get Racer, Set Sources & Get Image
+
+    // Content, Move & Start
+
+    // Finish & Progress
+
+    // Race, Ready & Select
+
+    // Add Racer & Add Finish
+
+    // Layout & New
+
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+                                    </code></pre>
+                                    <h2 class="display-6">Step 8</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>LuckyRacer</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Library</code> after the 
+                                        <strong>Comment</strong> of <code>// Constants, Variables & Choose Method</code> type the following <strong>Constants</strong>, <strong>Variables</strong> and <strong>Method</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private const string title = "Lucky Racer";
+private const int image_size = 72;
+private const int size = 400;
+
+private readonly Random _random = new((int)DateTime.UtcNow.Ticks);
+
+private Dialog _dialog;
+private Grid _grid;
+
+private bool _finish;
+private int _count;
+private State _state;
+private Racer _winner;
+private Racer _select;
+private List&lt;Image&gt; _images;
+private ImageSource[] _sources;
+
+private List&lt;int&gt; Choose(int minimum, int maximum, int total)
+{
+    var choose = new List&lt;int&gt;();
+    var values = Enumerable.Range(minimum, maximum).ToList();
+    for (int index = 0; index &lt; total; index++)
+    {
+        var value = _random.Next(0, values.Count);
+        choose.Add(values[value]);
+    }
+    return choose;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                    </code></pre>  
+                                    <p>
+                                        <strong>Constants</strong> are values that are used in the game that will not change and <strong>Variables</strong> are used to store various values, 
+                                        <strong>Instances</strong> of <code>Racer</code> and images needed for the game. 
+                                        There is also a <strong>Method</strong> of <code>Choose</code> which is used to select randomised numbers which can be duplicated so the race is more even and fair. 
+                                    </p>
+                                    <h2 class="display-6">Step 9</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>LuckyRacer</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Library</code> after the 
+                                        <strong>Comment</strong> of <code>// Get Finish, Get Racer, Set Sources & Get Image</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private async Task&lt;ImageSource&gt; GetFinishAsync() =>
+    await FlatFluentEmoji.Get(FluentEmojiType.ChequeredFlag)
+    .AsImageSourceAsync();
+
+private async Task&lt;ImageSource&gt; GetRacerAsync(Color main, Color trim) =>
+    await FlatFluentEmoji.Get(FluentEmojiType.RacingCar, 
+    new[] 
+    { 
+        Color.FromArgb(255, 248, 49, 47).AsDrawingColor(), 
+        Color.FromArgb(255, 202, 11, 74).AsDrawingColor() 
+    }, 
+    new[] 
+    { 
+        main.AsDrawingColor(), 
+        trim.AsDrawingColor()
+    }).AsImageSourceAsync();
+
+private async Task SetSourcesAsync() =>
+_sources ??= (new ImageSource[]
+{
+    await GetFinishAsync(),
+    await GetRacerAsync(Colors.Red, Colors.DarkRed),
+    await GetRacerAsync(Colors.Blue, Colors.DarkBlue),
+    await GetRacerAsync(Colors.Green, Colors.DarkGreen),
+    await GetRacerAsync(Colors.Goldenrod, Colors.DarkGoldenrod)
+});
+
+private Image GetImage(ImageSource source) =>
+    new()
+    {
+        Height = image_size,
+        Width = image_size,
+        Source = source
+    };                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                                    </code></pre>
+                                    <p>
+                                        <code>GetFinishAsync</code> will return a <i>Chequered Flag</i> emoji to represent the finish line for the racers and <code>GetRacerAsync</code> will return the image for 
+                                        the racers using the <i>Racing Car</i> emoji and will customise it using different colours and these <strong>Methods</strong> will be both used by <code>SetSourcesAsync</code> 
+                                        to set the images used in the game and <code>GetImage</code> will return an Image with a given <code>ImageSource</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 10</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>LuckyRacer</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Library</code> after the 
+                                        <strong>Comment</strong> of <code>// Content, Move & Start</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private StackPanel Content(string text, int index)
+{
+    var panel = new StackPanel()
+    {
+        Orientation = Orientation.Vertical,
+    };
+    panel.Children.Add(new TextBlock()
+    {
+        Text = text
+    });
+    panel.Children.Add(GetImage(_sources[index]));
+    return panel;
+}
+
+private void Move(Image image, double from, double to, TimeSpan duration)
+{
+    var animation = new DoubleAnimation()
+    {
+        To = to,
+        From = from,
+        Duration = duration,
+        EasingFunction = new ExponentialEase()
+        {
+            EasingMode = EasingMode.EaseIn
+        }
+    };
+    var storyboard = new Storyboard();
+    Storyboard.SetTargetProperty(animation, "(Canvas.Left)");
+    Storyboard.SetTarget(animation, image);
+    storyboard.Completed += (object sender, object e) =>
+        Progress(sender as Storyboard);
+    storyboard.Children.Add(animation);
+    storyboard.Begin();
+}
+
+private void Start()
+{
+    _count = 0;
+    _finish = false;
+    _state = State.Select;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                                    </code></pre>
+                                    <p>
+                                        <code>Content</code> will return a <code>StackPanel</code> containing a <code>TextBlock</code> as well as an image using <code>GetImage</code>, <code>Move</code> will be used to display the progress of the race, 
+                                        which will use a <strong>Method</strong> for <code>Progress</code> which will be defined in the next <strong>Step</strong> and <code>Start</code> will be ready for the game to start. 
+                                    </p>
+                                    <h2 class="display-6">Step 11</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>LuckyRacer</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Library</code> after the 
+                                        <strong>Comment</strong> of <code>// Finish & Progress</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private async void Finish()
+{
+    if (_state == State.Finished)
+    {
+        var message = _select.Index == _winner.Index ?
+            $"You Won in {_winner.Time}!" :
+            $"You Lost! Winning Car";
+        var content = Content(message, _winner.Index);
+        await _dialog.ConfirmAsync(content);
+        if (_finish)
+        {
+            foreach (var image in _images)
+            {
+                Move(image, 0, size - image_size, 
+                    TimeSpan.FromSeconds(1));
+            }
+            _finish = false;
+        }
+        Start();
+    }
+}
+
+private void Progress(Storyboard storyboard)
+{
+    if (_state == State.Started)
+    {
+        var duration = storyboard.GetCurrentTime();
+        var racer = _images.First(w => (w.Tag as Racer)
+            .Time == duration).Tag as Racer;
+        _count++;
+        if (_count == 1)
+            _winner = new Racer(racer.Index, duration);
+        if (_count == _images.Count)
+        {
+            _state = State.Finished;
+            Finish();
+        }
+        _finish = true;
+    }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                    </code></pre>
+                                    <p>
+                                        <code>Finish</code> will handle what happens when the race is over and determine if the <code>Racer</code> that was selected was the winning one or not and 
+                                        <code>Progress</code> which was called in Move will be used to set how the <code>Racer</code> should move across the game.
+                                    </p>
+                                    </p>
+                                    <h2 class="display-6">Step 12</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>LuckyRacer</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Library</code> after the 
+                                        <strong>Comment</strong> of <code>// Race, Ready & Select</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void Race()
+{
+    if (_state == State.Ready)
+    {
+        var index = 0;
+        var times = Choose(5, 15, _sources.Length - 1);
+        foreach (var image in _images)
+        {
+            var racer = image.Tag as Racer;
+            racer.Time = TimeSpan.FromSeconds(times[index]);
+            Move(image, size - image_size, 0, racer.Time);
+            index++;
+        }
+        _state = State.Started;
+    }
+}
+
+private async void Ready()
+{
+    if (_state == State.Ready)
+    {
+        var content = Content("Selected to Win", _select.Index);
+        var result = await _dialog.ConfirmAsync(
+            content, "Race", "Cancel");
+        if (result)
+            Race();
+        else
+            _state = State.Select;
+    }
+}
+
+private void Select(Image image)
+{
+    if (_state == State.Select)
+    {
+        var racer = image.Tag as Racer;
+        _select = racer;
+        _state = State.Ready;
+    }
+    Ready();
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                    </code></pre>
+                                    <p>
+                                        <code>Race</code> will determine which <code>Racer</code> will win and will then set each <code>Racer</code> so that the time it takes to move along the game matches the time that has been selected, 
+                                        <code>Ready</code> will give the player the option of which <code>Racer</code> they think will win and once selected it will begin the race and <code>Select</code> will be used to set which <code>Racer</code> has been selected.
+                                    </p>
+                                    <h2 class="display-6">Step 13</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>LuckyRacer</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Library</code> after the 
+                                        <strong>Comment</strong> of <code>// Add Racer & Add Finish</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void AddRacer(Grid grid, int row)
+{
+    grid.RowDefinitions.Add(new RowDefinition());
+    var racer = GetImage(_sources[row]);
+    racer.Tag = new Racer(row);
+    racer.Tapped += (object sender, TappedRoutedEventArgs e) =>
+        Select(sender as Image);
+    Canvas.SetLeft(racer, size - image_size);
+    _images.Add(racer);
+    var canvas = new Canvas()
+    {
+        Height = image_size,
+        Width = size
+    };
+    canvas.Children.Add(racer);
+    Grid.SetRow(canvas, row - 1);
+    grid.Children.Add(canvas);
+}
+
+private void AddFinish(Grid grid, int row)
+{
+    grid.RowDefinitions.Add(new RowDefinition());
+    var finish = GetImage(_sources.First());
+    Grid.SetRow(finish, row - 1);
+    grid.Children.Add(finish);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                                    </code></pre>
+                                    <p>
+                                        <code>AddRacer</code> is used to add the racers to the game and will use <code>GetImage</code> to obtain the <code>Image</code> to be used where each one will be a different colour then 
+                                        will add this to each <code>Row</code> of the <code>Grid</code> up to the number of racers in the game and <code>AddFinish</code> will be used to get the image that will be used to 
+                                        indicate the finish line for the race in the game.
+                                    </p>
+                                    <h2 class="display-6">Step 14</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>LuckyRacer</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Library</code> after the 
+                                        <strong>Comment</strong> of <code>// Layout & New</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void Layout(Grid grid)
+{
+    _images = new();
+    grid.Children.Clear();
+    var panel = new StackPanel()
+    {
+        Orientation = Orientation.Horizontal
+    };
+    _grid = new Grid()
+    {
+        Height = size,
+        Width = size
+    };
+    var finish = new Grid();
+    for (int row = 1; row &lt; _sources.Length; row++)
+    {
+        AddRacer(_grid, row);
+        AddFinish(finish, row);
+    }
+    panel.Children.Add(finish);
+    panel.Children.Add(_grid);
+    grid.Children.Add(panel);
+}
+
+public async void New(Grid grid)
+{
+    _dialog = new Dialog(grid.XamlRoot, title);
+    await SetSourcesAsync();
+    Layout(grid);
+    Start();
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                    </code></pre>
+                                    <p>
+                                        <code>Layout</code> will create the look-and-feel of the game by setting up all the elements including the racers and the finish line and 
+                                        <code>New</code> will setup and start a new game and will also setup the images used in the game.
+                                    </p>
+                                    <h2 class="display-6">Step 15</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>MainWindow.xaml</strong> to see the <strong>XAML</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-xaml-lucky-racer.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 16</h2>
+                                    <p>
+                                        In the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> there will be some <strong>XAML</strong> for a <code>StackPanel</code>, this should be <strong>Removed</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;StackPanel&nbsp;Orientation=&quot;Horizontal&quot;&nbsp;
+HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;x:Name=&quot;myButton&quot;&nbsp;Click=&quot;myButton_Click&quot;&gt;Click&nbsp;Me&lt;/Button&gt;
+&lt;/StackPanel&gt;                               
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 17</h2>
+                                    <p>
+                                        While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> above <code>&lt;/Window&gt;</code>, type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;Grid&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid&nbsp;Margin=&quot;50&quot;&nbsp;Name=&quot;Display&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HorizontalAlignment=&quot;Center&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VerticalAlignment=&quot;Center&quot;&nbsp;Loaded=&quot;New&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;CommandBar&nbsp;VerticalAlignment=&quot;Bottom&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AppBarButton&nbsp;Icon=&quot;Page2&quot;&nbsp;Label=&quot;New&quot;&nbsp;Click=&quot;New&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/CommandBar&gt;
+&lt;/Grid&gt;                                                                                                                                                                                                                                                                                 
+                                    </code></pre> 
+                                    <p>
+                                        This <strong>XAML</strong> contains a <code>Grid</code> with a <strong>Viewbox</strong> which will <strong>Scale</strong> a <code>Grid</code>. 
+                                        It has a <code>Loaded</code> event handler for <code>New</code> which is also shared by the <code>AppBarButton</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 18</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>MainWindow.xaml</strong> then double-click on <strong>MainWindow.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-code-lucky-racer.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 19</h2>
+                                    <p>
+                                        In the <strong>Code</strong> for <code>MainWindow.xaml.cs</code> there be a Method of <code>myButton_Click(...)</code> this should be <strong>Removed</strong> by removing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void myButton_Click(object sender, RoutedEventArgs e)
+{
+    myButton.Content = "Clicked";
+}                                        
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 20</h2>
+                                    <p>
+                                        Once <code>myButton_Click(...)</code> has been removed, within the <strong>Constructor</strong> of <code>public MainWindow() { ... }</code> and below the line of <code>this.InitializeComponent();</code> type in the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private readonly Library _library = new();
+
+private void New(object sender, RoutedEventArgs e) =>
+    _library.New(Display);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                    </code></pre>
+                                    <p>
+                                        Here an <strong>Instance</strong> of <code>Library</code> is created then below this is the <strong>Method</strong> of <code>New</code> that will be used with <strong>Event Handler</strong> 
+                                        from the <code>XAML</code>, this <strong>Method</strong> uses <strong>Arrow Syntax</strong> with the <code>=></code> for an expression body which is useful when a <strong>Method</strong> only has one line.
+                                    </p>
+                                    <h2 class="display-6">Step 21</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>LuckyRacer (Package)</strong> to <strong>Start</strong> the application.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-debug-lucky-racer.png" class="img-fluid" alt="LuckyRacer (Package)"/>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <h2 class="display-6">Step 22</h2>
+                                    <p>
+                                        Once running you can tap on any <strong>Racer</strong> and then tap <strong>Race</strong> to begin racing and you can watch and see which one wins, 
+                                        the one that reaches the <strong>Finish</strong> first will be the winner and if this is your <strong>Racer</strong> then you win, if not you lose or select <i>New</i> to start a new game.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-running-lucky-racer.png" class="img-fluid" alt="Lucky Racer Running and Output" />
+                                    </p>
+                                    <h2 class="display-6">Step 23</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                To <strong>Exit</strong> the <strong>Windows App SDK</strong> application, select the <strong>Close</strong> button from the top right of the application as that concludes this <strong>Tutorial</strong> for <strong>Windows App SDK</strong> from <a href="https://www.tutorialr.com">tutorialr.com</a>!
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-close.png" class="img-fluid" alt="Close application"/>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="card-footer">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-lucky-racer.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Lucky Racer
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>                   
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Tutorial -->
+                </section>
+                <!-- /Section -->    
+            </div>
+            <div class="waves waves-bottom bg-white"></div>  
+        </main>
+        <!-- /Main -->
+        <!-- Footer -->
+        <footer class="footer mt-auto">
+            <nav class="navbar bottom navbar-light p-2">
+                <a href="../../../"><img src="../../../images/footer.png" alt="tutorialr.com" height="40px"></a>
+                <a href="https://www.twitter.com/tutorialrdotcom" target="_blank"><img src="../../../images/twitter.png" height="45px" alt="@tutorialrdotcom"></a>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="../../../images/cc-by-sa.png" height="35px" alt="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"></a>
+            </nav>
+        </footer>
+        <!-- /Footer -->
+        <!-- Scripts -->
+        <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../../../highlight/js/highlight.min.js"></script>
+        <!-- /Scripts-->
+    </body>
+</html>
