@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <meta name="description" content="tutorialr.com - Tutorials, Talks and Workshops"/>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@tutorialrdotcom"/>
+        <meta name="twitter:creator" content="@rogueplanetoid"/>
+        <meta name="twitter:title" content="tutorialr.com"/>
+        <meta name="twitter:description" content="Tutorials, Talks and Workshops"/>
+        <meta name="twitter:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta name="twitter:image:alt" content="Tutorials, Talks and Workshops"/>
+        <!-- /Twitter -->
+        <!-- Open Graph -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="tutorialr.com"/>
+        <meta property="og:site_name" content="tutorialr.com">
+        <meta property="og:description" content="Tutorials, Talks and Workshops"/>
+        <meta property="og:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta property="og:image:width" content="1280"/>
+        <meta property="og:image:height" content="630"/>
+        <!-- /Open Graph -->
+        <link rel="icon" href="../../../favicon.ico"/>
+        <link href="../css/win-app-sdk.css" rel="stylesheet">
+        <link href="../../../css/style.css" rel="stylesheet">
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../highlight/css/vs.min.css" rel="stylesheet">
+        <title>tutorialr.com - Tutorials - Windows App SDK - Emoji Game</title>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <!-- Main -->
+        <main>
+            <!-- Navigation -->	
+            <nav class="navbar top navbar-light navbar-expand-md bg-brand">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tutorialr-navbar" aria-controls="tutorialr-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../">
+                        <img src="../../../images/header.png" alt="tutorialr.com" height="50px">
+                    </a>
+                    <div id="tutorialr-navbar" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../tutorials">Tutorials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-tutorialr active" href="../../winappsdk">Windows App SDK</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../talks">Talks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../workshops">Workshops</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://www.comentsys.com" target="_blank">
+                        <img src="../../../images/comentsys.png" alt="Comentsys" height="50px">
+                    </a>
+                </div>
+            </nav>
+            <!-- /Navigation -->
+            <div class="waves waves-top"></div>
+            <div class="bg-tutorialr">         
+                <!-- Section -->            
+                <section class="text-center text-white container">
+                    <!-- Hero -->
+                    <h1 class="display-4 mx-auto">Emoji Game</h1>
+                    <p class="lead">
+                        <strong>Learn</strong> creating an <strong>Emoji Game</strong> using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
+                    </p>
+                    <!-- /Hero -->
+                    <!-- Tutorial -->
+                    <div class="col-lg-10 mx-auto">
+                        <div class="container text-start text-black">
+                            <div class="card position-relative">
+                                <div class="card-header">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-emoji-game.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Emoji Game
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>   
+                                <div class="card-body">
+                                    <p>
+                                        <strong>Emoji Game</strong> shows how you can create a game where you can pick from a set of <strong>Emoji</strong> to identify which one 
+                                        is the correct one using emoji and a toolkit from <strong>NuGet</strong> using the <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 1</h2>
+                                    <p>
+                                        Follow <a href="../setup-and-start">Setup and Start</a> on how to get <strong>Setup</strong> and <strong>Install</strong> what you need for <strong>Visual Studio 2022</strong> and <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                In <strong>Windows 11</strong> choose <strong>Start</strong> and then find or search for <strong>Visual Studio 2022</strong> and then select it.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs.png" class="img-fluid" alt="Visual Studio 2022"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Once <strong>Visual Studio 2022</strong> has started select <strong>Create a new project</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-new-project.png" class="img-fluid" alt="Create a new project"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Then choose the <strong>Blank App, Packages (WinUI in Desktop)</strong> and then select <strong>Next</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-win-ui.png" class="img-fluid" alt="Blank App, Packages (WinUI in Desktop)"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>EmojiGame</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-configure-project.png" class="img-fluid" alt="Configure project" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 2</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio within</strong> <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Manage NuGet Packages...</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-manage-nuget-packages.png" class="img-fluid" alt="Manage NuGet Packages" />
+                                    </p>
+                                    <h2 class="display-6">Step 3</h2>
+                                    <p>
+                                        Then in the <strong>NuGet Package Manager</strong> from the <strong>Browse</strong> tab search for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> and then select <strong>Comentsys.Toolkit.WindowsAppSdk by Comentsys</strong> as indicated and select <strong>Install</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-nuget-toolkit.png" class="img-fluid" alt="NuGet Package Manager Comentsys.Toolkit.WindowsAppSdk" />
+                                    </p>
+                                    <p>
+                                        This will add the package for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> to your <strong>Project</strong>. If you get the <strong>Preview Changes</strong> screen saying 
+                                        <strong>Visual Studio is about to make changes to this solution. Click OK to proceed with the changes listed below.</strong> You can read the message and then select 
+                                        <strong>OK</strong> to <strong>Install</strong> the package.
+                                    </p>
+                                    <h2 class="display-6">Step 4</h2>
+                                    <p>
+                                        Then while still in the <strong>NuGet Package Manager</strong> from the <strong>Browse</strong> tab search for <strong>Comentsys.Assets.FluentEmoji</strong> and then select <strong>Comentsys.Assets.FluentEmoji by Comentsys</strong> as indicated and select <strong>Install</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-nuget-emoji.png" class="img-fluid" alt="NuGet Package Manager Comentsys.Assets.FluentEmoji" />
+                                    </p>
+                                    <p>
+                                        This will add the package for <strong>Comentsys.Assets.FluentEmoji </strong>to your <strong>Project</strong>. If you get the <strong>Preview Changes</strong> screen saying 
+                                        <strong>Visual Studio is about to make changes to this solution. Click OK to proceed with the changes listed below.</strong> You can read the message and then select 
+                                        <strong>OK</strong> to <strong>Install</strong> the package, then you can close the <strong>tab</strong> for <strong>Nuget: EmojiGame</strong> by selecting the <strong>x</strong> next to it. 
+                                    </p>
+                                    <h2 class="display-6">Step 5</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio</strong> within <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Add</strong> then <strong>New Item…</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-new-item.png" class="img-fluid" alt="Add New Item" />
+                                    </p>
+                                    <h2 class="display-6">Step 6</h2>
+                                    <p>
+                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>Code</strong> and then select <strong>Code File</strong> from the list next to this, then type in the name of <i>Library.cs</i> and then <strong>Click</strong> on <strong>Add</strong>.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-add-new-item-emoji-game.png" class="img-fluid" alt="Add New Code File" />
+                                    </p>
+                                    <h2 class="display-6">Step 7</h2>
+                                    <p>
+                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Library.cs</i> to define a <code>namespace</code> allowing classes to be defined together, 
+                                        usually each is separate but will be defined in <i>Library.cs</i> by typing the following <strong>Code</strong> along with <code>using</code> for <code>Comentsys.Toolkit.WindowsAppSdk</code> 
+                                        and others plus an <code>enum</code> for <code>State</code> and more.
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+using Comentsys.Assets.FluentEmoji;
+using Comentsys.Toolkit.Binding;
+using Comentsys.Toolkit.WindowsAppSdk;
+using Microsoft.UI;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Data;
+using Microsoft.UI.Xaml.Media;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Windows.Input;
+
+namespace EmojiGame;
+
+public enum State
+{
+    None,
+    Correct,
+    Incorrect
+}
+
+// Item Class
+
+public class Board : ObservableBase
+{
+    // Board Constants, Variables, Properties and GetSourceAsync Method
+
+    // Board SetSourcesAsync Method
+
+    // Board ChooseValues, ChooseUnique, Name, GetQuestion & Indexes Method
+
+    // Board Next Method
+
+    // Board SetupAsync, Correct & Play Method
+
+}
+
+// StateToBrushConverter Class
+
+public class Library
+{
+    // Library Constants and GetBoundText Method
+
+    // Library Layout & New Methods
+
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                    </code></pre>
+                                    <h2 class="display-6">Step 8</h2>
+                                    <p>
+                                        Still in <i>Library.cs</i> for the <code>namespace</code> of <code>EmojiGame</code> you will define a <code>class</code> for 
+                                        <code>Item</code> after the <strong>Comment</strong> of <code>// Item Class</code> by typing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public class Item : ActionCommandObservableBase
+{
+    private State _state = State.None;
+
+    public int Index {  get; }
+    public FluentEmojiType Type { get; }
+    public bool Correct { get; }
+    public ImageSource Source { get; }
+    public State State 
+    { 
+        get => _state; 
+        set => SetProperty(ref _state, value); 
+    }
+
+    public Item(int index, FluentEmojiType type, 
+        bool correct, ImageSource source, Action&lt;int&gt; action) : 
+        base(new ActionCommandHandler((param) => action(index))) =>
+        (Index, Type, Correct, Source) = 
+            (index, type, correct, source);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                                    </code></pre>
+                                    <p>
+                                        <code>Item</code> represents the elements for the <strong>Emoji</strong> in the game with various <strong>Properties</strong> and uses 
+                                        <code>ActionCommandObservableBase</code> from the package of <code>Comentsys.Toolkit.WindowsAppSdk</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 9</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>EmojiGame</code> in <i>Library.cs</i> in the <code>class</code> of <code>Board</code> after 
+                                        the <strong>Comment</strong> of <code>// Board Constants, Variables, Properties and GetSourceAsync Method</code> 
+                                        type the following <strong>Constants</strong>, <strong>Variables</strong>, <strong>Properties</strong> and <strong>Method</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private const string space = " ";
+private const int rounds = 12;
+private const int options = 2;
+
+private readonly Random _random = new((int)DateTime.UtcNow.Ticks);
+private Dictionary&lt;FluentEmojiType, ImageSource&gt; _sources;
+private ObservableCollection&lt;Item&gt; _items = new();
+private List&lt;int&gt; _selected = new();
+private List&lt;int&gt; _options = new();
+private List&lt;int&gt; _indexes = new();
+private string _question;
+private string _message;
+private int _round;
+private bool _over;
+
+public ObservableCollection&lt;Item&gt; Items
+{
+    get => _items;
+    set => SetProperty(ref _items, value);
+}
+
+public string Question
+{
+    get => _question;
+    set => SetProperty(ref _question, value);
+}
+
+public string Message
+{
+    get => _message;
+    set => SetProperty(ref _message, value);
+}
+
+private async Task&lt;ImageSource&gt; GetSourceAsync(FluentEmojiType type) =>
+    await FlatFluentEmoji.Get(type)
+    .AsImageSourceAsync();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                                    </code></pre>  
+                                    <p>
+                                        <strong>Constants</strong> are values that are used for the <code>Board</code> that will not change and <strong>Variables</strong> are used to store various 
+                                        values that will be set or changed some of which are exposed using the <strong>Properties</strong> and then there is a <strong>Method</strong> 
+                                        of <code>GetSourceAsync</code> which will be used to get the assets for the <strong>Emoji</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 10</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>EmojiGame</code> in <i>Library.cs</i> in the <code>class</code> of <code>Board</code> after 
+                                        the <strong>Comment</strong> of <code>// Board SetSourcesAsync Method </code> 
+                                        type the following first part of the <strong>Method</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private async Task SetSourcesAsync() =>
+_sources ??= new Dictionary&lt;FluentEmojiType, ImageSource&gt;()
+{
+    { FluentEmojiType.GrinningFace, 
+        await GetSourceAsync(FluentEmojiType.GrinningFace) },
+    { FluentEmojiType.BeamingFaceWithSmilingEyes, 
+        await GetSourceAsync(FluentEmojiType.BeamingFaceWithSmilingEyes) },
+    { FluentEmojiType.FaceWithTearsOfJoy, 
+        await GetSourceAsync(FluentEmojiType.FaceWithTearsOfJoy) },
+    { FluentEmojiType.GrinningSquintingFace, 
+        await GetSourceAsync(FluentEmojiType.GrinningSquintingFace) },
+    { FluentEmojiType.WinkingFace, 
+        await GetSourceAsync(FluentEmojiType.WinkingFace) },
+    { FluentEmojiType.FaceSavoringFood, 
+        await GetSourceAsync(FluentEmojiType.FaceSavoringFood) },
+    { FluentEmojiType.SmilingFace, 
+        await GetSourceAsync(FluentEmojiType.SmilingFace) },
+    { FluentEmojiType.HuggingFace, 
+        await GetSourceAsync(FluentEmojiType.HuggingFace) },
+    { FluentEmojiType.ThinkingFace, 
+        await GetSourceAsync(FluentEmojiType.ThinkingFace) },
+    { FluentEmojiType.FaceWithRaisedEyebrow, 
+        await GetSourceAsync(FluentEmojiType.FaceWithRaisedEyebrow) },
+    { FluentEmojiType.NeutralFace, 
+        await GetSourceAsync(FluentEmojiType.NeutralFace) },
+    { FluentEmojiType.ExpressionlessFace, 
+        await GetSourceAsync(FluentEmojiType.ExpressionlessFace) },
+    { FluentEmojiType.FaceWithRollingEyes, 
+        await GetSourceAsync(FluentEmojiType.FaceWithRollingEyes) },
+    { FluentEmojiType.PerseveringFace, 
+        await GetSourceAsync(FluentEmojiType.PerseveringFace) },
+    { FluentEmojiType.FaceWithOpenMouth, 
+        await GetSourceAsync(FluentEmojiType.FaceWithOpenMouth) },
+    { FluentEmojiType.HushedFace, 
+        await GetSourceAsync(FluentEmojiType.HushedFace) },
+    { FluentEmojiType.SleepyFace, 
+        await GetSourceAsync(FluentEmojiType.SleepyFace) },
+    { FluentEmojiType.TiredFace, 
+        await GetSourceAsync(FluentEmojiType.TiredFace) },
+    { FluentEmojiType.SleepingFace, 
+        await GetSourceAsync(FluentEmojiType.SleepingFace) },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                                    </code></pre>  
+                                    <p>
+                                        You will define the rest of the <strong>Method</strong> of <code>SetSourcesAsync</code> in the next <strong>Step</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 11</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>EmojiGame</code> in <i>Library.cs</i> in the <code>class</code> of <code>Board</code> 
+                                        after the end of first part of the <strong>Method</strong> for <code>SetSourcesAsync</code> of <code>await GetSourceAsync(FluentEmojiType.SleepingFace) },</code> 
+                                        from the previous <strong>Step</strong> type the following last part of the <strong>Method</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+{ FluentEmojiType.RelievedFace, 
+    await GetSourceAsync(FluentEmojiType.RelievedFace) },
+{ FluentEmojiType.UnamusedFace, 
+    await GetSourceAsync(FluentEmojiType.UnamusedFace) },
+{ FluentEmojiType.PensiveFace, 
+    await GetSourceAsync(FluentEmojiType.PensiveFace) },
+{ FluentEmojiType.ConfusedFace, 
+    await GetSourceAsync(FluentEmojiType.ConfusedFace) },
+{ FluentEmojiType.AstonishedFace, 
+    await GetSourceAsync(FluentEmojiType.AstonishedFace) },
+{ FluentEmojiType.FrowningFace, 
+    await GetSourceAsync(FluentEmojiType.FrowningFace) },
+{ FluentEmojiType.ConfoundedFace, 
+    await GetSourceAsync(FluentEmojiType.ConfoundedFace) },
+{ FluentEmojiType.DisappointedFace, 
+    await GetSourceAsync(FluentEmojiType.DisappointedFace) },
+{ FluentEmojiType.WorriedFace, 
+    await GetSourceAsync(FluentEmojiType.WorriedFace) },
+{ FluentEmojiType.FaceWithSteamFromNose, 
+    await GetSourceAsync(FluentEmojiType.FaceWithSteamFromNose) },
+{ FluentEmojiType.AnguishedFace, 
+    await GetSourceAsync(FluentEmojiType.AnguishedFace) },
+{ FluentEmojiType.FearfulFace, 
+    await GetSourceAsync(FluentEmojiType.FearfulFace) },
+{ FluentEmojiType.FlushedFace, 
+    await GetSourceAsync(FluentEmojiType.FlushedFace) },
+{ FluentEmojiType.ZanyFace, 
+    await GetSourceAsync(FluentEmojiType.ZanyFace) },
+{ FluentEmojiType.FaceExhaling, 
+    await GetSourceAsync(FluentEmojiType.FaceExhaling) },
+{ FluentEmojiType.AngryFace, 
+    await GetSourceAsync(FluentEmojiType.AngryFace) },
+{ FluentEmojiType.NerdFace, 
+    await GetSourceAsync(FluentEmojiType.NerdFace)  }
+};                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                                    </code></pre>  
+                                    <p>
+                                        <code>SetSourcesAsync</code> is used to set the assets for the <strong>Emoji</strong> needed for the game.
+                                    </p>
+                                    <h2 class="display-6">Step 12</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>EmojiGame</code> in <i>Library.cs</i> in the <code>class</code> of <code>Board</code> after 
+                                        the <strong>Comment</strong> of <code>// Board ChooseValues, ChooseUnique, Name, GetQuestion & Indexes Method</code> 
+                                        type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private List&lt;int&gt; ChooseValues(int minimum, int maximum, int total)
+{
+    var choose = new List&lt;int&gt;();
+    var values = Enumerable.Range(minimum, maximum).ToList();
+    for (int index = 0; index &lt; total; index++)
+    {
+        var value = _random.Next(0, values.Count);
+        choose.Add(values[value]);
+    }
+    return choose;
+}
+
+private List&lt;int&gt; ChooseUnique(int minimum, int maximum, int total) =>
+    Enumerable.Range(minimum, maximum)
+        .OrderBy(r => _random.Next(minimum, maximum))
+            .Take(total).ToList();
+
+private string Name(FluentEmojiType item) =>
+    Enum.GetName(typeof(FluentEmojiType), item);
+
+private string GetQuestion(FluentEmojiType item) =>
+    string.Join(space, new Regex(@"\p{Lu}\p{Ll}*")
+        .Matches(Name(item))
+                .Select(s => s.Value));
+
+private List&lt;int&gt; Indexes(IEnumerable&lt;FluentEmojiType&gt; items) =>
+    items.Select(item => Array.IndexOf(items.ToArray(), item))
+        .ToList();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                    </code></pre>  
+                                    <p>
+                                        <code>ChooseValues</code> is used to get a list of randomised non-unique numbers and <code>ChooseUnique</code> is used to get a list of 
+                                        randomised unique numbers. <code>Name</code> is used to get the name of an <strong>Emoji</strong> and <code>GetQuestion</code> will be used to get the 
+                                        displayed <strong>Emoji</strong> to be guessed with <code>Indexes</code> returning the positions of a given <code>FluentEmojiType</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 13</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>EmojiGame</code> in <i>Library.cs</i> in the <code>class</code> of <code>Board</code> after 
+                                        the <strong>Comment</strong> of <code>// Board Next Method</code> 
+                                        type the following <strong>Method</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public bool Next()
+{
+    if (_round &lt; rounds)
+    {
+        Items.Clear();
+        var emoji = _sources.Keys.ToArray();
+        var correct = emoji[_selected[_round]];
+        Question = GetQuestion(correct);
+        var incorrect = ChooseUnique(0, _options.Count - 1, options);
+        var indexOne = _options[incorrect.First()];
+        var indexTwo = _options[incorrect.Last()];
+        var one = emoji[indexOne];
+        var two = emoji[indexTwo];
+        _options.Remove(indexOne);
+        _options.Remove(indexTwo);
+        var indexes = ChooseUnique(0, options + 1, options + 1);
+        var items = new List&lt;Item&gt;()
+        {
+            new Item(indexes[0], correct, true, _sources[correct], Play),
+            new Item(indexes[1], one, false, _sources[one], Play),
+            new Item(indexes[2], two, false, _sources[two], Play)
+        }.OrderBy(o => o.Index);
+        foreach (var item in items)
+        {
+            Items.Add(item);
+        }
+        _round++;
+        return true;
+    }
+    return false;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                                    </code></pre>  
+                                    <p>
+                                        <code>Next</code> is used to proceed through the game to get the next <strong>Emoji</strong> to guess and uses the <strong>Methods</strong> of <code>GetQuestion</code> 
+                                        and <code>ChooseUnique</code> and will use the <strong>Method</strong> of <code>Play</code> which will be defined in the next <strong>Step</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 14</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>EmojiGame</code> in <i>Library.cs</i> in the <code>class</code> of <code>Board</code> after 
+                                        the <strong>Comment</strong> of <code>// Board SetupAsync, Correct & Play Method </code> 
+                                        type the following <strong>Methods</strong> of <code>SetupAsync</code> which will configure the game, <code>Correct</code> which will set 
+                                        the <code>State</code> accordingly and then the <strong>Method</strong> of <code>Play</code>.
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public async Task SetupAsync()
+{
+    _round = 0;
+    _over = false;
+    Question = string.Empty;
+    Message = string.Empty;
+    await SetSourcesAsync();
+    _indexes = Indexes(_sources.Keys);
+    _selected = ChooseValues(0, _indexes.Count, rounds);
+    _options = _indexes.Where(index => !_selected
+        .Any(selected => selected == index)).ToList();
+    Next();
+}
+
+public bool Correct(Item selected)
+{
+    foreach(var item in Items)
+    {
+        item.State = item.Correct ? 
+            State.Correct : State.Incorrect;
+    }
+    return selected.Correct;
+}
+
+public void Play(int index)
+{
+    if(!_over)
+    {
+        if (Correct(_items[index]))
+        {
+            if(!Next())
+            {
+                Message = "Game Over, You Won";
+                _over = true;
+            }
+        }
+        else
+        {
+            Message = "Incorrect, You Lost!";
+            _over = true;
+        }
+    }
+    else
+        Message = "Game Over";
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 15</h2>
+                                    <p>
+                                        Still in <i>Library.cs</i> for the <code>namespace</code> of <code>EmojiGame</code> you will define a <code>class</code> for 
+                                        <code>Item</code> after the <strong>Comment</strong> of <code>// StateToBrushConverter Class</code> by typing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public class StateToBrushConverter : IValueConverter
+{
+    public object Convert(object value, Type targetType,
+        object parameter, string language)
+    {
+        if (value is State state)
+        {
+            return new SolidColorBrush(value switch
+            {
+                State.Correct => Colors.Green,
+                State.Incorrect => Colors.Red,
+                _ => Colors.Transparent
+            });
+        }
+        return null;
+    }
+
+    public object ConvertBack(object value, Type targetType,
+        object parameter, string language) =>
+        throw new NotImplementedException();
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                    </code></pre>
+                                    <p>
+                                        <code>StateToBrushConverter</code> uses the <code>interface</code> of <code>IValueConverter</code> for <strong>Data Binding</strong> which will allow the colours of the 
+                                        <strong>Item</strong> in the game to be represented from either <i>Green</i>, <i>Red</i> or <i>Transparent</i> as a <code>SolidColorBrush</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 16</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>EmojiGame</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Library</code> after the 
+                                        <strong>Comment</strong> of <code>// Library Constants and GetBoundText Method</code> type the following <strong>Constants</strong> and <strong>Method</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private const int font = 20;
+private readonly Board _board = new();
+
+private TextBlock GetBoundText(string property)
+{
+    var text = new TextBlock()
+    {
+        FontSize = font,
+        VerticalAlignment = VerticalAlignment.Center,
+        HorizontalAlignment = HorizontalAlignment.Center
+    };
+    var binding = new Binding()
+    {
+        Source = _board,
+        Mode = BindingMode.OneWay,
+        Path = new PropertyPath(property),
+        UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged
+    };
+    BindingOperations.SetBinding(text, TextBlock.TextProperty, binding);
+    return text;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                                    </code></pre>  
+                                    <p>
+                                        <strong>Constants</strong> are values that are used in the game that will not change and there is also a 
+                                        <strong>Method</strong> of <code>GetBoundText</code> which is used to get a <code>TextBlock</code> to be used with <strong>Data Binding</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 17</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>EmojiGame</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Library</code> after the 
+                                        <strong>Comment</strong> of <code>// Layout & New</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void Layout(Grid grid, DataTemplate itemTemplate,
+    ItemsPanelTemplate itemsPanel)
+{
+    grid.Children.Clear();
+    var panel = new StackPanel()
+    {
+        Orientation = Orientation.Vertical
+    };
+    var question = GetBoundText(nameof(_board.Question));
+    panel.Children.Add(question);
+    var items = new ItemsControl()
+    {
+        ItemsSource = _board.Items,
+        ItemTemplate = itemTemplate,
+        ItemsPanel = itemsPanel
+    };
+    panel.Children.Add(items);
+    var message = GetBoundText(nameof(_board.Message));
+    panel.Children.Add(message);
+    grid.Children.Add(panel);
+}
+
+public async void New(Grid grid, DataTemplate itemTemplate, 
+    ItemsPanelTemplate itemsPanel)
+{
+    await _board.SetupAsync();
+    Layout(grid, itemTemplate, itemsPanel);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                                    </code></pre>
+                                    <p>
+                                        <code>Layout</code> will create the look-and-feel of the game by setting up all the elements including using a <code>DataTemplate</code>
+                                        for the elements and <code>New</code> will use <code>Layout</code> and setup the <strong>Emoji</strong> used in the game.
+                                    </p>
+                                    <h2 class="display-6">Step 18</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>MainWindow.xaml</strong> to see the <strong>XAML</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-xaml-emoji-game.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 19</h2>
+                                    <p>
+                                        In the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> there will be some <strong>XAML</strong> for a <code>StackPanel</code>, this should be <strong>Removed</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;StackPanel&nbsp;Orientation=&quot;Horizontal&quot;&nbsp;
+HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;x:Name=&quot;myButton&quot;&nbsp;Click=&quot;myButton_Click&quot;&gt;Click&nbsp;Me&lt;/Button&gt;
+&lt;/StackPanel&gt;                               
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 20</h2>
+                                    <p>
+                                        While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> above <code>&lt;/Window&gt;</code>, type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;Grid&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid.Resources&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;local:StateToBrushConverter&nbsp;x:Key=&quot;StateToBrushConverter&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;DataTemplate&nbsp;x:Name=&quot;DataTemplate&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;Command=&quot;{Binding&nbsp;Command}&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Border&nbsp;Height=&quot;100&quot;&nbsp;Width=&quot;100&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CornerRadius=&quot;5&quot;&nbsp;BorderThickness=&quot;5&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BorderBrush=&quot;{Binding&nbsp;State,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Converter={StaticResource&nbsp;StateToBrushConverter}}&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Image&nbsp;Source=&quot;{Binding&nbsp;Source}&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Border&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/DataTemplate&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ItemsPanelTemplate&nbsp;x:Name=&quot;ItemsTemplate&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;StackPanel&nbsp;Orientation=&quot;Horizontal&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ItemsPanelTemplate&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Grid.Resources&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid&nbsp;Margin=&quot;50&quot;&nbsp;Name=&quot;Display&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HorizontalAlignment=&quot;Center&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VerticalAlignment=&quot;Center&quot;&nbsp;Loaded=&quot;New&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ProgressRing/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Grid&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;CommandBar&nbsp;VerticalAlignment=&quot;Bottom&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AppBarButton&nbsp;Icon=&quot;Page2&quot;&nbsp;Label=&quot;New&quot;&nbsp;Click=&quot;New&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/CommandBar&gt;
+&lt;/Grid&gt;                                                                                                                                                                                                                                                                                                                         
+                                    </code></pre> 
+                                    <p>
+                                        This <strong>XAML</strong> contains a <code>Grid</code> with a <strong>Viewbox</strong> which will <strong>Scale</strong> a <code>Grid</code>. 
+                                        It has a <code>Loaded</code> event handler for <code>New</code> which is also shared by the <code>AppBarButton</code> and defines the <strong>Templates</strong> that will be used in the game.
+                                    </p>
+                                    <h2 class="display-6">Step 21</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>MainWindow.xaml</strong> then double-click on <strong>MainWindow.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-code-emoji-game.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 22</h2>
+                                    <p>
+                                        In the <strong>Code</strong> for <code>MainWindow.xaml.cs</code> there be a Method of <code>myButton_Click(...)</code> this should be <strong>Removed</strong> by removing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void myButton_Click(object sender, RoutedEventArgs e)
+{
+    myButton.Content = "Clicked";
+}                                        
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 23</h2>
+                                    <p>
+                                        Once <code>myButton_Click(...)</code> has been removed, within the <strong>Constructor</strong> of <code>public MainWindow() { ... }</code> and below the line of <code>this.InitializeComponent();</code> type in the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private readonly Library _library = new();
+
+private void New(object sender, RoutedEventArgs e) =>
+    _library.New(Display, DataTemplate, ItemsTemplate);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+                                    </code></pre>
+                                    <p>
+                                        Here an <strong>Instance</strong> of <code>Library</code> is created then below this is the <strong>Method</strong> of <code>New</code> that will be used with <strong>Event Handler</strong> 
+                                        from the <code>XAML</code>, this <strong>Method</strong> uses <strong>Arrow Syntax</strong> with the <code>=></code> for an expression body which is useful when a <strong>Method</strong> only has one line 
+                                        and it also provides the <strong>Templates</strong> needed for the game.
+                                    </p>
+                                    <h2 class="display-6">Step 24</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>EmojiGame (Package)</strong> to <strong>Start</strong> the application.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-debug-emoji-game.png" class="img-fluid" alt="EmojiGame (Package)"/>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <h2 class="display-6">Step 25</h2>
+                                    <p>
+                                        Once rrunning you can select an <strong>Emoji</strong> that you think is the one being asked for, if you get it right you progress to the next set of <strong>Emoji</strong> to 
+                                        pick from and if you get all <i>9</i> rounds and you win, but get any wrong and you lose or select <i>New</i> to start a new game.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-running-emoji-game.png" class="img-fluid" alt="Emoji Game Running and Output" />
+                                    </p>
+                                    <h2 class="display-6">Step 26</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                To <strong>Exit</strong> the <strong>Windows App SDK</strong> application, select the <strong>Close</strong> button from the top right of the application as that concludes this <strong>Tutorial</strong> for <strong>Windows App SDK</strong> from <a href="https://www.tutorialr.com">tutorialr.com</a>!
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-close.png" class="img-fluid" alt="Close application"/>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="card-footer">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-emoji-game.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Emoji Game
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>                   
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Tutorial -->
+                </section>
+                <!-- /Section -->    
+            </div>
+            <div class="waves waves-bottom bg-white"></div>  
+        </main>
+        <!-- /Main -->
+        <!-- Footer -->
+        <footer class="footer mt-auto">
+            <nav class="navbar bottom navbar-light p-2">
+                <a href="../../../"><img src="../../../images/footer.png" alt="tutorialr.com" height="40px"></a>
+                <a href="https://www.twitter.com/tutorialrdotcom" target="_blank"><img src="../../../images/twitter.png" height="45px" alt="@tutorialrdotcom"></a>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="../../../images/cc-by-sa.png" height="35px" alt="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"></a>
+            </nav>
+        </footer>
+        <!-- /Footer -->
+        <!-- Scripts -->
+        <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../../../highlight/js/highlight.min.js"></script>
+        <!-- /Scripts-->
+    </body>
+</html>
