@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <meta name="description" content="tutorialr.com - Tutorials, Talks and Workshops"/>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@tutorialrdotcom"/>
+        <meta name="twitter:creator" content="@rogueplanetoid"/>
+        <meta name="twitter:title" content="tutorialr.com"/>
+        <meta name="twitter:description" content="Tutorials, Talks and Workshops"/>
+        <meta name="twitter:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta name="twitter:image:alt" content="Tutorials, Talks and Workshops"/>
+        <!-- /Twitter -->
+        <!-- Open Graph -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="tutorialr.com"/>
+        <meta property="og:site_name" content="tutorialr.com">
+        <meta property="og:description" content="Tutorials, Talks and Workshops"/>
+        <meta property="og:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta property="og:image:width" content="1280"/>
+        <meta property="og:image:height" content="630"/>
+        <!-- /Open Graph -->
+        <link rel="icon" href="../../../favicon.ico"/>
+        <link href="../css/win-app-sdk.css" rel="stylesheet">
+        <link href="../../../css/style.css" rel="stylesheet">
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../highlight/css/vs.min.css" rel="stylesheet">
+        <title>tutorialr.com - Tutorials - Windows App SDK - Tiles Game</title>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <!-- Main -->
+        <main>
+            <!-- Navigation -->	
+            <nav class="navbar top navbar-light navbar-expand-md bg-brand">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tutorialr-navbar" aria-controls="tutorialr-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../">
+                        <img src="../../../images/header.png" alt="tutorialr.com" height="50px">
+                    </a>
+                    <div id="tutorialr-navbar" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../tutorials">Tutorials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-tutorialr active" href="../../winappsdk">Windows App SDK</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../talks">Talks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../workshops">Workshops</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://www.comentsys.com" target="_blank">
+                        <img src="../../../images/comentsys.png" alt="Comentsys" height="50px">
+                    </a>
+                </div>
+            </nav>
+            <!-- /Navigation -->
+            <div class="waves waves-top"></div>
+            <div class="bg-tutorialr">         
+                <!-- Section -->            
+                <section class="text-center text-white container">
+                    <!-- Hero -->
+                    <h1 class="display-4 mx-auto">Tiles Game</h1>
+                    <p class="lead">
+                        <strong>Learn</strong> creating a <strong>Tiles Game</strong> using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
+                    </p>
+                    <!-- /Hero -->
+                    <!-- Tutorial -->
+                    <div class="col-lg-10 mx-auto">
+                        <div class="container text-start text-black">
+                            <div class="card position-relative">
+                                <div class="card-header">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-tiles-game.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Tiles Game
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>   
+                                <div class="card-body">
+                                    <p>
+                                        <strong>Tiles Game</strong> e shows how you can create the game where you must tap all the <strong>Tiles</strong> that are <strong>Black</strong> in
+                                        the quickest time using a control in a toolkit from <strong>NuGet</strong> using the <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 1</h2>
+                                    <p>
+                                        Follow <a href="../setup-and-start">Setup and Start</a> on how to get <strong>Setup</strong> and <strong>Install</strong> what you need for <strong>Visual Studio 2022</strong> and <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                In <strong>Windows 11</strong> choose <strong>Start</strong> and then find or search for <strong>Visual Studio 2022</strong> and then select it.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs.png" class="img-fluid" alt="Visual Studio 2022"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Once <strong>Visual Studio 2022</strong> has started select <strong>Create a new project</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-new-project.png" class="img-fluid" alt="Create a new project"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Then choose the <strong>Blank App, Packages (WinUI in Desktop)</strong> and then select <strong>Next</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-win-ui.png" class="img-fluid" alt="Blank App, Packages (WinUI in Desktop)"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>TilesGame</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-configure-project.png" class="img-fluid" alt="Configure project" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 2</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio within</strong> <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Manage NuGet Packages...</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-manage-nuget-packages.png" class="img-fluid" alt="Manage NuGet Packages" />
+                                    </p>
+                                    <h2 class="display-6">Step 3</h2>
+                                    <p>
+                                        Then in the <strong>NuGet Package Manager</strong> from the <strong>Browse</strong> tab search for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> and then select <strong>Comentsys.Toolkit.WindowsAppSdk by Comentsys</strong> as indicated and select <strong>Install</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-nuget-toolkit.png" class="img-fluid" alt="NuGet Package Manager Comentsys.Toolkit.WindowsAppSdk" />
+                                    </p>
+                                    <p>
+                                        This will add the package for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> to your <strong>Project</strong>. If you get the <strong>Preview Changes</strong> screen saying 
+                                        <strong>Visual Studio is about to make changes to this solution. Click OK to proceed with the changes listed below.</strong> You can read the message and then select 
+                                        <strong>OK</strong> to <strong>Install</strong> the package, then you can close the <strong>tab</strong> for <strong>Nuget: TilesGame</strong> by selecting the <strong>x</strong> next to it. 
+                                    </p>
+                                    <h2 class="display-6">Step 4</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio</strong> within <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Add</strong> then <strong>New Item…</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-new-item.png" class="img-fluid" alt="Add New Item" />
+                                    </p>
+                                    <h2 class="display-6">Step 5</h2>
+                                    <p>
+                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>Code</strong> and then select <strong>Code File</strong> from the list next to this, then type in the name of <i>Library.cs</i> and then <strong>Click</strong> on <strong>Add</strong>.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-add-new-item-tiles-game.png" class="img-fluid" alt="Add New Code File" />
+                                    </p>
+                                    <h2 class="display-6">Step 6</h2>
+                                    <p>
+                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Library.cs</i> then define a <code>namespace</code> allowing classes to be defined together, 
+                                        usually each is separate but will be defined in <i>Library.cs</i> by typing the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+using Comentsys.Toolkit.Binding;
+using Comentsys.Toolkit.WindowsAppSdk;
+using Microsoft.UI;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Data;
+using Microsoft.UI.Xaml.Input;
+using Microsoft.UI.Xaml.Media;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace TilesGame;
+
+public enum State
+{
+    White,
+    Black,
+    Start,
+    Finish,
+    Correct,
+    Incorrect
+}
+
+// Item Class
+
+public class Board : ObservableBase
+{
+    // Board Constants, Members & Properties
+
+    // Board Choose, Set & Start Methods
+
+    // Board Play Method
+
+    // Board Get & New Methods and Constructor
+}
+
+public class Library
+{
+    // Library Constants, Variables & Play Method
+
+    // Library SetPieces Method
+
+    // Library GetBoundText Method
+
+    // Library Layout & New Methods
+
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                                    </code></pre>                               
+                                    <h2 class="display-6">Step 7</h2>
+                                    <p>
+                                        Still in <i>Library.cs</i> for the <code>namespace</code> of <code>TilesGame</code> in <i>Library.cs</i> 
+                                        you will define a <code>class</code> for <code>Item</code> for after the <strong>Comment</strong> of <code>// Item Class</code> by typing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public class Item
+{
+    public int Row { get; set; }
+
+    public int Column { get; set; }
+
+    public State State { get; set; }    
+
+    public Item(int row, int column, State state) =>
+        (Row, Column, State) = (row, column, state);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                    </code></pre> 
+                                    <p>
+                                        <code>Item</code> has <strong>Properties</strong> for <code>Row</code>, <code>Column</code> and <code>State</code> along with a 
+                                        <strong>Constructor</strong> to set them which will represent an item in the game.
+                                    </p>
+
+                                    <h2 class="display-6">Step 8</h2>
+                                    <p>
+                                        Still in <i>Library.cs</i> for the <code>namespace</code> of <code>TilesGame</code> in <i>Library.cs</i> 
+                                        in the <code>class</code> for <code>Board</code> after the <strong>Comment</strong> of <code>// Board Constants, Members & Properties</code> 
+                                        type the following <strong>Constants</strong>, <strong>Members</strong> and <strong>Properties</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private const int bound = 1;
+private const int timer = 100;
+private readonly State[,] _board;
+private readonly Random _random = new((int)DateTime.UtcNow.Ticks);
+private readonly int _rows;
+private readonly int _columns;
+private readonly int _levels;
+private readonly int _start;
+private readonly int _finish;
+
+private int _index;
+private int _offset;
+private bool _over;
+private bool _started;
+private TimeSpan _time;
+private TimeSpan _best;
+private DateTime _when;
+private string _message;
+private DispatcherTimer _timer;
+
+public TimeSpan Time { get => _time; set => SetProperty(ref _time, value); }
+public TimeSpan Best { get => _best; set => SetProperty(ref _best, value); }
+public string Message { get => _message; set => SetProperty(ref _message, value); }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+                                    </code></pre>
+                                    <h2 class="display-6">Step 9</h2>
+                                    <p>
+                                        Still in the <code>namespace</code> of <code>TilesGame</code> in <i>Library.cs</i>
+                                        in the <code>class</code> for <code>Board</code> after the <strong>Comment</strong> of <code>// Board Choose, Set & Start Methods</code> 
+                                        type the following <strong>Methods</strong> for <code>Choose</code> to pick random numbers. <code>Set</code> will update the 
+                                        <code>State</code> of game elements and <code>Start</code> which will begin the <strong>Timer</strong> for the game.
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private List&lt;int&gt; Choose(int minimum, int maximum, int total)
+{
+    var choose = new List&lt;int&gt;();
+    var values = Enumerable.Range(minimum, maximum).ToList();
+    for (int index = 0; index &lt; total; index++)
+    {
+        var value = _random.Next(0, values.Count);
+        choose.Add(values[value]);
+    }
+    return choose;
+}
+
+private void Set(int columns, int levels)
+{
+    var values = Choose(0, columns, levels - bound);
+    for (int level = 0; level &lt; levels; level++)
+    {
+        for (int column = 0; column &lt; columns; column++)
+        {
+            State tile;
+            if (level &lt; _finish)
+                tile = State.Finish;
+            else if (level >= _start)
+                tile = State.Start;
+            else
+                tile = values[level] == column ? State.Black : State.White;
+            _board[level, column] = tile;
+        }
+    }
+}
+
+private void Start()
+{
+    _when = DateTime.UtcNow;
+    if (_timer != null)
+        _timer.Stop();
+    _timer = new DispatcherTimer()
+    {
+        Interval = TimeSpan.FromMilliseconds(timer)
+    };
+    _timer.Tick += (object sender, object e) =>
+    {
+        if(_started && !_over)
+            Time = DateTime.UtcNow - _when;
+        else
+            _timer.Stop();
+    };
+    _started = true;
+    _timer.Start();
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+                                    </code></pre>
+                                    <h2 class="display-6">Step 10</h2>
+                                    <p>
+                                        Still in the <code>namespace</code> of <code>TilesGame</code> in <i>Library.cs</i>
+                                        in the <code>class</code> for <code>Board</code> after the <strong>Comment</strong> of <code>// Board Play Method</code> 
+                                        type the following <strong>Method</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public void Play(Item item)
+{
+    if (!_over)
+    {
+        if (item.State == State.Black)
+        {
+            if(item.Row == _index)
+            {
+                if(!_started)
+                    Start();
+                _board[item.Row, item.Column] = State.Correct;
+                _index--;
+                if (_offset > 0)
+                    _offset--;
+                if (_index &lt; _finish)
+                {
+                    _started = false;
+                    Time = DateTime.UtcNow - _when;
+                    if (Best == TimeSpan.Zero || Time &lt; Best)
+                        Best = Time;
+                    Message = $"Completed in {Time:ss\\.fff}!";
+                }
+            }
+            else
+            {
+                _board[item.Row, item.Column] = State.Incorrect;
+                Message = $"Game Over, Hit Wrong Tile!";
+                _over = true;
+            }
+        }
+        else if (item.State == State.White)
+        {
+            _board[item.Row, item.Column] = State.Incorrect;
+            Message = $"Game Over, Hit White Tile!";
+            _over = true;
+        }
+    }
+    else
+        Message = $"Game Over!";
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                    </code></pre>
+                                    <p>
+                                        <code>Play</code> is used when an element is interacted with in the game, the <code>State</code> will be checked and if the game is completed the finish time will be displayed, 
+                                        if anything other than the correct <strong>Tile</strong> is interacted with then the game is over, and a message will be displayed or if the game is over that message will be shown.
+                                    </p>
+                                    <h2 class="display-6">Step 11</h2>
+                                    <p>
+                                        Still in the <code>namespace</code> of <code>TilesGame</code> in <i>Library.cs</i>
+                                        in the <code>class</code> for <code>Board</code> after the <strong>Comment</strong> of <code>// Board Get & New Methods and Constructor</code> 
+                                        type the following <strong>Methods</strong> and <strong>Constructor</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public Item Get(int row, int column) =>
+    new(row + _offset, column, _board[row + _offset, column]);
+
+public void New()
+{
+    _over = false;
+    _started = false;
+    Time = TimeSpan.Zero;
+    Set(_columns, _levels);
+    _offset = _levels - _rows;
+    _index = _levels - (bound * 2);
+    Message = "Don't Hit White Tiles!";
+}
+
+public Board(int rows, int columns, int levels)
+{
+    _rows = rows;
+    _columns = columns;
+    _levels = levels;
+    _start = levels - bound;
+    _finish = rows - bound;
+    _board = new State[levels, columns];
+    New();
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                                    </code></pre>
+                                    <p>
+                                        <code>Get</code> will be used to determine what element is at the given position, <code>New</code> will start a new game and the <strong>Constructor</strong> for <code>Board</code> is used to setup the game.
+                                    </p>
+                                    <h2 class="display-6">Step 12</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>TilesGame</code> in <i>Library.cs</i> and the <code>class</code> of <code>Library</code> after 
+                                        the <strong>Comment</strong> of <code>// Library Constants, Variables & Play Method</code> 
+                                        type the following <strong>Constants</strong>, <strong>Variables</strong>, <strong>Property</strong> and <strong>Method</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private const int rows = 6;
+private const int columns = 4;
+private const int levels = 32;
+private const int size = 36;
+private const int font = 10;
+
+private readonly Dictionary&lt;State, SolidColorBrush&gt; _brushes = new()
+{
+    { State.White, new SolidColorBrush(Colors.White) },
+    { State.Black, new SolidColorBrush(Colors.Black) },
+    { State.Start, new SolidColorBrush(Colors.Gold) },
+    { State.Finish, new SolidColorBrush(Colors.ForestGreen) },
+    { State.Correct, new SolidColorBrush(Colors.Gray) },
+    { State.Incorrect, new SolidColorBrush(Colors.IndianRed) }
+};
+private readonly Board _board = new(rows, columns, levels);
+
+private Piece[,] _pieces;
+private Grid _grid;
+
+private void Play(Item selected)
+{
+    _board.Play(selected);
+    for (int row = 0; row &lt; rows; row++)
+    {
+        for (int column = 0; column &lt; columns; column++)
+        {
+            var item = _board.Get(row, column);
+            var piece = _pieces[row, column];
+            piece.Tag = item;
+            piece.Fill = _brushes[item.State];
+        }
+    }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+                                    </code></pre>  
+                                    <p>
+                                        <strong>Constants</strong> are values that are used in the game that will not change and <strong>Variables</strong> are used to store various 
+                                        values for the game, there is also the <strong>Method</strong> of <code>Play</code> which will be used to perform an action in the game for a 
+                                        given <strong>Tile</strong> or <code>Item</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 13</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Tetrominos</code> in <i>Library.cs</i> and the <code>class</code> of <code>Library</code> after 
+                                        the <strong>Comment</strong> of <code>// SetPieces Method</code> type the following <strong>Method</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private Piece[,] SetPieces(Grid grid)
+{
+    grid.Children.Clear();
+    var pieces = new Piece[rows, columns];
+    for (int row = 0; row &lt; rows; row++)
+    {
+        grid.RowDefinitions.Add(new RowDefinition());
+        for (int column = 0; column &lt; columns; column++)
+        {
+            if (row == 0)
+                grid.ColumnDefinitions.Add(new ColumnDefinition());
+            var item = _board.Get(row, column);
+            var piece = new Piece()
+            {
+                Tag = item,
+                Width = size,
+                Height = size,
+                IsSquare = true,
+                Fill = _brushes[item.State],
+                Stroke = new SolidColorBrush(Colors.WhiteSmoke)
+            };
+            piece.Tapped += (object sender, TappedRoutedEventArgs e) =>
+                Play((Item)(sender as Piece).Tag);
+            Grid.SetColumn(piece, column);
+            Grid.SetRow(piece, row);
+            grid.Children.Add(piece);
+            pieces[row, column] = piece;
+        }
+    }
+    return pieces;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                                    </code></pre>  
+                                    <p>
+                                        <code>SetPieces</code> is where the elements that make up the visuals for the game for a <strong>Tile</strong> using <code>Piece</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 14</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Tetrominos</code> in <i>Library.cs</i> and the <code>class</code> of <code>Library</code> after 
+                                        the <strong>Comment</strong> of <code>// GetBoundText Method</code> type the following <strong>Method</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private TextBlock GetBoundText(string property, string format = null)
+{
+    var text = new TextBlock()
+    {
+        FontSize = font,
+        VerticalAlignment = VerticalAlignment.Center,
+        HorizontalAlignment = HorizontalAlignment.Center
+    };
+    var binding = new Binding()
+    {     
+        Source = _board,
+        Mode = BindingMode.OneWay,
+        Path = new PropertyPath(property),
+        UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged,
+        Converter = new StringFormatConverter(),
+        ConverterParameter = format
+    };
+    BindingOperations.SetBinding(text, TextBlock.TextProperty, binding);
+    return text;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                    </code></pre>  
+                                    <p>
+                                        <code>GetBoundText</code> is used to get a <code>TextBlock</code> that will be used with <strong>Data Binding</strong> 
+                                        to output the messages from the game such as to indicate the current time, whether the game is competed or if the game is over.
+                                    </p>
+                                    <h2 class="display-6">Step 15</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>Tetrominos</code> in <i>Library.cs</i> and the <code>class</code> of <code>Library</code> after 
+                                        the <strong>Comment</strong> of <code>// Layout & New Methods</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void Layout(Grid grid)
+{
+    grid.Children.Clear();
+    var panel = new StackPanel()
+    {
+        Orientation = Orientation.Horizontal
+    };
+    var time = GetBoundText(nameof(_board.Time), "Time: {0:ss\\.fff}");
+    panel.Children.Add(time);
+    var inner = new StackPanel()
+    {
+        Orientation = Orientation.Vertical
+    };
+    var message = GetBoundText(nameof(_board.Message));
+    inner.Children.Add(message);
+    _grid = new()
+    {
+        VerticalAlignment = VerticalAlignment.Top,
+        HorizontalAlignment = HorizontalAlignment.Center
+    };
+    _pieces = SetPieces(_grid);
+    inner.Children.Add(_grid);
+    panel.Children.Add(inner);
+    var best = GetBoundText(nameof(_board.Best), "Best: {0:ss\\.fff}");
+    panel.Children.Add(best);
+    grid.Children.Add(panel);
+}
+
+public void New(Grid grid)
+{
+    _board.New();
+    Layout(grid);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                    </code></pre>  
+                                    <p>
+                                        <code>Layout</code> will create the look-and-feel of the game including to display the messages using <code>GetBoundText</code> and <code>New</code> will start a new game.
+                                    </p>
+                                    <h2 class="display-6">Step 16</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>MainWindow.xaml</strong> to see the <strong>XAML</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-xaml-tiles-game.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 17</h2>
+                                    <p>
+                                        In the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> there will be some <strong>XAML</strong> for a <code>StackPanel</code>, this should be <strong>Removed</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;StackPanel&nbsp;Orientation=&quot;Horizontal&quot;&nbsp;
+HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;x:Name=&quot;myButton&quot;&nbsp;Click=&quot;myButton_Click&quot;&gt;Click&nbsp;Me&lt;/Button&gt;
+&lt;/StackPanel&gt;                               
+                                    </code></pre>
+                                    <h2 class="display-6">Step 18</h2>
+                                    <p>
+                                        While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> above <code>&lt;/Window&gt;</code>, type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;Grid&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid&nbsp;Margin=&quot;50&quot;&nbsp;Name=&quot;Display&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HorizontalAlignment=&quot;Center&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VerticalAlignment=&quot;Center&quot;&nbsp;Loaded=&quot;New&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;CommandBar&nbsp;VerticalAlignment=&quot;Bottom&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AppBarButton&nbsp;Icon=&quot;Page2&quot;&nbsp;Label=&quot;New&quot;&nbsp;Click=&quot;New&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/CommandBar&gt;
+&lt;/Grid&gt;                                                                                                                                                                                                                                                                                 
+                                    </code></pre> 
+                                    <p>
+                                        This <strong>XAML</strong> contains a <code>Grid</code> with a <strong>Viewbox</strong> which will <strong>Scale</strong> a <code>Grid</code>. 
+                                        It has a <code>Loaded</code> event handler for <code>New</code> which is also shared by the <code>AppBarButton</code>.
+                                    </p>                           
+                                    <h2 class="display-6">Step 19</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>MainWindow.xaml</strong> then double-click on <strong>MainWindow.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-code-tiles-game.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 20</h2>
+                                    <p>
+                                        In the <strong>Code</strong> for <code>MainWindow.xaml.cs</code> there be a Method of <code>myButton_Click(...)</code> this should be <strong>Removed</strong> by removing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void myButton_Click(object sender, RoutedEventArgs e)
+{
+    myButton.Content = "Clicked";
+}                                        
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 21</h2>
+                                    <p>
+                                        Once <code>myButton_Click(...)</code> has been removed, within the <strong>Constructor</strong> of <code>public MainWindow() { ... }</code> and below the line of <code>this.InitializeComponent();</code> type in the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private readonly Library _library = new();
+
+private void New(object sender, RoutedEventArgs e) =>
+    _library.New(Display);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                    </code></pre>
+                                    <p>
+                                        Here an <strong>Instance</strong> of <code>Library</code> is created then below this is the <strong>Method</strong> of <code>New</code> that will be used with <strong>Event Handler</strong> 
+                                        from the <code>XAML</code>, this <strong>Method</strong> uses <strong>Arrow Syntax</strong> with the <code>=></code> for an expression body which is useful when a <strong>Method</strong> only has one line.
+                                    </p>
+                                    <h2 class="display-6">Step 22</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>TilesGame (Package)</strong> to <strong>Start</strong> the application.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-debug-tiles-game.png" class="img-fluid" alt="TilesGame (Package)"/>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <h2 class="display-6">Step 23</h2>
+                                    <p>
+                                        Once running you can tap on the first <strong>Tile</strong> that is <strong>Black</strong> above the <strong>Tiles</strong> that are <strong>Yellow</strong> to begin the game, tap on them all until you then you get to 
+                                        the <strong>Tiles</strong> that are Green to win the game, but tap on the wrong <strong>Tile</strong> that is <strong>Black</strong> or a <strong>White</strong> one then you lose the game or select <i>New</i> to start a new game.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-running-tiles-game.png" class="img-fluid" alt="Tiles Game Running and Output" />
+                                    </p>
+                                    <h2 class="display-6">Step 24</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                To <strong>Exit</strong> the <strong>Windows App SDK</strong> application, select the <strong>Close</strong> button from the top right of the application as that concludes this <strong>Tutorial</strong> for <strong>Windows App SDK</strong> from <a href="https://www.tutorialr.com">tutorialr.com</a>!
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-close.png" class="img-fluid" alt="Close application"/>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="card-footer">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-tiles-game.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Tiles Game
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>                   
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Tutorial -->
+                </section>
+                <!-- /Section -->    
+            </div>
+            <div class="waves waves-bottom bg-white"></div>  
+        </main>
+        <!-- /Main -->
+        <!-- Footer -->
+        <footer class="footer mt-auto">
+            <nav class="navbar bottom navbar-light p-2">
+                <a href="../../../"><img src="../../../images/footer.png" alt="tutorialr.com" height="40px"></a>
+                <a href="https://www.twitter.com/tutorialrdotcom" target="_blank"><img src="../../../images/twitter.png" height="45px" alt="@tutorialrdotcom"></a>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="../../../images/cc-by-sa.png" height="35px" alt="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"></a>
+            </nav>
+        </footer>
+        <!-- /Footer -->
+        <!-- Scripts -->
+        <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../../../highlight/js/highlight.min.js"></script>
+        <!-- /Scripts-->
+    </body>
+</html>
