@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <meta name="description" content="tutorialr.com - Tutorials, Talks and Workshops"/>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@tutorialrdotcom"/>
+        <meta name="twitter:creator" content="@rogueplanetoid"/>
+        <meta name="twitter:title" content="tutorialr.com"/>
+        <meta name="twitter:description" content="Tutorials, Talks and Workshops"/>
+        <meta name="twitter:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta name="twitter:image:alt" content="Tutorials, Talks and Workshops"/>
+        <!-- /Twitter -->
+        <!-- Open Graph -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="tutorialr.com"/>
+        <meta property="og:site_name" content="tutorialr.com">
+        <meta property="og:description" content="Tutorials, Talks and Workshops"/>
+        <meta property="og:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta property="og:image:width" content="1280"/>
+        <meta property="og:image:height" content="630"/>
+        <!-- /Open Graph -->
+        <link rel="icon" href="../../../favicon.ico"/>
+        <link href="../css/win-app-sdk.css" rel="stylesheet">
+        <link href="../../../css/style.css" rel="stylesheet">
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../highlight/css/vs.min.css" rel="stylesheet">
+        <title>tutorialr.com - Tutorials - Windows App SDK - Codes Game</title>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <!-- Main -->
+        <main>
+            <!-- Navigation -->	
+            <nav class="navbar top navbar-light navbar-expand-md bg-brand">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tutorialr-navbar" aria-controls="tutorialr-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../">
+                        <img src="../../../images/header.png" alt="tutorialr.com" height="50px">
+                    </a>
+                    <div id="tutorialr-navbar" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../tutorials">Tutorials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-tutorialr active" href="../../winappsdk">Windows App SDK</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../talks">Talks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../workshops">Workshops</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://www.comentsys.com" target="_blank">
+                        <img src="../../../images/comentsys.png" alt="Comentsys" height="50px">
+                    </a>
+                </div>
+            </nav>
+            <!-- /Navigation -->
+            <div class="waves waves-top"></div>
+            <div class="bg-tutorialr">         
+                <!-- Section -->            
+                <section class="text-center text-white container">
+                    <!-- Hero -->
+                    <h1 class="display-4 mx-auto">Codes Game</h1>
+                    <p class="lead">
+                        <strong>Learn</strong> creating a <strong>Codes Game</strong> using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
+                    </p>
+                    <!-- /Hero -->
+                    <!-- Tutorial -->
+                    <div class="col-lg-10 mx-auto">
+                        <div class="container text-start text-black">
+                            <div class="card position-relative">
+                                <div class="card-header">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-codes-game.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Codes Game
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>   
+                                <div class="card-body">
+                                    <p>
+                                        <strong>Codes Game</strong> shows how to create a game where you need to guess the correct combination of four 
+                                        numbers between <i>1</i> and <i>9</i> using a toolkit from <strong>NuGet</strong> using the <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 1</h2>
+                                    <p>
+                                        Follow <a href="../setup-and-start">Setup and Start</a> on how to get <strong>Setup</strong> and <strong>Install</strong> what you need for <strong>Visual Studio 2022</strong> and <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                In <strong>Windows 11</strong> choose <strong>Start</strong> and then find or search for <strong>Visual Studio 2022</strong> and then select it.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs.png" class="img-fluid" alt="Visual Studio 2022"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Once <strong>Visual Studio 2022</strong> has started select <strong>Create a new project</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-new-project.png" class="img-fluid" alt="Create a new project"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Then choose the <strong>Blank App, Packages (WinUI in Desktop)</strong> and then select <strong>Next</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-win-ui.png" class="img-fluid" alt="Blank App, Packages (WinUI in Desktop)"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>CodesGame</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-configure-project.png" class="img-fluid" alt="Configure project" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 2</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio within</strong> <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Manage NuGet Packages...</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-manage-nuget-packages.png" class="img-fluid" alt="Manage NuGet Packages" />
+                                    </p>
+                                    <h2 class="display-6">Step 3</h2>
+                                    <p>
+                                        Then in the <strong>NuGet Package Manager</strong> from the <strong>Browse</strong> tab search for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> and then select <strong>Comentsys.Toolkit.WindowsAppSdk by Comentsys</strong> as indicated and select <strong>Install</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-nuget-toolkit.png" class="img-fluid" alt="NuGet Package Manager Comentsys.Toolkit.WindowsAppSdk" />
+                                    </p>
+                                    <p>
+                                        This will add the package for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> to your <strong>Project</strong>. If you get the <strong>Preview Changes</strong> screen saying 
+                                        <strong>Visual Studio is about to make changes to this solution. Click OK to proceed with the changes listed below.</strong> You can read the message and then select 
+                                        <strong>OK</strong> to <strong>Install</strong> the package, then you can close the <strong>tab</strong> for <strong>Nuget: CodesGame</strong> by selecting the <strong>x</strong> next to it. 
+                                    </p>
+                                    <h2 class="display-6">Step 4</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio</strong> within <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Add</strong> then <strong>New Item…</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-new-item.png" class="img-fluid" alt="Add New Item" />
+                                    </p>
+                                    <h2 class="display-6">Step 5</h2>
+                                    <p>
+                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>Code</strong> and then select <strong>Code File</strong> from the list next to this, then type in the name of <i>Library.cs</i> and then <strong>Click</strong> on <strong>Add</strong>.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-add-new-item-codes-game.png" class="img-fluid" alt="Add New Code File" />
+                                    </p>
+                                    <h2 class="display-6">Step 6</h2>
+                                    <p>
+                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Library.cs</i>, within this type the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+using Comentsys.Toolkit.Binding;
+using Comentsys.Toolkit.WindowsAppSdk;
+using Microsoft.UI;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Data;
+using Microsoft.UI.Xaml.Media;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Windows.Input;
+
+namespace CodesGame;
+
+public enum State
+{
+    None,
+    Match
+}
+
+// Code Class
+
+// StateToBrushConverter Class
+
+public class Library
+{
+    // Library Constants, Variables and Choose Method
+
+    // Library GetCode, IsMatch & Setup Method
+
+    // Library Accept & New Method
+
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                                    </code></pre>  
+                                    <p>
+                                        The <code>Class</code> defined so far <i>Library.cs</i> has <code>using</code> for package of <code>Comentsys.Assets.FluentEmoji</code> and others 
+                                        along with a <code>namespace</code> which allows many classes to be defined together, usually a <code>class</code> is defined per file but to make 
+                                        things easier each will be defined in <i>Library.cs</i> instead.
+                                    </p>
+                                    <h2 class="display-6">Step 7</h2>
+                                    <p>
+                                        Still in <i>Library.cs</i> for the <code>namespace</code> of <code>CodesGame</code> in <i>Library.cs</i> you will define a 
+                                        <code>class</code> after the <strong>Comment</strong> of <code>// Code Class</code> by typing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public class Code : ObservableBase
+{
+    private int _value;
+    private State _state;
+    private readonly int _index;
+    private readonly Action&lt;int&gt; _action;
+
+    public Code(int index, int value, State state, Action&lt;int&gt; action) =>
+        (_index, Value, State, _action) = (index, value, state, action);
+
+    public ICommand Command =>
+        new ActionCommandHandler((param) => _action(_index));
+
+    public int Value
+    {
+        get => _value;
+        set => SetProperty(ref _value, value);
+    }
+
+    public State State
+    {
+        get => _state;
+        set => SetProperty(ref _state, value);
+    }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+                                    </code></pre>
+                                    <p>
+                                        <code>Code</code> uses the <code>class</code> from the toolkit of <code>ObservableBase</code> which will be used for <strong>Data Binding</strong> 
+                                        the <strong>Properties</strong> which include the <code>State</code> and <code>Value</code> along with the <code>Command</code> which will be used 
+                                        to allow interaction with the element using <strong>Commanding</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 8</h2>
+                                    <p>
+                                        Still in <i>Library.cs</i> for the <code>namespace</code> of <code>CodesGame</code> in <i>Library.cs</i> you will define a 
+                                        <code>class</code> after the <strong>Comment</strong> of <code>// StateToBrushConverter  Class</code> by typing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public class StateToBrushConverter : IValueConverter
+{
+    public object Convert(object value, Type targetType, 
+        object parameter, string language)
+    {
+        if (value is State state)
+        {
+            var invert = bool.Parse(parameter as string);
+            var none = state == State.None;
+            var color = none ^= invert;
+            return new SolidColorBrush(color ? Colors.White : Colors.Black);
+        }
+        return null;
+    }
+
+    public object ConvertBack(object value, Type targetType, 
+        object parameter, string language) =>
+        throw new NotImplementedException();
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                    </code></pre>
+                                    <p>
+                                        <code>StateToBrushConverter</code> uses the <code>interface</code> of <code>IValueConverter</code> for <strong>Data Binding</strong> which will allow the colours of the 
+                                        <strong>Codes</strong> in the game to be represented from either <i>White</i> or <i>Black</i> as a <code>SolidColorBrush</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 9</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>CodesGame</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Library</code> after the 
+                                        <strong>Comment</strong> of <code>// Library Constants, Variables and Choose Method</code> type in the following <strong>Constants</strong>, <strong>Variables</strong> and <strong>Method</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private const string title = "Codes Game";
+private const int max = 9;
+private const int total = 4;
+
+private readonly ObservableCollection&lt;Code&gt; _codes = new();
+private readonly Random _random = new((int)DateTime.UtcNow.Ticks);
+
+private List&lt;int&gt; _values = new();
+private int _turns = 0;
+
+private Dialog _dialog;
+private ItemsControl _items;
+
+private List&lt;int&gt; Choose(int minimum, int maximum, int total)
+{
+    var choose = new List&lt;int&gt;();
+    var values = Enumerable.Range(minimum, maximum).ToList();
+    for (int index = 0; index &lt; total; index++)
+    {
+        var value = _random.Next(0, values.Count);
+        choose.Add(values[value]);
+    }
+    return choose;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                    </code></pre>
+                                    <p>
+                                        <strong>Constants</strong> are values that are used in the game that will not change and <strong>Variables</strong> are used to store various values for the game. 
+                                        The <strong>Method</strong> of <code>Choose</code> will be used to create a list of randomised numbers that are not unique as you can have the same number in a <strong>Code</strong> for the game.
+                                    </p>
+                                    <h2 class="display-6">Step 10</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>CodesGame</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Library</code> after the 
+                                        <strong>Comment</strong> of <code>// Library GetCode, IsMatch & Setup Method</code> type in the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private Code GetCode(int index, int value) =>
+    new(index, value, State.None, (int i) =>
+    {
+        var code = _codes[i];
+        if (code.State == State.None)
+            code.Value = (code.Value == max) ? 1 : code.Value + 1;
+    });
+
+private bool IsMatch(int index, int value)
+{
+    var code = _codes[index];
+    return value == code.Value ?
+    (code.State = State.Match) == State.Match :
+    (code.State = State.None) == State.Match;
+}
+
+private void Setup()
+{
+    _turns = 0;
+    _codes.Clear();
+    for (int index = 0; index &lt; total; index++)
+    {
+        _codes.Add(GetCode(index, index + 1));
+    }
+    _values = Choose(1, max, total);
+    _items.ItemsSource = _codes;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                                    </code></pre>
+                                    <p>
+                                        <code>GetCode</code> is used to get a part of a <strong>Code</strong> for the game, <code>IsMatch</code> will check if the selected part of a <strong>Code</strong> matches the part of a 
+                                        <strong>Code</strong> and <code>Setup</code> is used to initialise the game with a given <strong>Code</strong> using <code>Choose</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 11</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>CodesGame</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Library</code> after the 
+                                        <strong>Comment</strong> of <code>// Library Accept & New Method</code> type in the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public void Accept()
+{
+    int index = 0;
+    int correct = 0;
+    foreach (var value in _values)
+    {
+        if (IsMatch(index, value))
+            correct++;
+        index++;
+    }
+    _turns++;
+    if (correct == total)
+    {
+        string code = string.Join(string.Empty, _codes.Select(s => s.Value));
+        _dialog.Show($"Matched {code} in {_turns} turns");
+        Setup();
+    }
+}
+
+public void New(ItemsControl items)
+{
+    _dialog = new Dialog(items.XamlRoot, title);
+    _items = items;
+    Setup();
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+                                    </code></pre>
+                                    <p>
+                                        <code>Accept</code> will check if the selected parts of the <strong>Code</strong> are correct using <code>IsMatch</code> if they are all correct then a message will be 
+                                        displayed using the <code>Dialog</code> and New will be used to begin a game and uses <code>Setup</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 12</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>MainWindow.xaml</strong> to see the <strong>XAML</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-xaml-codes-game.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                    <h2 class="display-6">Step 13</h2>
+                                    <p>
+                                        In the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> there will be some <strong>XAML</strong> for a <code>StackPanel</code>, this should be <strong>Removed</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;StackPanel&nbsp;Orientation=&quot;Horizontal&quot;&nbsp;
+HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;x:Name=&quot;myButton&quot;&nbsp;Click=&quot;myButton_Click&quot;&gt;Click&nbsp;Me&lt;/Button&gt;
+&lt;/StackPanel&gt;                               
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 14</h2>
+                                    <p>
+                                        While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> below <code>&lt;Window</code>, type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+xmlns:ui="using:Comentsys.Toolkit.WindowsAppSdk"                                                                                                                                                                                                                                                                                                                        
+                                    </code></pre>                                    
+                                    <p>
+                                        The <strong>XAML</strong> for <code>&lt;Window&gt;</code> should then look as follows:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;Window
+&nbsp;&nbsp;&nbsp;&nbsp;xmlns:ui=&quot;using:Comentsys.Toolkit.WindowsAppSdk&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;x:Class=&quot;CodesGame.MainWindow&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;xmlns:local=&quot;using:CodesGame&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;xmlns:mc=&quot;http://schemas.openxmlformats.org/markup&#45;compatibility/2006&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;mc:Ignorable=&quot;d&quot;&gt;                                                                                                                                                                                                                                                                                                                    
+                                    </code></pre>
+                                    <h2 class="display-6">Step 15</h2>
+                                    <p>
+                                        While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> above <code>&lt;/Window&gt;</code>, type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;Grid&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid.Resources&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;local:StateToBrushConverter&nbsp;x:Key=&quot;StateToBrushConverter&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Grid.Resources&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ItemsControl&nbsp;Margin=&quot;50&quot;&nbsp;Name=&quot;Display&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HorizontalAlignment=&quot;Center&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VerticalAlignment=&quot;Center&quot;&nbsp;Loaded=&quot;New&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ItemsControl.ItemTemplate&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;DataTemplate&nbsp;x:Name=&quot;DataTemplate&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;Command=&quot;{Binding&nbsp;Command}&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ui:Piece&nbsp;Value=&quot;{Binding&nbsp;Value}&quot;&nbsp;IsSquare=&quot;True&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fill=&quot;{Binding&nbsp;State,&nbsp;Mode=OneWay,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Converter={StaticResource&nbsp;StateToBrushConverter},&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ConverterParameter=True}&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Foreground=&quot;{Binding&nbsp;State,&nbsp;Mode=OneWay,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Converter={StaticResource&nbsp;StateToBrushConverter},&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ConverterParameter=False}&quot;&nbsp;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/DataTemplate&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ItemsControl.ItemTemplate&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ItemsControl.ItemsPanel&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ItemsPanelTemplate&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;StackPanel&nbsp;Orientation=&quot;Horizontal&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ItemsPanelTemplate&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ItemsControl.ItemsPanel&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ItemsControl&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;CommandBar&nbsp;VerticalAlignment=&quot;Bottom&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AppBarButton&nbsp;Icon=&quot;Accept&quot;&nbsp;Label=&quot;Accept&quot;&nbsp;Click=&quot;Accept&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AppBarButton&nbsp;Icon=&quot;Page2&quot;&nbsp;Label=&quot;New&quot;&nbsp;Click=&quot;New&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/CommandBar&gt;
+&lt;/Grid&gt;                                                                                                                                                                                                                                                                                                                         
+                                    </code></pre> 
+                                    <p>
+                                        This <strong>XAML</strong> contains a <code>Grid</code> with <code>Resources</code> using the <code>StateToBrushConverter</code> and also contains a <code>Viewbox</code> which will <strong>Scale</strong> an 
+                                        <code>ItemsControl</code> which has a <code>DataTemplate</code> which contains a <code>Button</code> and <code>Piece</code> which will be bound using <strong>Data Binding</strong>. 
+                                        It has a <code>Loaded</code> event handler for <code>New</code> which is also shared by the <code>AppBarButton</code> along with one for <code>Accept</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 16</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>MainWindow.xaml</strong> then double-click on <strong>MainWindow.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-code-codes-game.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 17</h2>
+                                    <p>
+                                        In the <strong>Code</strong> for <code>MainWindow.xaml.cs</code> there be a Method of <code>myButton_Click(...)</code> this should be <strong>Removed</strong> by removing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void myButton_Click(object sender, RoutedEventArgs e)
+{
+    myButton.Content = "Clicked";
+}                                        
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 18</h2>
+                                    <p>
+                                        Once <code>myButton_Click(...)</code> has been removed, within the <strong>Constructor</strong> of <code>public MainWindow() { ... }</code> and below the line of <code>this.InitializeComponent();</code> type in the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private readonly Library _library = new();
+
+private void Accept(object sender, RoutedEventArgs e) =>
+    _library.Accept();
+
+private void New(object sender, RoutedEventArgs e) =>
+    _library.New(Display);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                                    </code></pre>
+                                    <p>
+                                        Here an <strong>Instance</strong> of <code>Library</code> is created then below this is the <strong>Method</strong> of <code>Accept</code> and <code>New</code> that will be used with <strong>Event Handler</strong> 
+                                        from the <code>XAML</code>, these <strong>Methods</strong> use <strong>Arrow Syntax</strong> with the <code>=></code> for an expression body which is useful when a <strong>Method</strong> only has one line.
+                                    </p>
+                                    <h2 class="display-6">Step 19</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>CodesGame (Package)</strong> to <strong>Start</strong> the application.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-debug-codes-game.png" class="img-fluid" alt="CodesGame (Package)"/>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <h2 class="display-6">Step 20</h2>
+                                    <p>
+                                        Once running you win the game by selecting four numbers between <i>1</i> and <i>9</i> to guess the secret <strong>Code</strong> by selecting the numbers you can go through them to 
+                                        find the correct combination and once happy select <i>Accept</i> if you guessed a number incorrectly then it will turn <strong>Black</strong> with <strong>White</strong> text or if correct 
+                                        it will be <strong>White</strong> with <strong>Black</strong> text, or you can select <i>New</i> to start a new game.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-running-codes-game.png" class="img-fluid" alt="Codes Game Running and Output" />
+                                    </p>
+                                    <h2 class="display-6">Step 21</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                To <strong>Exit</strong> the <strong>Windows App SDK</strong> application, select the <strong>Close</strong> button from the top right of the application as that concludes this <strong>Tutorial</strong> for <strong>Windows App SDK</strong> from <a href="https://www.tutorialr.com">tutorialr.com</a>!
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-close.png" class="img-fluid" alt="Close application"/>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="card-footer">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-codes-game.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Codes Game
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>                   
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Tutorial -->
+                </section>
+                <!-- /Section -->    
+            </div>
+            <div class="waves waves-bottom bg-white"></div>  
+        </main>
+        <!-- /Main -->
+        <!-- Footer -->
+        <footer class="footer mt-auto">
+            <nav class="navbar bottom navbar-light p-2">
+                <a href="../../../"><img src="../../../images/footer.png" alt="tutorialr.com" height="40px"></a>
+                <a href="https://www.twitter.com/tutorialrdotcom" target="_blank"><img src="../../../images/twitter.png" height="45px" alt="@tutorialrdotcom"></a>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="../../../images/cc-by-sa.png" height="35px" alt="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"></a>
+            </nav>
+        </footer>
+        <!-- /Footer -->
+        <!-- Scripts -->
+        <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../../../highlight/js/highlight.min.js"></script>
+        <!-- /Scripts-->
+    </body>
+</html>
