@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <meta name="description" content="tutorialr.com - Tutorials, Talks and Workshops"/>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@tutorialrdotcom"/>
+        <meta name="twitter:creator" content="@rogueplanetoid"/>
+        <meta name="twitter:title" content="tutorialr.com"/>
+        <meta name="twitter:description" content="Tutorials, Talks and Workshops"/>
+        <meta name="twitter:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta name="twitter:image:alt" content="Tutorials, Talks and Workshops"/>
+        <!-- /Twitter -->
+        <!-- Open Graph -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="tutorialr.com"/>
+        <meta property="og:site_name" content="tutorialr.com">
+        <meta property="og:description" content="Tutorials, Talks and Workshops"/>
+        <meta property="og:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta property="og:image:width" content="1280"/>
+        <meta property="og:image:height" content="630"/>
+        <!-- /Open Graph -->
+        <link rel="icon" href="../../../favicon.ico"/>
+        <link href="../css/win-app-sdk.css" rel="stylesheet">
+        <link href="../../../css/style.css" rel="stylesheet">
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../highlight/css/vs.min.css" rel="stylesheet">
+        <title>tutorialr.com - Tutorials - Windows App SDK - Flags Game</title>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <!-- Main -->
+        <main>
+            <!-- Navigation -->	
+            <nav class="navbar top navbar-light navbar-expand-md bg-brand">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tutorialr-navbar" aria-controls="tutorialr-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../">
+                        <img src="../../../images/header.png" alt="tutorialr.com" height="50px">
+                    </a>
+                    <div id="tutorialr-navbar" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../tutorials">Tutorials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-tutorialr active" href="../../winappsdk">Windows App SDK</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../talks">Talks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../workshops">Workshops</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://www.comentsys.com" target="_blank">
+                        <img src="../../../images/comentsys.png" alt="Comentsys" height="50px">
+                    </a>
+                </div>
+            </nav>
+            <!-- /Navigation -->
+            <div class="waves waves-top"></div>
+            <div class="bg-tutorialr">         
+                <!-- Section -->            
+                <section class="text-center text-white container">
+                    <!-- Hero -->
+                    <h1 class="display-4 mx-auto">Flags Game</h1>
+                    <p class="lead">
+                        <strong>Learn</strong> creating a <strong>Flags Game</strong> using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
+                    </p>
+                    <!-- /Hero -->
+                    <!-- Tutorial -->
+                    <div class="col-lg-10 mx-auto">
+                        <div class="container text-start text-black">
+                            <div class="card position-relative">
+                                <div class="card-header">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-flags-game.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Flags Game
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>   
+                                <div class="card-body">
+                                    <p>
+                                        <strong>Flags Game</strong> shows how you can create a simple game where the aim is to guess the correct country's <strong>Flag</strong> 
+                                        from a set of <strong>Flags</strong> using flag assets and a toolkit from <strong>NuGet</strong> using the <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 1</h2>
+                                    <p>
+                                        Follow <a href="../setup-and-start">Setup and Start</a> on how to get <strong>Setup</strong> and <strong>Install</strong> what you need for <strong>Visual Studio 2022</strong> and <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                In <strong>Windows 11</strong> choose <strong>Start</strong> and then find or search for <strong>Visual Studio 2022</strong> and then select it.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs.png" class="img-fluid" alt="Visual Studio 2022"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Once <strong>Visual Studio 2022</strong> has started select <strong>Create a new project</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-new-project.png" class="img-fluid" alt="Create a new project"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Then choose the <strong>Blank App, Packages (WinUI in Desktop)</strong> and then select <strong>Next</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-win-ui.png" class="img-fluid" alt="Blank App, Packages (WinUI in Desktop)"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>FlagsGame</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-configure-project.png" class="img-fluid" alt="Configure project" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 2</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio within</strong> <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Manage NuGet Packages...</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-manage-nuget-packages.png" class="img-fluid" alt="Manage NuGet Packages" />
+                                    </p>
+                                    <h2 class="display-6">Step 3</h2>
+                                    <p>
+                                        Then in the <strong>NuGet Package Manager</strong> from the <strong>Browse</strong> tab search for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> and then select <strong>Comentsys.Toolkit.WindowsAppSdk by Comentsys</strong> as indicated and select <strong>Install</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-nuget-toolkit.png" class="img-fluid" alt="NuGet Package Manager Comentsys.Toolkit.WindowsAppSdk" />
+                                    </p>
+                                    <p>
+                                        This will add the package for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> to your <strong>Project</strong>. If you get the <strong>Preview Changes</strong> screen saying 
+                                        <strong>Visual Studio is about to make changes to this solution. Click OK to proceed with the changes listed below.</strong> You can read the message and then select 
+                                        <strong>OK</strong> to <strong>Install</strong> the package.
+                                    </p>
+                                    <h2 class="display-6">Step 4</h2>
+                                    <p>
+                                        Then while still in the <strong>NuGet Package Manager</strong> from the <strong>Browse</strong> tab search for <strong>Comentsys.Assets.Flags</strong> and then select <strong>Comentsys.Assets.Flags by Comentsys</strong> as indicated and select <strong>Install</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-nuget-flags.png" class="img-fluid" alt="NuGet Package Manager Comentsys.Assets.Flags" />
+                                    </p>
+                                    <p>
+                                        This will add the package for <strong>Comentsys.Assets.Flags </strong>to your <strong>Project</strong>. If you get the <strong>Preview Changes</strong> screen saying 
+                                        <strong>Visual Studio is about to make changes to this solution. Click OK to proceed with the changes listed below.</strong> You can read the message and then select 
+                                        <strong>OK</strong> to <strong>Install</strong> the package, then you can close the <strong>tab</strong> for <strong>Nuget: FlagsGame</strong> by selecting the <strong>x</strong> next to it. 
+                                    </p>
+                                    <h2 class="display-6">Step 5</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio</strong> within <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Add</strong> then <strong>New Item…</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-new-item.png" class="img-fluid" alt="Add New Item" />
+                                    </p>
+                                    <h2 class="display-6">Step 6</h2>
+                                    <p>
+                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>Code</strong> and then select <strong>Code File</strong> from the list next to this, then type in the name of <i>Library.cs</i> and then <strong>Click</strong> on <strong>Add</strong>.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-add-new-item-flags-game.png" class="img-fluid" alt="Add New Code File" />
+                                    </p>
+                                    <h2 class="display-6">Step 7</h2>
+                                    <p>
+                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Library.cs</i>, within this type the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+using Comentsys.Assets.Flags;
+using Comentsys.Toolkit.WindowsAppSdk;
+using Microsoft.UI;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Media;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+
+public class Library
+{
+    private const string space = " ";
+    private const int flag_size = 72;
+    private const int font = 20;
+    private const int size = 3;
+
+    private readonly Random _random = new((int)DateTime.UtcNow.Ticks);
+
+    private Grid _grid;
+    private TextBlock _text;
+
+    private Dictionary&lt;FlagType, ImageSource&gt; _sources;
+    private List&lt;int&gt; _indexes = new();
+    private List&lt;int&gt; _choices = new();
+    private int _turns;
+    private bool _over;
+    private string _name;
+
+    // GetSourceAsync & SetSourcesAsync
+
+    // Chose, Name, Country, Select & Set
+
+    // Play & Add
+
+    // Layout & New
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                                    </code></pre> 
+                                    <p>
+                                        <strong>Class</strong> defined so far <i>Library.cs</i> has <code>using</code> for package of <code>Comentsys.Toolkit.WindowsAppSdk</code>
+                                        and others including <code>Comentsys.Assets.Flags</code>. It also has <strong>Constants</strong> to represent things needed in the game and there 
+                                        are <strong>Variables</strong> to keep track of values used in the game.
+                                    </p> 
+                                    <h2 class="display-6">Step 8</h2>
+                                    <p>
+                                        While still in the <code>class</code> for <i>Library.cs</i> after the <strong>Comment</strong> of <code>// GetSourceAsync & SetSourcesAsync</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private async Task&lt;ImageSource&gt; GetSourceAsync(FlagType flagType) =>
+    await Flag.Get(FlagSet.Square, flagType)
+    .AsImageSourceAsync();
+
+private async Task SetSourcesAsync() =>
+    _sources ??= new Dictionary&lt;FlagType, ImageSource&gt;()
+    {
+        { FlagType.Armenia, await GetSourceAsync(FlagType.Armenia) },
+        { FlagType.Austria, await GetSourceAsync(FlagType.Austria) },
+        { FlagType.Belgium, await GetSourceAsync(FlagType.Belgium) },
+        { FlagType.Bulgaria, await GetSourceAsync(FlagType.Bulgaria) },
+        { FlagType.Estonia, await GetSourceAsync(FlagType.Estonia) },
+        { FlagType.France, await GetSourceAsync(FlagType.France) },
+        { FlagType.Gabon, await GetSourceAsync(FlagType.Gabon) },
+        { FlagType.Germany, await GetSourceAsync(FlagType.Germany) },
+        { FlagType.Guinea, await GetSourceAsync(FlagType.Guinea) },
+        { FlagType.Ireland, await GetSourceAsync(FlagType.Ireland) },
+        { FlagType.Italy, await GetSourceAsync(FlagType.Italy) },
+        { FlagType.Lithuania, await GetSourceAsync(FlagType.Lithuania) },
+        { FlagType.Luxembourg, await GetSourceAsync(FlagType.Luxembourg) },
+        { FlagType.Mali, await GetSourceAsync(FlagType.Mali) },
+        { FlagType.Netherlands, await GetSourceAsync(FlagType.Netherlands) },
+        { FlagType.Nigeria, await GetSourceAsync(FlagType.Nigeria) },
+        { FlagType.Romania, await GetSourceAsync(FlagType.Romania) },
+        { FlagType.Hungary, await GetSourceAsync(FlagType.Hungary) },
+        { FlagType.SierraLeone, await GetSourceAsync(FlagType.SierraLeone) },
+        { FlagType.Yemen, await GetSourceAsync(FlagType.Yemen) }
+    };                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                                    </code></pre>
+                                    <p>
+                                        <code>GetSourceAsync</code> will be used to get an <code>ImageSource</code> for a given <code>FlagType</code> and is used by the <strong>Method</strong> of <code>SetSourcesAsync</code> which will 
+                                        create a <code>Dictionary</code> of <strong>Flags</strong> which these have either horizontal or vertical stripes.
+                                    </p>
+                                    <h2 class="display-6">Step 9</h2>
+                                    <p>
+                                        While still in the <code>class</code> for <i>Library.cs</i> after the <strong>Comment</strong> of <code>// Chose, Name, Country, Select & Set</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private List&lt;int&gt; Choose(int minimum, int maximum, int total) =>
+    Enumerable.Range(minimum, maximum)
+        .OrderBy(r => _random.Next(minimum, maximum))
+            .Take(total).ToList();
+
+private string Name(FlagType flag) =>
+    Enum.GetName(typeof(FlagType), flag);
+
+private string Country(FlagType flag) => 
+    string.Join(space, new Regex(@"\p{Lu}\p{Ll}*")
+        .Matches(Name(flag))
+            .Select(s => s.Value));
+
+private void Select()
+{
+    var choice = _choices[_turns];
+    var index = _indexes[choice];
+    var flag = _sources.ElementAt(index);
+    _name = Name(flag.Key);
+    _text.Text = Country(flag.Key);
+    _turns++;
+}
+
+private void Set(string name, bool display) => 
+    (_grid.FindName(name) as Button).Opacity = display ? 1 : 0;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                                    </code></pre>
+                                    <p>
+                                        <code>Choose</code> is used to get a set of randomised unique numbers, <code>Name</code> will return the <strong>Flag</strong> as a <code>string</code> and <code>Country</code> will return the 
+                                        <code>Name</code> as a formatted <code>string</code>. <code>Select</code> will be used when performing an action in the game and <code>Set</code> will be used to hide a <strong>Flag</strong> once selected. 
+                                    </p>
+                                    <h2 class="display-6">Step 10</h2>
+                                    <p>
+                                        While still in the <code>class</code> for <i>Library.cs</i> after the <strong>Comment</strong> of <code>// Play & Add</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void Play(Button button)
+{
+    if(!_over)
+    {
+        string name = button.Name;
+        if(_name == name)
+        { 
+            Set(name, false);
+            if(_turns &lt; size * size)
+                Select();
+            else
+                _text.Text = "You Won!";
+        }
+        else
+            _over = true;
+    }
+    if(_over)   
+        _text.Text = "Game Over!";
+}
+
+private void Add(int row, int column, int index)
+{
+    var flag = _sources.ElementAt(_indexes[index]);
+    var border = new Border()
+    {
+        BorderBrush = new SolidColorBrush(Colors.Black),
+        BorderThickness = new Thickness(2)
+    };
+    var image = new Image()
+    {
+        Height = flag_size,
+        Width = flag_size,
+        Source = flag.Value
+    };
+    border.Child = image;
+    var button = new Button()
+    {
+        Name = Name(flag.Key),
+        Content = border
+    };
+    button.Click += (object sender, RoutedEventArgs e) =>
+        Play(sender as Button);
+    button.SetValue(Grid.RowProperty, row);
+    button.SetValue(Grid.ColumnProperty, column);
+    _grid.Children.Add(button);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                                    </code></pre>
+                                    <p>
+                                        <code>Play</code> is used when interacting with a <code>Button</code> and is used by <code>Add</code> for elements of the game.
+                                    </p>
+                                    <h2 class="display-6">Step 11</h2>
+                                    <p>
+                                        While still in the <code>class</code> for <i>Library.cs</i> after the <strong>Comment</strong> of <code>// Layout & New</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void Layout(Grid grid)
+{
+    var index = 0;
+    grid.Children.Clear();
+    grid.RowDefinitions.Clear();
+    grid.RowDefinitions.Add(new RowDefinition()
+    {
+        Height = GridLength.Auto
+    });
+    grid.RowDefinitions.Add(new RowDefinition()
+    {
+        Height = new GridLength(1, GridUnitType.Star)
+    });
+    _text = new TextBlock()
+    {
+        FontSize = font,
+        HorizontalAlignment = HorizontalAlignment.Center
+    };
+    Grid.SetRow(_text, 0);
+    grid.Children.Add(_text);
+    _grid = new Grid();
+    for (int row = 0; row &lt; size; row++)
+    {
+        _grid.RowDefinitions.Add(new RowDefinition());
+        for (int column = 0; column &lt; size; column++)
+        {
+            if (row == 0)
+                _grid.ColumnDefinitions.Add(new ColumnDefinition());
+            Add(row, column, index);
+            index++;
+        }
+    }
+    Grid.SetRow(_grid, 1);
+    grid.Children.Add(_grid);
+}
+
+public async void New(Grid grid)
+{
+    _turns = 0;
+    _over = false;
+    await SetSourcesAsync();
+    _indexes = Choose(0, _sources.Count, _sources.Count);
+    _choices = Choose(0, size * size, size * size);
+    Layout(grid);
+    Select();
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                    </code></pre>  
+                                    <p>
+                                        <code>Layout</code> will create the look-and-feel of the game and is used by <code>New</code> which will setup and begin a game.
+                                    </p>
+                                    <h2 class="display-6">Step 12</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>MainWindow.xaml</strong> to see the <strong>XAML</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-xaml-flags-game.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 13</h2>
+                                    <p>
+                                        In the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> there will be some <strong>XAML</strong> for a <code>StackPanel</code>, this should be <strong>Removed</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;StackPanel&nbsp;Orientation=&quot;Horizontal&quot;&nbsp;
+HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;x:Name=&quot;myButton&quot;&nbsp;Click=&quot;myButton_Click&quot;&gt;Click&nbsp;Me&lt;/Button&gt;
+&lt;/StackPanel&gt;                               
+                                    </code></pre>                                      
+                                    <h2 class="display-6">Step 14</h2>
+                                    <p>
+                                        While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> above <code>&lt;/Window&gt;</code>, type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;Grid&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid&nbsp;Margin=&quot;50&quot;&nbsp;Name=&quot;Display&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HorizontalAlignment=&quot;Center&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VerticalAlignment=&quot;Center&quot;&nbsp;Loaded=&quot;New&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;CommandBar&nbsp;VerticalAlignment=&quot;Bottom&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AppBarButton&nbsp;Icon=&quot;Page2&quot;&nbsp;Label=&quot;New&quot;&nbsp;Click=&quot;New&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/CommandBar&gt;
+&lt;/Grid&gt;                                                                                                                                                                                                                                                                                                                                                                                                       
+                                    </code></pre> 
+                                    <p>
+                                        This <strong>XAML</strong> contains a <code>Grid</code> with a <code>Viewbox</code> which will <strong>Scale</strong> a <code>Grid</code>. 
+                                        It has a <code>Loaded</code> event handler for <code>New</code> which is also shared by the<code>AppBarButton</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 15</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>MainWindow.xaml</strong> then double-click on <strong>MainWindow.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-code-flags-game.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 16</h2>
+                                    <p>
+                                        In the <strong>Code</strong> for <code>MainWindow.xaml.cs</code> there be a Method of <code>myButton_Click(...)</code> this should be <strong>Removed</strong> by removing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void myButton_Click(object sender, RoutedEventArgs e)
+{
+    myButton.Content = "Clicked";
+}                                        
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 17</h2>
+                                    <p>
+                                        Once <code>myButton_Click(...)</code> has been removed, within the <strong>Constructor</strong> of <code>public MainWindow() { ... }</code> and below the line of <code>this.InitializeComponent();</code> type in the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private readonly Library _library = new();
+
+private void New(object sender, RoutedEventArgs e) =>
+    _library.New(Display);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                    </code></pre>
+                                    <p>
+                                        Here an <strong>Instance</strong> of the <code>Class</code> of <code>Library</code> is created then below this is the <strong>Method</strong> of <code>New</code> that 
+                                        will be used with <strong>Event Handler</strong> from the <strong>XAML</strong>, this Method uses Arrow Syntax with the <code>=></code> for an Expression Body which is 
+                                        useful when a <strong>Method</strong> only has one line.
+                                    </p>
+                                    <h2 class="display-6">Step 18</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>FlagsGame (Package)</strong> to <strong>Start</strong> the application.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-debug-flags-game.png" class="img-fluid" alt="FlagsGame (Package)"/>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <h2 class="display-6">Step 19</h2>
+                                    <p>
+                                        Once running there will be <i>9</i> options for <strong>Flags</strong> available to select from and the aim is to correctly guess which <strong>Flag</strong> belongs to which country and if you guess all of them correctly you win but get any wrong and you lose or select <i>New</i> to start a new game.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-running-flags-game.png" class="img-fluid" alt="Flags Game Running and Output" />
+                                    </p>
+                                    <h2 class="display-6">Step 20</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                To <strong>Exit</strong> the <strong>Windows App SDK</strong> application, select the <strong>Close</strong> button from the top right of the application as that concludes this <strong>Tutorial</strong> for <strong>Windows App SDK</strong> from <a href="https://www.tutorialr.com">tutorialr.com</a>!
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-close.png" class="img-fluid" alt="Close application"/>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="card-footer">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-flags-game.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Flags Game
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>                   
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Tutorial -->
+                </section>
+                <!-- /Section -->    
+            </div>
+            <div class="waves waves-bottom bg-white"></div>  
+        </main>
+        <!-- /Main -->
+        <!-- Footer -->
+        <footer class="footer mt-auto">
+            <nav class="navbar bottom navbar-light p-2">
+                <a href="../../../"><img src="../../../images/footer.png" alt="tutorialr.com" height="40px"></a>
+                <a href="https://www.twitter.com/tutorialrdotcom" target="_blank"><img src="../../../images/twitter.png" height="45px" alt="@tutorialrdotcom"></a>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="../../../images/cc-by-sa.png" height="35px" alt="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"></a>
+            </nav>
+        </footer>
+        <!-- /Footer -->
+        <!-- Scripts -->
+        <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../../../highlight/js/highlight.min.js"></script>
+        <!-- /Scripts-->
+    </body>
+</html>

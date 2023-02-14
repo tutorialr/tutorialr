@@ -1,0 +1,1203 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <meta name="description" content="tutorialr.com - Tutorials, Talks and Workshops"/>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@tutorialrdotcom"/>
+        <meta name="twitter:creator" content="@rogueplanetoid"/>
+        <meta name="twitter:title" content="tutorialr.com"/>
+        <meta name="twitter:description" content="Tutorials, Talks and Workshops"/>
+        <meta name="twitter:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta name="twitter:image:alt" content="Tutorials, Talks and Workshops"/>
+        <!-- /Twitter -->
+        <!-- Open Graph -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="tutorialr.com"/>
+        <meta property="og:site_name" content="tutorialr.com">
+        <meta property="og:description" content="Tutorials, Talks and Workshops"/>
+        <meta property="og:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta property="og:image:width" content="1280"/>
+        <meta property="og:image:height" content="630"/>
+        <!-- /Open Graph -->
+        <link rel="icon" href="../../../favicon.ico"/>
+        <link href="../css/win-app-sdk.css" rel="stylesheet">
+        <link href="../../../css/style.css" rel="stylesheet">
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../highlight/css/vs.min.css" rel="stylesheet">
+        <title>tutorialr.com - Tutorials - Windows App SDK - Yatzy Game</title>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <!-- Main -->
+        <main>
+            <!-- Navigation -->	
+            <nav class="navbar top navbar-light navbar-expand-md bg-brand">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tutorialr-navbar" aria-controls="tutorialr-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../">
+                        <img src="../../../images/header.png" alt="tutorialr.com" height="50px">
+                    </a>
+                    <div id="tutorialr-navbar" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../tutorials">Tutorials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-tutorialr active" href="../../winappsdk">Windows App SDK</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../talks">Talks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../workshops">Workshops</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://www.comentsys.com" target="_blank">
+                        <img src="../../../images/comentsys.png" alt="Comentsys" height="50px">
+                    </a>
+                </div>
+            </nav>
+            <!-- /Navigation -->
+            <div class="waves waves-top"></div>
+            <div class="bg-tutorialr">         
+                <!-- Section -->            
+                <section class="text-center text-white container">
+                    <!-- Hero -->
+                    <h1 class="display-4 mx-auto">Yatzy Game</h1>
+                    <p class="lead">
+                        <strong>Learn</strong> creating a <strong>Yatzy Game</strong> using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
+                    </p>
+                    <!-- /Hero -->
+                    <!-- Tutorial -->
+                    <div class="col-lg-10 mx-auto">
+                        <div class="container text-start text-black">
+                            <div class="card position-relative">
+                                <div class="card-header">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-yatzy-game.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Yatzy Game
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>   
+                                <div class="card-body">
+                                    <p>
+                                        <strong>Yatzy Game</strong> shows how to create a dice game based on <strong>Yacht</strong> or <strong>Yahtzee</strong> using a toolkit from <strong>NuGet</strong> using the <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 1</h2>
+                                    <p>
+                                        Follow <a href="../setup-and-start">Setup and Start</a> on how to get <strong>Setup</strong> and <strong>Install</strong> what you need for <strong>Visual Studio 2022</strong> and <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                In <strong>Windows 11</strong> choose <strong>Start</strong> and then find or search for <strong>Visual Studio 2022</strong> and then select it.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs.png" class="img-fluid" alt="Visual Studio 2022"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Once <strong>Visual Studio 2022</strong> has started select <strong>Create a new project</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-new-project.png" class="img-fluid" alt="Create a new project"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Then choose the <strong>Blank App, Packages (WinUI in Desktop)</strong> and then select <strong>Next</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-win-ui.png" class="img-fluid" alt="Blank App, Packages (WinUI in Desktop)"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>YatzyGame</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-configure-project.png" class="img-fluid" alt="Configure project" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 2</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio within</strong> <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Manage NuGet Packages...</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-manage-nuget-packages.png" class="img-fluid" alt="Manage NuGet Packages" />
+                                    </p>
+                                    <h2 class="display-6">Step 3</h2>
+                                    <p>
+                                        Then in the <strong>NuGet Package Manager</strong> from the <strong>Browse</strong> tab search for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> and then select <strong>Comentsys.Toolkit.WindowsAppSdk by Comentsys</strong> as indicated and select <strong>Install</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-nuget-toolkit.png" class="img-fluid" alt="NuGet Package Manager Comentsys.Toolkit.WindowsAppSdk" />
+                                    </p>
+                                    <p>
+                                        This will add the package for <strong>Comentsys.Toolkit.WindowsAppSdk</strong> to your <strong>Project</strong>. If you get the <strong>Preview Changes</strong> screen saying 
+                                        <strong>Visual Studio is about to make changes to this solution. Click OK to proceed with the changes listed below.</strong> You can read the message and then select 
+                                        <strong>OK</strong> to <strong>Install</strong> the package, then you can close the <strong>tab</strong> for <strong>Nuget: YatzyGame</strong> by selecting the <strong>x</strong> next to it. 
+                                    </p>
+                                    <h2 class="display-6">Step 4</h2>
+                                    <p>
+                                        Then in <strong>Visual Studio</strong> within <strong>Solution Explorer</strong> for the <strong>Solution</strong>, right click on the <strong>Project</strong> shown below the <strong>Solution</strong> and then select <strong>Add</strong> then <strong>New Item…</strong>
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-new-item.png" class="img-fluid" alt="Add New Item" />
+                                    </p>
+                                    <h2 class="display-6">Step 5</h2>
+                                    <p>
+                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>Code</strong> and then select <strong>Code File</strong> from the list next to this, then type in the name of <i>Library.cs</i> and then <strong>Click</strong> on <strong>Add</strong>.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-add-new-item-yatzy-game.png" class="img-fluid" alt="Add New Code File" />
+                                    </p>
+                                    <h2 class="display-6">Step 6</h2>
+                                    <p>
+                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Library.cs</i> and then you need to type the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+// Usings & Namespace
+
+public enum ScoreType
+{
+    AcesScore, TwosScore, ThreesScore, FoursScore, FivesScore,
+    SixesScore, UpperTotalScore, UpperTotalBonusScore, ThreeOfAKindScore,
+    FourOfAKindScore, FullHouseScore, SmallStraightScore, LargeStraightScore,
+    YahtzeeScore, ChanceScore, YahtzeeBonusScore, LowerTotalScore, TotalScore
+}
+
+// Extensions Class
+
+// Item Class
+
+// Option Class
+
+public class Calculate
+{
+    // Calculate GetAddUp, GetOfAKind & GetFullHouse Method
+
+    // Calculate GetSmallStraight & GetLargeStraight Method
+
+    // Calculate Get GetYahtzee & GetChance Method
+
+}
+
+public class Board // : ActionCommandObservableBase
+{
+    // Board Constants, Variables, Properties and Choose, SetScore & GetScore Method
+
+    // Board Clear & Reset Method
+
+    // Board SetTotal & AddUpDice Method
+
+    // Board SetValueOfAKind Method
+
+    // Board SetItemScore Method
+
+    // Board SetYahtzee Method
+
+    // Board SetChance, SetBonus & New Method
+
+    // Board Roll Method
+
+    // Board Constructor
+}
+
+// OptionTemplateSelector Class
+
+// Library Class                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                    </code></pre>
+                                    <h2 class="display-6">Step 7</h2>
+                                    <p>
+                                        Still in <i>Library.cs</i> you will define a <code>namespace</code> which allows classes to be defined together, usually each is separate 
+                                        but will be defined in <i>Library.cs</i> along with adding <code>using</code> statements below the <strong>Comment</strong> of 
+                                        <code>// Usings & Namespace</code> by typing the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+using Comentsys.Toolkit.Binding;
+using Comentsys.Toolkit.WindowsAppSdk;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+
+namespace YatzyGame;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                                    </code></pre>
+                                    <p>
+                                        The <code>using</code> statements including ones for the package of <code>Comentsys.Toolkit.Binding</code> and 
+                                        <code>Comentsys.Toolkit.WindowsAppSdk</code> along with the <code>namespace</code> for <code>YatzyGame</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 8</h2>
+                                    <p>
+                                        Still in <i>Library.cs</i> for the <code>namespace</code> of <code>YatzyGame</code> you will define a <code>class</code> for 
+                                        <code>Extensions</code> after the <strong>Comment</strong> of <code>// Extensions Class</code> by typing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public static class Extensions
+{
+    private const string space = " ";
+    private const string score = "Score";
+    private static readonly Regex regex = new(@"\p{Lu}\p{Ll}*");
+
+    public static string Name(this ScoreType type) =>
+        string.Join(space, regex
+            .Matches(Enum.GetName(typeof(ScoreType), type)
+                .Replace(score, string.Empty))
+                    .Select(s => s.Value));
+
+    public static string Name(this ScoreType type, int take) =>
+        string.Join(space, regex
+            .Matches(Enum.GetName(typeof(ScoreType), type))
+                .Select(s => s.Value)
+                    .Take(take));
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                                    </code></pre>
+                                    <p>
+                                        <code>Extensions</code> will provide formatting capabilities for outputting the values for elements in the game.
+                                    </p>
+                                    <h2 class="display-6">Step 9</h2>
+                                    <p>
+                                        Still in <i>Library.cs</i> for the <code>namespace</code> of <code>YatzyGame</code> you will define a <code>class</code> for 
+                                        <code>Item</code> after the <strong>Comment</strong> of <code>// Item Class</code> by typing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public class Item : ActionCommandObservableBase
+{
+    private int _value;
+    private bool _hold;
+
+    public int Index { get; }
+    public int Value { get => _value; set => SetProperty(ref _value, value); }
+    public bool Hold { get => _hold; set => SetProperty(ref _hold, value); }
+
+    public Item(int index, Action&lt;int&gt; action) : 
+        base(new ActionCommandHandler((param) =>
+        action((param as Item).Index),
+        (param) => (param as Item).IsEnabled)) =>
+        (Index, Value) = (index, index + 1);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+                                    </code></pre>
+                                    <p>
+                                        <code>Item</code> has <strong>Properties</strong> for <code>Index</code>, <code>Value</code> and <code>State</code> plus uses 
+                                        <code>ActionCommandObservableBase</code> from the package of <code>Comentsys.Toolkit.WindowsAppSdk</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 10</h2>
+                                    <p>
+                                        Still in <i>Library.cs</i> for the <code>namespace</code> of <code>YatzyGame</code> you will define a <code>class</code> 
+                                        for <code>Option</code> after the <strong>Comment</strong> of <code>// Option Class</code> by typing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public class Option : ActionCommandObservableBase
+{
+    private int _score;
+
+    public int Score { get => _score; set => SetProperty(ref _score, value); }
+    public ScoreType Type { get; }
+    public string Content => Type.Name();
+
+    public Option(ScoreType type) : base(null) =>
+        Type = type;
+
+    public Option(ScoreType type, Action&lt;object&gt; action) : 
+        base(new ActionCommandHandler((param) =>
+        action(null),
+        (param) => (param as Option).IsEnabled)) =>
+        Type = type;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                    </code></pre>
+                                    <p>
+                                        <code>Option</code> has <strong>Properties</strong> for <code>Scoree</code>, <code>Type</code> and <code>Content</code> and also uses 
+                                        <code>ActionCommandObservableBase</code> from the package of <code>Comentsys.Toolkit.WindowsAppSdk</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 11</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>YatzyGame</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Calculate</code>
+                                        after the <strong>Comment</strong> of <code>// Calculate GetAddUp, GetOfAKind & GetFullHouse Method</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public static int GetAddUp(Item[] dice, int value)
+{
+    int sum = 0;
+    foreach(var item in dice.Where(w => w.Value == value))
+        sum += value;
+    return sum;
+}
+
+public static int GetOfAKind(Item[] dice, int value)
+{
+    int sum = 0;
+    bool result = false;
+    for (int i = 1; i &lt;= 6; i++)
+    {
+        int count = 0;
+        for (int j = 0; j &lt; 5; j++)
+        {
+            if (dice[j].Value == i) 
+                count++;
+            if (count > value)
+                result = true;
+        }
+    }
+    if(result)
+    {
+        foreach (var item in dice)
+            sum += item.Value;
+    }
+    return sum;
+}
+
+public static int GetFullHouse(Item[] dice)
+{
+    int sum = 0;
+    int[] item = dice.Select(s => s.Value).ToArray();
+    Array.Sort(item);
+    if (((item[0] == item[1]) && (item[1] == item[2]) && // Three of a Kind
+        (item[3] == item[4]) && // Two of a Kind
+        (item[2] != item[3])) ||
+        ((item[0] == item[1]) && // Two of a Kind
+        (item[2] == item[3]) && (item[3] == item[4]) && // Three of a Kind
+        (item[1] != item[2])))
+        sum = 25;
+    return sum;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                    </code></pre>
+                                    <p>
+                                        <code>GetAddUp</code> will add up the values for the items, <code>GetOfAKind</code> will add up values for all the items of a given kind, 
+                                        passed in as value and <code>GetFullHouse</code> will see if the items make up a full house.
+                                    </p>
+                                    <h2 class="display-6">Step 12</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>YatzyGame</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Calculate</code>
+                                        after the <strong>Comment</strong> of <code>// Calculate GetSmallStraight & GetLargeStraight Method</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public static int GetSmallStraight(Item[] dice)
+{
+    int sort = 0;
+    int[] item = dice.Select(s => s.Value).ToArray();
+    Array.Sort(item);
+    for (int j = 0; j &lt; 4; j++)
+    {
+        int value = 0;
+        if (item[j] == item[j + 1])
+        {
+            value = item[j];
+            for (int k = j; k &lt; 4; k++)
+                    item[k] = item[k + 1];
+            item[4] = value;
+        }
+    }
+    if (((item[0] == 1) && (item[1] == 2) && (item[2] == 3) && (item[3] == 4)) ||
+        ((item[0] == 2) && (item[1] == 3) && (item[2] == 4) && (item[3] == 5)) ||
+        ((item[0] == 3) && (item[1] == 4) && (item[2] == 5) && (item[3] == 6)) ||
+        ((item[1] == 1) && (item[2] == 2) && (item[3] == 3) && (item[4] == 4)) ||
+        ((item[1] == 2) && (item[2] == 3) && (item[3] == 4) && (item[4] == 5)) ||
+        ((item[1] == 3) && (item[2] == 4) && (item[3] == 5) && (item[4] == 6)))
+        sort = 30;
+    return sort;
+}
+
+public static int GetLargeStraight(Item[] dice)
+{
+    int sum = 0;
+    int[] i = dice.Select(s => s.Value).ToArray();
+    Array.Sort(i);
+    if (((i[0] == 1) && (i[1] == 2) && (i[2] == 3) && (i[3] == 4) && (i[4] == 5)) ||
+        ((i[0] == 2) && (i[1] == 3) && (i[2] == 4) && (i[3] == 5) && (i[4] == 6)))
+        sum = 40;
+    return sum;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                    </code></pre>
+                                    <p>
+                                        <code>GetSmallStraight</code> and <code>GetLargeStraight</code> will calculate those values for the game and return the score.
+                                    </p>
+                                    <h2 class="display-6">Step 13</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>YatzyGame</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Calculate</code>
+                                        after the <strong>Comment</strong> of <code>// Calculate Get GetYahtzee & GetChance Method</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public static int GetYahtzee(Item[] dice)
+{
+    int sum = 0;
+    for (int i = 1; i &lt;= 6; i++)
+    {
+        int Count = 0;
+        for (int j = 0; j &lt; 5; j++)
+        {
+            if (dice[j].Value == i) 
+                Count++;
+            if (Count > 4) 
+                sum = 50;
+        }
+    }
+    return sum;
+}
+
+public static int GetChance(Item[] dice)
+{
+    int sum = 0;
+    for (int i = 0; i &lt; 5; i++)
+        sum += dice[i].Value;
+    return sum;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+                                    </code></pre>
+                                    <p>
+                                        <code>GetYahtzee</code> will work out if the result is a <strong>Yahtzee</strong> and <code>GetChance</code> will work out the chance score.
+                                    </p>
+                                    <h2 class="display-6">Step 14</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>YatzyGame</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Board</code>
+                                        remove the <code>//</code> between <code>Board</code> and <code>: ActionCommandObservableBase</code> so that the top of the 
+                                        <code>class</code> of <code>Board</code> appears as follows:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public class Board : ActionCommandObservableBase                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                    </code></pre>
+                                    <p>
+                                        You will then provide what is needed for <code>ActionCommandObservableBase</code> to resolve the error of <i>There is no argument given that corresponds to the required parameter 'handler'</i> and define the rest of the <code>class</code> of <code>Board</code> in the following <strong>Steps</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 15</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>YatzyGame</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Board</code>
+                                        after the <strong>Comment</strong> of <code>// Constants, Variables, Properties and Choose, SetScore & GetScore Method</code> 
+                                        type the following <strong>Constants</strong>, <strong>Variables</strong>, <strong>Properties</strong> and <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private const int dice = 5;
+private const int count = 14;
+private const string accept = "Accept?";
+
+private readonly Random _random = new((int)DateTime.UtcNow.Ticks);
+private readonly Func&lt;string, Task&lt;bool&gt;&gt; _confirm = null;
+
+private List&lt;Option&gt; _options;
+private Item[] _dice;
+private int _rolls;
+private int _count;
+private int _total;
+private int _upper;
+private int _lower;
+private int _bonus;
+
+public List&lt;Option&gt; Options { get => _options; set => SetProperty(ref _options, value); }
+public Item[] Dice { get => _dice; set => SetProperty(ref _dice, value); }
+
+private List&lt;int&gt; Choose(int minimum, int maximum, int total)
+{
+    var choose = new List&lt;int&gt;();
+    var values = Enumerable.Range(minimum, maximum).ToList();
+    for (int index = 0; index &lt; total; index++)
+    {
+        var value = _random.Next(0, values.Count);
+        choose.Add(values[value]);
+    }
+    return choose;
+}
+
+private void SetScore(ScoreType type, int value)
+{
+    var score = Options.FirstOrDefault(f => f.Type == type);
+    if(score != null)
+        score.Score = value;
+}
+
+private int GetScore(ScoreType type) =>
+    Options.FirstOrDefault(f => f.Type == type)?.Score ?? 0;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+                                    </code></pre>
+                                    <p>
+                                        <strong>Constants</strong> are values that are used in the game that will not change, <strong>Variables</strong> are values that will be changed in 
+                                        the game of which some are exposed as <strong>Properties</strong>. The <strong>Method</strong> of <code>Choose</code> is used to a list of randomised numbers and 
+                                        <code>SetScore</code> is used to update the score for an <code>Option</code> and <code>GetScore</code> will obtain a score for an <code>Option</code>. 
+                                        You will also have an error <i>There is no argument given that corresponds to the required parameter 'handler'</i>
+                                        this will be resolved when you add the <strong>Constructor</strong> in a later <strong>Step</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 16</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>YatzyGame</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Board</code>
+                                        after the <strong>Comment</strong> of <code>// Board Clear & Reset Method</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void Clear()
+{
+    _rolls = 0;
+    _count = 0;
+    _total = 0;
+    _upper = 0;
+    _lower = 0;
+    _bonus = 0;
+    foreach (ScoreType type in Enum.GetValues(typeof(ScoreType)))
+        SetScore(type, 0);
+    int value = 1;
+    foreach(var dice in Dice)
+    {
+        dice.Hold = false;
+        dice.Value = value++;
+        dice.IsEnabled = false;
+    }
+    foreach (var option in Options)
+        option.IsEnabled = false;   
+    IsEnabled = true;
+}
+
+private async Task Reset()
+{
+    _rolls = 0;
+    _count++;
+    foreach(var dice in _dice)
+        dice.Hold = false;
+    SetScore(ScoreType.UpperTotalScore, _upper);
+    SetScore(ScoreType.UpperTotalBonusScore, _bonus);
+    SetScore(ScoreType.LowerTotalScore, _lower);
+    SetScore(ScoreType.TotalScore, _total);
+    if(_count == count)
+    {
+        int total = GetScore(ScoreType.TotalScore);
+        bool result = await _confirm($"Game Over, Score {total}. Play again?");
+        if(result)
+            Clear();
+    }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                    </code></pre>
+                                    <p>
+                                        <code>Clear</code> is used to reset all scores and uses <code>SetScore</code> and <code>Reset</code> resets all totals in the game.
+                                    </p>
+                                    <h2 class="display-6">Step 17</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>YatzyGame</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Board</code>
+                                        after the <strong>Comment</strong> of <code>// Board SetTotal & AddUpDice Method</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void SetTotal(int score, bool isUpper)
+{
+    var isBonus = false;
+    if (isUpper)
+    {
+        _upper += score;
+        if (_upper >= 63)
+            isBonus = true;
+    }
+    else
+        _lower += score;
+    _total = 0;
+    _total += _upper;
+    if (isBonus)
+    {
+        _bonus = 35;
+        _total += _bonus;
+    }
+    _total += _lower;
+}
+
+private async void AddUpDice(ScoreType type, int value)
+{
+    int score = GetScore(type);
+    if (_rolls > 0 && score == 0)
+    {
+        int total = Calculate.GetAddUp(_dice, value);
+        bool result = await _confirm($"Total is {total}. {accept}");
+        if (result)
+        {
+            SetScore(type, total);
+            SetTotal(total, true);
+            await Reset();
+        }
+    }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+                                    </code></pre>
+                                    <p>
+                                        <code>SetTotal</code> is used to set the total score value and <code>AddUpDice</code> is used to get the scores from the <strong>Dice</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 18</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>YatzyGame</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Board</code>
+                                        after the <strong>Comment</strong> of <code>// Board SetValueOfAKind Method</code> type the following <strong>Method</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private async void SetValueOfAKind(ScoreType type, int value)
+{
+    string name = type.Name(1);
+    int score = GetScore(type);
+    if (_count > 0 && score == 0)
+    {
+        int total = Calculate.GetOfAKind(_dice, value - 1);
+        if (total != 0)
+        {
+            bool result = await _confirm($"Total is {total}. {accept}");
+            if (result)
+            {
+                SetScore(type, total);
+                SetTotal(total, false);
+                await Reset();
+            }
+        }
+        else
+        {
+            bool result = await _confirm($"No {name} of a Kind. {accept}");
+            if (result)
+            {
+                SetScore(type, 0);
+                SetTotal(total, false);
+                await Reset();
+            }
+        }
+    }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                    </code></pre>
+                                    <p>
+                                        <code>SetValueOfAKind</code> is used to set the values where the <strong>Dice</strong> are of the same kind.
+                                    </p>
+                                    <h2 class="display-6">Step 19</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>YatzyGame</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Board</code>
+                                        after the <strong>Comment</strong> of <code>// Board SetItemScore Method</code> type the following <strong>Method</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private async void SetItemScore(ScoreType type, int value)
+{
+    string name = type.Name();
+    int score = GetScore(type);
+    if ((_rolls > 0) && (score == 0))
+    {
+        int total = type switch
+        {
+            ScoreType.FullHouseScore => Calculate.GetFullHouse(_dice),
+            ScoreType.SmallStraightScore => Calculate.GetSmallStraight(_dice),
+            ScoreType.LargeStraightScore => Calculate.GetLargeStraight(_dice),
+            _ => 0,
+        };
+        if (total == value)
+        {
+            SetScore(type, total);
+            SetTotal(total, false);
+            await Reset();
+        }
+        else
+        {
+            bool result = await _confirm($"No {name}. {accept}");
+            if (result)
+            {
+                SetScore(type, 0);
+                SetTotal(total, false);
+                await Reset();
+            }
+        }
+    }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                    </code></pre>
+                                    <p>
+                                        <code>SetItemScore</code> will set the score using <code>GetFullHouse</code>, <code>GetSmallStraight</code> and <code>GetLargeStraight</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 20</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>YatzyGame</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Board</code>
+                                        after the <strong>Comment</strong> of <code>// Board SetYahtzee Method</code> type the following <strong>Method</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private async void SetYahtzee()
+{
+    int score = GetScore(ScoreType.YahtzeeScore);
+    if ((_rolls > 0) && (score == 0))
+    {
+        int total = Calculate.GetYahtzee(_dice);
+        if (total == 50)
+        {
+            SetScore(ScoreType.YahtzeeScore, total);
+            SetTotal(total, false);
+            await Reset();
+        }
+        else
+        {
+            bool result = await _confirm($"No Yahtzee. {accept}");
+            if (result)
+            {
+                SetScore(ScoreType.YahtzeeScore, 0);
+                SetScore(ScoreType.YahtzeeBonusScore, 0);
+                _count++;
+                SetTotal(total, true);
+                await Reset();
+            }
+        }
+    }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                                    </code></pre>
+                                    <p>
+                                        <code>SetYahtzee</code> will determine if the values of the <strong>Dice</strong> are a Yatzee and if so update the score accordingly.
+                                    </p>
+                                    <h2 class="display-6">Step 21</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>YatzyGame</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Board</code>
+                                        after the <strong>Comment</strong> of <code>// Board SetChance, SetBonus & New Method</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private async void SetChance()
+{
+    int score = GetScore(ScoreType.ChanceScore);
+    if ((_rolls > 0) && (score == 0))
+    {
+        int total = Calculate.GetChance(_dice);
+        bool result = await _confirm($"Total is {total}. {accept}");
+        if (result)
+        {
+            SetScore(ScoreType.ChanceScore, total);
+            SetTotal(total, false);
+            await Reset();
+        }
+    }
+}
+
+private async void SetBonus()
+{
+    int score = GetScore(ScoreType.YahtzeeScore);
+    int bonus = GetScore(ScoreType.YahtzeeBonusScore);
+    if ((_rolls > 0) && (score == 0) && (bonus != 0))
+    {
+        int total = Calculate.GetYahtzee(_dice);
+        if (total == 50)
+        {
+            SetScore(ScoreType.YahtzeeBonusScore, 100);
+            SetTotal(100, false);
+            await Reset();
+        }
+        else
+        {
+            SetScore(ScoreType.YahtzeeBonusScore, 0);
+            SetTotal(0, true);
+            await Reset();
+        }
+    }
+}
+
+public void New() =>
+    Clear();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                                    </code></pre>
+                                    <p>
+                                        <code>SetChance</code> will be used for a chance score and <code>SetBonus</code> will be used for a bonus score with <code>New</code> using <code>Clear</code> to start a game.
+                                    </p>
+                                    <h2 class="display-6">Step 22</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>YatzyGame</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Board</code>
+                                        after the <strong>Comment</strong> of <code>// Board Roll Method</code> type the following <strong>Method</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+internal void Roll()
+{
+    if (_rolls &lt; 3)
+    {
+        if (_rolls == 0)
+        {
+            foreach (var dice in Dice)
+            {
+                dice.IsEnabled = true;
+                dice.Hold = false;
+            }
+            foreach (var option in Options)
+                option.IsEnabled = true;
+        }
+        var values = Choose(1, 6, dice);
+        for (int i = 0; i &lt; Dice.Length; i++)
+        {
+            if (!Dice[i].Hold)
+                Dice[i].Value = values[i];
+        }
+        _rolls++;
+        if (_rolls == 3)
+        {
+            foreach (var dice in Dice)
+            {
+                dice.IsEnabled = false;
+                dice.Hold = true;
+            }
+            IsEnabled = false;
+        }
+    }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                    </code></pre>
+                                    <p>
+                                        <code>Roll</code> is used to roll the <strong>Dice</strong> used in the game and will also handle if they are held or not, this 
+                                        <strong>Method</strong> is also declared as internal as it will only be used within the <code>class</code> of <code>Board</code> in the 
+                                        next <strong>Step</strong> for the <strong>Constructor</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 23</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>YatzyGame</code> in <i>Library.cs</i> and in the <code>class</code> of <code>Board</code>
+                                        after the <strong>Comment</strong> of <code>// Board Constructor</code> type the following <strong>Constructor</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public Board(Func&lt;string, Task&lt;bool&gt;&gt; confirm) : base(
+    new ActionCommandHandler((param) => (param as Board).Roll(),
+    (param) => (param as Board).IsEnabled))
+    {
+        IsEnabled = true;
+        _confirm = confirm;
+        _dice = new Item[dice];
+        for (int i = 0; i &lt; _dice.Length; i++)
+            _dice[i] = new Item(i, (int i) =>
+            _dice[i].Hold = !_dice[i].Hold);
+        Options = new()
+        {
+            new Option(ScoreType.AcesScore, 
+                (p) => AddUpDice(ScoreType.AcesScore, 1)),
+            new Option(ScoreType.TwosScore, 
+                (p) => AddUpDice(ScoreType.TwosScore, 2)),
+            new Option(ScoreType.ThreesScore, 
+                (p) => AddUpDice(ScoreType.ThreesScore, 3)),
+            new Option(ScoreType.FoursScore, 
+                (p) => AddUpDice(ScoreType.FoursScore, 4)),
+            new Option(ScoreType.FivesScore, 
+                (p) => AddUpDice(ScoreType.FivesScore, 5)),
+            new Option(ScoreType.SixesScore, 
+                (p) => AddUpDice(ScoreType.SixesScore, 6)),
+            new Option(ScoreType.UpperTotalScore),
+            new Option(ScoreType.UpperTotalBonusScore),
+            new Option(ScoreType.ThreeOfAKindScore, 
+                (p) => SetValueOfAKind(ScoreType.ThreeOfAKindScore, 3)),
+            new Option(ScoreType.FourOfAKindScore, 
+                (p) => SetValueOfAKind(ScoreType.FourOfAKindScore, 4)),
+            new Option(ScoreType.FullHouseScore, 
+                (p) => SetItemScore(ScoreType.FullHouseScore, 25)),
+            new Option(ScoreType.SmallStraightScore, 
+                (p) => SetItemScore(ScoreType.SmallStraightScore, 30)),
+            new Option(ScoreType.LargeStraightScore, 
+                (p) => SetItemScore(ScoreType.FullHouseScore, 25)),
+            new Option(ScoreType.YahtzeeScore, 
+                (p) => SetYahtzee()),
+            new Option(ScoreType.ChanceScore, 
+                (p) => SetChance()),
+            new Option(ScoreType.YahtzeeBonusScore, 
+                (p) => SetBonus()),
+            new Option(ScoreType.LowerTotalScore),
+            new Option(ScoreType.TotalScore)
+        };
+    }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+                                    </code></pre>
+                                    <p>
+                                        Once the <strong>Constructor</strong> has been added the error <i>There is no argument given that corresponds to the required parameter 'handler'</i> will have been resolved, as you have now provided what was needed.
+                                    </p>
+                                    <h2 class="display-6">Step 24</h2>
+                                    <p>
+                                        Still in <i>Library.cs</i> for the <code>namespace</code> of <code>YatzyGame</code> you will define a <code>class</code> 
+                                        for <code>OptionTemplateSelector</code> after the <strong>Comment</strong> of <code>// OptionTemplateSelector Class</code> by typing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public class OptionTemplateSelector : DataTemplateSelector
+{
+    public DataTemplate ScoreItem { get; set; }
+    public DataTemplate TotalItem { get; set; }
+
+    protected override DataTemplate SelectTemplateCore(
+        object value, DependencyObject container) => 
+        value is Option item ? item.Command != null ? 
+            ScoreItem : TotalItem : null;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                                    </code></pre>
+                                    <p>
+                                        <code>OptionTemplateSelector</code> will be used to provide a different <code>DataTemplate</code> depending on whether the <code>Command</code> has been set on an <code>Item</code>, 
+                                        this will be useful when displaying the output for the game as needed.
+                                    </p>
+                                    <h2 class="display-6">Step 25</h2>
+                                    <p>
+                                        Still in <i>Library.cs</i> for the <code>namespace</code> of <code>YatzyGame</code> you will define a <code>class</code> 
+                                        for <code>Library</code> after the <strong>Comment</strong> of <code>// Library Class</code> by typing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public class Library
+{
+    private const string title = "Yatzy Game";
+    private Board _board;
+    private Dialog _dialog;
+
+    public void Load(StackPanel display)
+    {
+        _dialog = new Dialog(display.XamlRoot, title);
+        display.DataContext = _board = new Board(
+            (content) => _dialog.ConfirmAsync(content, "Yes", "No"));
+    }
+
+    public async void New()
+    {
+        var result = await _dialog.ConfirmAsync("Start a New Game?", "Yes", "No");
+        if(result)
+            _board.New();
+    }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                    </code></pre>
+                                    <p>
+                                        <code>Library</code> will set the <code>DataContext</code> of the <code>StackPanel</code> to the <code>Board</code> in <code>Load</code> and <code>New</code> will begin a game.
+                                    </p>
+                                    <h2 class="display-6">Step 26</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>MainWindow.xaml</strong> to see the <strong>XAML</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-xaml-yatzy-game.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 27</h2>
+                                    <p>
+                                        In the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> there will be some <strong>XAML</strong> for a <code>StackPanel</code>, this should be <strong>Removed</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;StackPanel&nbsp;Orientation=&quot;Horizontal&quot;&nbsp;
+HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;x:Name=&quot;myButton&quot;&nbsp;Click=&quot;myButton_Click&quot;&gt;Click&nbsp;Me&lt;/Button&gt;
+&lt;/StackPanel&gt;                               
+                                    </code></pre>
+                                    <h2 class="display-6">Step 28</h2>
+                                    <p>
+                                        While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> below <code>&lt;Window</code>, type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+xmlns:ui="using:Comentsys.Toolkit.WindowsAppSdk"                                                                                                                                                                                                                                                                                                                        
+                                    </code></pre>                                    
+                                    <p>
+                                        The <strong>XAML</strong> for <code>&lt;Window&gt;</code> should then look as follows:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;Window
+&nbsp;&nbsp;&nbsp;&nbsp;xmlns:ui=&quot;using:Comentsys.Toolkit.WindowsAppSdk&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;x:Class=&quot;YatzyGame.MainWindow&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;xmlns:local=&quot;using:YatzyGame&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;xmlns:mc=&quot;http://schemas.openxmlformats.org/markup&#45;compatibility/2006&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;mc:Ignorable=&quot;d&quot;&gt;                                                                                                                                                                                                                                                                                                                                                                                            
+                                    </code></pre>                                     
+                                    <h2 class="display-6">Step 29</h2>
+                                    <p>
+                                        While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> above <code>&lt;/Window&gt;</code>, type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;Grid&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid.Resources&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!&#45;&#45;&nbsp;Resources&nbsp;&#45;&#45;&gt;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Grid.Resources&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!&#45;&#45;&nbsp;StackPanel&nbsp;&#45;&#45;&gt;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Viewbox&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;CommandBar&nbsp;VerticalAlignment=&quot;Bottom&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;AppBarButton&nbsp;Icon=&quot;Page2&quot;&nbsp;Label=&quot;New&quot;&nbsp;Click=&quot;New&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/CommandBar&gt;
+&lt;/Grid&gt;                                                                                                                                                                                                                                                                                                                                                                                                         
+                                    </code></pre> 
+                                    <p>
+                                        This <strong>XAML</strong> contains a <code>Grid</code> with a <strong>Viewbox</strong> which will <strong>Scale</strong> a <code>StackPanel</code> to be added in a later <strong>Step</strong>
+                                        along with using <strong>Resources</strong> which will be added in the next <strong>Step</strong> and has an <code>AppBarButton</code> set to <code>New</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 30</h2>
+                                    <p>
+                                        While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> below the <strong>Comment</strong> of <code>&lt;!-- Resources --&gt;</code> 
+                                        type in the following <strong>XAML</strong> for <strong>Data Templates</strong> for look-and-feel of the game along with <code>OptionTemplateSelector</code>.
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;DataTemplate&nbsp;x:Name=&quot;DiceTemplate&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;StackPanel&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ui:Dice&nbsp;Height=&quot;50&quot;&nbsp;Width=&quot;50&quot;&nbsp;Value=&quot;{Binding&nbsp;Value}&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Foreground=&quot;Red&quot;&nbsp;Background=&quot;WhiteSmoke&quot;&nbsp;CornerRadius=&quot;5&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ToggleButton&nbsp;Margin=&quot;2&quot;&nbsp;HorizontalAlignment=&quot;Center&quot;&nbsp;Content=&quot;Hold&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IsChecked=&quot;{Binding&nbsp;Hold}&quot;&nbsp;Command=&quot;{Binding&nbsp;Command}&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CommandParameter=&quot;{Binding}&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/StackPanel&gt;
+&lt;/DataTemplate&gt;
+&lt;DataTemplate&nbsp;x:Key=&quot;ScoreTemplate&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;StackPanel&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid&nbsp;Margin=&quot;2&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid.ColumnDefinitions&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ColumnDefinition&nbsp;Width=&quot;*&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ColumnDefinition&nbsp;Width=&quot;Auto&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Grid.ColumnDefinitions&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;Width=&quot;200&quot;&nbsp;Grid.Column=&quot;0&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HorizontalContentAlignment=&quot;Left&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Content=&quot;{Binding&nbsp;Content}&quot;&nbsp;Command=&quot;{Binding&nbsp;Command}&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CommandParameter=&quot;{Binding}&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid&nbsp;Grid.Column=&quot;1&quot;&nbsp;Background=&quot;Blue&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TextBlock&nbsp;Width=&quot;75&quot;&nbsp;Text=&quot;{Binding&nbsp;Score}&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TextAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Foreground=&quot;WhiteSmoke&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Grid&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Grid&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/StackPanel&gt;
+&lt;/DataTemplate&gt;
+&lt;DataTemplate&nbsp;x:Key=&quot;TotalTemplate&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;StackPanel&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid&nbsp;Margin=&quot;2&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid.ColumnDefinitions&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ColumnDefinition&nbsp;Width=&quot;*&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ColumnDefinition&nbsp;Width=&quot;Auto&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Grid.ColumnDefinitions&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TextBlock&nbsp;Width=&quot;200&quot;&nbsp;Grid.Column=&quot;0&quot;&nbsp;TextAlignment=&quot;Right&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Text=&quot;{Binding&nbsp;Content}&quot;&nbsp;FontWeight=&quot;SemiBold&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Grid&nbsp;Grid.Column=&quot;1&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TextBlock&nbsp;Width=&quot;75&quot;&nbsp;Text=&quot;{Binding&nbsp;Score}&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TextAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Foreground=&quot;Blue&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Grid&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Grid&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/StackPanel&gt;
+&lt;/DataTemplate&gt;
+&lt;ItemsPanelTemplate&nbsp;x:Name=&quot;ItemsTemplate&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;StackPanel&nbsp;Orientation=&quot;Horizontal&quot;/&gt;
+&lt;/ItemsPanelTemplate&gt;
+&lt;local:OptionTemplateSelector&nbsp;x:Key=&quot;OptionTemplateSelector&quot;
+ScoreItem=&quot;{StaticResource&nbsp;ScoreTemplate}&quot;&nbsp;
+TotalItem=&quot;{StaticResource&nbsp;TotalTemplate}&quot;&nbsp;/&gt;                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                    </code></pre> 
+                                    <h2 class="display-6">Step 31</h2>
+                                    <p>
+                                        While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> below the <strong>Comment</strong> of <code>&lt;!-- StackPanel --&gt;</code> type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;StackPanel&nbsp;Name=&quot;Display&quot;&nbsp;Margin=&quot;50&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;HorizontalAlignment=&quot;Center&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;VerticalAlignment=&quot;Center&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Loaded=&quot;Load&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;Margin=&quot;2&quot;&nbsp;HorizontalAlignment=&quot;Stretch&quot;&nbsp;VerticalAlignment=&quot;Center&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;Command=&quot;{Binding&nbsp;Command}&quot;&nbsp;CommandParameter=&quot;{Binding}&quot;&nbsp;Content=&quot;Roll&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;ItemsControl&nbsp;ItemsSource=&quot;{Binding&nbsp;Dice}&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;ItemTemplate=&quot;{StaticResource&nbsp;DiceTemplate}&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;ItemsPanel=&quot;{StaticResource&nbsp;ItemsTemplate}&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;ItemsControl&nbsp;ItemsSource=&quot;{Binding&nbsp;Options}&quot;&nbsp;HorizontalAlignment=&quot;Center&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ItemsControl.ItemTemplate&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;DataTemplate&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ContentControl&nbsp;Content=&quot;{Binding}&quot;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ContentTemplateSelector=&quot;{StaticResource&nbsp;OptionTemplateSelector}&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/DataTemplate&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ItemsControl.ItemTemplate&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ItemsControl&gt;
+&lt;/StackPanel&gt;                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                    </code></pre> 
+                                    <p>
+                                        This <strong>XAML</strong> contains a <code>StackPanel</code> with a <code>Loaded</code> event handler for <code>Load</code> 
+                                        it also contains a <code>Button</code> along with an <code>ItemsControl</code> for the <strong>Dice</strong> and the other 
+                                        <strong>Buttons</strong> and <strong>Totals</strong> for the game.
+                                    </p>
+                                    <h2 class="display-6">Step 32</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>MainWindow.xaml</strong> then double-click on <strong>MainWindow.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-code-yatzy-game.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 33</h2>
+                                    <p>
+                                        In the <strong>Code</strong> for <code>MainWindow.xaml.cs</code> there be a Method of <code>myButton_Click(...)</code> this should be <strong>Removed</strong> by removing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void myButton_Click(object sender, RoutedEventArgs e)
+{
+    myButton.Content = "Clicked";
+}                                        
+                                    </code></pre>  
+                                    <h2 class="display-6">Step 34</h2>
+                                    <p>
+                                        Once <code>myButton_Click(...)</code> has been removed, within the <strong>Constructor</strong> of <code>public MainWindow() { ... }</code> and below the line of <code>this.InitializeComponent();</code> type in the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private readonly Library _library = new();
+
+private void Load(object sender, RoutedEventArgs e) =>
+    _library.Load(Display);
+
+private void New(object sender, RoutedEventArgs e) =>
+    _library.New();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+                                    </code></pre>
+                                    <p>
+                                        Here an <strong>Instance</strong> of <code>Library</code> is created then below this are the <strong>Methods</strong> of <code>Load</code> and <code>New</code> that will be used with <strong>Event Handler</strong> 
+                                        from the <code>XAML</code>, these <strong>Methods</strong> use <strong>Arrow Syntax</strong> with the <code>=></code> for an expression body which is useful when a <strong>Method</strong> only has one line.
+                                    </p>
+                                    <h2 class="display-6">Step 35</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>YatzyGame (Package)</strong> to <strong>Start</strong> the application.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-debug-yatzy-game.png" class="img-fluid" alt="YatzyGame (Package)"/>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <h2 class="display-6">Step 36</h2>
+                                    <p>
+                                        Once running you can select <i>Roll</i> to randomly select the values for the <strong>Dice</strong> and you can use the 
+                                        other <strong>Buttons</strong> to total up your score based on the values of the <strong>Dice</strong>, or select <i>New</i> to start a new game.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-running-yatzy-game.png" class="img-fluid" alt="Yatzy Game Running and Output" />
+                                    </p>
+                                    <h2 class="display-6">Step 37</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                To <strong>Exit</strong> the <strong>Windows App SDK</strong> application, select the <strong>Close</strong> button from the top right of the application as that concludes this <strong>Tutorial</strong> for <strong>Windows App SDK</strong> from <a href="https://www.tutorialr.com">tutorialr.com</a>!
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-close.png" class="img-fluid" alt="Close application"/>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="card-footer">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-yatzy-game.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Yatzy Game
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>                   
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Tutorial -->
+                </section>
+                <!-- /Section -->    
+            </div>
+            <div class="waves waves-bottom bg-white"></div>  
+        </main>
+        <!-- /Main -->
+        <!-- Footer -->
+        <footer class="footer mt-auto">
+            <nav class="navbar bottom navbar-light p-2">
+                <a href="../../../"><img src="../../../images/footer.png" alt="tutorialr.com" height="40px"></a>
+                <a href="https://www.twitter.com/tutorialrdotcom" target="_blank"><img src="../../../images/twitter.png" height="45px" alt="@tutorialrdotcom"></a>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="../../../images/cc-by-sa.png" height="35px" alt="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"></a>
+            </nav>
+        </footer>
+        <!-- /Footer -->
+        <!-- Scripts -->
+        <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../../../highlight/js/highlight.min.js"></script>
+        <!-- /Scripts-->
+    </body>
+</html>
