@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <meta name="description" content="tutorialr.com - Tutorials, Talks and Workshops"/>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@tutorialrdotcom"/>
+        <meta name="twitter:creator" content="@rogueplanetoid"/>
+        <meta name="twitter:title" content="tutorialr.com"/>
+        <meta name="twitter:description" content="Tutorials, Talks and Workshops"/>
+        <meta name="twitter:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta name="twitter:image:alt" content="Tutorials, Talks and Workshops"/>
+        <!-- /Twitter -->
+        <!-- Open Graph -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="tutorialr.com"/>
+        <meta property="og:site_name" content="tutorialr.com">
+        <meta property="og:description" content="Tutorials, Talks and Workshops"/>
+        <meta property="og:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta property="og:image:width" content="1280"/>
+        <meta property="og:image:height" content="630"/>
+        <!-- /Open Graph -->
+        <link rel="icon" href="../../../favicon.ico"/>
+        <link href="../css/win-app-sdk.css" rel="stylesheet">
+        <link href="../../../css/style.css" rel="stylesheet">
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../highlight/css/vs.min.css" rel="stylesheet">
+        <title>tutorialr.com - Tutorials - Visual Basic 6 - Lucky Dice</title>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <!-- Main -->
+        <main>
+            <!-- Navigation -->	
+            <nav class="navbar top navbar-light navbar-expand-md bg-brand">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tutorialr-navbar" aria-controls="tutorialr-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../">
+                        <img src="../../../images/header.png" alt="tutorialr.com" height="50px">
+                    </a>
+                    <div id="tutorialr-navbar" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../tutorials">Tutorials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-tutorialr active" href="../../vb6">Visual Basic 6</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../talks">Talks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../workshops">Workshops</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://www.comentsys.com" target="_blank">
+                        <img src="../../../images/comentsys.png" alt="Comentsys" height="50px">
+                    </a>
+                </div>
+            </nav>
+            <!-- /Navigation -->
+            <div class="waves waves-top"></div>
+            <div class="bg-tutorialr">         
+                <!-- Section -->            
+                <section class="text-center text-white container">
+                    <!-- Hero -->
+                    <h1 class="display-4 mx-auto">Lucky Dice</h1>
+                    <p class="lead">
+                        <strong>Learn</strong> to make a <strong>Lucky Dice</strong> game using <strong>Visual Basic 6</strong> with this <strong>Tutorial</strong> that <strong>Celebrates</strong> the <a href="https://www.cespage.com" class="nav-link badge bg-cespage rounded-pill">CESPage 25th Anniversary</a> 
+                    </p>
+                    <!-- /Hero -->
+                    <!-- Tutorial -->
+                    <div class="col-lg-10 mx-auto">
+                        <div class="container text-start text-black">
+                            <div class="card position-relative">  
+                                <div class="card-body">
+                                    <p>
+                                        This is a simple game, which will introduce you to <strong>Control Arrays</strong>, Multiple <strong>Picture Boxes</strong>, <strong>Labels</strong>, the <strong>Circle</strong> function and more!
+                                    </p>
+                                    <h2 class="display-6">Step 1</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Load <strong>Microsoft Visual Basic</strong>, then select <strong>Standard EXE</strong> Project if VB5/6, click on the option then click <strong>Open</strong>
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/fignewproject.gif" class="img-fluid" alt="New Project"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 2</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                A Blank <strong>Form</strong> named <strong>Form1</strong> should then appear
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/figform1.gif" class="img-fluid" alt="Blank Form"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 3</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Then from the <strong>Visual Basic Components Menu</strong> Select the <strong>Picture Box</strong> Control:
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/figpicbox.gif" class="img-fluid" alt="Picture Box Control"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 4</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Draw Two <strong>Picture Boxes</strong> on the <strong>Form</strong>
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/figfrmtwopic.gif" class="img-fluid" alt="Form with Two Picture Boxes"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 5</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Change the <code>Name</code> of <code>Picture1</code> to <code>picDieOne</code> and <code>picture2</code> to <code>picDieTwo</code> and the 
+                                                <code>Visible</code> Properties of both <strong>Picture Boxes</strong> to <code>False</code> and the <code>AutoRedraw</code> Properties to <code>True</code>
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/figpicdietwoprop.gif" class="img-fluid" alt="Picture Box Visible and AutoRedraw Property"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 6</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                <strong>Click</strong> on <code>picDieOne</code> (the Leftmost <strong>Picture Box</strong>) and <strong>Copy</strong> it
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/figcopy.gif" class="img-fluid" alt="Copy"/>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Then <strong>Click</strong> on the <strong>Form</strong>, then <strong>Click</strong> on <strong>Paste</strong>.
+                                                with the dialog <strong>"You already have a Control named picDieOne. Do you want to create a control array?"</strong> click <strong>Yes</strong> 
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/figpaste.gif" class="img-fluid" alt="Paste"/>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Continue to <strong>Paste</strong>, but <strong>Click</strong> on the <strong>Form</strong> between each <strong>Paste</strong>, 
+                                                so that there are five copies (Six "<code>picDieOne</code>"s)
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/figdieone5.gif" class="img-fluid" alt="Form with Six picDieOne Picture Boxes"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 7</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Then select <code>picDieTwo</code> and repeat <strong>Step 6</strong> for this <strong>Picture Box</strong> so that there are 
+                                                also five copies (Six <code>picDieTwo</code>'s) see below:
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/figdiepics.gif" class="img-fluid" alt="Form with Six picDieTwo Picture Boxes"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 8</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Then from the <strong>Visual Basic Components Menu</strong> Select the <strong>Command Button</strong> Control:
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/figcommand.gif" class="img-fluid" alt="Command Button Control"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 9</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Draw Four <strong>Command Buttons</strong> on the <strong>Form</strong>
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/figdiecoms.gif" class="img-fluid" alt="Form with Picture Boxes and Four Command Buttons"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 10</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Change the <code>Caption</code> Property of <code>Command4</code> to <code>Quit</code>, <code>Command3</code> to <code>New Game</code>, 
+                                                <code>Command2</code> to <code>Roll Two</code> and <code>Command1</code> to <code>Roll One</code>
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/figdiecommand.gif" class="img-fluid" alt="Form with Picture Boxes and Four Captioned Command Buttons"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 11</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Then from the <strong>Visual Basic Components Menu</strong> Select the <strong>Label</strong> Control:
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/figlbl.gif" class="img-fluid" alt="Label Control"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 12</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Draw a <strong>Label</strong> on the <strong>Form</strong>, and change the <code>Name</code> Property of the 
+                                                <strong>Label</strong> to <code>lblTurn</code>
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/figdielblcom.gif" class="img-fluid" alt="Form with Picture Boxes, Command Buttons and Label Control"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 13</h2>
+                                    <p>
+                                        <strong>Click</strong> on the <code>Form</code> and change its <code>Name</code> Property to <code>frmMain</code> then <strong>Double Click</strong> 
+                                        on the <strong>Form</strong> of <code>frmMain</code> and type in the <code>Form_Load</code> Sub:
+                                    </p>
+                                    <pre class="code-block language-vbscript"><code>
+'Initialise Dice
+frmMain.Caption = "Lucky Dice"
+'Definitions
+Dim intTop As Integer
+Dim intLeft As Integer
+Dim intRadius As Integer
+Dim intColour As Integer
+Dim intCount As Integer
+'Set Circle Settings
+intRadius = 60
+intColour = vbBlack
+'Die One
+'Set Die One Settings
+intLeft = picDieOne(0).Left
+intTop = picDieOne(0).Top
+'Setup Picture Boxes (Move, Fill and Visbility)
+For intCount = 0 To 5
+    picDieOne(intCount).Left = intLeft
+    picDieOne(intCount).Top = intTop
+    picDieOne(intCount).FillStyle = vbFSSolid
+    picDieOne(intCount).Visible = True
+    picDieOne(intCount).BackColor = vbWhite
+Next intCount
+'Render Dice Patterns
+'Number One
+picDieOne(0).Circle (280, 280), intRadius, intColour
+'Number Two
+picDieOne(1).Circle (140, 120), intRadius, intColour
+picDieOne(1).Circle (400, 400), intRadius, intColour
+'Number Three
+picDieOne(2).Circle (140, 120), intRadius, intColour
+picDieOne(2).Circle (280, 280), intRadius, intColour
+picDieOne(2).Circle (440, 440), intRadius, intColour
+'Number Four
+picDieOne(3).Circle (140, 120), intRadius, intColour
+picDieOne(3).Circle (140, 440), intRadius, intColour
+picDieOne(3).Circle (440, 120), intRadius, intColour
+picDieOne(3).Circle (440, 440), intRadius, intColour
+'Number Five
+picDieOne(4).Circle (140, 120), intRadius, intColour
+picDieOne(4).Circle (140, 440), intRadius, intColour
+picDieOne(4).Circle (280, 280), intRadius, intColour
+picDieOne(4).Circle (440, 120), intRadius, intColour
+picDieOne(4).Circle (440, 440), intRadius, intColour
+'Number Six
+picDieOne(5).Circle (140, 120), intRadius, intColour
+picDieOne(5).Circle (140, 270), intRadius, intColour
+picDieOne(5).Circle (140, 440), intRadius, intColour
+picDieOne(5).Circle (440, 120), intRadius, intColour
+picDieOne(5).Circle (440, 270), intRadius, intColour
+picDieOne(5).Circle (440, 440), intRadius, intColour
+'Die Two
+'Set Die Two Settings
+intLeft = picDieTwo(0).Left
+intTop = picDieTwo(0).Top
+'Setup Picture Boxes (Move, Fill and Visbility)
+For intCount = 0 To 5
+    picDieTwo(intCount).Left = intLeft
+    picDieTwo(intCount).Top = intTop
+    picDieTwo(intCount).FillStyle = vbFSSolid
+    picDieTwo(intCount).Visible = True
+    picDieTwo(intCount).BackColor = vbWhite
+Next intCount
+'Render Dice Patterns
+'Number One
+picDieTwo(0).Circle (280, 280), intRadius, intColour
+'Number Two
+picDieTwo(1).Circle (140, 120), intRadius, intColour
+picDieTwo(1).Circle (400, 400), intRadius, intColour
+'Number Three
+picDieTwo(2).Circle (140, 120), intRadius, intColour
+picDieTwo(2).Circle (280, 280), intRadius, intColour
+picDieTwo(2).Circle (440, 440), intRadius, intColour
+'Number Four
+picDieTwo(3).Circle (140, 120), intRadius, intColour
+picDieTwo(3).Circle (140, 440), intRadius, intColour
+picDieTwo(3).Circle (440, 120), intRadius, intColour
+picDieTwo(3).Circle (440, 440), intRadius, intColour
+'Number Five
+picDieTwo(4).Circle (140, 120), intRadius, intColour
+picDieTwo(4).Circle (140, 440), intRadius, intColour
+picDieTwo(4).Circle (280, 280), intRadius, intColour
+picDieTwo(4).Circle (440, 120), intRadius, intColour
+picDieTwo(4).Circle (440, 440), intRadius, intColour
+'Number Six
+picDieTwo(5).Circle (140, 120), intRadius, intColour
+picDieTwo(5).Circle (140, 270), intRadius, intColour
+picDieTwo(5).Circle (140, 440), intRadius, intColour
+picDieTwo(5).Circle (440, 120), intRadius, intColour
+picDieTwo(5).Circle (440, 270), intRadius, intColour
+picDieTwo(5).Circle (440, 440), intRadius, intColour
+'Select Player One
+lblTurn.Caption = "Turn:Player 1"
+Command2.Enabled = False 
+                                    </code></pre>
+                                    <h2 class="display-6">Step 14</h2>
+                                    <p>
+                                        <strong>Double Click</strong> on the <strong>Command Button</strong> of <strong>Quit</strong> or <code>Command4</code> 
+                                        and type in the <code>Command4_Click()</code> Sub:
+                                    </p>
+                                    <pre class="code-block language-vbscript"><code>
+Unload Me 
+                                    </code></pre>
+                                    <h2 class="display-6">Step 15</h2>
+                                    <p>
+                                        <strong>Double Click</strong> on the <strong>Command Button</strong> of <strong>New Game</strong> or <code>Command3</code> and type in the <code>Command3_Click()</code> Sub:
+                                    </p>
+                                    <pre class="code-block language-vbscript"><code>
+'Ask for new Game
+'Reset Counters
+intPlayerOne = 0
+intPlayerTwo = 0
+'Definitions 
+Dim intRes As Integer
+intRes = MsgBox("Does Player One wish to go First?", vbYesNo + vbQuestion, "Player One First?")
+If intRes = vbYes Then GoTo First Else GoTo Second
+First:
+    lblTurn.Caption = "Turn:Player 1"
+    Command1.Enabled = True
+    Command2.Enabled = False
+    GoTo Fin
+Second:
+    lblTurn.Caption = "Turn:Player 2"
+    Command1.Enabled = False
+    Command2.Enabled = True
+Fin: 
+                                    </code></pre>
+                                    <h2 class="display-6">Step 16</h2>
+                                    <p>
+                                        <strong>Double Click</strong> on the <strong>Command Button</strong> of <strong>Roll Two</strong> or <code>Command2</code> and type in the 
+                                        <code>Command2_Click()</code> Sub:
+                                    </p>
+                                    <pre class="code-block language-vbscript"><code>
+'Player Two (Die Two)
+'Definitions
+Dim intShow As Integer
+Dim intCount As Integer
+'Roll Dice
+Randomize Timer
+intShow = Int((5 * Rnd))
+For intCount = 0 To intShow
+    picDieTwo(intCount).ZOrder (0)
+Next intCount
+Command1.Enabled = True
+Command2.Enabled = False
+lblTurn.Caption = "Turn:Player 1"
+                                    </code></pre>
+                                    <h2 class="display-6">Step 17</h2>
+                                    <p>
+                                        <strong>Double Click</strong> on the <strong>Command Button</strong> of <strong>Roll One</strong> or <code>Command1</code> and type in the 
+                                        <code>Command1_Click()</code> Sub:
+                                    </p>
+                                    <pre class="code-block language-vbscript"><code>
+'Player One (Die One)
+'Definitions
+Dim intShow As Integer
+Dim intCount As Integer
+'Roll Dice
+Randomize Timer
+intShow = Int((5 * Rnd))
+For intCount = 0 To intShow
+    picDieOne(intCount).ZOrder (0)
+Next intCount
+Command1.Enabled = False
+Command2.Enabled = True
+lblTurn.Caption = "Turn:Player 2"
+                                    </code></pre>
+                                    <h2 class="display-6">Step 18</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                <strong>Save</strong> the <strong>Project</strong>, for example <i>prjLuckyDice</i>, into a vacant folder as you have finished the application. <strong>Click</strong> on <strong>Start / Run</strong>
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/figstart.gif" class="img-fluid" alt="Start / Run"/>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                This should <strong>Start</strong> the application
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/figdicerun.gif" class="img-fluid" alt="Lucky Dice Running" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 19</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                <strong>Click</strong> on <strong>Roll One</strong> to <strong>Roll</strong> the First <strong>Die</strong> and then <strong>Roll Two</strong> for the Second <strong>Die</strong>, 
+                                                this is a simple <strong>Lucky Dice</strong> game with no scoring or rules. To <strong>Exit</strong> the application, <strong>Click</strong> on <strong>Quit</strong> or <strong>End / Stop</strong>
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/figend.gif" class="img-fluid" alt="End / Stop"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        You have just created a simple <strong>Lucky Dice</strong> game, but what about scoring and proper dice rules, you'll have to wait, try and make it have a scoring system/rules yourself and 
+                                        see what else you can achieve with this program.
+                                    </p>
+                                </div>                  
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Tutorial -->
+                </section>
+                <!-- /Section -->    
+            </div>
+            <div class="waves waves-bottom bg-white"></div>  
+        </main>
+        <!-- /Main -->
+        <!-- Footer -->
+        <footer class="footer mt-auto">
+            <nav class="navbar bottom navbar-light p-2">
+                <a href="../../../"><img src="../../../images/footer.png" alt="tutorialr.com" height="40px"></a>
+                <a href="https://www.twitter.com/tutorialrdotcom" target="_blank"><img src="../../../images/twitter.png" height="45px" alt="@tutorialrdotcom"></a>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="../../../images/cc-by-sa.png" height="35px" alt="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"></a>
+            </nav>
+        </footer>
+        <!-- /Footer -->
+        <!-- Scripts -->
+        <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../../../highlight/js/highlight.min.js"></script>
+        <!-- /Scripts-->
+    </body>
+</html>

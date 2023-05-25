@@ -54,6 +54,10 @@
     background-image: url('../images/waves-bottom.svg');
 }
 
+.bg-cespage {
+    background-color: #830088;
+}
+
 .bg-tutorialr {
     background-color: #5e7495;
 }
