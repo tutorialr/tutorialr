@@ -27,7 +27,7 @@
         <link href="../../../css/style.css" rel="stylesheet">
         <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../highlight/css/vs.min.css" rel="stylesheet">
-        <title>tutorialr.com - Tutorials - Windows App SDK - Gauge Control</title>
+        <title>tutorialr.com - Tutorials - Windows App SDK - Carousel Control</title>
     </head>
     <body class="d-flex flex-column h-100">
         <!-- Main -->
@@ -71,9 +71,9 @@
                 <!-- Section -->            
                 <section class="text-center text-white container">
                     <!-- Hero -->
-                    <h1 class="display-4 mx-auto">Gauge Control</h1>
+                    <h1 class="display-4 mx-auto">Carousel Control</h1>
                     <p class="lead">
-                        <strong>Learn</strong> creating a <strong>Gauge Control</strong> using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
+                        <strong>Learn</strong> creating a <strong>Carousel Control</strong> using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
                     </p>
                     <!-- /Hero -->
                     <!-- Tutorial -->
@@ -82,9 +82,9 @@
                             <div class="card position-relative">
                                 <div class="card-header">
                                     <div class="justify-content-sm-center text-center m-1">
-                                        <a href="../../pdf/win-app-sdk-gauge-control.pdf" target="_blank">
+                                        <a href="../../pdf/win-app-sdk-carousel-control.pdf" target="_blank">
                                             <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
-                                                Gauge Control
+                                                Carousel Control
                                                 <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
                                             </span>
                                         </a>
@@ -92,7 +92,8 @@
                                 </div>   
                                 <div class="card-body">
                                     <p>
-                                        <strong>Gauge Control</strong> shows how to create a <strong>Control</strong> that can be used as a <strong>Gauge</strong> using <strong>Windows App SDK</strong>.
+                                        <strong>Carousel Control</strong> shows how to create a <strong>Control</strong> that can be used to display <strong>Images</strong> 
+                                        in a moving <strong>Carousel</strong> using <strong>Windows App SDK</strong>.
                                     </p>
                                     <h2 class="display-6">Step 1</h2>
                                     <p>
@@ -128,7 +129,7 @@
 
                                         <div class="row mb-3">
                                             <div class="col-sm">
-                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>GaugeControl</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
+                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>CarouselControl</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
                                             </div>
                                             <div class="col-sm">
                                                 <img src="../assets/win-vs-configure-project.png" class="img-fluid" alt="Configure project" />
@@ -144,304 +145,196 @@
                                     </p>
                                     <h2 class="display-6">Step 3</h2>
                                     <p>
-                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>WinUI</strong> and then select <strong>User Control (WinUI 3)</strong> from the list next to this, then type in the name of <i>Gauge.xaml</i> and then <strong>Click</strong> on <strong>Add</strong>.
+                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>WinUI</strong> and then select <strong>User Control (WinUI 3)</strong> from the list next to this, then type in the name of <i>Carousel.xaml</i> and then <strong>Click</strong> on <strong>Add</strong>.
                                     </p>
                                     <p>
-                                        <img src="../assets/was-add-new-item-gauge-control.png" class="img-fluid" alt="Add New User Control (WinUI 3)" />
+                                        <img src="../assets/was-add-new-item-carousel-control.png" class="img-fluid" alt="Add New User Control (WinUI 3)" />
                                     </p>
                                     <h2 class="display-6">Step 4</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
-                                                Then from <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>Gauge.xaml</strong> to see the <strong>XAML</strong> for the <strong>User Control</strong>.
+                                                Then from <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>Carousel.xaml</strong> to see the <strong>XAML</strong> for the <strong>User Control</strong>.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-solution-explorer-user-xaml-gauge-control.png" class="img-fluid" alt="Solution Explorer Gauge.xaml"/>
+                                                <img src="../assets/was-solution-explorer-user-xaml-carousel-control.png" class="img-fluid" alt="Solution Explorer Carousel.xaml"/>
                                             </div>
                                         </div>
                                     </div>
                                     <h2 class="display-6">Step 5</h2>
                                     <p>
-                                        In the <strong>XAML</strong> for <i>Gauge.xaml</i> there will be some <strong>XAML</strong> for a <code>Grid</code>, above <code>Grid</code>, type the following <strong>XAML</strong>:
+                                        In the <strong>XAML</strong> for <i>Carousel.xaml</i> there will be some <strong>XAML</strong> for a <code>Grid</code>, above <code>Grid</code>, type the following <strong>XAML</strong>:
                                     </p>
                                     <pre class="code-block language-xml"><code>
-&lt;Viewbox&gt;
-    &lt;Canvas Name="Display" Height="300" Width="300" Loaded="Load"/&gt;
-&lt;/Viewbox&gt;
+&lt;Canvas Name="Display" HorizontalAlignment="Center"
+VerticalAlignment="Center" Loaded="Load"/&gt;
                                     </code></pre>
                                     <p>
-                                        This <strong>XAML</strong> contains a <code>Viewbox</code> which will <strong>Scale</strong> a <code>Canvas</code> with a <code>Loaded</code> event handler of <code>Load</code>.
+                                        This <strong>XAML</strong> contains a <code>Canvas</code> with a <code>Loaded</code> event handler of <code>Load</code>.
                                     </p>
                                     <h2 class="display-6">Step 6</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
-                                                Then, within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>Gauge.xaml</strong> then double-click on <strong>Gauge.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>User Control</strong>.
+                                                Then, within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>Carousel.xaml</strong> then double-click on <strong>Carousel.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>User Control</strong>.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-solution-explorer-user-code-gauge-control.png" class="img-fluid" alt="Solution Explorer Gauge.xaml.cs"/>
+                                                <img src="../assets/was-solution-explorer-user-code-carousel-control.png" class="img-fluid" alt="Solution Explorer Carousel.xaml.cs"/>
                                             </div>
                                         </div>
                                     </div>
                                     <h2 class="display-6">Step 7</h2>
                                     <p>
-                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Gauge.xaml.cs</i> near the top of the <strong>Code</strong>, 
-                                        below the final <code>using</code> statement you will need to type the following <code>using</code> statement:
+                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Carousel.xaml.cs</i> near the top of the <strong>Code</strong>, 
+                                        below the final <code>using</code> statement you will need to type the following <code>using</code> statements:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-using Microsoft.UI.Xaml.Shapes;
+using Microsoft.UI.Xaml.Media.Animation;
+using Microsoft.UI.Xaml.Media.Imaging;
                                     </code></pre>
                                     <h2 class="display-6">Step 8</h2>
                                     <p>
-                                        Then while still in the <strong>View</strong> for the <strong>Code</strong> of <i>Gauge.xaml.cs</i> type the following <strong>Code</strong>
-                                        below the end of the <strong>Constructor</strong> of <code>public Gauge() { ... }</code>:
+                                        Then while still in the <strong>View</strong> for the <strong>Code</strong> of <i>Carousel.xaml.cs</i> type the following <strong>Code</strong>
+                                        below the end of the <strong>Constructor</strong> of <code>public Caoursel() { ... }</code>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-private Rectangle _needle;
-private double _diameter = 0;
+private const double speed = 0.0125;
+private const double perspective = 55;
 
-// Transform Method
+private readonly Storyboard _animation = new();
+private readonly List&lt;BitmapImage&gt; _list = new();
+private readonly Point _radius = new() { X = -20, Y = 200 };
 
-// Markers Method
+private Point _position;
+private double _distance;
 
-// Layout, Indicator & Load Methods
+// Rotate Method
 
-// Dependency Properties
+// Layout Method
 
-// Properties
+// Add, Remove, New & Load Methods
                                     </code></pre>
                                     <p>
-                                        The <code>class</code> for <code>Gauge</code> represents the <strong>User Control</strong> for the <strong>Gauge</strong> and includes a 
-                                        <code>Rectangle</code> that will be used to represent the needle of the <strong>Gauge</strong> along with a <code>double</code> for the diameter of the <strong>Gauge</strong>.
+                                        The <code>class</code> for <code>Carousel</code> represents the <strong>User Control</strong> for the <strong>Carousel</strong> and includes a 
+                                        <code>Storyboard</code> that will be used for rotating the images represented by the <code>List</code> of <code>BitmapImage</code> for the <strong>Carousel</strong>.
                                     </p>
                                     <h2 class="display-6">Step 9</h2>
                                     <p>
-                                        While still in the <code>class</code> of <code>Gauge</code> after <strong>Comment</strong> of <code>// Transform Method</code> type the following <strong>Code</strong>:
+                                        While still in the <code>class</code> of <code>Carousel</code> after <strong>Comment</strong> of <code>// Rotate Method</code> type the following <strong>Method</strong>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-private TransformGroup Transform(double angle, double x, double y)
+private void Rotate()
 {
-    var transformGroup = new TransformGroup();
-    var firstTranslate = new TranslateTransform()
+    foreach (var item in Display.Children.Cast&lt;Image&gt;())
     {
-        X = x,
-        Y = y
-    };
-    transformGroup.Children.Add(firstTranslate);
-    var rotateTransform = new RotateTransform()
-    {
-        Angle = angle
-    };
-    transformGroup.Children.Add(rotateTransform);
-    var secondTranslate = new TranslateTransform()
-    {
-        X = _diameter / 2,
-        Y = _diameter / 2
-    };
-    transformGroup.Children.Add(secondTranslate);
-    return transformGroup;
-}
-                                    </code></pre>
-                                    <p>
-                                        This <strong>Method</strong> will create a <code>TransformGroup</code> to rotate elements to be used for the <strong>Gauge</strong>.
-                                    </p>
-                                    <h2 class="display-6">Step 10</h2>
-                                    <p>
-                                        While still in the <code>class</code> of <code>Gauge</code> after <strong>Comment</strong> of <code>// Markers Method</code> type the following <strong>Method</strong>:
-                                    </p>
-                                    <pre class="code-block language-csharp"><code>
-private void Markers(Canvas canvas, double thickness)
-{
-    var inner = _diameter;
-    var markers = new Canvas()
-    {
-        Width = inner,
-        Height = inner
-    };
-    for (int i = 0; i &lt; 51; i++)
-    {
-        var marker = new Rectangle()
+        double angle = (double)item.Tag;
+        angle -= speed;
+        item.Tag = angle;
+        _position.X = Math.Cos(angle) * _radius.X;
+        _position.Y = Math.Sin(angle) * _radius.Y;
+        Canvas.SetLeft(item, _position.X - (item.Width - perspective));
+        Canvas.SetTop(item, _position.Y);
+        if (_radius.X >= 0)
         {
-            Fill = Foreground
-        };
-        if ((i % 5) == 0)
-        {
-            marker.Width = 4;
-            marker.Height = 16;
-            marker.RenderTransform = Transform(i * 6, -(marker.Width / 2),
-            -(marker.Height * 2 + 4.5 - thickness / 2 - inner / 2 - 16));
+            _distance = 1 * (1 - (_position.X / perspective));
+            Canvas.SetZIndex(item, -(int)_position.X);
         }
         else
         {
-            marker.Width = 2;
-            marker.Height = 8;
-            marker.RenderTransform = Transform(i * 6, -(marker.Width / 2),
-            -(marker.Height * 2 + 12.75 - thickness / 2 - inner / 2 - 16));
+            _distance = 1 / (1 - (_position.X / perspective));
+            Canvas.SetZIndex(item, (int)_position.X);
         }
-        markers.Children.Add(marker);
+        item.Opacity = ((ScaleTransform)item.RenderTransform).ScaleX =
+            ((ScaleTransform)item.RenderTransform).ScaleY = _distance;
     }
-    markers.RenderTransform = new RotateTransform()
-    {
-        Angle = 30,
-        CenterX = _diameter / 2,
-        CenterY = _diameter / 2
-    };
-    canvas.Children.Add(markers);
+    _animation.Begin();
 }
                                     </code></pre>
                                     <p>
-                                        This <strong>Method</strong> will create the set of small and large markers to be displayed on the <strong>Gauge</strong>
+                                        This <strong>Method</strong> will be used for rotating the items in the <strong>Carousel</strong> by looping through all the <code>Image</code> controls and then adjusting the position 
+                                        of them along with triggering the <code>Storyboard</code>.
+                                    </p>
+                                    <h2 class="display-6">Step 10</h2>
+                                    <p>
+                                        While still in the <code>class</code> of <code>Carousel</code> after <strong>Comment</strong> of <code>// Layout Method</code> type the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void Layout(Canvas display)
+{
+    display.Children.Clear();
+    for (int index = 0; index &lt; _list.Count; index++)
+    {
+        _distance = 1 / (1 - (_position.X / perspective));
+        var item = new Image
+        {
+            Width = 150,
+            Source = _list[index],
+            Tag = index * (Math.PI * 2 / _list.Count),
+            RenderTransform = new ScaleTransform()
+        };
+        _position.X = Math.Cos((double)item.Tag) * _radius.X;
+        _position.Y = Math.Sin((double)item.Tag) * _radius.Y;
+        Canvas.SetLeft(item, _position.X - (item.Width - perspective));
+        Canvas.SetTop(item, _position.Y);
+        item.Opacity = ((ScaleTransform)item.RenderTransform).ScaleX =
+            ((ScaleTransform)item.RenderTransform).ScaleY = _distance;
+        display.Children.Add(item);
+    }
+}
+                                    </code></pre>
+                                    <p>
+                                        This <strong>Method</strong> will be used to create the look-and-feel of the <strong>Carousel</strong> by positioning each 
+                                        item as an <code>Image</code> onto the <strong>Carousel</strong> where needed.
                                     </p>
                                     <h2 class="display-6">Step 11</h2>
                                     <p>
-                                        While still in the <code>class</code> of <code>Gauge</code> after <strong>Comment</strong> of <code>// Layout, Indicator & Load Methods</code> type the following <strong>Methods</strong>:
+                                        While still in the <code>class</code> of <code>Carousel</code> after <strong>Comment</strong> of <code>// Add, Remove, New & Load Methods</code> type the following <strong>Methods</strong>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-private void Layout(Canvas canvas)
+public void Add(BitmapImage image)
 {
-    canvas.Children.Clear();
-    _diameter = canvas.Width;
-    var face = new Ellipse()
-    {
-        Height = _diameter,
-        Width = _diameter,
-        Fill = Fill
-    };
-    canvas.Children.Add(face);
-    Markers(canvas, face.StrokeThickness);
-    _needle = new Rectangle()
-    {
-        Width = Needle,
-        Height = (int)_diameter / 2 - 30,
-        Fill = Foreground
-    };
-    canvas.Children.Add(_needle);
-    var middle = new Ellipse()
-    {
-        Height = _diameter / 10,
-        Width = _diameter / 10,
-        Fill = Foreground
-    };
-    Canvas.SetLeft(middle, (_diameter - middle.ActualWidth) / 2);
-    Canvas.SetTop(middle, (_diameter - middle.ActualHeight) / 2);
-    canvas.Children.Add(middle);
-}
-
-private void Indicator(int value)
-{
+    _list.Add(image);
     Layout(Display);
-    var percentage = value / (double)Maximum * 100;
-    var position = (percentage / 2) + 5;
-    _needle.RenderTransform = Transform(position * 6,
-    -Needle / 2, 4.25);
 }
 
-private void Load(object sender, RoutedEventArgs e) =>
-    Indicator(Value);
+public void Remove()
+{
+    if (_list.Any())
+    {
+        _list.Remove(_list.Last());
+        Layout(Display);
+    }
+}
+
+public void New()
+{
+    _list.Clear();
+    Layout(Display);
+}
+
+private void Load(object sender, RoutedEventArgs e)
+{
+    _animation.Completed += (object s, object obj) =>
+        Rotate();
+    _animation.Begin();
+}
                                     </code></pre>
                                     <p>
-                                        There will also be some <strong>Errors</strong> as these refer to <strong>Properties</strong> that will be added in the next few steps.
-                                    </p>
-                                    <p>
-                                        <code>Layout</code> will create the look-and-feel of the <strong>Gauge</strong> and uses the <strong>Method</strong> for <code>Markers</code> along with creating the centre point and needle for the <strong>Gauge</strong>. 
-                                        The <strong>Method</strong> of <code>Indicator</code> will use <code>Layout</code> along with calculating the position of the needle for the <strong>Gauge</strong> and <code>Load</code> will be used when the <code>Canvas</code> of 
-                                        the <strong>User Control</strong> is loaded and will call the <strong>Method</strong> of <code>Indicator</code>.
-                                    </p>
+                                        <code>Add</code> will be used to add items to the <strong>Carousel</strong> and <code>Remove</code> will be used to remove the last item from the <strong>Carousel</strong>, 
+                                        then <code>New</code> will be used to clear the <strong>Carousel</strong> of all items and <code>Load</code> will be used to setup the <strong>Carousel</strong>.
+                                    </p>                                    
                                     <h2 class="display-6">Step 12</h2>
-                                    <p>
-                                        While still in the <code>class</code> of <code>Gauge</code> after <strong>Comment</strong> of <code>// Dependency Properties</code> type the following <strong>Dependency Properties</strong>:
-                                    </p>
-                                    <pre class="code-block language-csharp"><code>
-public static readonly DependencyProperty FillProperty =
-DependencyProperty.Register(nameof(Fill), typeof(Brush),
-typeof(Gauge), null);
-
-public static readonly DependencyProperty NeedleProperty =
-DependencyProperty.Register(nameof(Needle), typeof(int), typeof(Gauge),
-new PropertyMetadata(2));
-
-public static readonly DependencyProperty ValueProperty =
-DependencyProperty.Register(nameof(Value), typeof(double), typeof(Gauge),
-new PropertyMetadata(25));
-
-public static readonly DependencyProperty MinimumProperty =
-DependencyProperty.Register(nameof(Minimum), typeof(int), typeof(Gauge),
-new PropertyMetadata(0));
-
-public static readonly DependencyProperty MaximumProperty =
-DependencyProperty.Register(nameof(Maximum), typeof(int), typeof(Gauge),
-new PropertyMetadata(100));
-                                    </code></pre>
-                                    <p>
-                                        There will still also be some <strong>Errors</strong> as these refer to <strong>Properties</strong> that will be added in the next step.
-                                    </p>
-                                    <p>
-                                        These <strong>Dependency Properties</strong> refer to various <strong>Properties</strong> of the <strong>Gauge</strong> that can be customised for the <strong>User Control</strong>.
-                                    </p>
-                                    <h2 class="display-6">Step 13</h2>
-                                    <p>
-                                        While still in the <code>class</code> of <code>Gauge</code> after <strong>Comment</strong> of <code>// Properties</code> type the following <strong>Properties</strong>:
-                                    </p>
-                                    <pre class="code-block language-csharp"><code>
-public Brush Fill
-{
-    get { return (Brush)GetValue(FillProperty); }
-    set { SetValue(FillProperty, value); }
-}
-
-public int Needle
-{
-    get { return (int)GetValue(NeedleProperty); }
-    set
-    {
-        SetValue(NeedleProperty, value);
-        Indicator(Value);
-    }
-}
-
-public int Value
-{
-    get { return (int)GetValue(ValueProperty); }
-    set
-    {
-        if (value &gt;= Minimum && value &lt;= Maximum)
-        {
-            SetValue(ValueProperty, value);
-            Indicator(value);
-        }
-    }
-}
-
-public int Minimum
-{
-    get { return (int)GetValue(MinimumProperty); }
-    set { SetValue(MinimumProperty, value); }
-}
-
-public int Maximum
-{
-    get { return (int)GetValue(MaximumProperty); }
-    set { SetValue(MaximumProperty, value); }
-}
-                                    </code></pre>
-                                    <p>
-                                        Any <strong>Errors</strong> should now be resolved, if you continue to get them check all previous steps to see if you have missed anything.
-                                    </p>
-                                    <p>
-                                        These <strong>Properties</strong> are for values for the <strong>User Control</strong> such as the <code>Minimum</code> or <code>Maximum</code> values for the <strong>Gauge</strong>.
-                                    </p>
-                                    <h2 class="display-6">Step 14</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
                                                 Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>MainWindow.xaml</strong> to see the <strong>XAML</strong> for the <strong>Main Window</strong>.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-solution-explorer-xaml-gauge-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
+                                                <img src="../assets/was-solution-explorer-xaml-carousel-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
                                             </div>
                                         </div>
                                     </div>
-                                    <h2 class="display-6">Step 15</h2>
+                                    <h2 class="display-6">Step 13</h2>
                                     <p>
                                         In the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> there will be some <strong>XAML</strong> for a <code>StackPanel</code>, this should be <strong>Removed</strong>:
                                     </p>
@@ -451,29 +344,41 @@ HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;x:Name=&quot;myButton&quot;&nbsp;Click=&quot;myButton_Click&quot;&gt;Click&nbsp;Me&lt;/Button&gt;
 &lt;/StackPanel&gt;
                                     </code></pre>                                   
-                                    <h2 class="display-6">Step 16</h2>
+                                    <h2 class="display-6">Step 14</h2>
                                     <p>
                                         While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> above <code>&lt;/Window&gt;</code>, type in the following <strong>XAML</strong>:
                                     </p>
                                     <pre class="code-block language-xml"><code>
-                                        &lt;local:Gauge Margin="50" Value="25" Foreground="WhiteSmoke" Needle="4" 
-                                        Fill="{ThemeResource SystemControlHighlightAccentBrush}"/&gt;;                                                                                                                                                                                                                                                                                                                        
+&lt;Grid&gt;
+    &lt;Grid.RowDefinitions&gt;
+        &lt;RowDefinition Height="Auto"/&gt;
+        &lt;RowDefinition Height="*"/&gt;
+    &lt;/Grid.RowDefinitions&gt;
+    &lt;TextBox Grid.Row="0" Name="Value" InputScope="Url" Margin="20,20,20,20"/&gt;
+    &lt;local:Carousel  Grid.Row="1" x:Name="Display" Width="400"
+        HorizontalAlignment="Center" VerticalAlignment="Center" /&gt;
+    &lt;CommandBar Grid.Row="1" VerticalAlignment="Bottom"&gt;
+        &lt;AppBarButton Icon="Add" Label="Add" Click="Add"/&gt;
+        &lt;AppBarButton Icon="Remove" Label="Remove" Click="Remove"/&gt;
+        &lt;AppBarButton Icon="Page2" Label="New" Click="New"/&gt;
+    &lt;/CommandBar&gt;
+&lt;/Grid&gt;
                                     </code></pre> 
                                     <p>
-                                        This <strong>XAML</strong> contains the <strong>User Control</strong> of <code>Gauge</code> with various <strong>Properties</strong> including <code>Value</code> and <code>Needle</code>.
+                                        This <strong>XAML</strong> contains the <strong>User Control</strong> of <code>Carousel</code> with <strong>Properties</strong> set including <code>Foreground</code> and <code>Fill</code>.
                                     </p>
-                                    <h2 class="display-6">Step 17</h2>
+                                    <h2 class="display-6">Step 15</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
                                                 Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>MainWindow.xaml</strong> then double-click on <strong>MainWindow.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Main Window</strong>.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-solution-explorer-code-gauge-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
+                                                <img src="../assets/was-solution-explorer-code-carousel-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
                                             </div>
                                         </div>
                                     </div>
-                                    <h2 class="display-6">Step 18</h2>
+                                    <h2 class="display-6">Step 16</h2>
                                     <p>
                                         In the <strong>Code</strong> for <code>MainWindow.xaml.cs</code> there be a Method of <code>myButton_Click(...)</code> this should be <strong>Removed</strong> by removing the following:
                                     </p>
@@ -481,27 +386,46 @@ HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;
 private void myButton_Click(object sender, RoutedEventArgs e)
 {
     myButton.Content = "Clicked";
-}
-                                    </code></pre>  
-                                    <h2 class="display-6">Step 19</h2>
+}                                        
+                                    </code></pre>
+                                    <h2 class="display-6">Step 17</h2>
+                                    <p>
+                                        Once <code>myButton_Click(...)</code> has been removed, within the <strong>Constructor</strong> of <code>public MainWindow() { ... }</code> and below the line of <code>this.InitializeComponent();</code> type in the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void Add(object sender, RoutedEventArgs e) =>
+    Display.Add(new BitmapImage(new Uri(Value.Text)));
+
+private void New(object sender, RoutedEventArgs e) =>
+    Display.New();
+
+private void Remove(object sender, RoutedEventArgs e) =>
+    Display.Remove();
+                                    </code></pre>
+                                    <p>
+                                        The <strong>Methods</strong> of <code>Add</code>, <code>New</code> and <code>Remove</code> will be used with <strong>Event Handler</strong> from the <strong>XAML</strong>, 
+                                        these <strong>Methods</strong> use <strong>Arrow Syntax</strong> with the <code>=></code> for an expression body which is useful when a <strong>Method</strong> only has one line.
+                                    </p>                                
+                                    <h2 class="display-6">Step 18</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
-                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>GaugeControl (Package)</strong> to <strong>Start</strong> the application.
+                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>CarouselControl (Package)</strong> to <strong>Start</strong> the application.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-debug-gauge-control.png" class="img-fluid" alt="GaugeControl (Package)"/>
+                                                <img src="../assets/was-debug-carousel-control.png" class="img-fluid" alt="CarouselControl (Package)"/>
                                             </div>
                                         </div>
                                     </div>    
+                                    <h2 class="display-6">Step 19</h2>
+                                    <p>
+                                        Once running you will see the <strong>Carousel Control</strong> displayed, then you can type in the <i>URL</i> of an image e.g. <a href="https://www.tutorialr.com/tutorials/images/win-app-sdk-tutorials.png" target="_blank">https://www.tutorialr.com/tutorials/images/win-app-sdk-tutorials.png</a> 
+                                        then select <i>Add</i> to display this or multiple images on the <strong>Carousel</strong> or you can select <i>Remove</i> to remove the last image or <i>New</i> to clear the <strong>Carousel</strong>.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-running-carousel-control.png" class="img-fluid" alt="Carousel Control Running and Output" />
+                                    </p>
                                     <h2 class="display-6">Step 20</h2>
-                                    <p>
-                                        Once running you will see the <strong>Gauge Control</strong> displayed, with a <i>Value</i> which can be changed in the <strong>XAML</strong> to show the <i>Needle</i> in a different position.
-                                    </p>
-                                    <p>
-                                        <img src="../assets/was-running-gauge-control.png" class="img-fluid" alt="Gauge Control Running and Output" />
-                                    </p>
-                                    <h2 class="display-6">Step 21</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
@@ -515,9 +439,9 @@ private void myButton_Click(object sender, RoutedEventArgs e)
                                 </div>
                                 <div class="card-footer">
                                     <div class="justify-content-sm-center text-center m-1">
-                                        <a href="../../pdf/win-app-sdk-gauge-control.pdf" target="_blank">
+                                        <a href="../../pdf/win-app-sdk-carousel-control.pdf" target="_blank">
                                             <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
-                                                Gauge Control
+                                                Carousel Control
                                                 <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
                                             </span>
                                         </a>

@@ -144,7 +144,7 @@
                                     </p>
                                     <h2 class="display-6">Step 3</h2>
                                     <p>
-                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>WInUI</strong> and then select <strong>User Control (WinUI 3)</strong> from the list next to this, then type in the name of <i>Clock.xaml</i> and then <strong>Click</strong> on <strong>Add</strong>.
+                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>WinUI</strong> and then select <strong>User Control (WinUI 3)</strong> from the list next to this, then type in the name of <i>Clock.xaml</i> and then <strong>Click</strong> on <strong>Add</strong>.
                                     </p>
                                     <p>
                                         <img src="../assets/was-add-new-item-clock-control.png" class="img-fluid" alt="Add New User Control (WinUI 3)" />
@@ -167,7 +167,7 @@
                                     <pre class="code-block language-xml"><code>
 &lt;Viewbox&gt;
     &lt;Canvas Name="Display" Height="300" Width="300" Loaded="Load"/&gt;
-&lt;/Viewbox&gt;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+&lt;/Viewbox&gt;
                                     </code></pre>
                                     <p>
                                         This <strong>XAML</strong> contains a <code>Viewbox</code> which will <strong>Scale</strong> a <code>Canvas</code> with a <code>Loaded</code> event handler of <code>Load</code>.
@@ -189,7 +189,7 @@
                                         below the final <code>using</code> statement you will need to type the following <code>using</code> statement:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-using Microsoft.UI.Xaml.Shapes;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+using Microsoft.UI.Xaml.Shapes;
                                     </code></pre>
                                     <h2 class="display-6">Step 8</h2>
                                     <p>
@@ -216,7 +216,7 @@ private double _diameter;
 
 // SecondHand, MinuteHand & HourHand Methods
 
-// Layout & Load Methods                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+// Layout & Load Methods
                                     </code></pre>
                                     <p>
                                         The <code>class</code> for <code>Clock</code> represents the <strong>User Control</strong> for the <strong>Clock</strong> and includes a 
@@ -257,7 +257,7 @@ public bool Enabled
             _timer.Start();
         }
     }
-}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+}
                                     </code></pre>
                                     <p>
                                         The <strong>Dependency Property</strong> will be used for elements of the <strong>Clock</strong> that will use the <strong>Property</strong> of <code>Fill</code> and the other <strong>Properties</strong> configure 
@@ -289,14 +289,14 @@ private TransformGroup Transform(double angle, double x, double y)
     };
     transformGroup.Children.Add(secondTranslate);
     return transformGroup;
-}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+}
                                     </code></pre>
                                     <p>
                                         This <strong>Method</strong> will create a <code>TransformGroup</code> to rotate elements to be used on the <strong>Clock</strong>.
                                     </p>
                                     <h2 class="display-6">Step 11</h2>
                                     <p>
-                                        While still in the <code>class</code> of <code>Gauge</code> after <strong>Comment</strong> of <code>// Markers Method</code> type the following <strong>Method</strong>:
+                                        While still in the <code>class</code> of <code>Clock</code> after <strong>Comment</strong> of <code>// Markers Method</code> type the following <strong>Method</strong>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
 private void Markers(Canvas canvas, double thickness)
@@ -328,7 +328,7 @@ private void Markers(Canvas canvas, double thickness)
         _markers.Children.Add(marker);
     }
     canvas.Children.Add(_markers);
-}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+}
                                     </code></pre>
                                     <p>
                                         This <strong>Method</strong> will create the set of small and large markers to be displayed on the <strong>Clock</strong>
@@ -369,7 +369,7 @@ private void RemoveHand(int width)
     {
         _face.Children.Remove(hand);
     }
-}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+}
                                     </code></pre>
                                     <p>
                                         <code>Hand</code> will be used to create the hands for the <strong>Clock</strong> and will take advantage of the different widths to tell them apart in the next 
@@ -424,14 +424,14 @@ private void HourHand(int hours, int minutes, int seconds)
     {
         RemoveHand(hours_width);
     }
-}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+}
                                     </code></pre>
                                     <p>
                                         These <strong>Methods</strong> will manage the display and movement of the three hands of the <strong>Clock</strong> for seconds, minutes and hours.
                                     </p>
                                     <h2 class="display-6">Step 14</h2>
                                     <p>
-                                        While still in the <code>class</code> of <code>Gauge</code> after <strong>Comment</strong> of <code>// Layout & Load Methods</code> type the following <strong>Methods</strong>:
+                                        While still in the <code>class</code> of <code>Clock</code> after <strong>Comment</strong> of <code>// Layout & Load Methods</code> type the following <strong>Methods</strong>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
 private void Layout(Canvas canvas)
@@ -467,7 +467,7 @@ private void Load(object sender, RoutedEventArgs e)
         HourHand(Time.Hour, Time.Minute, Time.Second);
     };
     _timer.Start();
-}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+}
                                     </code></pre>
                                     <p>
                                         <code>Layout</code> will create the look-and-feel of the <strong>Clock</strong> and uses the <strong>Method</strong> for <code>Markers</code> and <code>Load</code> 
@@ -493,7 +493,7 @@ private void Load(object sender, RoutedEventArgs e)
 &lt;StackPanel&nbsp;Orientation=&quot;Horizontal&quot;&nbsp;
 HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;x:Name=&quot;myButton&quot;&nbsp;Click=&quot;myButton_Click&quot;&gt;Click&nbsp;Me&lt;/Button&gt;
-&lt;/StackPanel&gt;                               
+&lt;/StackPanel&gt;
                                     </code></pre>                                   
                                     <h2 class="display-6">Step 17</h2>
                                     <p>
@@ -525,7 +525,7 @@ HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;
 private void myButton_Click(object sender, RoutedEventArgs e)
 {
     myButton.Content = "Clicked";
-}                                        
+}
                                     </code></pre>  
                                     <h2 class="display-6">Step 20</h2>
                                     <div class="container">
@@ -543,7 +543,7 @@ private void myButton_Click(object sender, RoutedEventArgs e)
                                         Once running you will see the <strong>Clock Control</strong> displayed, with the current time displayed on the <strong>Clock</strong>.
                                     </p>
                                     <p>
-                                        <img src="../assets/was-running-clock-control.png" class="img-fluid" alt="Gauge Control Running and Output" />
+                                        <img src="../assets/was-running-clock-control.png" class="img-fluid" alt="Clock Control Running and Output" />
                                     </p>
                                     <h2 class="display-6">Step 21</h2>
                                     <div class="container">

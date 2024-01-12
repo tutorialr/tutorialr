@@ -27,7 +27,7 @@
         <link href="../../../css/style.css" rel="stylesheet">
         <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../highlight/css/vs.min.css" rel="stylesheet">
-        <title>tutorialr.com - Tutorials - Windows App SDK - Gauge Control</title>
+        <title>tutorialr.com - Tutorials - Windows App SDK - Dipad Control</title>
     </head>
     <body class="d-flex flex-column h-100">
         <!-- Main -->
@@ -71,9 +71,9 @@
                 <!-- Section -->            
                 <section class="text-center text-white container">
                     <!-- Hero -->
-                    <h1 class="display-4 mx-auto">Gauge Control</h1>
+                    <h1 class="display-4 mx-auto">Dipad Control</h1>
                     <p class="lead">
-                        <strong>Learn</strong> creating a <strong>Gauge Control</strong> using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
+                        <strong>Learn</strong> creating a <strong>Directional Pad</strong> using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
                     </p>
                     <!-- /Hero -->
                     <!-- Tutorial -->
@@ -82,9 +82,9 @@
                             <div class="card position-relative">
                                 <div class="card-header">
                                     <div class="justify-content-sm-center text-center m-1">
-                                        <a href="../../pdf/win-app-sdk-gauge-control.pdf" target="_blank">
+                                        <a href="../../pdf/win-app-sdk-dipad-control.pdf" target="_blank">
                                             <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
-                                                Gauge Control
+                                                Dipad Control
                                                 <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
                                             </span>
                                         </a>
@@ -92,7 +92,8 @@
                                 </div>   
                                 <div class="card-body">
                                     <p>
-                                        <strong>Gauge Control</strong> shows how to create a <strong>Control</strong> that can be used as a <strong>Gauge</strong> using <strong>Windows App SDK</strong>.
+                                        <strong>Dipad Control</strong> shows how to create a <strong>Directional Pad</strong> that can be used for 
+                                        selecting a <strong>Direction</strong> using <strong>Windows App SDK</strong>.
                                     </p>
                                     <h2 class="display-6">Step 1</h2>
                                     <p>
@@ -128,7 +129,7 @@
 
                                         <div class="row mb-3">
                                             <div class="col-sm">
-                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>GaugeControl</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
+                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>DipadControl</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
                                             </div>
                                             <div class="col-sm">
                                                 <img src="../assets/win-vs-configure-project.png" class="img-fluid" alt="Configure project" />
@@ -144,304 +145,224 @@
                                     </p>
                                     <h2 class="display-6">Step 3</h2>
                                     <p>
-                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>WinUI</strong> and then select <strong>User Control (WinUI 3)</strong> from the list next to this, then type in the name of <i>Gauge.xaml</i> and then <strong>Click</strong> on <strong>Add</strong>.
+                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>Code</strong> and then select <strong>Code File</strong> from the list next to this, then type in the name of <i>Dipad.cs</i> and then <strong>Click</strong> on <strong>Add</strong>.
                                     </p>
                                     <p>
-                                        <img src="../assets/was-add-new-item-gauge-control.png" class="img-fluid" alt="Add New User Control (WinUI 3)" />
+                                        <img src="../assets/was-add-new-item-dipad-control.png" class="img-fluid" alt="Add New Code File" />
                                     </p>
                                     <h2 class="display-6">Step 4</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
-                                                Then from <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>Gauge.xaml</strong> to see the <strong>XAML</strong> for the <strong>User Control</strong>.
+                                                Then from <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>Dipad.cs</strong> to see the <strong>Code</strong> for the <strong>User Control</strong>.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-solution-explorer-user-xaml-gauge-control.png" class="img-fluid" alt="Solution Explorer Gauge.xaml"/>
+                                                <img src="../assets/was-solution-explorer-user-code-dipad-control.png" class="img-fluid" alt="Solution Explorer Dipad.cs"/>
                                             </div>
                                         </div>
                                     </div>
                                     <h2 class="display-6">Step 5</h2>
                                     <p>
-                                        In the <strong>XAML</strong> for <i>Gauge.xaml</i> there will be some <strong>XAML</strong> for a <code>Grid</code>, above <code>Grid</code>, type the following <strong>XAML</strong>:
+                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Dipad.cs</i>, within this type the following <strong>Code</strong>:
                                     </p>
-                                    <pre class="code-block language-xml"><code>
-&lt;Viewbox&gt;
-    &lt;Canvas Name="Display" Height="300" Width="300" Loaded="Load"/&gt;
-&lt;/Viewbox&gt;
+                                    <pre class="code-block language-csharp"><code>
+using Microsoft.UI.Input;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Data;
+using Microsoft.UI.Xaml.Input;
+using Microsoft.UI.Xaml.Markup;
+using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Shapes;
+using System;
+
+namespace DipadControl;
+
+public enum DipadDirection
+{
+    Up,
+    Down,
+    Left,
+    Right
+}
+
+public class Dipad : Grid
+{
+    // Constants, Event, Dependency Property & Property
+
+    // GetPath & GetDirection Methods
+
+    // Add Method
+
+    // Constructor
+
+}
                                     </code></pre>
                                     <p>
-                                        This <strong>XAML</strong> contains a <code>Viewbox</code> which will <strong>Scale</strong> a <code>Canvas</code> with a <code>Loaded</code> event handler of <code>Load</code>.
+                                        There are <code>using</code> statements for the <strong>User Control</strong>, a <code>namespace</code> for <code>DipadControl</code> with an <code>enum</code> for the <strong>Directions</strong> 
+                                        along with a <code>class</code> of <code>Dipad</code> that will represent the <strong>User Control</strong> for the <strong>Directional Pad</strong>.
                                     </p>
                                     <h2 class="display-6">Step 6</h2>
-                                    <div class="container">
-                                        <div class="row mb-3">
-                                            <div class="col-sm">
-                                                Then, within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>Gauge.xaml</strong> then double-click on <strong>Gauge.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>User Control</strong>.
-                                            </div>
-                                            <div class="col-sm">
-                                                <img src="../assets/was-solution-explorer-user-code-gauge-control.png" class="img-fluid" alt="Solution Explorer Gauge.xaml.cs"/>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <p>
+                                        Then in the <code>namespace</code> of <code>DipadControl</code> in the <code>class</code> of <code>Dipad</code> after the <strong>Comment</strong> 
+                                        of <code>// Constants, Event, Dependency Property & Property</code> type the following <strong>Constants</strong>, <strong>Event</strong>, 
+                                        <strong>Dependency Property</strong> and <strong>Property</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private const int size = 3;
+private const string path_up = "M 0,0 40,0 40,60 20,80 0,60 0,0 z";
+private const string path_down = "M 0,20 20,0 40,20 40,80 0,80 z";
+private const string path_left = "M 0,0 60,0 80,20 60,40 0,40 z";
+private const string path_right = "M 0,20 20,0 80,0 80,40 20,40 z";
+
+public delegate void DirectionEvent(object sender, DipadDirection direction);
+public event DirectionEvent Direction;
+
+public static readonly DependencyProperty ForegroundProperty =
+DependencyProperty.Register(nameof(Foreground), typeof(Brush),
+typeof(Dipad), null);
+
+public Brush Foreground
+{
+    get { return (Brush)GetValue(ForegroundProperty); }
+    set { SetValue(ForegroundProperty, value); }
+}
+                                    </code></pre>
+                                    <p>
+                                        <strong>Constants</strong> include the <strong>Paths</strong> needed to represent the different directional parts of the <strong>Directional Pad</strong> and there is also a 
+                                        <code>delegate</code> along with an <code>event</code> for when a particular direction of the <strong>Directional Pad</strong> is interacted with. There is also a 
+                                        <strong>Dependency Property</strong> and <strong>Property</strong> for the <code>Foreground</code> of the <strong>Directional Pad</strong>.
+                                    </p>
                                     <h2 class="display-6">Step 7</h2>
                                     <p>
-                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Gauge.xaml.cs</i> near the top of the <strong>Code</strong>, 
-                                        below the final <code>using</code> statement you will need to type the following <code>using</code> statement:
+                                        While still in the <code>namespace</code> of <code>DipadControl</code> in the <code>class</code> of <code>Dipad</code> after the <strong>Comment</strong> 
+                                        of <code>// GetPath & GetDirection Methods</code> type the following <strong>Methods</strong>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-using Microsoft.UI.Xaml.Shapes;
+private static Path GetPath(string value) => 
+    (Path)XamlReader.Load(
+        @$"&lt;Path xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation'&gt;
+            &lt;Path.Data>{value}&lt;/Path.Data&gt;
+        &lt;/Path&gt;");
+
+private void GetDirection(object sender, PointerRoutedEventArgs e)
+{
+    var path = (Path)sender;
+    var point = e.GetCurrentPoint(this);
+    bool fire = (e.Pointer.PointerDeviceType == PointerDeviceType.Mouse) ?
+        point.Properties.IsLeftButtonPressed : point.IsInContact;
+    if (fire)
+    {
+        Direction?.Invoke(path, (DipadDirection)
+            Enum.Parse(typeof(DipadDirection), path.Name));
+    }
+}
                                     </code></pre>
+                                    <p>
+                                        The <strong>Method</strong> of <code>GetPath</code> will be used to obtain a <code>Path</code> from the <strong>Constants</strong> defined earlier and 
+                                        <code>GetDirection</code> will determine if the <strong>Directional Pad</strong> has been interacted with and for which <strong>Direction</strong>.
+                                    </p>
                                     <h2 class="display-6">Step 8</h2>
                                     <p>
-                                        Then while still in the <strong>View</strong> for the <strong>Code</strong> of <i>Gauge.xaml.cs</i> type the following <strong>Code</strong>
-                                        below the end of the <strong>Constructor</strong> of <code>public Gauge() { ... }</code>:
+                                        While still in the <code>namespace</code> of <code>DipadControl</code> in the <code>class</code> of <code>Dipad</code> after the <strong>Comment</strong> 
+                                        of <code>// Add Method</code> type the following <strong>Method</strong>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-private Rectangle _needle;
-private double _diameter = 0;
-
-// Transform Method
-
-// Markers Method
-
-// Layout, Indicator & Load Methods
-
-// Dependency Properties
-
-// Properties
+private void Add(Grid grid,
+    DipadDirection direction, string value,
+    int row, int column,
+    int? rowspan, int? columnspan,
+    VerticalAlignment? vertical = null,
+    HorizontalAlignment? horizontal = null)
+{
+    var path = GetPath(value);
+    path.Margin = new Thickness(5);
+    path.Name = direction.ToString();
+    if (vertical != null) 
+        path.VerticalAlignment = vertical.Value;
+    if (horizontal != null) 
+        path.HorizontalAlignment = horizontal.Value;
+    path.SetBinding(Shape.FillProperty, new Binding()
+    {
+        Path = new PropertyPath(nameof(Foreground)),
+        Mode = BindingMode.TwoWay,
+        Source = this
+    });
+    path.PointerPressed += GetDirection;
+    path.PointerMoved += GetDirection;
+    path.SetValue(RowProperty, row);
+    path.SetValue(ColumnProperty, column);
+    if (rowspan != null) 
+        path.SetValue(RowSpanProperty, rowspan);
+    if (columnspan != null) 
+        path.SetValue(ColumnSpanProperty, columnspan);
+    grid.Children.Add(path);
+}
                                     </code></pre>
                                     <p>
-                                        The <code>class</code> for <code>Gauge</code> represents the <strong>User Control</strong> for the <strong>Gauge</strong> and includes a 
-                                        <code>Rectangle</code> that will be used to represent the needle of the <strong>Gauge</strong> along with a <code>double</code> for the diameter of the <strong>Gauge</strong>.
+                                        <code>Add</code> will be used to add items to the <strong>Directional Pad</strong> for each of the <strong>Directions</strong> along with <strong>Binding</strong> the <code>Shape</code> that uses a 
+                                        <code>Path</code> with the <strong>Property</strong> of <code>Foreground</code> for the <strong>User Control</strong>.
                                     </p>
                                     <h2 class="display-6">Step 9</h2>
                                     <p>
-                                        While still in the <code>class</code> of <code>Gauge</code> after <strong>Comment</strong> of <code>// Transform Method</code> type the following <strong>Code</strong>:
+                                        While still in the <code>namespace</code> of <code>DipadControl</code> in the <code>class</code> of <code>Dipad</code> after the <strong>Comment</strong> 
+                                        of <code>// Constructor</code> type the following <strong>Constructor</strong>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-private TransformGroup Transform(double angle, double x, double y)
+public Dipad()
 {
-    var transformGroup = new TransformGroup();
-    var firstTranslate = new TranslateTransform()
+    var grid = new Grid()
     {
-        X = x,
-        Y = y
+        Height = 180,
+        Width = 180
     };
-    transformGroup.Children.Add(firstTranslate);
-    var rotateTransform = new RotateTransform()
+    grid.Children.Clear();
+    grid.ColumnDefinitions.Clear();
+    grid.RowDefinitions.Clear();
+    for (int index = 0; index &lt; size; index++)
     {
-        Angle = angle
-    };
-    transformGroup.Children.Add(rotateTransform);
-    var secondTranslate = new TranslateTransform()
+        grid.RowDefinitions.Add(new RowDefinition()
+        {
+            Height = (index == 1) ? GridLength.Auto : 
+                new GridLength(100, GridUnitType.Star)
+        });
+        grid.ColumnDefinitions.Add(new ColumnDefinition()
+        {
+            Width = (index == 1) ? GridLength.Auto : 
+                new GridLength(100, GridUnitType.Star)
+        });
+    }
+    Add(grid, DipadDirection.Up, path_up, 0, 1, 2, null, 
+        VerticalAlignment.Top, null);
+    Add(grid, DipadDirection.Down, path_down, 1, 1, 2, null, 
+        VerticalAlignment.Bottom, null);
+    Add(grid, DipadDirection.Left, path_left, 1, 0, null, 2, null, 
+        HorizontalAlignment.Left);
+    Add(grid, DipadDirection.Right, path_right, 1, 1, null, 2, null, 
+        HorizontalAlignment.Right);
+    var box = new Viewbox()
     {
-        X = _diameter / 2,
-        Y = _diameter / 2
+        Child = grid
     };
-    transformGroup.Children.Add(secondTranslate);
-    return transformGroup;
+    Children.Add(box);
 }
                                     </code></pre>
                                     <p>
-                                        This <strong>Method</strong> will create a <code>TransformGroup</code> to rotate elements to be used for the <strong>Gauge</strong>.
-                                    </p>
+                                        The <strong>Constructor</strong> will be used to create the look-and-feel of the <strong>User Control</strong> and will use the <strong>Method</strong> of 
+                                        <code>Add</code> for each of the <strong>Directions</strong> needed to be displayed for the <strong>Directional Pad</strong>.
+                                    </p>                                    
                                     <h2 class="display-6">Step 10</h2>
-                                    <p>
-                                        While still in the <code>class</code> of <code>Gauge</code> after <strong>Comment</strong> of <code>// Markers Method</code> type the following <strong>Method</strong>:
-                                    </p>
-                                    <pre class="code-block language-csharp"><code>
-private void Markers(Canvas canvas, double thickness)
-{
-    var inner = _diameter;
-    var markers = new Canvas()
-    {
-        Width = inner,
-        Height = inner
-    };
-    for (int i = 0; i &lt; 51; i++)
-    {
-        var marker = new Rectangle()
-        {
-            Fill = Foreground
-        };
-        if ((i % 5) == 0)
-        {
-            marker.Width = 4;
-            marker.Height = 16;
-            marker.RenderTransform = Transform(i * 6, -(marker.Width / 2),
-            -(marker.Height * 2 + 4.5 - thickness / 2 - inner / 2 - 16));
-        }
-        else
-        {
-            marker.Width = 2;
-            marker.Height = 8;
-            marker.RenderTransform = Transform(i * 6, -(marker.Width / 2),
-            -(marker.Height * 2 + 12.75 - thickness / 2 - inner / 2 - 16));
-        }
-        markers.Children.Add(marker);
-    }
-    markers.RenderTransform = new RotateTransform()
-    {
-        Angle = 30,
-        CenterX = _diameter / 2,
-        CenterY = _diameter / 2
-    };
-    canvas.Children.Add(markers);
-}
-                                    </code></pre>
-                                    <p>
-                                        This <strong>Method</strong> will create the set of small and large markers to be displayed on the <strong>Gauge</strong>
-                                    </p>
-                                    <h2 class="display-6">Step 11</h2>
-                                    <p>
-                                        While still in the <code>class</code> of <code>Gauge</code> after <strong>Comment</strong> of <code>// Layout, Indicator & Load Methods</code> type the following <strong>Methods</strong>:
-                                    </p>
-                                    <pre class="code-block language-csharp"><code>
-private void Layout(Canvas canvas)
-{
-    canvas.Children.Clear();
-    _diameter = canvas.Width;
-    var face = new Ellipse()
-    {
-        Height = _diameter,
-        Width = _diameter,
-        Fill = Fill
-    };
-    canvas.Children.Add(face);
-    Markers(canvas, face.StrokeThickness);
-    _needle = new Rectangle()
-    {
-        Width = Needle,
-        Height = (int)_diameter / 2 - 30,
-        Fill = Foreground
-    };
-    canvas.Children.Add(_needle);
-    var middle = new Ellipse()
-    {
-        Height = _diameter / 10,
-        Width = _diameter / 10,
-        Fill = Foreground
-    };
-    Canvas.SetLeft(middle, (_diameter - middle.ActualWidth) / 2);
-    Canvas.SetTop(middle, (_diameter - middle.ActualHeight) / 2);
-    canvas.Children.Add(middle);
-}
-
-private void Indicator(int value)
-{
-    Layout(Display);
-    var percentage = value / (double)Maximum * 100;
-    var position = (percentage / 2) + 5;
-    _needle.RenderTransform = Transform(position * 6,
-    -Needle / 2, 4.25);
-}
-
-private void Load(object sender, RoutedEventArgs e) =>
-    Indicator(Value);
-                                    </code></pre>
-                                    <p>
-                                        There will also be some <strong>Errors</strong> as these refer to <strong>Properties</strong> that will be added in the next few steps.
-                                    </p>
-                                    <p>
-                                        <code>Layout</code> will create the look-and-feel of the <strong>Gauge</strong> and uses the <strong>Method</strong> for <code>Markers</code> along with creating the centre point and needle for the <strong>Gauge</strong>. 
-                                        The <strong>Method</strong> of <code>Indicator</code> will use <code>Layout</code> along with calculating the position of the needle for the <strong>Gauge</strong> and <code>Load</code> will be used when the <code>Canvas</code> of 
-                                        the <strong>User Control</strong> is loaded and will call the <strong>Method</strong> of <code>Indicator</code>.
-                                    </p>
-                                    <h2 class="display-6">Step 12</h2>
-                                    <p>
-                                        While still in the <code>class</code> of <code>Gauge</code> after <strong>Comment</strong> of <code>// Dependency Properties</code> type the following <strong>Dependency Properties</strong>:
-                                    </p>
-                                    <pre class="code-block language-csharp"><code>
-public static readonly DependencyProperty FillProperty =
-DependencyProperty.Register(nameof(Fill), typeof(Brush),
-typeof(Gauge), null);
-
-public static readonly DependencyProperty NeedleProperty =
-DependencyProperty.Register(nameof(Needle), typeof(int), typeof(Gauge),
-new PropertyMetadata(2));
-
-public static readonly DependencyProperty ValueProperty =
-DependencyProperty.Register(nameof(Value), typeof(double), typeof(Gauge),
-new PropertyMetadata(25));
-
-public static readonly DependencyProperty MinimumProperty =
-DependencyProperty.Register(nameof(Minimum), typeof(int), typeof(Gauge),
-new PropertyMetadata(0));
-
-public static readonly DependencyProperty MaximumProperty =
-DependencyProperty.Register(nameof(Maximum), typeof(int), typeof(Gauge),
-new PropertyMetadata(100));
-                                    </code></pre>
-                                    <p>
-                                        There will still also be some <strong>Errors</strong> as these refer to <strong>Properties</strong> that will be added in the next step.
-                                    </p>
-                                    <p>
-                                        These <strong>Dependency Properties</strong> refer to various <strong>Properties</strong> of the <strong>Gauge</strong> that can be customised for the <strong>User Control</strong>.
-                                    </p>
-                                    <h2 class="display-6">Step 13</h2>
-                                    <p>
-                                        While still in the <code>class</code> of <code>Gauge</code> after <strong>Comment</strong> of <code>// Properties</code> type the following <strong>Properties</strong>:
-                                    </p>
-                                    <pre class="code-block language-csharp"><code>
-public Brush Fill
-{
-    get { return (Brush)GetValue(FillProperty); }
-    set { SetValue(FillProperty, value); }
-}
-
-public int Needle
-{
-    get { return (int)GetValue(NeedleProperty); }
-    set
-    {
-        SetValue(NeedleProperty, value);
-        Indicator(Value);
-    }
-}
-
-public int Value
-{
-    get { return (int)GetValue(ValueProperty); }
-    set
-    {
-        if (value &gt;= Minimum && value &lt;= Maximum)
-        {
-            SetValue(ValueProperty, value);
-            Indicator(value);
-        }
-    }
-}
-
-public int Minimum
-{
-    get { return (int)GetValue(MinimumProperty); }
-    set { SetValue(MinimumProperty, value); }
-}
-
-public int Maximum
-{
-    get { return (int)GetValue(MaximumProperty); }
-    set { SetValue(MaximumProperty, value); }
-}
-                                    </code></pre>
-                                    <p>
-                                        Any <strong>Errors</strong> should now be resolved, if you continue to get them check all previous steps to see if you have missed anything.
-                                    </p>
-                                    <p>
-                                        These <strong>Properties</strong> are for values for the <strong>User Control</strong> such as the <code>Minimum</code> or <code>Maximum</code> values for the <strong>Gauge</strong>.
-                                    </p>
-                                    <h2 class="display-6">Step 14</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
                                                 Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>MainWindow.xaml</strong> to see the <strong>XAML</strong> for the <strong>Main Window</strong>.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-solution-explorer-xaml-gauge-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
+                                                <img src="../assets/was-solution-explorer-xaml-dipad-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
                                             </div>
                                         </div>
                                     </div>
-                                    <h2 class="display-6">Step 15</h2>
+                                    <h2 class="display-6">Step 11</h2>
                                     <p>
                                         In the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> there will be some <strong>XAML</strong> for a <code>StackPanel</code>, this should be <strong>Removed</strong>:
                                     </p>
@@ -451,29 +372,34 @@ HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;x:Name=&quot;myButton&quot;&nbsp;Click=&quot;myButton_Click&quot;&gt;Click&nbsp;Me&lt;/Button&gt;
 &lt;/StackPanel&gt;
                                     </code></pre>                                   
-                                    <h2 class="display-6">Step 16</h2>
+                                    <h2 class="display-6">Step 12</h2>
                                     <p>
                                         While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> above <code>&lt;/Window&gt;</code>, type in the following <strong>XAML</strong>:
                                     </p>
                                     <pre class="code-block language-xml"><code>
-                                        &lt;local:Gauge Margin="50" Value="25" Foreground="WhiteSmoke" Needle="4" 
-                                        Fill="{ThemeResource SystemControlHighlightAccentBrush}"/&gt;;                                                                                                                                                                                                                                                                                                                        
+&lt;StackPanel Margin="50" VerticalAlignment="Center" HorizontalAlignment="Center"&gt;
+    &lt;TextBlock Name="Label" HorizontalAlignment="Center" 
+    Style="{StaticResource SubtitleTextBlockStyle}"/&gt;
+    &lt;local:Dipad x:Name="Pad" Height="400" Width="400" 
+    Foreground="{ThemeResource AccentButtonBackground}" 
+    Direction="Direction"/&gt;
+&lt;/StackPanel&gt;
                                     </code></pre> 
                                     <p>
-                                        This <strong>XAML</strong> contains the <strong>User Control</strong> of <code>Gauge</code> with various <strong>Properties</strong> including <code>Value</code> and <code>Needle</code>.
+                                        This <strong>XAML</strong> contains a <strong>StackPanel</strong> including a <code>TextBlock</code> and the <strong>User Control</strong> of <code>Dipad</code> with the <code>Event</code> of <code>Direction</code>.
                                     </p>
-                                    <h2 class="display-6">Step 17</h2>
+                                    <h2 class="display-6">Step 13</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
                                                 Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>MainWindow.xaml</strong> then double-click on <strong>MainWindow.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Main Window</strong>.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-solution-explorer-code-gauge-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
+                                                <img src="../assets/was-solution-explorer-code-dipad-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
                                             </div>
                                         </div>
                                     </div>
-                                    <h2 class="display-6">Step 18</h2>
+                                    <h2 class="display-6">Step 14</h2>
                                     <p>
                                         In the <strong>Code</strong> for <code>MainWindow.xaml.cs</code> there be a Method of <code>myButton_Click(...)</code> this should be <strong>Removed</strong> by removing the following:
                                     </p>
@@ -482,26 +408,38 @@ private void myButton_Click(object sender, RoutedEventArgs e)
 {
     myButton.Content = "Clicked";
 }
-                                    </code></pre>  
-                                    <h2 class="display-6">Step 19</h2>
+                                    </code></pre>
+                                    <h2 class="display-6">Step 15</h2>
+                                    <p>
+                                        Once <code>myButton_Click(...)</code> has been removed, within the <strong>Constructor</strong> of <code>public MainWindow() { ... }</code> and below the line of <code>this.InitializeComponent();</code> type in the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void Direction(object sender, DipadDirection direction) => 
+    Label.Text = direction.ToString();
+                                    </code></pre>
+                                    <p>
+                                        The <strong>Method</strong> of <code>Direction</code> will be used with <strong>Event Handler</strong> from the <strong>XAML</strong> to display the selected <strong>Direction</strong>. 
+                                        This <strong>Method</strong> uses <strong>Arrow Syntax</strong> with the <code>=></code> for an expression body which is useful when a <strong>Method</strong> only has one line.
+                                    </p>                                
+                                    <h2 class="display-6">Step 16</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
-                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>GaugeControl (Package)</strong> to <strong>Start</strong> the application.
+                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>DipadControl (Package)</strong> to <strong>Start</strong> the application.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-debug-gauge-control.png" class="img-fluid" alt="GaugeControl (Package)"/>
+                                                <img src="../assets/was-debug-dipad-control.png" class="img-fluid" alt="DipadControl (Package)"/>
                                             </div>
                                         </div>
                                     </div>    
-                                    <h2 class="display-6">Step 20</h2>
+                                    <h2 class="display-6">Step 17</h2>
                                     <p>
-                                        Once running you will see the <strong>Gauge Control</strong> displayed, with a <i>Value</i> which can be changed in the <strong>XAML</strong> to show the <i>Needle</i> in a different position.
+                                        Once running you will see the <strong>Dipad Control</strong> displayed, then you can select the parts of the <strong>Directional Pad</strong> for <i>Up</i>, <i>Down</i>, <i>Left</i> and <i>Right</i>.
                                     </p>
                                     <p>
-                                        <img src="../assets/was-running-gauge-control.png" class="img-fluid" alt="Gauge Control Running and Output" />
+                                        <img src="../assets/was-running-dipad-control.png" class="img-fluid" alt="Dipad Control Running and Output" />
                                     </p>
-                                    <h2 class="display-6">Step 21</h2>
+                                    <h2 class="display-6">Step 18</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
@@ -515,9 +453,9 @@ private void myButton_Click(object sender, RoutedEventArgs e)
                                 </div>
                                 <div class="card-footer">
                                     <div class="justify-content-sm-center text-center m-1">
-                                        <a href="../../pdf/win-app-sdk-gauge-control.pdf" target="_blank">
+                                        <a href="../../pdf/win-app-sdk-dipad-control.pdf" target="_blank">
                                             <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
-                                                Gauge Control
+                                                Dipad Control
                                                 <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
                                             </span>
                                         </a>
