@@ -27,7 +27,7 @@
         <link href="../../../css/style.css" rel="stylesheet">
         <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../highlight/css/vs.min.css" rel="stylesheet">
-        <title>tutorialr.com - Tutorials - Windows App SDK - Gauge Control</title>
+        <title>tutorialr.com - Tutorials - Windows App SDK - Stick Control</title>
     </head>
     <body class="d-flex flex-column h-100">
         <!-- Main -->
@@ -71,9 +71,9 @@
                 <!-- Section -->            
                 <section class="text-center text-white container">
                     <!-- Hero -->
-                    <h1 class="display-4 mx-auto">Gauge Control</h1>
+                    <h1 class="display-4 mx-auto">Stick Control</h1>
                     <p class="lead">
-                        <strong>Learn</strong> creating a <strong>Gauge Control</strong> using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
+                        <strong>Learn</strong> creating a <strong>Directional Stick</strong> using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
                     </p>
                     <!-- /Hero -->
                     <!-- Tutorial -->
@@ -82,9 +82,9 @@
                             <div class="card position-relative">
                                 <div class="card-header">
                                     <div class="justify-content-sm-center text-center m-1">
-                                        <a href="../../pdf/win-app-sdk-gauge-control.pdf" target="_blank">
+                                        <a href="../../pdf/win-app-sdk-stick-control.pdf" target="_blank">
                                             <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
-                                                Gauge Control
+                                                Stick Control
                                                 <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
                                             </span>
                                         </a>
@@ -92,7 +92,8 @@
                                 </div>   
                                 <div class="card-body">
                                     <p>
-                                        <strong>Gauge Control</strong> shows how to create a <strong>Control</strong> that can be used as a <strong>Gauge</strong> using <strong>Windows App SDK</strong>.
+                                        <strong>Stick Control</strong> shows how to create a <strong>Directional Stick</strong> that can be used for 
+                                        selecting an <strong>Angle</strong> and <strong>Ratio</strong> using <strong>Windows App SDK</strong>.
                                     </p>
                                     <h2 class="display-6">Step 1</h2>
                                     <p>
@@ -128,7 +129,7 @@
 
                                         <div class="row mb-3">
                                             <div class="col-sm">
-                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>GaugeControl</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
+                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>StickControl</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
                                             </div>
                                             <div class="col-sm">
                                                 <img src="../assets/win-vs-configure-project.png" class="img-fluid" alt="Configure project" />
@@ -144,304 +145,331 @@
                                     </p>
                                     <h2 class="display-6">Step 3</h2>
                                     <p>
-                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>WinUI</strong> and then select <strong>User Control (WinUI 3)</strong> from the list next to this, then type in the name of <i>Gauge.xaml</i> and then <strong>Click</strong> on <strong>Add</strong>.
+                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>Code</strong> and then select <strong>Code File</strong> from the list next to this, then type in the name of <i>Stick.cs</i> and then <strong>Click</strong> on <strong>Add</strong>.
                                     </p>
                                     <p>
-                                        <img src="../assets/was-add-new-item-gauge-control.png" class="img-fluid" alt="Add New User Control (WinUI 3)" />
+                                        <img src="../assets/was-add-new-item-stick-control.png" class="img-fluid" alt="Add New Code File" />
                                     </p>
                                     <h2 class="display-6">Step 4</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
-                                                Then from <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>Gauge.xaml</strong> to see the <strong>XAML</strong> for the <strong>User Control</strong>.
+                                                Then from <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>Stick.cs</strong> to see the <strong>Code</strong> for the <strong>User Control</strong>.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-solution-explorer-user-xaml-gauge-control.png" class="img-fluid" alt="Solution Explorer Gauge.xaml"/>
+                                                <img src="../assets/was-solution-explorer-user-code-stick-control.png" class="img-fluid" alt="Solution Explorer Stick.cs"/>
                                             </div>
                                         </div>
                                     </div>
                                     <h2 class="display-6">Step 5</h2>
                                     <p>
-                                        In the <strong>XAML</strong> for <i>Gauge.xaml</i> there will be some <strong>XAML</strong> for a <code>Grid</code>, above <code>Grid</code>, type the following <strong>XAML</strong>:
+                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Stick.cs</i>, within this type the following <strong>Code</strong>:
                                     </p>
-                                    <pre class="code-block language-xml"><code>
-&lt;Viewbox&gt;
-    &lt;Canvas Name="Display" Height="300" Width="300" Loaded="Load"/&gt;
-&lt;/Viewbox&gt;
+                                    <pre class="code-block language-csharp"><code>
+using Microsoft.UI;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Data;
+using Microsoft.UI.Xaml.Input;
+using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Shapes;
+using System;
+
+namespace StickControl;
+
+public class Stick : Grid
+{
+    // Members & Event
+
+    // Dependency Properties
+
+    // Properties
+
+    // ToRadians, ToDegrees, SetMiddle, & GetCircle Methods
+
+    // Move Method
+
+    // Layout & Load Methods and Constructor
+
+}
                                     </code></pre>
                                     <p>
-                                        This <strong>XAML</strong> contains a <code>Viewbox</code> which will <strong>Scale</strong> a <code>Canvas</code> with a <code>Loaded</code> event handler of <code>Load</code>.
+                                        There are <code>using</code> statements for the <strong>User Control</strong>, a <code>namespace</code> for <code>StickControl</code> with an <code>enum</code> for the <strong>Directions</strong> 
+                                        along with a <code>class</code> of <code>Stick</code> that will represent the <strong>User Control</strong> for the <strong>Directional Stick</strong>.
                                     </p>
                                     <h2 class="display-6">Step 6</h2>
-                                    <div class="container">
-                                        <div class="row mb-3">
-                                            <div class="col-sm">
-                                                Then, within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>Gauge.xaml</strong> then double-click on <strong>Gauge.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>User Control</strong>.
-                                            </div>
-                                            <div class="col-sm">
-                                                <img src="../assets/was-solution-explorer-user-code-gauge-control.png" class="img-fluid" alt="Solution Explorer Gauge.xaml.cs"/>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <p>
+                                        Then in the <code>namespace</code> of <code>StickControl</code> in the <code>class</code> of <code>Stick</code> after the <strong>Comment</strong> 
+                                        of <code>// Members & Event</code> type the following <strong>Members</strong> and <strong>Event</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private bool _capture;
+private Ellipse _knob;
+private Ellipse _face;
+private double x = 0;
+private double y = 0;
+private double _m = 0;
+private double _res = 0;
+private double _width = 0;
+private double _height = 0;
+private double _alpha = 0;
+private double _alphaM = 0;
+private double _centreX = 0;
+private double _centreY = 0;
+private double _distance = 0;
+private double _oldAlphaM = -999.0;
+private double _oldDistance = -999.0;
+
+public delegate void ValueChangedEventHandler(
+    object sender, double angle, double ratio);
+public event ValueChangedEventHandler ValueChanged;
+                                    </code></pre>
+                                    <p>
+                                        <strong>Members</strong> include <strong>Ellipses</strong> needed to represent the different directional parts of the <strong>Directional Stick</strong> and there is also a 
+                                        <code>delegate</code> along with an <code>event</code> for when the <strong>Directional Stick</strong> is interacted with.
+                                    </p>
                                     <h2 class="display-6">Step 7</h2>
                                     <p>
-                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Gauge.xaml.cs</i> near the top of the <strong>Code</strong>, 
-                                        below the final <code>using</code> statement you will need to type the following <code>using</code> statement:
+                                        While still in the <code>namespace</code> of <code>StickControl</code> in the <code>class</code> of <code>Stick</code> after the <strong>Comment</strong> 
+                                        of <code>// Dependency Properties</code> type the following <strong>Dependency Properties</strong>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-using Microsoft.UI.Xaml.Shapes;
+public static readonly DependencyProperty RadiusProperty =
+DependencyProperty.Register(nameof(Radius), typeof(int),
+typeof(Stick), new PropertyMetadata(100));
+
+public static readonly DependencyProperty KnobProperty =
+DependencyProperty.Register(nameof(Knob), typeof(Brush),
+typeof(Stick), new PropertyMetadata(new SolidColorBrush(Colors.Red)));
+
+public static readonly DependencyProperty FaceProperty =
+DependencyProperty.Register(nameof(Face), typeof(Brush),
+typeof(Stick), new PropertyMetadata(new SolidColorBrush(Colors.Black)));
+
+public static readonly DependencyProperty AngleProperty =
+DependencyProperty.Register(nameof(Angle), typeof(double),
+typeof(Stick), null);
+
+public static readonly DependencyProperty RatioProperty =
+DependencyProperty.Register(nameof(Ratio), typeof(double),
+typeof(Stick), null);
+
+public static readonly DependencyProperty SensitivityProperty =
+DependencyProperty.Register(nameof(Sensitivity), typeof(double),
+typeof(Stick), null);
                                     </code></pre>
+                                    <p>
+                                        There will also be some <strong>Errors</strong> as these refer to <strong>Properties</strong> that will be added in the next step.
+                                    </p>
+                                    <p>
+                                        These <strong>Dependency Properties</strong> refer to various <strong>Properties</strong> of the <strong>Directional Stick</strong> 
+                                        that can be customised for the <strong>User Control</strong>.
+                                    </p>
                                     <h2 class="display-6">Step 8</h2>
                                     <p>
-                                        Then while still in the <strong>View</strong> for the <strong>Code</strong> of <i>Gauge.xaml.cs</i> type the following <strong>Code</strong>
-                                        below the end of the <strong>Constructor</strong> of <code>public Gauge() { ... }</code>:
+                                        While still in the <code>namespace</code> of <code>StickControl</code> in the <code>class</code> of <code>Stick</code> after the <strong>Comment</strong> 
+                                        of <code>// Properties</code> type the following <strong>Properties</strong>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-private Rectangle _needle;
-private double _diameter = 0;
+public int Radius
+{
+    get { return (int)GetValue(RadiusProperty); }
+    set { SetValue(RadiusProperty, value); Load(); }
+}
 
-// Transform Method
+public Brush Knob
+{
+    get { return (Brush)GetValue(KnobProperty); }
+    set { SetValue(KnobProperty, value); }
+}
 
-// Markers Method
+public Brush Face
+{
+    get { return (Brush)GetValue(FaceProperty); }
+    set { SetValue(FaceProperty, value); }
+}
 
-// Layout, Indicator & Load Methods
+public double Angle
+{
+    get { return (double)GetValue(AngleProperty); }
+    set { SetValue(AngleProperty, value); }
+}
 
-// Dependency Properties
+public double Ratio
+{
+    get { return (double)GetValue(RatioProperty); }
+    set { SetValue(RatioProperty, value); }
+}
 
-// Properties
+public double Sensitivity
+{
+    get { return (double)GetValue(SensitivityProperty); }
+    set { SetValue(SensitivityProperty, value); }
+}
                                     </code></pre>
                                     <p>
-                                        The <code>class</code> for <code>Gauge</code> represents the <strong>User Control</strong> for the <strong>Gauge</strong> and includes a 
-                                        <code>Rectangle</code> that will be used to represent the needle of the <strong>Gauge</strong> along with a <code>double</code> for the diameter of the <strong>Gauge</strong>.
+                                        All previous <strong>Errors</strong> should now be resolved, however there will be just one for a <strong>Method</strong> of <code>Load</code> which will be resolved in a future 
+                                        step but if you are getting any others check any previous steps to see if you have missed anything.
+                                    </p>
+                                    <p>
+                                        These <strong>Properties</strong> are for values for the <strong>User Control</strong> such as the <code>Angle</code> or <code>Ratio</code> values for the <strong>Directional Stick</strong>. 
                                     </p>
                                     <h2 class="display-6">Step 9</h2>
                                     <p>
-                                        While still in the <code>class</code> of <code>Gauge</code> after <strong>Comment</strong> of <code>// Transform Method</code> type the following <strong>Code</strong>:
+                                        While still in the <code>namespace</code> of <code>StickControl</code> in the <code>class</code> of <code>Stick</code> after the <strong>Comment</strong> 
+                                        of <code>// ToRadians, ToDegrees, SetMiddle, & GetCircle Methods</code> type the following <strong>Methods</strong>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-private TransformGroup Transform(double angle, double x, double y)
+private static double ToRadians(double angle) =>
+    Math.PI * angle / 180.0;
+
+private static double ToDegrees(double angle) =>
+    angle * (180.0 / Math.PI);
+
+private void SetMiddle()
 {
-    var transformGroup = new TransformGroup();
-    var firstTranslate = new TranslateTransform()
+    _capture = false;
+    Canvas.SetLeft(_knob, (Width - _width) / 2);
+    Canvas.SetTop(_knob, (Height - _height) / 2);
+    _centreX = Width / 2;
+    _centreY = Height / 2;
+}
+
+private Ellipse GetCircle(double dimension, string path)
+{
+    var circle = new Ellipse()
     {
-        X = x,
-        Y = y
+        Height = dimension,
+        Width = dimension
     };
-    transformGroup.Children.Add(firstTranslate);
-    var rotateTransform = new RotateTransform()
+    circle.SetBinding(Shape.FillProperty, new Binding()
     {
-        Angle = angle
-    };
-    transformGroup.Children.Add(rotateTransform);
-    var secondTranslate = new TranslateTransform()
-    {
-        X = _diameter / 2,
-        Y = _diameter / 2
-    };
-    transformGroup.Children.Add(secondTranslate);
-    return transformGroup;
+        Source = this,
+        Path = new PropertyPath(path),
+        Mode = BindingMode.TwoWay
+    });
+    return circle;
 }
                                     </code></pre>
                                     <p>
-                                        This <strong>Method</strong> will create a <code>TransformGroup</code> to rotate elements to be used for the <strong>Gauge</strong>.
+                                        The <strong>Methods</strong> of <code>ToRadians</code> and <code>ToDegrees</code> will perform the relevant conversions, <code>SetMiddle</code> will determine the centre point of 
+                                        the <strong>Directional Stick</strong> and <code>GetCircle</code> will create an <code>Ellipse</code> with a <strong>Binding</strong> for the <code>Fill</code>.
                                     </p>
                                     <h2 class="display-6">Step 10</h2>
                                     <p>
-                                        While still in the <code>class</code> of <code>Gauge</code> after <strong>Comment</strong> of <code>// Markers Method</code> type the following <strong>Method</strong>:
+                                        While still in the <code>namespace</code> of <code>StickControl</code> in the <code>class</code> of <code>Stick</code> after the <strong>Comment</strong> 
+                                        of <code>// Move Method</code> type the following <strong>Method</strong>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-private void Markers(Canvas canvas, double thickness)
+private void Move(PointerRoutedEventArgs e)
 {
-    var inner = _diameter;
-    var markers = new Canvas()
+    x = e.GetCurrentPoint(this).Position.X;
+    y = e.GetCurrentPoint(this).Position.Y;
+    _res = Math.Sqrt((x - _centreX) *
+        (x - _centreX) + (y - _centreY) * (y - _centreY));
+    _m = (y - _centreY) / (x - _centreX);
+    _alpha = ToDegrees(Math.Atan(_m) + Math.PI / 2);
+    if (x &lt; _centreX)
+        _alpha += 180.0;
+    else if (x == _centreX && y &lt;= _centreY)
+        _alpha = 0.0;
+    else if (x == _centreX)
+        _alpha = 180.0;
+    if (_res > Radius)
     {
-        Width = inner,
-        Height = inner
-    };
-    for (int i = 0; i &lt; 51; i++)
-    {
-        var marker = new Rectangle()
-        {
-            Fill = Foreground
-        };
-        if ((i % 5) == 0)
-        {
-            marker.Width = 4;
-            marker.Height = 16;
-            marker.RenderTransform = Transform(i * 6, -(marker.Width / 2),
-            -(marker.Height * 2 + 4.5 - thickness / 2 - inner / 2 - 16));
-        }
-        else
-        {
-            marker.Width = 2;
-            marker.Height = 8;
-            marker.RenderTransform = Transform(i * 6, -(marker.Width / 2),
-            -(marker.Height * 2 + 12.75 - thickness / 2 - inner / 2 - 16));
-        }
-        markers.Children.Add(marker);
+        x = _centreX + Math.Cos(ToRadians(_alpha) - Math.PI / 2) * Radius;
+        y = _centreY + Math.Sin(ToRadians(_alpha) - Math.PI / 2) * Radius
+            * ((_alpha % 180.0 == 0.0) ? -1.0 : 1.0);
+        _res = Radius;
     }
-    markers.RenderTransform = new RotateTransform()
+    if (Math.Abs(_alpha - _alphaM) >= Sensitivity ||
+        Math.Abs(_distance * Radius - _res) >= Sensitivity)
     {
-        Angle = 30,
-        CenterX = _diameter / 2,
-        CenterY = _diameter / 2
-    };
-    canvas.Children.Add(markers);
+        _alphaM = _alpha;
+        _distance = _res / Radius;
+    }
+    if (_oldAlphaM != _alphaM ||
+        _oldDistance != _distance)
+    {
+        Angle = _alphaM;
+        Ratio = _distance;
+        _oldAlphaM = _alphaM;
+        _oldDistance = _distance;
+        ValueChanged?.Invoke(this, Angle, Ratio);
+    }
+    Canvas.SetLeft(_knob, x - _width / 2);
+    Canvas.SetTop(_knob, y - _height / 2);
 }
                                     </code></pre>
                                     <p>
-                                        This <strong>Method</strong> will create the set of small and large markers to be displayed on the <strong>Gauge</strong>
+                                        The <strong>Method</strong> of Move will be used by the <strong>Directional Stick</strong> to determine the current <code>Angle</code> and <code>Ratio</code> along with raising the <strong>Event</strong> of <code>ValueChanged</code> with those values.
                                     </p>
                                     <h2 class="display-6">Step 11</h2>
                                     <p>
-                                        While still in the <code>class</code> of <code>Gauge</code> after <strong>Comment</strong> of <code>// Layout, Indicator & Load Methods</code> type the following <strong>Methods</strong>:
+                                        While still in the <code>namespace</code> of <code>StickControl</code> in the <code>class</code> of <code>Stick</code> after the <strong>Comment</strong> 
+                                        of <code>// Layout & Load Methods and Constructor</code> type the following <strong>Methods</strong> and <strong>Constructor</strong>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-private void Layout(Canvas canvas)
+private void Layout()
 {
-    canvas.Children.Clear();
-    _diameter = canvas.Width;
-    var face = new Ellipse()
+    _knob = GetCircle(Radius, "Knob");
+    _face = GetCircle(Radius * 2, "Face");
+    _height = _knob.ActualHeight;
+    _width = _knob.ActualWidth;
+    Width = _width + Radius * 2;
+    Height = _height + Radius * 2;
+    SetMiddle();
+    PointerExited -= null;
+    PointerExited += (object sender, PointerRoutedEventArgs e) =>
+        SetMiddle();
+    _knob.PointerReleased += (object sender, PointerRoutedEventArgs e) =>
+        SetMiddle();
+    _knob.PointerPressed += (object sender, PointerRoutedEventArgs e) =>
+        _capture = true;
+    _knob.PointerMoved += (object sender, PointerRoutedEventArgs e) =>
     {
-        Height = _diameter,
-        Width = _diameter,
-        Fill = Fill
+        if (_capture) 
+            Move(e);
     };
-    canvas.Children.Add(face);
-    Markers(canvas, face.StrokeThickness);
-    _needle = new Rectangle()
-    {
-        Width = Needle,
-        Height = (int)_diameter / 2 - 30,
-        Fill = Foreground
-    };
-    canvas.Children.Add(_needle);
-    var middle = new Ellipse()
-    {
-        Height = _diameter / 10,
-        Width = _diameter / 10,
-        Fill = Foreground
-    };
-    Canvas.SetLeft(middle, (_diameter - middle.ActualWidth) / 2);
-    Canvas.SetTop(middle, (_diameter - middle.ActualHeight) / 2);
-    canvas.Children.Add(middle);
+    _knob.PointerExited += (object sender, PointerRoutedEventArgs e) =>
+        SetMiddle();
 }
 
-private void Indicator(int value)
+private void Load()
 {
-    Layout(Display);
-    var percentage = value / (double)Maximum * 100;
-    var position = (percentage / 2) + 5;
-    _needle.RenderTransform = Transform(position * 6,
-    -Needle / 2, 4.25);
+    Layout();
+    Children.Clear();
+    Children.Add(_face);
+    var canvas = new Canvas()
+    {
+        Width = Width,
+        Height = Height
+    };
+    canvas.Children.Add(_knob);
+    Children.Add(canvas);
 }
 
-private void Load(object sender, RoutedEventArgs e) =>
-    Indicator(Value);
+public Stick() => Load();
                                     </code></pre>
                                     <p>
-                                        There will also be some <strong>Errors</strong> as these refer to <strong>Properties</strong> that will be added in the next few steps.
+                                        All <strong>Errors</strong> should now be resolved, if you continue to get them check any previous steps to see if you have missed anything.
                                     </p>
                                     <p>
-                                        <code>Layout</code> will create the look-and-feel of the <strong>Gauge</strong> and uses the <strong>Method</strong> for <code>Markers</code> along with creating the centre point and needle for the <strong>Gauge</strong>. 
-                                        The <strong>Method</strong> of <code>Indicator</code> will use <code>Layout</code> along with calculating the position of the needle for the <strong>Gauge</strong> and <code>Load</code> will be used when the <code>Canvas</code> of 
-                                        the <strong>User Control</strong> is loaded and will call the <strong>Method</strong> of <code>Indicator</code>.
-                                    </p>
+                                        The <strong>Constructor</strong> will be used to create the look-and-feel of the <strong>User Control</strong> and will use the <strong>Method</strong> of 
+                                        <code>Load</code> which will use the <strong>Method</strong> of <code>Layout</code> which will capture if the <strong>User Control</strong> is being interacted with.
+                                    </p>                                    
                                     <h2 class="display-6">Step 12</h2>
-                                    <p>
-                                        While still in the <code>class</code> of <code>Gauge</code> after <strong>Comment</strong> of <code>// Dependency Properties</code> type the following <strong>Dependency Properties</strong>:
-                                    </p>
-                                    <pre class="code-block language-csharp"><code>
-public static readonly DependencyProperty FillProperty =
-DependencyProperty.Register(nameof(Fill), typeof(Brush),
-typeof(Gauge), null);
-
-public static readonly DependencyProperty NeedleProperty =
-DependencyProperty.Register(nameof(Needle), typeof(int), typeof(Gauge),
-new PropertyMetadata(2));
-
-public static readonly DependencyProperty ValueProperty =
-DependencyProperty.Register(nameof(Value), typeof(double), typeof(Gauge),
-new PropertyMetadata(25));
-
-public static readonly DependencyProperty MinimumProperty =
-DependencyProperty.Register(nameof(Minimum), typeof(int), typeof(Gauge),
-new PropertyMetadata(0));
-
-public static readonly DependencyProperty MaximumProperty =
-DependencyProperty.Register(nameof(Maximum), typeof(int), typeof(Gauge),
-new PropertyMetadata(100));
-                                    </code></pre>
-                                    <p>
-                                        There will still also be some <strong>Errors</strong> as these refer to <strong>Properties</strong> that will be added in the next step.
-                                    </p>
-                                    <p>
-                                        These <strong>Dependency Properties</strong> refer to various <strong>Properties</strong> of the <strong>Gauge</strong> that can be customised for the <strong>User Control</strong>.
-                                    </p>
-                                    <h2 class="display-6">Step 13</h2>
-                                    <p>
-                                        While still in the <code>class</code> of <code>Gauge</code> after <strong>Comment</strong> of <code>// Properties</code> type the following <strong>Properties</strong>:
-                                    </p>
-                                    <pre class="code-block language-csharp"><code>
-public Brush Fill
-{
-    get { return (Brush)GetValue(FillProperty); }
-    set { SetValue(FillProperty, value); }
-}
-
-public int Needle
-{
-    get { return (int)GetValue(NeedleProperty); }
-    set
-    {
-        SetValue(NeedleProperty, value);
-        Indicator(Value);
-    }
-}
-
-public int Value
-{
-    get { return (int)GetValue(ValueProperty); }
-    set
-    {
-        if (value &gt;= Minimum && value &lt;= Maximum)
-        {
-            SetValue(ValueProperty, value);
-            Indicator(value);
-        }
-    }
-}
-
-public int Minimum
-{
-    get { return (int)GetValue(MinimumProperty); }
-    set { SetValue(MinimumProperty, value); }
-}
-
-public int Maximum
-{
-    get { return (int)GetValue(MaximumProperty); }
-    set { SetValue(MaximumProperty, value); }
-}
-                                    </code></pre>
-                                    <p>
-                                        Any <strong>Errors</strong> should now be resolved, if you continue to get them check all previous steps to see if you have missed anything.
-                                    </p>
-                                    <p>
-                                        These <strong>Properties</strong> are for values for the <strong>User Control</strong> such as the <code>Minimum</code> or <code>Maximum</code> values for the <strong>Gauge</strong>.
-                                    </p>
-                                    <h2 class="display-6">Step 14</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
                                                 Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>MainWindow.xaml</strong> to see the <strong>XAML</strong> for the <strong>Main Window</strong>.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-solution-explorer-xaml-gauge-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
+                                                <img src="../assets/was-solution-explorer-xaml-stick-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
                                             </div>
                                         </div>
                                     </div>
-                                    <h2 class="display-6">Step 15</h2>
+                                    <h2 class="display-6">Step 13</h2>
                                     <p>
                                         In the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> there will be some <strong>XAML</strong> for a <code>StackPanel</code>, this should be <strong>Removed</strong>:
                                     </p>
@@ -451,29 +479,33 @@ HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;x:Name=&quot;myButton&quot;&nbsp;Click=&quot;myButton_Click&quot;&gt;Click&nbsp;Me&lt;/Button&gt;
 &lt;/StackPanel&gt;
                                     </code></pre>                                   
-                                    <h2 class="display-6">Step 16</h2>
+                                    <h2 class="display-6">Step 14</h2>
                                     <p>
                                         While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> above <code>&lt;/Window&gt;</code>, type in the following <strong>XAML</strong>:
                                     </p>
-                                    <pre class="code-block language-xml"><code>
-                                        &lt;local:Gauge Margin="50" Value="25" Foreground="WhiteSmoke" Needle="4" 
-                                        Fill="{ThemeResource SystemControlHighlightAccentBrush}"/&gt;;                                                                                                                                                                                                                                                                                                                        
+                                    <pre class="code-block language-xml"><code>                            
+&lt;StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"&gt;
+    &lt;TextBlock Name="Label" HorizontalAlignment="Center" 
+    Style="{StaticResource SubtitleTextBlockStyle}"/&gt;
+    &lt;local:Stick Radius="200" Knob="{ThemeResource AccentButtonBackground}" 
+    Face="WhiteSmoke" ValueChanged="ValueChanged"/&gt;
+&lt;/StackPanel&gt;
                                     </code></pre> 
                                     <p>
-                                        This <strong>XAML</strong> contains the <strong>User Control</strong> of <code>Gauge</code> with various <strong>Properties</strong> including <code>Value</code> and <code>Needle</code>.
+                                        This <strong>XAML</strong> contains a <strong>StackPanel</strong> including a <code>TextBlock</code> and the <strong>User Control</strong> of <code>Stick</code> with the <code>Event</code> of <code>ValueChanged</code>.
                                     </p>
-                                    <h2 class="display-6">Step 17</h2>
+                                    <h2 class="display-6">Step 15</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
                                                 Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>MainWindow.xaml</strong> then double-click on <strong>MainWindow.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Main Window</strong>.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-solution-explorer-code-gauge-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
+                                                <img src="../assets/was-solution-explorer-code-stick-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
                                             </div>
                                         </div>
                                     </div>
-                                    <h2 class="display-6">Step 18</h2>
+                                    <h2 class="display-6">Step 16</h2>
                                     <p>
                                         In the <strong>Code</strong> for <code>MainWindow.xaml.cs</code> there be a Method of <code>myButton_Click(...)</code> this should be <strong>Removed</strong> by removing the following:
                                     </p>
@@ -482,26 +514,39 @@ private void myButton_Click(object sender, RoutedEventArgs e)
 {
     myButton.Content = "Clicked";
 }
-                                    </code></pre>  
-                                    <h2 class="display-6">Step 19</h2>
+                                    </code></pre>
+                                    <h2 class="display-6">Step 17</h2>
+                                    <p>
+                                        Once <code>myButton_Click(...)</code> has been removed, within the <strong>Constructor</strong> of <code>public MainWindow() { ... }</code> and below the line of <code>this.InitializeComponent();</code> type in the following <strong>Code</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void ValueChanged(object sender, double angle, double ratio) => 
+    Label.Text = $"Angle {angle}, Ratio {ratio}";
+                                    </code></pre>
+                                    <p>
+                                        The <strong>Method</strong> of <code>ValueChanged</code> will be used with <strong>Event Handler</strong> from the <strong>XAML</strong> to display the selected <strong>Angle</strong> and <strong>Ratio</strong>,
+                                        this <strong>Method</strong> uses <strong>Arrow Syntax</strong> with the <code>=></code> for an expression body which is useful when a <strong>Method</strong> only has one line.
+                                    </p>                                
+                                    <h2 class="display-6">Step 18</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
-                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>GaugeControl (Package)</strong> to <strong>Start</strong> the application.
+                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>StickControl (Package)</strong> to <strong>Start</strong> the application.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-debug-gauge-control.png" class="img-fluid" alt="GaugeControl (Package)"/>
+                                                <img src="../assets/was-debug-stick-control.png" class="img-fluid" alt="StickControl (Package)"/>
                                             </div>
                                         </div>
                                     </div>    
+                                    <h2 class="display-6">Step 19</h2>
+                                    <p>
+                                        Once running you will see the <strong>Stick Control</strong> displayed, then you can select and move the centre portion of the 
+                                        <strong>Directional Stick</strong> and can see the <i>Angle</i> around the centre, or the <i>Ratio</i> of the distance between the centre and the outside displayed.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-running-stick-control.png" class="img-fluid" alt="Stick Control Running and Output" />
+                                    </p>
                                     <h2 class="display-6">Step 20</h2>
-                                    <p>
-                                        Once running you will see the <strong>Gauge Control</strong> displayed, with a <i>Value</i> which can be changed in the <strong>XAML</strong> to show the <i>Needle</i> in a different position.
-                                    </p>
-                                    <p>
-                                        <img src="../assets/was-running-gauge-control.png" class="img-fluid" alt="Gauge Control Running and Output" />
-                                    </p>
-                                    <h2 class="display-6">Step 21</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
@@ -515,9 +560,9 @@ private void myButton_Click(object sender, RoutedEventArgs e)
                                 </div>
                                 <div class="card-footer">
                                     <div class="justify-content-sm-center text-center m-1">
-                                        <a href="../../pdf/win-app-sdk-gauge-control.pdf" target="_blank">
+                                        <a href="../../pdf/win-app-sdk-stick-control.pdf" target="_blank">
                                             <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
-                                                Gauge Control
+                                                Stick Control
                                                 <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
                                             </span>
                                         </a>
