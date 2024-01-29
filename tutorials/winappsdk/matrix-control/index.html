@@ -27,7 +27,7 @@
         <link href="../../../css/style.css" rel="stylesheet">
         <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../highlight/css/vs.min.css" rel="stylesheet">
-        <title>tutorialr.com - Tutorials - Windows App SDK - Stick Control</title>
+        <title>tutorialr.com - Tutorials - Windows App SDK - Matrix Control</title>
     </head>
     <body class="d-flex flex-column h-100">
         <!-- Main -->
@@ -71,9 +71,9 @@
                 <!-- Section -->            
                 <section class="text-center text-white container">
                     <!-- Hero -->
-                    <h1 class="display-4 mx-auto">Stick Control</h1>
+                    <h1 class="display-4 mx-auto">Matrix Control</h1>
                     <p class="lead">
-                        <strong>Learn</strong> creating a <strong>Directional Stick</strong> using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
+                        <strong>Learn</strong> creating a <strong>Matrix Control</strong> for a matrix display using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
                     </p>
                     <!-- /Hero -->
                     <!-- Tutorial -->
@@ -82,9 +82,9 @@
                             <div class="card position-relative">
                                 <div class="card-header">
                                     <div class="justify-content-sm-center text-center m-1">
-                                        <a href="../../pdf/win-app-sdk-stick-control.pdf" target="_blank">
+                                        <a href="../../pdf/win-app-sdk-matrix-control.pdf" target="_blank">
                                             <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
-                                                Stick Control
+                                                Matrix Control
                                                 <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
                                             </span>
                                         </a>
@@ -92,8 +92,7 @@
                                 </div>   
                                 <div class="card-body">
                                     <p>
-                                        <strong>Stick Control</strong> shows how to create a <strong>Directional Stick</strong> that can be used for 
-                                        selecting an <strong>Angle</strong> and <strong>Ratio</strong> using <strong>Windows App SDK</strong>.
+                                        <strong>Matrix Control</strong> shows how to create a <strong>Matrix</strong> to display the <strong>Time</strong> or <strong>Date</strong> using  <strong>Windows App SDK</strong>.
                                     </p>
                                     <h2 class="display-6">Step 1</h2>
                                     <p>
@@ -129,7 +128,7 @@
 
                                         <div class="row mb-3">
                                             <div class="col-sm">
-                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>StickControl</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
+                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>MatrixControl</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
                                             </div>
                                             <div class="col-sm">
                                                 <img src="../assets/win-vs-configure-project.png" class="img-fluid" alt="Configure project" />
@@ -145,331 +144,438 @@
                                     </p>
                                     <h2 class="display-6">Step 3</h2>
                                     <p>
-                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>Code</strong> and then select <strong>Code File</strong> from the list next to this, then type in the name of <i>Stick.cs</i> and then <strong>Click</strong> on <strong>Add</strong>.
+                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>Code</strong> and then select <strong>Code File</strong> from the list next to this, then type in the name of <i>Matrix.cs</i> and then <strong>Click</strong> on <strong>Add</strong>.
                                     </p>
                                     <p>
-                                        <img src="../assets/was-add-new-item-stick-control.png" class="img-fluid" alt="Add New Code File" />
+                                        <img src="../assets/was-add-new-item-matrix-control.png" class="img-fluid" alt="Add New Code File" />
                                     </p>
                                     <h2 class="display-6">Step 4</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
-                                                Then from <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>Stick.cs</strong> to see the <strong>Code</strong> for the <strong>User Control</strong>.
+                                                Then from <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>Matrix.cs</strong> to see the <strong>Code</strong> for the <strong>User Control</strong>.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-solution-explorer-user-code-stick-control.png" class="img-fluid" alt="Solution Explorer Stick.cs"/>
+                                                <img src="../assets/was-solution-explorer-user-code-matrix-control.png" class="img-fluid" alt="Solution Explorer Matrix.cs"/>
                                             </div>
                                         </div>
                                     </div>
                                     <h2 class="display-6">Step 5</h2>
                                     <p>
-                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Stick.cs</i>, within this type the following <strong>Code</strong>:
+                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Matrix.cs</i>, within this type the following <strong>Code</strong>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-using Microsoft.UI;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Shapes;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace StickControl;
+namespace MatrixControl;
 
-public class Stick : Grid
+public enum Sources
 {
-    // Members & Event
+    Value, Time, Date, TimeDate
+}
 
-    // Dependency Properties
+public class Matrix : StackPanel
+{
+    private readonly byte[][] table =
+    {
+        // Table 0 - 4
 
-    // Properties
+        // Table 5 - 9
 
-    // ToRadians, ToDegrees, SetMiddle, & GetCircle Methods
+        // Table Minus, Slash, Colon & Space
 
-    // Move Method
+    };
 
-    // Layout & Load Methods and Constructor
+    // Constants & Members
+
+    // Dependency Properties & Properties
+
+    // Add Element & Add Section Methods
+
+    // Set Layout & Add Layout Methods
+
+    // Value Property & Constructor
 
 }
                                     </code></pre>
                                     <p>
-                                        There are <code>using</code> statements for the <strong>User Control</strong>, a <code>namespace</code> for <code>StickControl</code>
-                                        along with a <code>class</code> of <code>Stick</code> that will represent the <strong>User Control</strong> for the <strong>Directional Stick</strong>.
+                                        There are <code>using</code> statements for the <strong>User Control</strong>, a <code>namespace</code> for <code>MatrixControl</code> with an <code>enum</code> for the <strong>Sources</strong> 
+                                        of the <strong>Matrix Control</strong> along with a <code>class</code> of <code>Matrix</code> that will represent the <strong>User Control</strong>.
                                     </p>
                                     <h2 class="display-6">Step 6</h2>
                                     <p>
-                                        Then in the <code>namespace</code> of <code>StickControl</code> in the <code>class</code> of <code>Stick</code> after the <strong>Comment</strong> 
-                                        of <code>// Members & Event</code> type the following <strong>Members</strong> and <strong>Event</strong>:
+                                        Then in the <code>namespace</code> of <code>MatrixControl</code> in the <code>class</code> of <code>Matrix</code> after the <strong>Comment</strong> 
+                                        of <code>// Table 0 - 4</code> type the following <strong>Code</strong> for the <code>table</code> which will represent values between <i>0</i> and <i>4</i>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-private bool _capture;
-private Ellipse _knob;
-private Ellipse _face;
-private double x = 0;
-private double y = 0;
-private double _m = 0;
-private double _res = 0;
-private double _width = 0;
-private double _height = 0;
-private double _alpha = 0;
-private double _alphaM = 0;
-private double _centreX = 0;
-private double _centreY = 0;
-private double _distance = 0;
-private double _oldAlphaM = -999.0;
-private double _oldDistance = -999.0;
-
-public delegate void ValueChangedEventHandler(
-    object sender, double angle, double ratio);
-public event ValueChangedEventHandler ValueChanged;
+new byte[] {
+0,0,0,0,0,0,0,0,
+0,1,1,1,1,1,1,0,
+0,1,1,0,0,1,1,0,
+0,1,1,0,0,1,1,0,
+0,1,1,0,0,1,1,0,
+0,1,1,1,1,1,1,0,
+0,0,0,0,0,0,0,0
+}, // 0
+new byte[] {
+0,0,0,0,0,0,0,0,
+0,0,0,1,1,0,0,0,
+0,1,1,1,1,0,0,0,
+0,0,0,1,1,0,0,0,
+0,0,0,1,1,0,0,0,
+0,0,0,1,1,0,0,0,
+0,0,0,0,0,0,0,0
+}, // 1 
+new byte[] {
+0,0,0,0,0,0,0,0,
+0,1,1,1,1,1,1,0,
+0,0,0,0,0,1,1,0,
+0,1,1,1,1,1,1,0,
+0,1,1,0,0,0,0,0,
+0,1,1,1,1,1,1,0,
+0,0,0,0,0,0,0,0
+}, // 2
+new byte[] {
+0,0,0,0,0,0,0,0,
+0,1,1,1,1,1,1,0,
+0,0,0,0,0,1,1,0,
+0,1,1,1,1,1,1,0,
+0,0,0,0,0,1,1,0,
+0,1,1,1,1,1,1,0,
+0,0,0,0,0,0,0,0
+}, // 3
+new byte[] {
+0,0,0,0,0,0,0,0,
+0,1,1,0,0,1,1,0,
+0,1,1,0,0,1,1,0,
+0,1,1,1,1,1,1,0,
+0,0,0,0,0,1,1,0,
+0,0,0,0,0,1,1,0,
+0,0,0,0,0,0,0,0
+}, // 4
                                     </code></pre>
-                                    <p>
-                                        <strong>Members</strong> include <strong>Ellipses</strong> needed to represent the different directional parts of the <strong>Directional Stick</strong> and there is also a 
-                                        <code>delegate</code> along with an <code>event</code> for when the <strong>Directional Stick</strong> is interacted with.
-                                    </p>
                                     <h2 class="display-6">Step 7</h2>
                                     <p>
-                                        While still in the <code>namespace</code> of <code>StickControl</code> in the <code>class</code> of <code>Stick</code> after the <strong>Comment</strong> 
-                                        of <code>// Dependency Properties</code> type the following <strong>Dependency Properties</strong>:
+                                        While still in the <code>namespace</code> of <code>MatrixControl</code> in the <code>class</code> of <code>Matrix</code> after the <strong>Comment</strong> 
+                                        of <code>// Table 5 - 9</code> type the following <strong>Code</strong> for the <code>table</code> which will represent values between <i>5</i> and <i>9</i>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-public static readonly DependencyProperty RadiusProperty =
-DependencyProperty.Register(nameof(Radius), typeof(int),
-typeof(Stick), new PropertyMetadata(100));
-
-public static readonly DependencyProperty KnobProperty =
-DependencyProperty.Register(nameof(Knob), typeof(Brush),
-typeof(Stick), new PropertyMetadata(new SolidColorBrush(Colors.Red)));
-
-public static readonly DependencyProperty FaceProperty =
-DependencyProperty.Register(nameof(Face), typeof(Brush),
-typeof(Stick), new PropertyMetadata(new SolidColorBrush(Colors.Black)));
-
-public static readonly DependencyProperty AngleProperty =
-DependencyProperty.Register(nameof(Angle), typeof(double),
-typeof(Stick), null);
-
-public static readonly DependencyProperty RatioProperty =
-DependencyProperty.Register(nameof(Ratio), typeof(double),
-typeof(Stick), null);
-
-public static readonly DependencyProperty SensitivityProperty =
-DependencyProperty.Register(nameof(Sensitivity), typeof(double),
-typeof(Stick), null);
+new byte[] {
+0,0,0,0,0,0,0,0,
+0,1,1,1,1,1,1,0,
+0,1,1,0,0,0,0,0,
+0,1,1,1,1,1,1,0,
+0,0,0,0,0,1,1,0,
+0,1,1,1,1,1,1,0,
+0,0,0,0,0,0,0,0
+}, // 5
+new byte[] {
+0,0,0,0,0,0,0,0,
+0,1,1,1,1,1,1,0,
+0,1,1,0,0,0,0,0,
+0,1,1,1,1,1,1,0,
+0,1,1,0,0,1,1,0,
+0,1,1,1,1,1,1,0,
+0,0,0,0,0,0,0,0
+}, // 6
+new byte[] {
+0,0,0,0,0,0,0,0,
+0,1,1,1,1,1,1,0,
+0,0,0,0,0,1,1,0,
+0,0,0,0,0,1,1,0,
+0,0,0,0,0,1,1,0,
+0,0,0,0,0,1,1,0,
+0,0,0,0,0,0,0,0
+}, // 7
+new byte[] {
+0,0,0,0,0,0,0,0,
+0,1,1,1,1,1,1,0,
+0,1,1,0,0,1,1,0,
+0,1,1,1,1,1,1,0,
+0,1,1,0,0,1,1,0,
+0,1,1,1,1,1,1,0,
+0,0,0,0,0,0,0,0
+}, // 8
+new byte[] {
+0,0,0,0,0,0,0,0,
+0,1,1,1,1,1,1,0,
+0,1,1,0,0,1,1,0,
+0,1,1,1,1,1,1,0,
+0,0,0,0,0,1,1,0,
+0,1,1,1,1,1,1,0,
+0,0,0,0,0,0,0,0
+}, // 9
                                     </code></pre>
-                                    <p>
-                                        There will also be some <strong>Errors</strong> as these refer to <strong>Properties</strong> that will be added in the next step.
-                                    </p>
-                                    <p>
-                                        These <strong>Dependency Properties</strong> refer to various <strong>Properties</strong> of the <strong>Directional Stick</strong> 
-                                        that can be customised for the <strong>User Control</strong>.
-                                    </p>
                                     <h2 class="display-6">Step 8</h2>
                                     <p>
-                                        While still in the <code>namespace</code> of <code>StickControl</code> in the <code>class</code> of <code>Stick</code> after the <strong>Comment</strong> 
-                                        of <code>// Properties</code> type the following <strong>Properties</strong>:
+                                        While still in the <code>namespace</code> of <code>MatrixControl</code> in the <code>class</code> of <code>Matrix</code> after the <strong>Comment</strong> 
+                                        of <code>// Table Minus, Slash, Colon & Space</code> type the following <strong>Code</strong> for the <code>table</code> which will represent 
+                                        a <i>Minus</i>, <i>Slash</i>, <i>Colon</i>, and <i>Space</i>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-public int Radius
-{
-    get { return (int)GetValue(RadiusProperty); }
-    set { SetValue(RadiusProperty, value); Load(); }
-}
-
-public Brush Knob
-{
-    get { return (Brush)GetValue(KnobProperty); }
-    set { SetValue(KnobProperty, value); }
-}
-
-public Brush Face
-{
-    get { return (Brush)GetValue(FaceProperty); }
-    set { SetValue(FaceProperty, value); }
-}
-
-public double Angle
-{
-    get { return (double)GetValue(AngleProperty); }
-    set { SetValue(AngleProperty, value); }
-}
-
-public double Ratio
-{
-    get { return (double)GetValue(RatioProperty); }
-    set { SetValue(RatioProperty, value); }
-}
-
-public double Sensitivity
-{
-    get { return (double)GetValue(SensitivityProperty); }
-    set { SetValue(SensitivityProperty, value); }
-}
+new byte[] {
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,1,1,1,1,1,1,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+}, // Minus
+new byte[] {
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,1,1,0,
+0,0,0,0,1,1,0,0,
+0,0,0,1,1,0,0,0,
+0,0,1,1,0,0,0,0,
+0,1,1,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+}, // Slash
+new byte[] {
+0,0,0,0,0,0,0,0,
+0,0,0,1,1,0,0,0,
+0,0,0,1,1,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,1,1,0,0,0,
+0,0,0,1,1,0,0,0,
+0,0,0,0,0,0,0,0
+}, // Colon
+new byte[] {
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+} // Space                                            
                                     </code></pre>
-                                    <p>
-                                        All previous <strong>Errors</strong> should now be resolved, however there will be just one for a <strong>Method</strong> of <code>Load</code> which will be resolved in a future 
-                                        step but if you are getting any others check any previous steps to see if you have missed anything.
-                                    </p>
-                                    <p>
-                                        These <strong>Properties</strong> are for values for the <strong>User Control</strong> such as the <code>Angle</code> or <code>Ratio</code> values for the <strong>Directional Stick</strong>. 
-                                    </p>
                                     <h2 class="display-6">Step 9</h2>
                                     <p>
-                                        While still in the <code>namespace</code> of <code>StickControl</code> in the <code>class</code> of <code>Stick</code> after the <strong>Comment</strong> 
-                                        of <code>// ToRadians, ToDegrees, SetMiddle, & GetCircle Methods</code> type the following <strong>Methods</strong>:
+                                        While still in the <code>namespace</code> of <code>MatrixControl</code> in the <code>class</code> of <code>Matrix</code> after the <strong>Comment</strong> 
+                                        of <code>// Constants & Members</code> type the following <strong>Constant</strong> and <strong>Members</strong>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-private static double ToRadians(double angle) =>
-    Math.PI * angle / 180.0;
-
-private static double ToDegrees(double angle) =>
-    angle * (180.0 / Math.PI);
-
-private void SetMiddle()
+private readonly List&lt;char&gt; glyphs = new()
 {
-    _capture = false;
-    Canvas.SetLeft(_knob, (Width - _width) / 2);
-    Canvas.SetTop(_knob, (Height - _height) / 2);
-    _centreX = Width / 2;
-    _centreY = Height / 2;
-}
+    '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '-', '/', ':', ' '
+};
 
-private Ellipse GetCircle(double dimension, string path)
-{
-    var circle = new Ellipse()
-    {
-        Height = dimension,
-        Width = dimension
-    };
-    circle.SetBinding(Shape.FillProperty, new Binding()
-    {
-        Source = this,
-        Path = new PropertyPath(path),
-        Mode = BindingMode.TwoWay
-    });
-    return circle;
-}
+private const string time = "HH:mm:ss";
+private const string date = "dd/MM/yyyy";
+private const string date_time = "HH:mm:ss dd/MM/yyyy";
+private const string invalid_source = "Invalid argument";
+private const int padding = 1;
+private const int columns = 8;
+private const int rows = 7;
+
+private string _value;
+private int _count;
                                     </code></pre>
                                     <p>
-                                        The <strong>Methods</strong> of <code>ToRadians</code> and <code>ToDegrees</code> will perform the relevant conversions, <code>SetMiddle</code> will determine the centre point of 
-                                        the <strong>Directional Stick</strong> and <code>GetCircle</code> will create an <code>Ellipse</code> with a <strong>Binding</strong> for the <code>Fill</code>.
+                                        The <strong>Constants</strong> include an <strong>Array</strong> of <code>glyphs</code> that will represent what can be displayed 
+                                        including <i>Digits</i> or <i>Minus</i>, <i>Slash</i>, <i>Colon</i>, and <i>Space</i> along with <strong>Members</strong> for the <strong>Matrix Control</strong>.
                                     </p>
                                     <h2 class="display-6">Step 10</h2>
                                     <p>
-                                        While still in the <code>namespace</code> of <code>StickControl</code> in the <code>class</code> of <code>Stick</code> after the <strong>Comment</strong> 
-                                        of <code>// Move Method</code> type the following <strong>Method</strong>:
+                                        While still in the <code>namespace</code> of <code>MatrixControl</code> in the <code>class</code> of <code>Matrix</code> after the <strong>Comment</strong> 
+                                        of <code>// Dependency Properties & Properties</code> type the following <strong>Dependency Properties</strong> and <strong>Properties</strong>
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-private void Move(PointerRoutedEventArgs e)
+public static readonly DependencyProperty ForegroundProperty =
+DependencyProperty.Register(nameof(Foreground), typeof(Brush),
+typeof(Matrix), null);
+
+public static readonly DependencyProperty SourceProperty =
+DependencyProperty.Register(nameof(Source), typeof(Sources),
+typeof(Matrix), new PropertyMetadata(Sources.Time));
+
+public static readonly DependencyProperty SizeProperty =
+DependencyProperty.Register(nameof(Size), typeof(UIElement),
+typeof(Matrix), new PropertyMetadata(4));
+
+public Brush Foreground
 {
-    x = e.GetCurrentPoint(this).Position.X;
-    y = e.GetCurrentPoint(this).Position.Y;
-    _res = Math.Sqrt((x - _centreX) *
-        (x - _centreX) + (y - _centreY) * (y - _centreY));
-    _m = (y - _centreY) / (x - _centreX);
-    _alpha = ToDegrees(Math.Atan(_m) + Math.PI / 2);
-    if (x &lt; _centreX)
-        _alpha += 180.0;
-    else if (x == _centreX && y &lt;= _centreY)
-        _alpha = 0.0;
-    else if (x == _centreX)
-        _alpha = 180.0;
-    if (_res > Radius)
-    {
-        x = _centreX + Math.Cos(ToRadians(_alpha) - Math.PI / 2) * Radius;
-        y = _centreY + Math.Sin(ToRadians(_alpha) - Math.PI / 2) * Radius
-            * ((_alpha % 180.0 == 0.0) ? -1.0 : 1.0);
-        _res = Radius;
-    }
-    if (Math.Abs(_alpha - _alphaM) >= Sensitivity ||
-        Math.Abs(_distance * Radius - _res) >= Sensitivity)
-    {
-        _alphaM = _alpha;
-        _distance = _res / Radius;
-    }
-    if (_oldAlphaM != _alphaM ||
-        _oldDistance != _distance)
-    {
-        Angle = _alphaM;
-        Ratio = _distance;
-        _oldAlphaM = _alphaM;
-        _oldDistance = _distance;
-        ValueChanged?.Invoke(this, Angle, Ratio);
-    }
-    Canvas.SetLeft(_knob, x - _width / 2);
-    Canvas.SetTop(_knob, y - _height / 2);
+    get { return (Brush)GetValue(ForegroundProperty); }
+    set { SetValue(ForegroundProperty, value); }
+}
+
+public Sources Source
+{
+    get { return (Sources)GetValue(SourceProperty); }
+    set { SetValue(SourceProperty, value); }
+}
+
+public int Size
+{
+    get { return (int)GetValue(SizeProperty); }
+    set { SetValue(SizeProperty, value); }
 }
                                     </code></pre>
                                     <p>
-                                        The <strong>Method</strong> of Move will be used by the <strong>Directional Stick</strong> to determine the current <code>Angle</code> and <code>Ratio</code> along with raising the <strong>Event</strong> of <code>ValueChanged</code> with those values.
+                                        The <strong>Dependency Properties</strong> or <strong>Properties</strong> for the <strong>User Control</strong> can be customised for the <strong>Matrix Control</strong>.
                                     </p>
                                     <h2 class="display-6">Step 11</h2>
                                     <p>
-                                        While still in the <code>namespace</code> of <code>StickControl</code> in the <code>class</code> of <code>Stick</code> after the <strong>Comment</strong> 
-                                        of <code>// Layout & Load Methods and Constructor</code> type the following <strong>Methods</strong> and <strong>Constructor</strong>:
+                                        While still in the <code>namespace</code> of <code>MatrixControl</code> in the <code>class</code> of <code>Matrix</code> after the <strong>Comment</strong> 
+                                        of <code>// Add Element & Add Section Methods</code> type the following <strong>Methods</strong>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-private void Layout()
+private Rectangle AddElement(string name, int left, int top)
 {
-    _knob = GetCircle(Radius, "Knob");
-    _face = GetCircle(Radius * 2, "Face");
-    _height = _knob.ActualHeight;
-    _width = _knob.ActualWidth;
-    Width = _width + Radius * 2;
-    Height = _height + Radius * 2;
-    SetMiddle();
-    PointerExited -= null;
-    PointerExited += (object sender, PointerRoutedEventArgs e) =>
-        SetMiddle();
-    _knob.PointerReleased += (object sender, PointerRoutedEventArgs e) =>
-        SetMiddle();
-    _knob.PointerPressed += (object sender, PointerRoutedEventArgs e) =>
-        _capture = true;
-    _knob.PointerMoved += (object sender, PointerRoutedEventArgs e) =>
+    var element = new Rectangle()
     {
-        if (_capture) 
-            Move(e);
+        Tag = name,
+        Opacity = 0,
+        RadiusX = 1,
+        RadiusY = 1,
+        Width = Size,
+        Height = Size,
+        Margin = new Thickness(2)
     };
-    _knob.PointerExited += (object sender, PointerRoutedEventArgs e) =>
-        SetMiddle();
+    element.SetBinding(Shape.FillProperty, new Binding()
+    {
+        Path = new PropertyPath(nameof(Foreground)),
+        Mode = BindingMode.TwoWay,
+        Source = this
+    });
+    Canvas.SetLeft(element, left);
+    Canvas.SetTop(element, top);
+    return element;
 }
 
-private void Load()
+private void AddSection(string name)
 {
-    Layout();
-    Children.Clear();
-    Children.Add(_face);
-    var canvas = new Canvas()
+    int x = 0;
+    int y = 0;
+    int index = 0;
+    var section = new Canvas()
     {
-        Width = Width,
-        Height = Height
+        Tag = name,
+        Height = rows * Size,
+        Width = columns * Size
     };
-    canvas.Children.Add(_knob);
-    Children.Add(canvas);
+    for (int row = 0; row &lt; rows; row++)
+    {
+        for (int column = 0; column &lt; columns; column++)
+        {
+            section.Children.Add(AddElement($"{name}.{index}", x, y));
+            x = x + Size + padding;
+            index++;
+        }
+        x = 0;
+        y = y + Size + padding;
+    }
+    Children.Add(section);
 }
-
-public Stick() => Load();
                                     </code></pre>
                                     <p>
-                                        All <strong>Errors</strong> should now be resolved, if you continue to get them check any previous steps to see if you have missed anything.
+                                        The <strong>Method</strong> of <code>AddElement</code> will be used to create an element for the <strong>Matrix Control</strong> which is used by <code>AddSection</code>.
                                     </p>
-                                    <p>
-                                        The <strong>Constructor</strong> will be used to create the look-and-feel of the <strong>User Control</strong> and will use the <strong>Method</strong> of 
-                                        <code>Load</code> which will use the <strong>Method</strong> of <code>Layout</code> which will capture if the <strong>User Control</strong> is being interacted with.
-                                    </p>                                    
                                     <h2 class="display-6">Step 12</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>MatrixControl</code> in the <code>class</code> of <code>Matrix</code> after the <strong>Comment</strong> 
+                                        of <code>// Set Layout & Add Layout Methods</code> type the following <strong>Methods</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void SetLayout(string name, char glyph)
+{
+    var layout = Children.Cast&lt;Canvas&gt;()
+        .FirstOrDefault(f => (string)f.Tag == name);
+    int pos = glyphs.IndexOf(glyph);
+    byte[] values = table[pos];
+    for (int index = 0; index &lt; layout.Children.Count; index++)
+    {
+        layout.Children.Cast&lt;Rectangle&gt;()
+        .FirstOrDefault(f => (string)f.Tag == $"{name}.{index}")
+        .Opacity = values[index];
+    }
+}
+
+private void AddLayout()
+{
+    var array = _value.ToCharArray();
+    var length = array.Length;
+    var list = Enumerable.Range(0, length);
+    if (_count != length)
+    {
+        Children.Clear();
+        foreach (int item in list)
+        {
+            AddSection(item.ToString());
+        }
+        _count = length;
+    }
+    foreach (int item in list)
+    {
+        SetLayout(item.ToString(), array[item]);
+    }
+}
+                                    </code></pre>
+                                    <p>
+                                        The <strong>Method</strong> of <code>SetLayout</code> will display the appropriate value for the <strong>Matrix Control</strong> 
+                                        by setting the <code>Opacity</code> and <code>AddLayout</code> will setup the display of the <strong>Matrix Control</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 13</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>MatrixControl</code> in the <code>class</code> of <code>Matrix</code> after the <strong>Comment</strong> 
+                                        of <code>// Value Property & Constructor</code> type the following <strong>Property</strong> and <strong>Constructor</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public string Value
+{
+    get { return _value; }
+    set { _value = value; AddLayout(); }
+}
+
+public Matrix()
+{
+    Orientation = Orientation.Horizontal;
+    var timer = new DispatcherTimer()
+    {
+        Interval = TimeSpan.FromMilliseconds(250)
+    };
+    timer.Tick += (object s, object args) =>
+    {
+        if (Source != Sources.Value)
+        {
+            var format = Source switch
+            {
+                Sources.Time => time,
+                Sources.Date => date,
+                Sources.TimeDate => date_time,
+                _ => throw new ArgumentException(invalid_source)
+            };
+            Value = DateTime.Now.ToString(format);
+        }
+    };
+    timer.Start();
+}
+                                    </code></pre>
+                                    <p>
+                                        The <strong>Property</strong> of <code>Value</code> will setup the display of the <strong>Matrix Control</strong> 
+                                        using the <strong>Method</strong> of <code>AddLayout</code> and the <strong>Constructor</strong> will setup 
+                                        a <code>DispatcherTimer</code> to be used to display the <code>Value</code> of the <strong>Matrix Control</strong>.
+                                    </p>                                                                        
+                                    <h2 class="display-6">Step 14</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
                                                 Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>MainWindow.xaml</strong> to see the <strong>XAML</strong> for the <strong>Main Window</strong>.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-solution-explorer-xaml-stick-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
+                                                <img src="../assets/was-solution-explorer-xaml-matrix-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
                                             </div>
                                         </div>
                                     </div>
-                                    <h2 class="display-6">Step 13</h2>
+                                    <h2 class="display-6">Step 15</h2>
                                     <p>
                                         In the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> there will be some <strong>XAML</strong> for a <code>StackPanel</code>, this should be <strong>Removed</strong>:
                                     </p>
@@ -479,33 +585,31 @@ HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;x:Name=&quot;myButton&quot;&nbsp;Click=&quot;myButton_Click&quot;&gt;Click&nbsp;Me&lt;/Button&gt;
 &lt;/StackPanel&gt;
                                     </code></pre>                                   
-                                    <h2 class="display-6">Step 14</h2>
+                                    <h2 class="display-6">Step 16</h2>
                                     <p>
                                         While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> above <code>&lt;/Window&gt;</code>, type in the following <strong>XAML</strong>:
                                     </p>
                                     <pre class="code-block language-xml"><code>                            
-&lt;StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"&gt;
-    &lt;TextBlock Name="Label" HorizontalAlignment="Center" 
-    Style="{StaticResource SubtitleTextBlockStyle}"/&gt;
-    &lt;local:Stick Radius="200" Knob="{ThemeResource AccentButtonBackground}" 
-    Face="WhiteSmoke" ValueChanged="ValueChanged"/&gt;
-&lt;/StackPanel&gt;
+&lt;Viewbox&gt;
+    &lt;local:Matrix Padding="50" Source="Time" 
+    Foreground="{ThemeResource AccentButtonBackground}" /&gt;
+&lt;/Viewbox&gt;
                                     </code></pre> 
                                     <p>
-                                        This <strong>XAML</strong> contains a <strong>StackPanel</strong> including a <code>TextBlock</code> and the <strong>User Control</strong> of <code>Stick</code> with the <code>Event</code> of <code>ValueChanged</code>.
+                                        This <strong>XAML</strong> contains a <strong>ViewBox</strong> and the <strong>User Control</strong> of <code>Matrix</code> with the <code>Source</code> set to <code>Time</code>.
                                     </p>
-                                    <h2 class="display-6">Step 15</h2>
+                                    <h2 class="display-6">Step 17</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
                                                 Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>MainWindow.xaml</strong> then double-click on <strong>MainWindow.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Main Window</strong>.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-solution-explorer-code-stick-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
+                                                <img src="../assets/was-solution-explorer-code-matrix-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
                                             </div>
                                         </div>
                                     </div>
-                                    <h2 class="display-6">Step 16</h2>
+                                    <h2 class="display-6">Step 18</h2>
                                     <p>
                                         In the <strong>Code</strong> for <code>MainWindow.xaml.cs</code> there be a Method of <code>myButton_Click(...)</code> this should be <strong>Removed</strong> by removing the following:
                                     </p>
@@ -514,39 +618,26 @@ private void myButton_Click(object sender, RoutedEventArgs e)
 {
     myButton.Content = "Clicked";
 }
-                                    </code></pre>
-                                    <h2 class="display-6">Step 17</h2>
-                                    <p>
-                                        Once <code>myButton_Click(...)</code> has been removed, within the <strong>Constructor</strong> of <code>public MainWindow() { ... }</code> and below the line of <code>this.InitializeComponent();</code> type in the following <strong>Code</strong>:
-                                    </p>
-                                    <pre class="code-block language-csharp"><code>
-private void ValueChanged(object sender, double angle, double ratio) => 
-    Label.Text = $"Angle {angle}, Ratio {ratio}";
-                                    </code></pre>
-                                    <p>
-                                        The <strong>Method</strong> of <code>ValueChanged</code> will be used with <strong>Event Handler</strong> from the <strong>XAML</strong> to display the selected <strong>Angle</strong> and <strong>Ratio</strong>,
-                                        this <strong>Method</strong> uses <strong>Arrow Syntax</strong> with the <code>=></code> for an expression body which is useful when a <strong>Method</strong> only has one line.
-                                    </p>                                
-                                    <h2 class="display-6">Step 18</h2>
+                                    </code></pre>                                
+                                    <h2 class="display-6">Step 19</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
-                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>StickControl (Package)</strong> to <strong>Start</strong> the application.
+                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>MatrixControl (Package)</strong> to <strong>Start</strong> the application.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-debug-stick-control.png" class="img-fluid" alt="StickControl (Package)"/>
+                                                <img src="../assets/was-debug-matrix-control.png" class="img-fluid" alt="MatrixControl (Package)"/>
                                             </div>
                                         </div>
                                     </div>    
-                                    <h2 class="display-6">Step 19</h2>
-                                    <p>
-                                        Once running you will see the <strong>Stick Control</strong> displayed, then you can select and move the centre portion of the 
-                                        <strong>Directional Stick</strong> and can see the <i>Angle</i> around the centre, or the <i>Ratio</i> of the distance between the centre and the outside displayed.
-                                    </p>
-                                    <p>
-                                        <img src="../assets/was-running-stick-control.png" class="img-fluid" alt="Stick Control Running and Output" />
-                                    </p>
                                     <h2 class="display-6">Step 20</h2>
+                                    <p>
+                                        Once running you will see the <strong>Matrix Control</strong> displaying the current <i>Time</i>.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-running-matrix-control.png" class="img-fluid" alt="Matrix Control Running and Output" />
+                                    </p>
+                                    <h2 class="display-6">Step 21</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
@@ -560,9 +651,9 @@ private void ValueChanged(object sender, double angle, double ratio) =>
                                 </div>
                                 <div class="card-footer">
                                     <div class="justify-content-sm-center text-center m-1">
-                                        <a href="../../pdf/win-app-sdk-stick-control.pdf" target="_blank">
+                                        <a href="../../pdf/win-app-sdk-matrix-control.pdf" target="_blank">
                                             <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
-                                                Stick Control
+                                                Matrix Control
                                                 <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
                                             </span>
                                         </a>
