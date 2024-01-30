@@ -27,7 +27,7 @@
         <link href="../../../css/style.css" rel="stylesheet">
         <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../highlight/css/vs.min.css" rel="stylesheet">
-        <title>tutorialr.com - Tutorials - Windows App SDK - Stick Control</title>
+        <title>tutorialr.com - Tutorials - Windows App SDK - Segment Control</title>
     </head>
     <body class="d-flex flex-column h-100">
         <!-- Main -->
@@ -71,9 +71,9 @@
                 <!-- Section -->            
                 <section class="text-center text-white container">
                     <!-- Hero -->
-                    <h1 class="display-4 mx-auto">Stick Control</h1>
+                    <h1 class="display-4 mx-auto">Segment Control</h1>
                     <p class="lead">
-                        <strong>Learn</strong> creating a <strong>Directional Stick</strong> using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
+                        <strong>Learn</strong> creating a <strong>Segment Control</strong> for a seven-segment display using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
                     </p>
                     <!-- /Hero -->
                     <!-- Tutorial -->
@@ -82,9 +82,9 @@
                             <div class="card position-relative">
                                 <div class="card-header">
                                     <div class="justify-content-sm-center text-center m-1">
-                                        <a href="../../pdf/win-app-sdk-stick-control.pdf" target="_blank">
+                                        <a href="../../pdf/win-app-sdk-segment-control.pdf" target="_blank">
                                             <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
-                                                Stick Control
+                                                Segment Control
                                                 <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
                                             </span>
                                         </a>
@@ -92,8 +92,7 @@
                                 </div>   
                                 <div class="card-body">
                                     <p>
-                                        <strong>Stick Control</strong> shows how to create a <strong>Directional Stick</strong> that can be used for 
-                                        selecting an <strong>Angle</strong> and <strong>Ratio</strong> using <strong>Windows App SDK</strong>.
+                                        <strong>Segment Control</strong> shows how to create a seven-segment display using <strong>Windows App SDK</strong>.
                                     </p>
                                     <h2 class="display-6">Step 1</h2>
                                     <p>
@@ -129,7 +128,7 @@
 
                                         <div class="row mb-3">
                                             <div class="col-sm">
-                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>StickControl</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
+                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>SegmentControl</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
                                             </div>
                                             <div class="col-sm">
                                                 <img src="../assets/win-vs-configure-project.png" class="img-fluid" alt="Configure project" />
@@ -145,319 +144,309 @@
                                     </p>
                                     <h2 class="display-6">Step 3</h2>
                                     <p>
-                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>Code</strong> and then select <strong>Code File</strong> from the list next to this, then type in the name of <i>Stick.cs</i> and then <strong>Click</strong> on <strong>Add</strong>.
+                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>Code</strong> and then select <strong>Code File</strong> from the list next to this, then type in the name of <i>Segment.cs</i> and then <strong>Click</strong> on <strong>Add</strong>.
                                     </p>
                                     <p>
-                                        <img src="../assets/was-add-new-item-stick-control.png" class="img-fluid" alt="Add New Code File" />
+                                        <img src="../assets/was-add-new-item-segment-control.png" class="img-fluid" alt="Add New Code File" />
                                     </p>
                                     <h2 class="display-6">Step 4</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
-                                                Then from <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>Stick.cs</strong> to see the <strong>Code</strong> for the <strong>User Control</strong>.
+                                                Then from <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>Segment.cs</strong> to see the <strong>Code</strong> for the <strong>User Control</strong>.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-solution-explorer-user-code-stick-control.png" class="img-fluid" alt="Solution Explorer Stick.cs"/>
+                                                <img src="../assets/was-solution-explorer-user-code-segment-control.png" class="img-fluid" alt="Solution Explorer Segment.cs"/>
                                             </div>
                                         </div>
                                     </div>
                                     <h2 class="display-6">Step 5</h2>
                                     <p>
-                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Stick.cs</i>, within this type the following <strong>Code</strong>:
+                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Segment.cs</i>, within this type the following <strong>Code</strong>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
 using Microsoft.UI;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Shapes;
 using System;
+using System.Linq;
 
-namespace StickControl;
+namespace SegmentControl;
 
-public class Stick : Grid
+public enum Sources
 {
-    // Members & Event
+    Value, Time, Date, TimeDate
+}
 
-    // Dependency Properties
+public class Segment : StackPanel
+{
+    // Constants & Members
 
-    // Properties
+    // Dependency Properties & Properties
 
-    // ToRadians, ToDegrees, SetMiddle, & GetCircle Methods
+    // Get Element & Add Element Methods
 
-    // Move Method
+    // Set Segment & Add Segment Methods
 
-    // Layout & Load Methods and Constructor
+    // Add Layout Method & Value Property
+
+    // Constructor	
 
 }
                                     </code></pre>
                                     <p>
-                                        There are <code>using</code> statements for the <strong>User Control</strong>, a <code>namespace</code> for <code>StickControl</code>
-                                        along with a <code>class</code> of <code>Stick</code> that will represent the <strong>User Control</strong> for the <strong>Directional Stick</strong>.
+                                        There are <code>using</code> statements for the <strong>User Control</strong>, a <code>namespace</code> for <code>SegmentControl</code> with an <code>enum</code> for the <strong>Sources</strong> 
+                                        of the <strong>Segment Control</strong> along with a <code>class</code> of <code>Segment</code> that will represent the <strong>User Control</strong>.
                                     </p>
                                     <h2 class="display-6">Step 6</h2>
                                     <p>
-                                        Then in the <code>namespace</code> of <code>StickControl</code> in the <code>class</code> of <code>Stick</code> after the <strong>Comment</strong> 
-                                        of <code>// Members & Event</code> type the following <strong>Members</strong> and <strong>Event</strong>:
+                                        Then in the <code>namespace</code> of <code>SegmentControl</code> in the <code>class</code> of <code>Segment</code> after the <strong>Comment</strong> 
+                                        of <code>// Constants & Members</code> type the following <strong>Constants</strong> and <strong>Members</strong>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-private bool _capture;
-private Ellipse _knob;
-private Ellipse _face;
-private double x = 0;
-private double y = 0;
-private double _m = 0;
-private double _res = 0;
-private double _width = 0;
-private double _height = 0;
-private double _alpha = 0;
-private double _alphaM = 0;
-private double _centreX = 0;
-private double _centreY = 0;
-private double _distance = 0;
-private double _oldAlphaM = -999.0;
-private double _oldDistance = -999.0;
+private readonly byte[][] table =
+{
+    // a, b, c, d, e, f, g
+    new byte[] { 1, 1, 1, 1, 1, 1, 0 }, // 0
+    new byte[] { 0, 1, 1, 0, 0, 0, 0 }, // 1
+    new byte[] { 1, 1, 0, 1, 1, 0, 1 }, // 2
+    new byte[] { 1, 1, 1, 1, 0, 0, 1 }, // 3
+    new byte[] { 0, 1, 1, 0, 0, 1, 1 }, // 4
+    new byte[] { 1, 0, 1, 1, 0, 1, 1 }, // 5
+    new byte[] { 1, 0, 1, 1, 1, 1, 1 }, // 6
+    new byte[] { 1, 1, 1, 0, 0, 0, 0 }, // 7
+    new byte[] { 1, 1, 1, 1, 1, 1, 1 }, // 8
+    new byte[] { 1, 1, 1, 0, 0, 1, 1 }, // 9
+    new byte[] { 0, 0, 0, 0, 0, 0, 1 }, // Minus
+    new byte[] { 0, 0, 0, 0, 0, 0, 0 }, // Colon
+    new byte[] { 0, 0, 0, 0, 0, 0, 0 } // Space
+};
+private const int width = 5;
+private const int height = 25;
+private const int spacing = 10;
+private const int minus_pos = 10;
+private const int colon_pos = 11;
+private const int space_pos = 12;
+private const string minus = "-";
+private const string colon = ":";
+private const string space = " ";
+private const string time = "HH:mm:ss";
+private const string date = "dd-MM-yyyy";
+private const string date_time = "HH:mm:ss  dd-MM-yyyy";
+private const string invalid_source = "Invalid argument";
 
-public delegate void ValueChangedEventHandler(
-    object sender, double angle, double ratio);
-public event ValueChangedEventHandler ValueChanged;
+private int _count;
+private string _value;
                                     </code></pre>
                                     <p>
-                                        <strong>Members</strong> include <strong>Ellipses</strong> needed to represent the different directional parts of the <strong>Directional Stick</strong> and there is also a 
-                                        <code>delegate</code> along with an <code>event</code> for when the <strong>Directional Stick</strong> is interacted with.
+                                        The <strong>Constants</strong> include a two-dimensional <strong>Array</strong> of <code>table</code> that will represent the elements of the segments that will be 
+                                        displayed for each <i>Digit</i> or <i>Minus</i>, <i>Colon</i>, and <i>Space</i> along with <strong>Members</strong> for the <strong>Segment Control</strong>.
                                     </p>
                                     <h2 class="display-6">Step 7</h2>
                                     <p>
-                                        While still in the <code>namespace</code> of <code>StickControl</code> in the <code>class</code> of <code>Stick</code> after the <strong>Comment</strong> 
-                                        of <code>// Dependency Properties</code> type the following <strong>Dependency Properties</strong>:
+                                        While still in the <code>namespace</code> of <code>SegmentControl</code> in the <code>class</code> of <code>Segment</code> after the <strong>Comment</strong> 
+                                        of <code>// Dependency Properties & Properties</code> type the following <strong>Dependency Properties</strong> and <strong>Properties</strong>
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-public static readonly DependencyProperty RadiusProperty =
-DependencyProperty.Register(nameof(Radius), typeof(int),
-typeof(Stick), new PropertyMetadata(100));
+public static readonly DependencyProperty SourceProperty =
+DependencyProperty.Register(nameof(Source), typeof(Sources),
+typeof(Segment), new PropertyMetadata(Sources.Time));
 
-public static readonly DependencyProperty KnobProperty =
-DependencyProperty.Register(nameof(Knob), typeof(Brush),
-typeof(Stick), new PropertyMetadata(new SolidColorBrush(Colors.Red)));
+public static readonly DependencyProperty ForegroundProperty =
+DependencyProperty.Register(nameof(Foreground), typeof(Brush),
+typeof(Segment), new PropertyMetadata(new SolidColorBrush(Colors.Black)));
 
-public static readonly DependencyProperty FaceProperty =
-DependencyProperty.Register(nameof(Face), typeof(Brush),
-typeof(Stick), new PropertyMetadata(new SolidColorBrush(Colors.Black)));
+public Sources Source
+{
+    get { return (Sources)GetValue(SourceProperty); }
+    set { SetValue(SourceProperty, value); }
+}
 
-public static readonly DependencyProperty AngleProperty =
-DependencyProperty.Register(nameof(Angle), typeof(double),
-typeof(Stick), null);
-
-public static readonly DependencyProperty RatioProperty =
-DependencyProperty.Register(nameof(Ratio), typeof(double),
-typeof(Stick), null);
-
-public static readonly DependencyProperty SensitivityProperty =
-DependencyProperty.Register(nameof(Sensitivity), typeof(double),
-typeof(Stick), null);
+public Brush Foreground
+{
+    get { return (Brush)GetValue(ForegroundProperty); }
+    set { SetValue(ForegroundProperty, value); }
+}
                                     </code></pre>
                                     <p>
-                                        There will also be some <strong>Errors</strong> as these refer to <strong>Properties</strong> that will be added in the next step.
-                                    </p>
-                                    <p>
-                                        These <strong>Dependency Properties</strong> refer to various <strong>Properties</strong> of the <strong>Directional Stick</strong> 
-                                        that can be customised for the <strong>User Control</strong>.
+                                        The <strong>Dependency Properties</strong> or <strong>Properties</strong> for the <strong>User Control</strong> can be customised for the <strong>Segment Control</strong>.
                                     </p>
                                     <h2 class="display-6">Step 8</h2>
                                     <p>
-                                        While still in the <code>namespace</code> of <code>StickControl</code> in the <code>class</code> of <code>Stick</code> after the <strong>Comment</strong> 
-                                        of <code>// Properties</code> type the following <strong>Properties</strong>:
+                                        While still in the <code>namespace</code> of <code>SegmentControl</code> in the <code>class</code> of <code>Segment</code> after the <strong>Comment</strong> 
+                                        of <code>// Get Element & Add Element Methods</code> type the following <strong>Methods</strong>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-public int Radius
-{
-    get { return (int)GetValue(RadiusProperty); }
-    set { SetValue(RadiusProperty, value); Load(); }
-}
+private static Rectangle GetElement(Canvas segment, string name) =>
+    segment.Children.Cast&lt;Rectangle&gt;()
+    .FirstOrDefault(f => (string)f.Tag == name);
 
-public Brush Knob
+private Rectangle AddElement(string name, 
+    int left, int top, int width, int height)
 {
-    get { return (Brush)GetValue(KnobProperty); }
-    set { SetValue(KnobProperty, value); }
-}
-
-public Brush Face
-{
-    get { return (Brush)GetValue(FaceProperty); }
-    set { SetValue(FaceProperty, value); }
-}
-
-public double Angle
-{
-    get { return (double)GetValue(AngleProperty); }
-    set { SetValue(AngleProperty, value); }
-}
-
-public double Ratio
-{
-    get { return (double)GetValue(RatioProperty); }
-    set { SetValue(RatioProperty, value); }
-}
-
-public double Sensitivity
-{
-    get { return (double)GetValue(SensitivityProperty); }
-    set { SetValue(SensitivityProperty, value); }
+    var element = new Rectangle()
+    {
+        Tag = name,
+        Opacity = 0,
+        RadiusX = 2,
+        RadiusY = 2,
+        Width = width,
+        Height = height,
+        Margin = new Thickness(2)
+    };
+    element.SetBinding(Shape.FillProperty, new Binding()
+    {
+        Path = new PropertyPath(nameof(Foreground)),
+        Mode = BindingMode.TwoWay,
+        Source = this
+    });
+    Canvas.SetLeft(element, left);
+    Canvas.SetTop(element, top);
+    return element;
 }
                                     </code></pre>
                                     <p>
-                                        All previous <strong>Errors</strong> should now be resolved, however there will be just one for a <strong>Method</strong> of <code>Load</code> which will be resolved in a future 
-                                        step but if you are getting any others check any previous steps to see if you have missed anything.
-                                    </p>
-                                    <p>
-                                        These <strong>Properties</strong> are for values for the <strong>User Control</strong> such as the <code>Angle</code> or <code>Ratio</code> values for the <strong>Directional Stick</strong>. 
+                                        The <strong>Method</strong> of <code>GetElement</code> will be used to obtain an element to be modified and 
+                                        <code>AddElement</code> will create an element for part of the segments of the <strong>Segment Control</strong>.
                                     </p>
                                     <h2 class="display-6">Step 9</h2>
                                     <p>
-                                        While still in the <code>namespace</code> of <code>StickControl</code> in the <code>class</code> of <code>Stick</code> after the <strong>Comment</strong> 
-                                        of <code>// ToRadians, ToDegrees, SetMiddle, & GetCircle Methods</code> type the following <strong>Methods</strong>:
+                                        While still in the <code>namespace</code> of <code>SegmentControl</code> in the <code>class</code> of <code>Segment</code> after the <strong>Comment</strong> 
+                                        of <code>// Set Segment & Add Segment Methods</code> type the following <strong>Methods</strong>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-private static double ToRadians(double angle) =>
-    Math.PI * angle / 180.0;
-
-private static double ToDegrees(double angle) =>
-    angle * (180.0 / Math.PI);
-
-private void SetMiddle()
+private void SetSegment(string name, int digit)
 {
-    _capture = false;
-    Canvas.SetLeft(_knob, (Width - _width) / 2);
-    Canvas.SetTop(_knob, (Height - _height) / 2);
-    _centreX = Width / 2;
-    _centreY = Height / 2;
+    var segment = Children.Cast&lt;Canvas&gt;()
+        .FirstOrDefault(f => (string)f.Tag == name);
+    byte[] values = table[digit];
+    GetElement(segment, $"{name}.a").Opacity = values[0];
+    GetElement(segment, $"{name}.b").Opacity = values[1];
+    GetElement(segment, $"{name}.c").Opacity = values[2];
+    GetElement(segment, $"{name}.d").Opacity = values[3];
+    GetElement(segment, $"{name}.e").Opacity = values[4];
+    GetElement(segment, $"{name}.f").Opacity = values[5];
+    GetElement(segment, $"{name}.g").Opacity = values[6];
+    GetElement(segment, $"{name}.h").Opacity = digit == colon_pos ? 1 : 0;
+    GetElement(segment, $"{name}.i").Opacity = digit == colon_pos ? 1 : 0;
 }
 
-private Ellipse GetCircle(double dimension, string path)
+private void AddSegment(string name)
 {
-    var circle = new Ellipse()
+    var segment = new Canvas()
     {
-        Height = dimension,
-        Width = dimension
+        Tag = name,
+        Width = 25,
+        Height = 50,
+        Margin = new Thickness(2)
     };
-    circle.SetBinding(Shape.FillProperty, new Binding()
-    {
-        Source = this,
-        Path = new PropertyPath(path),
-        Mode = BindingMode.TwoWay
-    });
-    return circle;
+    segment.Children.Add(AddElement($"{name}.a",
+        width, 0, height, width));
+    segment.Children.Add(AddElement($"{name}.h",
+        width * 3, width * 3, width, width));
+    segment.Children.Add(AddElement($"{name}.f",
+        0, width, width, height));
+    segment.Children.Add(AddElement($"{name}.b",
+        height + width, width, width, height));
+    segment.Children.Add(AddElement($"{name}.g",
+        width, height + width, height, width));
+    segment.Children.Add(AddElement($"{name}.e",
+        0, height + (width * 2), width, height));
+    segment.Children.Add(AddElement($"{name}.c",
+        height + width, height + width + width, width, height));
+    segment.Children.Add(AddElement($"{name}.i",
+        width * 3, height + (width * 4), width, width));
+    segment.Children.Add(AddElement($"{name}.d",
+        width, (height * 2) + (width * 2), height, width));
+    Children.Add(segment);
 }
                                     </code></pre>
                                     <p>
-                                        The <strong>Methods</strong> of <code>ToRadians</code> and <code>ToDegrees</code> will perform the relevant conversions, <code>SetMiddle</code> will determine the centre point of 
-                                        the <strong>Directional Stick</strong> and <code>GetCircle</code> will create an <code>Ellipse</code> with a <strong>Binding</strong> for the <code>Fill</code>.
+                                        The <strong>Method</strong> of <code>SetSegment</code> will use <code>GetElement</code> along with the <strong>Array</strong> of <code>table</code> to display the 
+                                        appropriate value by setting the <code>Opacity</code> and <code>AddSegment</code> will add the segments to the <strong>Segment Control</strong>.
                                     </p>
                                     <h2 class="display-6">Step 10</h2>
                                     <p>
-                                        While still in the <code>namespace</code> of <code>StickControl</code> in the <code>class</code> of <code>Stick</code> after the <strong>Comment</strong> 
-                                        of <code>// Move Method</code> type the following <strong>Method</strong>:
+                                        While still in the <code>namespace</code> of <code>SegmentControl</code> in the <code>class</code> of <code>Segment</code> after the <strong>Comment</strong> 
+                                        of <code>// Add Layout Method & Value Property</code> type the following <strong>Method</strong> and <strong>Property</strong>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-private void Move(PointerRoutedEventArgs e)
+private void AddLayout()
 {
-    x = e.GetCurrentPoint(this).Position.X;
-    y = e.GetCurrentPoint(this).Position.Y;
-    _res = Math.Sqrt((x - _centreX) *
-        (x - _centreX) + (y - _centreY) * (y - _centreY));
-    _m = (y - _centreY) / (x - _centreX);
-    _alpha = ToDegrees(Math.Atan(_m) + Math.PI / 2);
-    if (x &lt; _centreX)
-        _alpha += 180.0;
-    else if (x == _centreX && y &lt;= _centreY)
-        _alpha = 0.0;
-    else if (x == _centreX)
-        _alpha = 180.0;
-    if (_res > Radius)
+    var array = _value.ToCharArray();
+    var length = array.Length;
+    var list = Enumerable.Range(0, length);
+    if (_count != length)
     {
-        x = _centreX + Math.Cos(ToRadians(_alpha) - Math.PI / 2) * Radius;
-        y = _centreY + Math.Sin(ToRadians(_alpha) - Math.PI / 2) * Radius
-            * ((_alpha % 180.0 == 0.0) ? -1.0 : 1.0);
-        _res = Radius;
+        Children.Clear();
+        foreach (var item in list)
+        {
+            AddSegment(item.ToString());
+        }
+        _count = length;
     }
-    if (Math.Abs(_alpha - _alphaM) >= Sensitivity ||
-        Math.Abs(_distance * Radius - _res) >= Sensitivity)
+    foreach (int item in list)
     {
-        _alphaM = _alpha;
-        _distance = _res / Radius;
+        var value = array[item].ToString();
+        var digit = value switch
+        {
+            minus => minus_pos,
+            colon => colon_pos,
+            space => space_pos,
+            _ => int.Parse(value),
+        };
+        SetSegment(item.ToString(), digit);
     }
-    if (_oldAlphaM != _alphaM ||
-        _oldDistance != _distance)
-    {
-        Angle = _alphaM;
-        Ratio = _distance;
-        _oldAlphaM = _alphaM;
-        _oldDistance = _distance;
-        ValueChanged?.Invoke(this, Angle, Ratio);
-    }
-    Canvas.SetLeft(_knob, x - _width / 2);
-    Canvas.SetTop(_knob, y - _height / 2);
+}
+
+public string Value
+{
+    get { return _value; }
+    set { _value = value; AddLayout(); }
 }
                                     </code></pre>
                                     <p>
-                                        The <strong>Method</strong> of Move will be used by the <strong>Directional Stick</strong> to determine the current <code>Angle</code> and <code>Ratio</code> along with raising the <strong>Event</strong> of <code>ValueChanged</code> with those values.
+                                        The <strong>Method</strong> of <code>AddLayout</code> creates the look-and-feel for the <strong>User Control</strong> 
+                                        and the <strong>Property</strong> of <code>Value</code> will setup the display of the <strong>Segment Control</strong> 
+                                        using the <strong>Method</strong> of <code>AddLayout</code>.
                                     </p>
                                     <h2 class="display-6">Step 11</h2>
                                     <p>
-                                        While still in the <code>namespace</code> of <code>StickControl</code> in the <code>class</code> of <code>Stick</code> after the <strong>Comment</strong> 
-                                        of <code>// Layout & Load Methods and Constructor</code> type the following <strong>Methods</strong> and <strong>Constructor</strong>:
+                                        While still in the <code>namespace</code> of <code>SegmentControl</code> in the <code>class</code> of <code>Segment</code> after the <strong>Comment</strong> 
+                                        of <code>// Constructor</code> type the following <strong>Constructor</strong> and <strong>Event Handler</strong>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-private void Layout()
+public Segment()
 {
-    _knob = GetCircle(Radius, "Knob");
-    _face = GetCircle(Radius * 2, "Face");
-    _height = _knob.ActualHeight;
-    _width = _knob.ActualWidth;
-    Width = _width + Radius * 2;
-    Height = _height + Radius * 2;
-    SetMiddle();
-    PointerExited -= null;
-    PointerExited += (object sender, PointerRoutedEventArgs e) =>
-        SetMiddle();
-    _knob.PointerReleased += (object sender, PointerRoutedEventArgs e) =>
-        SetMiddle();
-    _knob.PointerPressed += (object sender, PointerRoutedEventArgs e) =>
-        _capture = true;
-    _knob.PointerMoved += (object sender, PointerRoutedEventArgs e) =>
+    Spacing = spacing;
+    Orientation = Orientation.Horizontal;
+    var timer = new DispatcherTimer()
     {
-        if (_capture) 
-            Move(e);
+        Interval = TimeSpan.FromMilliseconds(250)
     };
-    _knob.PointerExited += (object sender, PointerRoutedEventArgs e) =>
-        SetMiddle();
-}
-
-private void Load()
-{
-    Layout();
-    Children.Clear();
-    Children.Add(_face);
-    var canvas = new Canvas()
+    timer.Tick += (object s, object args) =>
     {
-        Width = Width,
-        Height = Height
+        if (Source != Sources.Value)
+        {
+            var format = Source switch
+            {
+                Sources.Time => time,
+                Sources.Date => date,
+                Sources.TimeDate => date_time,
+                _ => throw new ArgumentException(invalid_source)
+            };
+            Value = DateTime.Now.ToString(format);
+        }
     };
-    canvas.Children.Add(_knob);
-    Children.Add(canvas);
+    timer.Start();
 }
-
-public Stick() => Load();
                                     </code></pre>
                                     <p>
-                                        All <strong>Errors</strong> should now be resolved, if you continue to get them check any previous steps to see if you have missed anything.
-                                    </p>
-                                    <p>
-                                        The <strong>Constructor</strong> will be used to create the look-and-feel of the <strong>User Control</strong> and will use the <strong>Method</strong> of 
-                                        <code>Load</code> which will use the <strong>Method</strong> of <code>Layout</code> which will capture if the <strong>User Control</strong> is being interacted with.
-                                    </p>                                    
+                                        The <strong>Constructor</strong> will setup a <code>DispatcherTimer</code> to be used to display the <code>Value</code> of the <strong>Segment Control</strong>.
+                                    </p>                                                                        
                                     <h2 class="display-6">Step 12</h2>
                                     <div class="container">
                                         <div class="row mb-3">
@@ -465,7 +454,7 @@ public Stick() => Load();
                                                 Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>MainWindow.xaml</strong> to see the <strong>XAML</strong> for the <strong>Main Window</strong>.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-solution-explorer-xaml-stick-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
+                                                <img src="../assets/was-solution-explorer-xaml-segment-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
                                             </div>
                                         </div>
                                     </div>
@@ -484,15 +473,13 @@ HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;
                                         While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> above <code>&lt;/Window&gt;</code>, type in the following <strong>XAML</strong>:
                                     </p>
                                     <pre class="code-block language-xml"><code>                            
-&lt;StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"&gt;
-    &lt;TextBlock Name="Label" HorizontalAlignment="Center" 
-    Style="{StaticResource SubtitleTextBlockStyle}"/&gt;
-    &lt;local:Stick Radius="200" Knob="{ThemeResource AccentButtonBackground}" 
-    Face="WhiteSmoke" ValueChanged="ValueChanged"/&gt;
-&lt;/StackPanel&gt;
+&lt;Viewbox&gt;
+    &lt;local:Segment Padding="50" Source="Time" 
+    Foreground="{ThemeResource SystemControlHighlightAccentBrush}" /&gt;
+&lt;/Viewbox&gt;
                                     </code></pre> 
                                     <p>
-                                        This <strong>XAML</strong> contains a <strong>StackPanel</strong> including a <code>TextBlock</code> and the <strong>User Control</strong> of <code>Stick</code> with the <code>Event</code> of <code>ValueChanged</code>.
+                                        This <strong>XAML</strong> contains a <strong>ViewBox</strong> and the <strong>User Control</strong> of <code>Segment</code> with the <code>Source</code> set to <code>Time</code>.
                                     </p>
                                     <h2 class="display-6">Step 15</h2>
                                     <div class="container">
@@ -501,7 +488,7 @@ HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;
                                                 Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>MainWindow.xaml</strong> then double-click on <strong>MainWindow.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Main Window</strong>.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-solution-explorer-code-stick-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
+                                                <img src="../assets/was-solution-explorer-code-segment-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
                                             </div>
                                         </div>
                                     </div>
@@ -514,39 +501,26 @@ private void myButton_Click(object sender, RoutedEventArgs e)
 {
     myButton.Content = "Clicked";
 }
-                                    </code></pre>
+                                    </code></pre>                                
                                     <h2 class="display-6">Step 17</h2>
-                                    <p>
-                                        Once <code>myButton_Click(...)</code> has been removed, within the <strong>Constructor</strong> of <code>public MainWindow() { ... }</code> and below the line of <code>this.InitializeComponent();</code> type in the following <strong>Code</strong>:
-                                    </p>
-                                    <pre class="code-block language-csharp"><code>
-private void ValueChanged(object sender, double angle, double ratio) => 
-    Label.Text = $"Angle {angle}, Ratio {ratio}";
-                                    </code></pre>
-                                    <p>
-                                        The <strong>Method</strong> of <code>ValueChanged</code> will be used with <strong>Event Handler</strong> from the <strong>XAML</strong> to display the selected <strong>Angle</strong> and <strong>Ratio</strong>,
-                                        this <strong>Method</strong> uses <strong>Arrow Syntax</strong> with the <code>=></code> for an expression body which is useful when a <strong>Method</strong> only has one line.
-                                    </p>                                
-                                    <h2 class="display-6">Step 18</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
-                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>StickControl (Package)</strong> to <strong>Start</strong> the application.
+                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>SegmentControl (Package)</strong> to <strong>Start</strong> the application.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-debug-stick-control.png" class="img-fluid" alt="StickControl (Package)"/>
+                                                <img src="../assets/was-debug-segment-control.png" class="img-fluid" alt="SegmentControl (Package)"/>
                                             </div>
                                         </div>
                                     </div>    
+                                    <h2 class="display-6">Step 18</h2>
+                                    <p>
+                                        Once running you will see the <strong>Segment Control</strong> displaying the current <i>Time</i>.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-running-segment-control.png" class="img-fluid" alt="Segment Control Running and Output" />
+                                    </p>
                                     <h2 class="display-6">Step 19</h2>
-                                    <p>
-                                        Once running you will see the <strong>Stick Control</strong> displayed, then you can select and move the centre portion of the 
-                                        <strong>Directional Stick</strong> and can see the <i>Angle</i> around the centre, or the <i>Ratio</i> of the distance between the centre and the outside displayed.
-                                    </p>
-                                    <p>
-                                        <img src="../assets/was-running-stick-control.png" class="img-fluid" alt="Stick Control Running and Output" />
-                                    </p>
-                                    <h2 class="display-6">Step 20</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
@@ -560,9 +534,9 @@ private void ValueChanged(object sender, double angle, double ratio) =>
                                 </div>
                                 <div class="card-footer">
                                     <div class="justify-content-sm-center text-center m-1">
-                                        <a href="../../pdf/win-app-sdk-stick-control.pdf" target="_blank">
+                                        <a href="../../pdf/win-app-sdk-segment-control.pdf" target="_blank">
                                             <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
-                                                Stick Control
+                                                Segment Control
                                                 <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
                                             </span>
                                         </a>

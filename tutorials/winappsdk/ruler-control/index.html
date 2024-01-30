@@ -27,7 +27,7 @@
         <link href="../../../css/style.css" rel="stylesheet">
         <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../highlight/css/vs.min.css" rel="stylesheet">
-        <title>tutorialr.com - Tutorials - Windows App SDK - Gauge Control</title>
+        <title>tutorialr.com - Tutorials - Windows App SDK - Ruler Control</title>
     </head>
     <body class="d-flex flex-column h-100">
         <!-- Main -->
@@ -71,9 +71,9 @@
                 <!-- Section -->            
                 <section class="text-center text-white container">
                     <!-- Hero -->
-                    <h1 class="display-4 mx-auto">Gauge Control</h1>
+                    <h1 class="display-4 mx-auto">Ruler Control</h1>
                     <p class="lead">
-                        <strong>Learn</strong> creating a <strong>Gauge Control</strong> using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
+                        <strong>Learn</strong> creating an on-screen <strong>Ruler</strong> using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
                     </p>
                     <!-- /Hero -->
                     <!-- Tutorial -->
@@ -82,9 +82,9 @@
                             <div class="card position-relative">
                                 <div class="card-header">
                                     <div class="justify-content-sm-center text-center m-1">
-                                        <a href="../../pdf/win-app-sdk-gauge-control.pdf" target="_blank">
+                                        <a href="../../pdf/win-app-sdk-ruler-control.pdf" target="_blank">
                                             <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
-                                                Gauge Control
+                                                Ruler Control
                                                 <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
                                             </span>
                                         </a>
@@ -92,7 +92,7 @@
                                 </div>   
                                 <div class="card-body">
                                     <p>
-                                        <strong>Gauge Control</strong> shows how to create a <strong>Control</strong> that can be used as a <strong>Gauge</strong> using <strong>Windows App SDK</strong>.
+                                        <strong>Ruler Control</strong> shows how to create an on-screen <strong>Ruler</strong> for <strong>Metric</strong> or <strong>Imperial</strong> using <strong>Windows App SDK</strong>.
                                     </p>
                                     <h2 class="display-6">Step 1</h2>
                                     <p>
@@ -128,7 +128,7 @@
 
                                         <div class="row mb-3">
                                             <div class="col-sm">
-                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>GaugeControl</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
+                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>RulerControl</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
                                             </div>
                                             <div class="col-sm">
                                                 <img src="../assets/win-vs-configure-project.png" class="img-fluid" alt="Configure project" />
@@ -144,304 +144,233 @@
                                     </p>
                                     <h2 class="display-6">Step 3</h2>
                                     <p>
-                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>WinUI</strong> and then select <strong>User Control (WinUI 3)</strong> from the list next to this, then type in the name of <i>Gauge.xaml</i> and then <strong>Click</strong> on <strong>Add</strong>.
+                                        Then in <strong>Add New Item</strong> from the <strong>C# Items</strong> list, select <strong>Code</strong> and then select <strong>Code File</strong> from the list next to this, then type in the name of <i>Ruler.cs</i> and then <strong>Click</strong> on <strong>Add</strong>.
                                     </p>
                                     <p>
-                                        <img src="../assets/was-add-new-item-gauge-control.png" class="img-fluid" alt="Add New User Control (WinUI 3)" />
+                                        <img src="../assets/was-add-new-item-ruler-control.png" class="img-fluid" alt="Add New Code File" />
                                     </p>
                                     <h2 class="display-6">Step 4</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
-                                                Then from <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>Gauge.xaml</strong> to see the <strong>XAML</strong> for the <strong>User Control</strong>.
+                                                Then from <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>Ruler.cs</strong> to see the <strong>Code</strong> for the <strong>User Control</strong>.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-solution-explorer-user-xaml-gauge-control.png" class="img-fluid" alt="Solution Explorer Gauge.xaml"/>
+                                                <img src="../assets/was-solution-explorer-user-code-ruler-control.png" class="img-fluid" alt="Solution Explorer Ruler.cs"/>
                                             </div>
                                         </div>
                                     </div>
                                     <h2 class="display-6">Step 5</h2>
                                     <p>
-                                        In the <strong>XAML</strong> for <i>Gauge.xaml</i> there will be some <strong>XAML</strong> for a <code>Grid</code>, below <code>Grid</code>, type the following <strong>XAML</strong>:
-                                    </p>
-                                    <pre class="code-block language-xml"><code>
-&lt;Viewbox&gt;
-    &lt;Canvas Name="Display" Height="300" Width="300" Loaded="Load"/&gt;
-&lt;/Viewbox&gt;
-                                    </code></pre>
-                                    <p>
-                                        This <strong>XAML</strong> contains a <code>Viewbox</code> which will <strong>Scale</strong> a <code>Canvas</code> with a <code>Loaded</code> event handler of <code>Load</code>.
-                                    </p>
-                                    <h2 class="display-6">Step 6</h2>
-                                    <div class="container">
-                                        <div class="row mb-3">
-                                            <div class="col-sm">
-                                                Then, within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>Gauge.xaml</strong> then double-click on <strong>Gauge.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>User Control</strong>.
-                                            </div>
-                                            <div class="col-sm">
-                                                <img src="../assets/was-solution-explorer-user-code-gauge-control.png" class="img-fluid" alt="Solution Explorer Gauge.xaml.cs"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h2 class="display-6">Step 7</h2>
-                                    <p>
-                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Gauge.xaml.cs</i> near the top of the <strong>Code</strong>, 
-                                        below the final <code>using</code> statement you will need to type the following <code>using</code> statement:
+                                        You will now be in the <strong>View</strong> for the <strong>Code</strong> of <i>Ruler.cs</i>, within this type the following <strong>Code</strong>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
+using Microsoft.UI;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Shapes;
-                                    </code></pre>
-                                    <h2 class="display-6">Step 8</h2>
-                                    <p>
-                                        Then while still in the <strong>View</strong> for the <strong>Code</strong> of <i>Gauge.xaml.cs</i> type the following <strong>Code</strong>
-                                        below the end of the <strong>Constructor</strong> of <code>public Gauge() { ... }</code>:
-                                    </p>
-                                    <pre class="code-block language-csharp"><code>
-private Rectangle _needle;
-private double _diameter = 0;
+using Windows.Foundation;
 
-// Transform Method
+namespace RulerControl;
 
-// Markers Method
-
-// Layout, Indicator & Load Methods
-
-// Dependency Properties
-
-// Properties
-                                    </code></pre>
-                                    <p>
-                                        The <code>class</code> for <code>Gauge</code> represents the <strong>User Control</strong> for the <strong>Gauge</strong> and includes a 
-                                        <code>Rectangle</code> that will be used to represent the needle of the <strong>Gauge</strong> along with a <code>double</code> for the diameter of the <strong>Gauge</strong>.
-                                    </p>
-                                    <h2 class="display-6">Step 9</h2>
-                                    <p>
-                                        While still in the <code>class</code> of <code>Gauge</code> after <strong>Comment</strong> of <code>// Transform Method</code> type the following <strong>Code</strong>:
-                                    </p>
-                                    <pre class="code-block language-csharp"><code>
-private TransformGroup Transform(double angle, double x, double y)
+public enum Units
 {
-    var transformGroup = new TransformGroup();
-    var firstTranslate = new TranslateTransform()
-    {
-        X = x,
-        Y = y
-    };
-    transformGroup.Children.Add(firstTranslate);
-    var rotateTransform = new RotateTransform()
-    {
-        Angle = angle
-    };
-    transformGroup.Children.Add(rotateTransform);
-    var secondTranslate = new TranslateTransform()
-    {
-        X = _diameter / 2,
-        Y = _diameter / 2
-    };
-    transformGroup.Children.Add(secondTranslate);
-    return transformGroup;
+    Cm,
+    Inch
+};
+
+public class Ruler : Canvas
+{
+    private const double default_height = 40.0;
+
+    private double _originalHeight;
+
+    // Static Methods
+
+    // Dependency Properties & Properties
+
+    // Layout Method
+
+    // Constructor & Measure Override Event Handler
+
 }
                                     </code></pre>
                                     <p>
-                                        This <strong>Method</strong> will create a <code>TransformGroup</code> to rotate elements to be used for the <strong>Gauge</strong>.
+                                        There are <code>using</code> statements for the <strong>User Control</strong>, a <code>namespace</code> for <code>RulerControl</code> with an <code>enum</code> for the <strong>Units</strong> 
+                                        along with a <code>class</code> of <code>Ruler</code> that will represent the <strong>User Control</strong> for the <strong>Ruler</strong>.
                                     </p>
-                                    <h2 class="display-6">Step 10</h2>
+                                    <h2 class="display-6">Step 6</h2>
                                     <p>
-                                        While still in the <code>class</code> of <code>Gauge</code> after <strong>Comment</strong> of <code>// Markers Method</code> type the following <strong>Method</strong>:
+                                        Then in the <code>namespace</code> of <code>RulerControl</code> in the <code>class</code> of <code>Ruler</code> after the <strong>Comment</strong> 
+                                        of <code>// Static Methods</code> type the following <strong>Static Methods</strong>:
                                     </p>
                                     <pre class="code-block language-csharp"><code>
-private void Markers(Canvas canvas, double thickness)
+private static double CmToDip(double cm) => 
+    cm * 96.0 / 2.54;
+
+private static double InchToDip(double inch) => 
+    inch * 96.0;
+
+private static Path GetLine(Brush stroke, double thickness, 
+    Point start, Point finish) => new()
 {
-    var inner = _diameter;
-    var markers = new Canvas()
+    Stroke = stroke,
+    StrokeThickness = thickness,
+    Data = new LineGeometry()
     {
-        Width = inner,
-        Height = inner
-    };
-    for (int i = 0; i &lt; 51; i++)
+        StartPoint = start,
+        EndPoint = finish
+    }
+};
+                                    </code></pre>
+                                    <p>
+                                        These <strong>Static Methods</strong> include <code>CmToDip</code> and <code>InchToDip</code> which will perform the conversions for the measurements to be displayed
+                                        on the <strong>Ruler</strong> to device independent pixels. There is also <code>GetLine</code> which will return the <code>Path</code> used to display the lines on the <strong>Ruler</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 7</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>RulerControl</code> in the <code>class</code> of <code>Ruler</code> after the <strong>Comment</strong> 
+                                        of <code>// Dependency Properties & Properties</code> type the following <strong>Dependency Properties</strong> and <strong>Properties</strong>
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public static readonly DependencyProperty ForegroundProperty =
+DependencyProperty.Register(nameof(Foreground), typeof(Brush),
+typeof(Ruler), new PropertyMetadata(new SolidColorBrush(Colors.Black)));
+
+public static readonly DependencyProperty LengthProperty =
+DependencyProperty.Register(nameof(Length), typeof(double),
+typeof(Ruler), new PropertyMetadata(10.0));
+
+public static readonly DependencyProperty SegmentProperty =
+DependencyProperty.Register(nameof(Segment), typeof(double),
+typeof(Ruler), new PropertyMetadata(20.0));
+
+public static readonly DependencyProperty UnitProperty =
+DependencyProperty.Register(nameof(Unit), typeof(double),
+typeof(Ruler), new PropertyMetadata(Units.Cm));
+
+public Brush Foreground
+{
+    get { return (Brush)GetValue(ForegroundProperty); }
+    set { SetValue(ForegroundProperty, value); }
+}
+
+public double Length
+{
+    get { return (double)GetValue(LengthProperty); }
+    set { SetValue(LengthProperty, value); }
+}
+
+public double Segment
+{
+    get { return (double)GetValue(SegmentProperty); }
+    set { SetValue(SegmentProperty, value); }
+}
+
+public Units Unit
+{
+    get { return (Units)GetValue(UnitProperty); }
+    set { SetValue(UnitProperty, value); }
+}
+                                    </code></pre>
+                                    <p>
+                                        The <strong>Dependency Properties</strong> or <strong>Properties</strong> for the <strong>User Control</strong> can be customised for the <strong>Ruler</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 8</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>RulerControl</code> in the <code>class</code> of <code>Ruler</code> after the <strong>Comment</strong> 
+                                        of <code>// Layout Method</code> type the following <strong>Method</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void Layout()
+{
+    Children.Clear();
+    for (double value = 0.0; value &lt;= Length; value++)
     {
-        var marker = new Rectangle()
+        double dip;
+        if (Unit == Units.Cm)
         {
-            Fill = Foreground
-        };
-        if ((i % 5) == 0)
-        {
-            marker.Width = 4;
-            marker.Height = 16;
-            marker.RenderTransform = Transform(i * 6, -(marker.Width / 2),
-            -(marker.Height * 2 + 4.5 - thickness / 2 - inner / 2 - 16));
+            dip = CmToDip(value);
+            if (value &lt; Length)
+            {
+                for (int i = 1; i &lt;= 9; i++)
+                {
+                    if (i != 5)
+                    {
+                        var mm = CmToDip(value + 0.1 * i);
+                        Children.Add(GetLine(Foreground, 0.5, new Point(mm, Height),
+                        new Point(mm, Height - Segment / 3.0)));
+                    }
+                }
+                var middle = CmToDip(value + 0.5);
+                Children.Add(GetLine(Foreground, 1.0, new Point(middle, Height),
+                new Point(middle, Height - Segment * 2.0 / 3.0)));
+            }
         }
         else
         {
-            marker.Width = 2;
-            marker.Height = 8;
-            marker.RenderTransform = Transform(i * 6, -(marker.Width / 2),
-            -(marker.Height * 2 + 12.75 - thickness / 2 - inner / 2 - 16));
+            dip = InchToDip(value);
+            if (value &lt; Length)
+            {
+                var quarter = InchToDip(value + 0.25);
+                Children.Add(GetLine(Foreground, 0.5, new Point(quarter, Height),
+                new Point(quarter, Height - Segment / 3.0)));
+                var middle = InchToDip(value + 0.5);
+                Children.Add(GetLine(Foreground, 1.0, new Point(middle, Height),
+                new Point(middle, Height - 0.5 * Segment * 2.0 / 3.0)));
+                var division = InchToDip(value + 0.75);
+                Children.Add(GetLine(Foreground, 0.5, new Point(division, Height),
+                new Point(division, Height - 0.25 * Segment / 3.0)));
+            }
         }
-        markers.Children.Add(marker);
-    }
-    markers.RenderTransform = new RotateTransform()
-    {
-        Angle = 30,
-        CenterX = _diameter / 2,
-        CenterY = _diameter / 2
-    };
-    canvas.Children.Add(markers);
-}
-                                    </code></pre>
-                                    <p>
-                                        This <strong>Method</strong> will create the set of small and large markers to be displayed on the <strong>Gauge</strong>
-                                    </p>
-                                    <h2 class="display-6">Step 11</h2>
-                                    <p>
-                                        While still in the <code>class</code> of <code>Gauge</code> after <strong>Comment</strong> of <code>// Layout, Indicator & Load Methods</code> type the following <strong>Methods</strong>:
-                                    </p>
-                                    <pre class="code-block language-csharp"><code>
-private void Layout(Canvas canvas)
-{
-    canvas.Children.Clear();
-    _diameter = canvas.Width;
-    var face = new Ellipse()
-    {
-        Height = _diameter,
-        Width = _diameter,
-        Fill = Fill
-    };
-    canvas.Children.Add(face);
-    Markers(canvas, face.StrokeThickness);
-    _needle = new Rectangle()
-    {
-        Width = Needle,
-        Height = (int)_diameter / 2 - 30,
-        Fill = Foreground
-    };
-    canvas.Children.Add(_needle);
-    var middle = new Ellipse()
-    {
-        Height = _diameter / 10,
-        Width = _diameter / 10,
-        Fill = Foreground
-    };
-    Canvas.SetLeft(middle, (_diameter - middle.ActualWidth) / 2);
-    Canvas.SetTop(middle, (_diameter - middle.ActualHeight) / 2);
-    canvas.Children.Add(middle);
-}
-
-private void Indicator(int value)
-{
-    Layout(Display);
-    var percentage = value / (double)Maximum * 100;
-    var position = (percentage / 2) + 5;
-    _needle.RenderTransform = Transform(position * 6,
-    -Needle / 2, 4.25);
-}
-
-private void Load(object sender, RoutedEventArgs e) =>
-    Indicator(Value);
-                                    </code></pre>
-                                    <p>
-                                        There will also be some <strong>Errors</strong> as these refer to <strong>Properties</strong> that will be added in the next few steps.
-                                    </p>
-                                    <p>
-                                        <code>Layout</code> will create the look-and-feel of the <strong>Gauge</strong> and uses the <strong>Method</strong> for <code>Markers</code> along with creating the centre point and needle for the <strong>Gauge</strong>. 
-                                        The <strong>Method</strong> of <code>Indicator</code> will use <code>Layout</code> along with calculating the position of the needle for the <strong>Gauge</strong> and <code>Load</code> will be used when the <code>Canvas</code> of 
-                                        the <strong>User Control</strong> is loaded and will call the <strong>Method</strong> of <code>Indicator</code>.
-                                    </p>
-                                    <h2 class="display-6">Step 12</h2>
-                                    <p>
-                                        While still in the <code>class</code> of <code>Gauge</code> after <strong>Comment</strong> of <code>// Dependency Properties</code> type the following <strong>Dependency Properties</strong>:
-                                    </p>
-                                    <pre class="code-block language-csharp"><code>
-public static readonly DependencyProperty FillProperty =
-DependencyProperty.Register(nameof(Fill), typeof(Brush),
-typeof(Gauge), null);
-
-public static readonly DependencyProperty NeedleProperty =
-DependencyProperty.Register(nameof(Needle), typeof(int), typeof(Gauge),
-new PropertyMetadata(2));
-
-public static readonly DependencyProperty ValueProperty =
-DependencyProperty.Register(nameof(Value), typeof(double), typeof(Gauge),
-new PropertyMetadata(25));
-
-public static readonly DependencyProperty MinimumProperty =
-DependencyProperty.Register(nameof(Minimum), typeof(int), typeof(Gauge),
-new PropertyMetadata(0));
-
-public static readonly DependencyProperty MaximumProperty =
-DependencyProperty.Register(nameof(Maximum), typeof(int), typeof(Gauge),
-new PropertyMetadata(100));
-                                    </code></pre>
-                                    <p>
-                                        There will still also be some <strong>Errors</strong> as these refer to <strong>Properties</strong> that will be added in the next step.
-                                    </p>
-                                    <p>
-                                        These <strong>Dependency Properties</strong> refer to various <strong>Properties</strong> of the <strong>Gauge</strong> that can be customised for the <strong>User Control</strong>.
-                                    </p>
-                                    <h2 class="display-6">Step 13</h2>
-                                    <p>
-                                        While still in the <code>class</code> of <code>Gauge</code> after <strong>Comment</strong> of <code>// Properties</code> type the following <strong>Properties</strong>:
-                                    </p>
-                                    <pre class="code-block language-csharp"><code>
-public Brush Fill
-{
-    get { return (Brush)GetValue(FillProperty); }
-    set { SetValue(FillProperty, value); }
-}
-
-public int Needle
-{
-    get { return (int)GetValue(NeedleProperty); }
-    set
-    {
-        SetValue(NeedleProperty, value);
-        Indicator(Value);
+        Children.Add(GetLine(Foreground, 1.0, new Point(dip, Height),
+        new Point(dip, Height - Segment)));
     }
 }
+                                    </code></pre>
+                                    <p>
+                                        This <strong>Method</strong> creates the look-and-feel for the <strong>User Control</strong> for either <i>Metric</i> or <i>Imperial</i> units to be displayed accordingly for the <strong>Ruler</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 9</h2>
+                                    <p>
+                                        While still in the <code>namespace</code> of <code>RulerControl</code> in the <code>class</code> of <code>Ruler</code> after the <strong>Comment</strong> 
+                                        of <code>// Constructor & Measure Override Event Handler</code> type the following <strong>Constructor</strong> and <strong>Event Handler</strong>:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+public Ruler() => 
+    Loaded += (object sender, RoutedEventArgs e) => Layout();
 
-public int Value
+protected override Size MeasureOverride(Size availableSize)
 {
-    get { return (int)GetValue(ValueProperty); }
-    set
+    Height = !double.IsNaN(Height) ? Height : default_height;
+    var desiredSize = (Unit == Units.Cm) ? 
+        new Size(CmToDip(Length), Height) : 
+        new Size(InchToDip(Length), Height);
+    if(Height != _originalHeight)
     {
-        if (value &gt;= Minimum && value &lt;= Maximum)
-        {
-            SetValue(ValueProperty, value);
-            Indicator(value);
-        }
+        Layout();
+        _originalHeight = Height;
     }
-}
-
-public int Minimum
-{
-    get { return (int)GetValue(MinimumProperty); }
-    set { SetValue(MinimumProperty, value); }
-}
-
-public int Maximum
-{
-    get { return (int)GetValue(MaximumProperty); }
-    set { SetValue(MaximumProperty, value); }
+    return desiredSize;
 }
                                     </code></pre>
                                     <p>
-                                        Any <strong>Errors</strong> should now be resolved, if you continue to get them check all previous steps to see if you have missed anything.
-                                    </p>
-                                    <p>
-                                        These <strong>Properties</strong> are for values for the <strong>User Control</strong> such as the <code>Minimum</code> or <code>Maximum</code> values for the <strong>Gauge</strong>.
-                                    </p>
-                                    <h2 class="display-6">Step 14</h2>
+                                        The <strong>Constructor</strong> will call the <strong>Method</strong> of <code>Layout</code> when the <strong>User Control</strong> has been <code>Loaded</code> 
+                                        and the <strong>Event Handler</strong> of <code>MeasureOverride</code> will manage the resizing of the <strong>Ruler</strong>.
+                                    </p>                                                                        
+                                    <h2 class="display-6">Step 10</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
                                                 Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>MainWindow.xaml</strong> to see the <strong>XAML</strong> for the <strong>Main Window</strong>.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-solution-explorer-xaml-gauge-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
+                                                <img src="../assets/was-solution-explorer-xaml-ruler-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
                                             </div>
                                         </div>
                                     </div>
-                                    <h2 class="display-6">Step 15</h2>
+                                    <h2 class="display-6">Step 11</h2>
                                     <p>
                                         In the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> there will be some <strong>XAML</strong> for a <code>StackPanel</code>, this should be <strong>Removed</strong>:
                                     </p>
@@ -451,29 +380,32 @@ HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;x:Name=&quot;myButton&quot;&nbsp;Click=&quot;myButton_Click&quot;&gt;Click&nbsp;Me&lt;/Button&gt;
 &lt;/StackPanel&gt;
                                     </code></pre>                                   
-                                    <h2 class="display-6">Step 16</h2>
+                                    <h2 class="display-6">Step 12</h2>
                                     <p>
                                         While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> above <code>&lt;/Window&gt;</code>, type in the following <strong>XAML</strong>:
                                     </p>
-                                    <pre class="code-block language-xml"><code>
-                                        &lt;local:Gauge Margin="50" Value="25" Foreground="WhiteSmoke" Needle="4" 
-                                        Fill="{ThemeResource SystemControlHighlightAccentBrush}"/&gt;;                                                                                                                                                                                                                                                                                                                        
+                                    <pre class="code-block language-xml"><code>                            
+&lt;Viewbox Margin="50"&gt;
+    &lt;local:Ruler Length="15.0" Unit="Cm"
+    Background="{ThemeResource SystemControlHighlightAccentBrush}"
+    Foreground="{ThemeResource SystemControlBackgroundAltHighBrush}"/&gt;
+&lt;/Viewbox&gt;
                                     </code></pre> 
                                     <p>
-                                        This <strong>XAML</strong> contains the <strong>User Control</strong> of <code>Gauge</code> with various <strong>Properties</strong> including <code>Value</code> and <code>Needle</code>.
+                                        This <strong>XAML</strong> contains a <strong>ViewBox</strong> and the <strong>User Control</strong> of <code>Ruler</code> with the <code>Length</code> and <code>Unit</code> set.
                                     </p>
-                                    <h2 class="display-6">Step 17</h2>
+                                    <h2 class="display-6">Step 13</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
                                                 Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>MainWindow.xaml</strong> then double-click on <strong>MainWindow.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Main Window</strong>.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-solution-explorer-code-gauge-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
+                                                <img src="../assets/was-solution-explorer-code-ruler-control.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
                                             </div>
                                         </div>
                                     </div>
-                                    <h2 class="display-6">Step 18</h2>
+                                    <h2 class="display-6">Step 14</h2>
                                     <p>
                                         In the <strong>Code</strong> for <code>MainWindow.xaml.cs</code> there be a Method of <code>myButton_Click(...)</code> this should be <strong>Removed</strong> by removing the following:
                                     </p>
@@ -482,26 +414,26 @@ private void myButton_Click(object sender, RoutedEventArgs e)
 {
     myButton.Content = "Clicked";
 }
-                                    </code></pre>  
-                                    <h2 class="display-6">Step 19</h2>
+                                    </code></pre>                                
+                                    <h2 class="display-6">Step 15</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
-                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>GaugeControl (Package)</strong> to <strong>Start</strong> the application.
+                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>RulerControl (Package)</strong> to <strong>Start</strong> the application.
                                             </div>
                                             <div class="col-sm">
-                                                <img src="../assets/was-debug-gauge-control.png" class="img-fluid" alt="GaugeControl (Package)"/>
+                                                <img src="../assets/was-debug-ruler-control.png" class="img-fluid" alt="RulerControl (Package)"/>
                                             </div>
                                         </div>
                                     </div>    
-                                    <h2 class="display-6">Step 20</h2>
+                                    <h2 class="display-6">Step 16</h2>
                                     <p>
-                                        Once running you will see the <strong>Gauge Control</strong> displayed, with a <i>Value</i> which can be changed in the <strong>XAML</strong> to show the <i>Needle</i> in a different position.
+                                        Once running you will see the <strong>Ruler Control</strong> displayed with the given <i>Length</i> and <i>Unit</i>.
                                     </p>
                                     <p>
-                                        <img src="../assets/was-running-gauge-control.png" class="img-fluid" alt="Gauge Control Running and Output" />
+                                        <img src="../assets/was-running-ruler-control.png" class="img-fluid" alt="Ruler Control Running and Output" />
                                     </p>
-                                    <h2 class="display-6">Step 21</h2>
+                                    <h2 class="display-6">Step 17</h2>
                                     <div class="container">
                                         <div class="row mb-3">
                                             <div class="col-sm">
@@ -515,9 +447,9 @@ private void myButton_Click(object sender, RoutedEventArgs e)
                                 </div>
                                 <div class="card-footer">
                                     <div class="justify-content-sm-center text-center m-1">
-                                        <a href="../../pdf/win-app-sdk-gauge-control.pdf" target="_blank">
+                                        <a href="../../pdf/win-app-sdk-ruler-control.pdf" target="_blank">
                                             <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
-                                                Gauge Control
+                                                Ruler Control
                                                 <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
                                             </span>
                                         </a>
