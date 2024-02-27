@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <meta name="description" content="tutorialr.com - Tutorials, Talks and Workshops"/>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@tutorialrdotcom"/>
+        <meta name="twitter:creator" content="@rogueplanetoid"/>
+        <meta name="twitter:title" content="tutorialr.com"/>
+        <meta name="twitter:description" content="Tutorials, Talks and Workshops"/>
+        <meta name="twitter:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta name="twitter:image:alt" content="Tutorials, Talks and Workshops"/>
+        <!-- /Twitter -->
+        <!-- Open Graph -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="tutorialr.com"/>
+        <meta property="og:site_name" content="tutorialr.com">
+        <meta property="og:description" content="Tutorials, Talks and Workshops"/>
+        <meta property="og:image" content="https://www.tutorialr.com/images/card.png"/>
+        <meta property="og:image:width" content="1280"/>
+        <meta property="og:image:height" content="630"/>
+        <!-- /Open Graph -->
+        <link rel="icon" href="../../../favicon.ico"/>
+        <link href="../css/win-app-sdk.css" rel="stylesheet">
+        <link href="../../../css/style.css" rel="stylesheet">
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../highlight/css/vs.min.css" rel="stylesheet">
+        <title>tutorialr.com - Tutorials - Windows App SDK - Custom Button</title>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <!-- Main -->
+        <main>
+            <!-- Navigation -->	
+            <nav class="navbar top navbar-light navbar-expand-md bg-brand">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tutorialr-navbar" aria-controls="tutorialr-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../">
+                        <img src="../../../images/header.png" alt="tutorialr.com" height="50px">
+                    </a>
+                    <div id="tutorialr-navbar" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../tutorials">Tutorials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-tutorialr active" href="../../winappsdk">Windows App SDK</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../talks">Talks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-tutorialr" href="../../../workshops">Workshops</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://www.comentsys.com" target="_blank">
+                        <img src="../../../images/comentsys.png" alt="Comentsys" height="50px">
+                    </a>
+                </div>
+            </nav>
+            <!-- /Navigation -->
+            <div class="waves waves-top"></div>
+            <div class="bg-tutorialr">         
+                <!-- Section -->            
+                <section class="text-center text-white container">
+                    <!-- Hero -->
+                    <h1 class="display-4 mx-auto">Custom Button</h1>
+                    <p class="lead">
+                        <strong>Learn</strong> creating a <strong>Custom Button</strong>using <strong>Windows App SDK</strong> with this <strong>Tutorial</strong> 
+                    </p>
+                    <!-- /Hero -->
+                    <!-- Tutorial -->
+                    <div class="col-lg-10 mx-auto">
+                        <div class="container text-start text-black">
+                            <div class="card position-relative">
+                                <div class="card-header">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-custom-button.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Custom Button
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>   
+                                <div class="card-body">
+                                    <p>
+                                        <strong>Custom Button</strong> shows how to create a <strong>Style</strong> for a <strong>Button</strong> using <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 1</h2>
+                                    <p>
+                                        Follow <a href="../setup-and-start">Setup and Start</a> on how to get <strong>Setup</strong> and <strong>Install</strong> what you need for <strong>Visual Studio 2022</strong> and <strong>Windows App SDK</strong>.
+                                    </p>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                In <strong>Windows 11</strong> choose <strong>Start</strong> and then find or search for <strong>Visual Studio 2022</strong> and then select it.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs.png" class="img-fluid" alt="Visual Studio 2022"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Once <strong>Visual Studio 2022</strong> has started select <strong>Create a new project</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-new-project.png" class="img-fluid" alt="Create a new project"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Then choose the <strong>Blank App, Packages (WinUI in Desktop)</strong> and then select <strong>Next</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-win-ui.png" class="img-fluid" alt="Blank App, Packages (WinUI in Desktop)"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                After that in <strong>Configure your new project</strong> type in the Project name as <i>CustomButton</i>, then select a <strong>Location</strong> and then select <strong>Create</strong> to start a new <strong>Solution</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/win-vs-configure-project.png" class="img-fluid" alt="Configure project" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 2</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Then in <strong>Visual Studio</strong> within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>App.xaml</strong> to see the <strong>XAML</strong> for the <strong>Project</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-app-xaml-custom-button.png" class="img-fluid" alt="Solution Explorer App.xaml"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 3</h2>
+                                    <p>
+                                        In the <strong>XAML</strong> for <strong>App.xaml</strong> below the <strong>Comment</strong>
+                                        of <code>&lt;!-- Other app resources here --&gt;</code> type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;Style x:Key="CustomButton" TargetType="Button"&gt;
+    &lt;Setter Property="Background"&gt;
+        &lt;Setter.Value&gt;
+            &lt;LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1"&gt;
+                &lt;GradientStop Offset="0" Color="LightSalmon"/&gt;
+                &lt;GradientStop Offset="1" Color="DarkSalmon"/&gt;
+            &lt;/LinearGradientBrush&gt;
+        &lt;/Setter.Value&gt;
+    &lt;/Setter&gt;
+    &lt;Setter Property="Template"&gt;
+        &lt;Setter.Value&gt;
+            &lt;ControlTemplate TargetType="Button"&gt;
+                &lt;Grid&gt;
+                    &lt;!-- Visual State Groups --&gt;
+
+                    &lt;!-- Content --&gt;
+
+                &lt;/Grid&gt;
+            &lt;/ControlTemplate&gt;
+        &lt;/Setter.Value&gt;
+    &lt;/Setter&gt;
+&lt;/Style&gt;
+                                    </code></pre>
+                                    <p>
+                                        This <strong>XAML</strong> is part of a <code>Style</code> of <code>CustomButton</code> that will be used to target a <code>Button</code> 
+                                        which will contain some <strong>Visual State Groups</strong> and <strong>Content</strong> for the <strong>Custom Button</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 4</h2>
+                                    <p>
+                                        While still the <strong>XAML</strong> for <strong>App.xaml</strong> below the <strong>Comment</strong>
+                                        of <code>&lt;!-- Visual State Groups --&gt;</code> type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;VisualStateManager.VisualStateGroups&gt;
+    &lt;VisualStateGroup x:Name="CommonStates"&gt;
+        &lt;VisualState x:Name="Normal"/&gt;
+        &lt;VisualState x:Name="PointerOver"&gt;
+            &lt;Storyboard&gt;
+                &lt;ObjectAnimationUsingKeyFrames Storyboard.TargetName="Inner" 
+                Storyboard.TargetProperty="(ScaleTransform.ScaleY)"&gt;
+                    &lt;DiscreteObjectKeyFrame KeyTime="0" Value="-1"/&gt;
+                &lt;/ObjectAnimationUsingKeyFrames&gt;
+                &lt;ObjectAnimationUsingKeyFrames Storyboard.TargetName="Outer" 
+                Storyboard.TargetProperty="(ScaleTransform.ScaleY)"&gt;
+                    &lt;DiscreteObjectKeyFrame KeyTime="0" Value="1"/&gt;
+                &lt;/ObjectAnimationUsingKeyFrames&gt;
+            &lt;/Storyboard&gt;
+        &lt;/VisualState&gt;
+        &lt;VisualState x:Name="Pressed"&gt;
+            &lt;Storyboard&gt;
+                &lt;ObjectAnimationUsingKeyFrames Storyboard.TargetName="Inner" 
+                Storyboard.TargetProperty="(ScaleTransform.ScaleY)"&gt;
+                    &lt;DiscreteObjectKeyFrame KeyTime="0" Value="1"/&gt;
+                &lt;/ObjectAnimationUsingKeyFrames&gt;
+                &lt;ObjectAnimationUsingKeyFrames Storyboard.TargetName="Outer" 
+                Storyboard.TargetProperty="(ScaleTransform.ScaleY)"&gt;
+                    &lt;DiscreteObjectKeyFrame KeyTime="0" Value="-1"/&gt;
+                &lt;/ObjectAnimationUsingKeyFrames&gt;
+            &lt;/Storyboard&gt;
+        &lt;/VisualState&gt;
+    &lt;/VisualStateGroup&gt;
+&lt;/VisualStateManager.VisualStateGroups&gt;
+                                    </code></pre>
+                                    <p>
+                                        This <strong>XAML</strong> is for the <strong>Visual State Groups</strong> that will represent the <strong>States</strong> for the <code>Button</code> including 
+                                        how it will behave when <code>Normal</code> and when it is <code>Pressed</code> for the <strong>Custom Button</strong>.
+                                    </p>                                    
+                                    <h2 class="display-6">Step 5</h2>
+                                    <p>
+                                        Then in the <strong>XAML</strong> for <strong>App.xaml</strong> below the <strong>Comment</strong>
+                                        of <code>&lt;!-- Content --&gt;</code> type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;Ellipse Margin="4" Fill="{TemplateBinding Background}" 
+RenderTransformOrigin="0.5,0.5"&gt;
+    &lt;Ellipse.RenderTransform&gt;
+        &lt;ScaleTransform ScaleY="1" x:Name="Outer"/&gt;
+    &lt;/Ellipse.RenderTransform&gt;
+&lt;/Ellipse&gt;
+&lt;Ellipse Margin="20" Fill="{TemplateBinding Background}" 
+RenderTransformOrigin="0.5,0.5"&gt;
+    &lt;Ellipse.RenderTransform&gt;
+        &lt;ScaleTransform ScaleY="-1" x:Name="Inner"/&gt;
+    &lt;/Ellipse.RenderTransform&gt;
+&lt;/Ellipse&gt;
+&lt;ContentPresenter x:Name="Content" 
+HorizontalAlignment="Center" 
+VerticalAlignment="Center"/&gt;
+                                    </code></pre>
+                                    <p>
+                                        This <strong>XAML</strong> is the <strong>Content</strong> for the layout of a <code>Button</code> when the <code>Style</code> is applied for the <strong>Custom Button</strong>.
+                                    </p> 
+                                    <h2 class="display-6">Step 6</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> double-click on <strong>MainWindow.xaml</strong> to see the <strong>XAML</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-xaml-custom-button.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 7</h2>
+                                    <p>
+                                        In the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> there will be some <strong>XAML</strong> for a <code>StackPanel</code>, this should be <strong>Removed</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>
+&lt;StackPanel&nbsp;Orientation=&quot;Horizontal&quot;&nbsp;
+HorizontalAlignment=&quot;Center&quot;&nbsp;VerticalAlignment=&quot;Center&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Button&nbsp;x:Name=&quot;myButton&quot;&nbsp;Click=&quot;myButton_Click&quot;&gt;Click&nbsp;Me&lt;/Button&gt;
+&lt;/StackPanel&gt;
+                                    </code></pre>                                   
+                                    <h2 class="display-6">Step 8</h2>
+                                    <p>
+                                        While still in the <strong>XAML</strong> for <strong>MainWindow.xaml</strong> above <code>&lt;/Window&gt;</code>, type in the following <strong>XAML</strong>:
+                                    </p>
+                                    <pre class="code-block language-xml"><code>                            
+&lt;Button HorizontalAlignment="Center" Content="Button"
+Height="200" Width="200" Style="{StaticResource CustomButton}"/&gt;
+                                    </code></pre> 
+                                    <p>
+                                        This <strong>XAML</strong> contains a <code>Button</code> with <code>Style</code> set to the 
+                                        <code>StaticResource</code> of <code>CustomButton</code> from <strong>App.xaml</strong>.
+                                    </p>
+                                    <h2 class="display-6">Step 9</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                Within <strong>Solution Explorer</strong> for the <strong>Solution</strong> select the arrow next to <strong>MainWindow.xaml</strong> then double-click on <strong>MainWindow.xaml.cs</strong> to see the <strong>Code</strong> for the <strong>Main Window</strong>.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-solution-explorer-code-custom-button.png" class="img-fluid" alt="Solution Explorer MainWindow.xaml.cs"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="display-6">Step 10</h2>
+                                    <p>
+                                        In the <strong>Code</strong> for <code>MainWindow.xaml.cs</code> there be a Method of <code>myButton_Click(...)</code> this should be <strong>Removed</strong> by removing the following:
+                                    </p>
+                                    <pre class="code-block language-csharp"><code>
+private void myButton_Click(object sender, RoutedEventArgs e)
+{
+    myButton.Content = "Clicked";
+}
+                                    </code></pre>                                
+                                    <h2 class="display-6">Step 11</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                That completes the <strong>Windows App SDK</strong> application. In <strong>Visual Studio 2022</strong> from the <strong>Toolbar</strong> select <strong>CustomButton (Package)</strong> to <strong>Start</strong> the application.
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-debug-custom-button.png" class="img-fluid" alt="CustomButton (Package)"/>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <h2 class="display-6">Step 12</h2>
+                                    <p>
+                                        Once running you will see the <strong>Custom Button</strong> displayed.
+                                    </p>
+                                    <p>
+                                        <img src="../assets/was-running-custom-button.png" class="img-fluid" alt="Custom Button Running and Output" />
+                                    </p>
+                                    <h2 class="display-6">Step 13</h2>
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-sm">
+                                                To <strong>Exit</strong> the <strong>Windows App SDK</strong> application, select the <strong>Close</strong> button from the top right of the application as that concludes this <strong>Tutorial</strong> for <strong>Windows App SDK</strong> from <a href="https://www.tutorialr.com">tutorialr.com</a>!
+                                            </div>
+                                            <div class="col-sm">
+                                                <img src="../assets/was-close.png" class="img-fluid" alt="Close application"/>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="card-footer">
+                                    <div class="justify-content-sm-center text-center m-1">
+                                        <a href="../../pdf/win-app-sdk-custom-button.pdf" target="_blank">
+                                            <span class="btn btn-tutorialr btn-block btn-sm px-3 py-2 position-relative">
+                                                Custom Button
+                                                <span class="position-absolute top-0 start-100 translate-middle badge bg-tutorialr-light rounded-pill">PDF</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>                   
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Tutorial -->
+                </section>
+                <!-- /Section -->    
+            </div>
+            <div class="waves waves-bottom bg-white"></div>  
+        </main>
+        <!-- /Main -->
+        <!-- Footer -->
+        <footer class="footer mt-auto">
+            <nav class="navbar bottom navbar-light p-2">
+                <a href="../../../"><img src="../../../images/footer.png" alt="tutorialr.com" height="40px"></a>
+                <a href="https://www.twitter.com/tutorialrdotcom" target="_blank"><img src="../../../images/twitter.png" height="45px" alt="@tutorialrdotcom"></a>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="../../../images/cc-by-sa.png" height="35px" alt="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"></a>
+            </nav>
+        </footer>
+        <!-- /Footer -->
+        <!-- Scripts -->
+        <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../../../highlight/js/highlight.min.js"></script>
+        <!-- /Scripts-->
+    </body>
+</html>
